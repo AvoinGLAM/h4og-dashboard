@@ -1,4 +1,5 @@
 node_modules/
 headerValues.json
 data.json
-config/
+config/config.json
+config/google-key.json
