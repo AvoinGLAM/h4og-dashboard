@@ -1,4 +1,4 @@
-# hack4openglam-visualization
+# Hack4OpenGLAM Google Forms Data Visualization
 
 # Getting Started
 
