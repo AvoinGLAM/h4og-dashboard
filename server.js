@@ -18,4 +18,4 @@ app.get('/', function(req, res) {
     res.render('test', {data: data});
 });
 
-app.listen(80);
+app.listen(process.env.PORT || 80);
