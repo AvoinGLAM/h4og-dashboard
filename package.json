@@ -1,7 +1,7 @@
 {
   "name": "hack4openglam-visualization",
   "version": "1.0.0",
-  "description": "Visualize hack4openglam sign up Google Form data",
+  "description": "Web app for visualizing Hack4OpenGLAM Google Form data as different shaped post-it notes",
   "main": "ecosystem.config.js",
   "dependencies": {
     "ejs": "^3.1.5",
