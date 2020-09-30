@@ -3,6 +3,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.waterMask {
+    -webkit-mask-image: url("/images/brush.png");
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+}
 [style*="--aspect-ratio"]> :first-child {
     width: 100%;
 }
@@ -32,11 +37,11 @@ body {
 
 .project .description {
     margin-top: 20px;
+    overflow-wrap: anywhere;
 }
 
 .avatar {
     vertical-align: middle;
-    border-radius: 50%;
     margin-right: 5px;
 }
 
@@ -90,6 +95,7 @@ body {
 
 .person span.description {
     margin-bottom: 4px;
+    overflow-wrap: anywhere;
 }
 
 .person {

@@ -84,7 +84,7 @@ function parseRow(row, i) {
     
 }
 function gravatarURL(email) {
-    return 'https://www.gravatar.com/avatar/' + crypto.createHash('md5').update(email).digest('hex') + '?d=mp';
+    return 'https://www.gravatar.com/avatar/' + crypto.createHash('md5').update(email).digest('hex') + '?d=404';
 }
 
 module.exports = function (creds, spreadsheet) {

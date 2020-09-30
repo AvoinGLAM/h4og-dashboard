@@ -25,14 +25,14 @@ function printSocial(social, icon) {
         <% /* PERSON CARD */ for (let person in data.people) { %> %>
         <div class="item person" style="--aspect-ratio:2;" data-index="<%=data.people[person].index%>">
             <div class="item-content">
-                <table>
+                <table style="width: 100%; height: 100%;">
                     <tr>
-                        <td rowspan="3">
-                            <img src="/images/types/person.png" style="height: 65%;">
+                        <td rowspan="3" style="width: 45%;">
+                                <img class="avatar waterMask"
+                                src="<%=(data.people[person].picture ? data.people[person].picture : data.people[person].gravatar)%>"
+                                onerror="this.src='<%=data.people[person].gravatar%>';this.onerror=() => {setDefaultAvatar(this)};" style="width: 100%;">
                         </td>
-                        <td style="padding-top:15px;" valign="top"><span class="title"><img width="28" class="avatar"
-                                    src="<%=(data.people[person].picture ? data.people[person].picture : data.people[person].gravatar)%>"
-                                    onerror="this.src='<%=data.people[person].gravatar%>';this.onerror='';"><%=data.people[person].name%></span>
+                        <td style="padding-top:15px;" valign="top"><span class="title"><%=data.people[person].name%></span>
                             <span
                                 class="subtitle"><%=(data.people[person].organization ? 'from ' + data.people[person].organization : ' ')%>&nbsp;</span>
                         </td>
@@ -126,6 +126,11 @@ function printSocial(social, icon) {
         });
         grid.refreshSortData();
         grid.sort('foo');
+
+        function setDefaultAvatar(el) {
+            el.src = '/images/types/person.png';
+            // el.classList = 'avatar'; looks more consistent, if we keep everything masked
+        }
     </script>
 </body>
 
