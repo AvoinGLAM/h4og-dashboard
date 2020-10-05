@@ -8,13 +8,25 @@ String.prototype.replaceAll = function(search, replacement) {
     var target = this;
     return target.replace(new RegExp(search, 'g'), replacement);
 };
+function merge(obj1, obj2) {
+    answer = {}
+    for(key in obj1) {
+      if(answer[key] === undefined || answer[key] === null || answer[key] == '')
+        answer[key] = obj1[key];
+    }
+    for(key in obj2) {
+      if(answer[key] === undefined || answer[key] === null || answer[key] == '')
+        answer[key] = obj2[key];
+    }
+    return answer
+  }
 
 function parseRow(row, i) {
     if (data.people[row['Sähköpostiosoite']] == undefined) {
         console.log('New people')
         data.people[row['Sähköpostiosoite']] = {};
     } 
-    data.people[row['Sähköpostiosoite']] = {
+    let tempPerson = {
         index: i,
         name: row['First name'],
         organization: row['Your organization'],
@@ -37,7 +49,7 @@ function parseRow(row, i) {
         picture: row['Picture URL'],
         gravatar: gravatarURL(row['Sähköpostiosoite'])
     }
-    
+    data.people[row['Sähköpostiosoite']] = merge(tempPerson, data.people[row['Sähköpostiosoite']]);
     if (row['What kind of proposal is it?'] == 'Project') {
         let projectId = row['Sähköpostiosoite'] + '-' + row['Title'];
         if (data.projects[projectId] == undefined) {
@@ -53,7 +65,7 @@ function parseRow(row, i) {
             thumbnail: row['Link to a thumbnail image'],
             video: row['Link to a presentation video'],
             owner: {
-                name: row['First name'],
+                name: data.people[row['Sähköpostiosoite']].name,
                 email: row['Sähköpostiosoite']   
             }
         };
@@ -71,7 +83,7 @@ function parseRow(row, i) {
             codebase: row['Link to the codebase'],
             thumbnail: row['Link to a thumbnail image'],
             owner: {
-                name: row['First name'],
+                name: data.people[row['Sähköpostiosoite']].name,
                 email: row['Sähköpostiosoite']   
             },
             country: row['The country of origin of the collection'],

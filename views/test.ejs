@@ -43,12 +43,13 @@ function printSocial(social, icon) {
                                 class="description"><%=data.people[person].description.substr(0, 79)%><% if (data.people[person].description.length > 80) { %><a
                                     href="#" class="truncated">...</a><% } %></span>
 
-                            <% data.people[person].type.split(', ').forEach(item => { %>
+                            
+                            <% if (data.people[person].type.length > 0) { data.people[person].type.split(', ').forEach(item => { %>
                             <span class="typeItem"><%= item %></span>
-                            <% }); %>
-                            <% data.people[person].languages.split(', ').forEach(item => { %>
+                            <% }); } %>
+                            <% if (data.people[person].languages.length > 0) {data.people[person].languages.split(', ').forEach(item => { %>
                             <span class="languageItem"><%= item %></span>
-                            <% }); %>
+                            <% }); } %>
                         </td>
                     </tr>
                     <tr>
@@ -84,7 +85,9 @@ function printSocial(social, icon) {
                         <td style="height: 100%; vertical-align: top; padding: 25px;">
                             <span class="title"><%=data.projects[project].title%></span>
                             <span class="subtitle">by <%=data.projects[project].owner.name%></span>
-                            <span class="description"><%=data.projects[project].description%></span>
+                            <span class="description">
+                                    <%=data.projects[project].description.substr(0, 129)%><% if (data.projects[project].description.length > 130) { %><a
+                                        href="#" class="truncated">...</a><% } %></span>
                         </td>
                     </tr>
                     <tr>
@@ -106,8 +109,28 @@ function printSocial(social, icon) {
         <% /* COLLECTION CARD */ for (let collection in data.collections) { %> %>
         <div class="item collection" style="--aspect-ratio:1;" data-index="<%=data.collections[collection].index%>">
             <div class="item-content">
-                <span class="title"><%=data.collections[collection].title%></span>
+               <!-- <span class="title"><%=data.collections[collection].title%></span>
                 <span class="subtitle">by <%=data.collections[collection].owner.name%></span>
+               -->
+               <table style="height: 100%; width: 100%;">
+                <tr>
+                    <td style="text-align: center;">
+                        <img src="/images/types/collection.png" height="140">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 100%; vertical-align: top; padding: 25px;">
+                        <span class="title"> <%=data.collections[collection].title%></span>
+                        <span class="subtitle">by <%=data.collections[collection].owner.name%>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 20px;">
+                        
+                    </td>
+                </tr>
+            </table>
 
             </div>
         </div>
@@ -122,6 +145,9 @@ function printSocial(social, icon) {
                 foo: function (item, element) {
                     return parseInt(element.getAttribute('data-index')) + 1;
                 }
+            },
+            layout: {
+                fillGaps: true
             }
         });
         grid.refreshSortData();
@@ -129,7 +155,7 @@ function printSocial(social, icon) {
 
         function setDefaultAvatar(el) {
             el.src = '/images/types/person.png';
-            // el.classList = 'avatar'; looks more consistent, if we keep everything masked
+            // el.classList = 'avatar'; //looks more consistent, if we keep everything masked
         }
     </script>
 </body>
