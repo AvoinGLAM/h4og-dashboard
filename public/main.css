@@ -43,6 +43,9 @@ body {
 .avatar {
     vertical-align: middle;
     margin-right: 5px;
+    object-fit: cover;
+  width:200px;
+  height:200px;
 }
 
 .item span {
@@ -98,10 +101,24 @@ body {
     overflow-wrap: anywhere;
 }
 
-.person {
-    width: calc(100% / 12 * 4);
+.item {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    color: #000;
+    /*max-width: 100%;*/
 }
-
+.person {
+    width: calc(230px * 2);
+}
+.collection {
+    background: rgba(255, 255, 0, 0.5);
+    width: calc(230px * 2);
+}
+.project, .verticalPerson {
+    width: calc(230px * 1);
+}
+/* 240px each column */ 
 .item::before {
     content: ' ';
     width: 100%;
@@ -119,27 +136,13 @@ body {
     background-image: url('/images/cards/green-v.png');
 }
 
-.collection {
-    background: rgba(255, 255, 0, 0.5);
-    width: calc(100% / 12 * 4);
-}
 
-.project {
-    width: calc(100% / 12 * 2);
-}
 
 .grid {
     position: relative;
 
 }
 
-.item {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    color: #000;
-
-}
 
 .item.muuri-item-dragging {
     z-index: 3;
