@@ -86,6 +86,7 @@ function parseRow(row, i) {
                 name: data.people[row['Sähköpostiosoite']].name,
                 email: row['Sähköpostiosoite']   
             },
+            organization: row['The holder of the collection'],
             country: row['The country of origin of the collection'],
             access: row['How can the collection be accessed?'],
             copyright: row['Copyright status of the collection'],

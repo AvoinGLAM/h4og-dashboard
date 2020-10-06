@@ -84,37 +84,24 @@ function caculateCardLengthPoints(card) {
             %>
         <div class="item person" style="--aspect-ratio:2;" data-index="<%= data.people[person].index %>">
             <div class="item-content">
-                <table style="width: 100%; height: 100%;">
-                    <tr>
-                        <td rowspan="3">
-                            <img class="avatar waterMask"
-                                src="<%=(data.people[person].picture ? data.people[person].picture : data.people[person].gravatar)%>"
-                                onerror="this.src='<%=data.people[person].gravatar%>';this.onerror=() => {setDefaultAvatar(this)};">
-                        </td>
-                        <td style="padding-top:15px;" valign="top"><span
-                                class="title"><%=data.people[person].name%></span>
-                            <span
-                                class="subtitle"><%=(data.people[person].organization ? 'from ' + data.people[person].organization : ' ')%>&nbsp;</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <span
-                                class="description"><%=data.people[person].description.substr(0, 79)%><% if (data.people[person].description.length > 80) { %><a
-                                    href="#" class="truncated">...</a><% } %></span>
-
-
+                <div class="h-box">
+                    <div class="imagebox">
+                    <img class="avatar waterMask" src="<%=(data.people[person].picture ? data.people[person].picture : data.people[person].gravatar)%>" onerror="this.src='<%=data.people[person].gravatar%>';this.onerror=() => {setDefaultAvatar(this)};">
+                    </div>
+                    <div class="infobox">
+                    <div class="title"><%=data.people[person].name%></div>
+                    <div class="subtitle"><%=(data.people[person].organization ? 'from ' + data.people[person].organization : ' ')%>&nbsp;</div>
+                            <div class="description"><%=data.people[person].description.substr(0, 79)%><% if (data.people[person].description.length > 80) { %><a href="#" class="truncated">...</a><% } %></div>
+                            <div class="tags">
                             <% if (data.people[person].type.length > 0) { data.people[person].type.split(', ').forEach(item => { %>
-                            <span class="typeItem"><%= item %></span>
+
+                                <div class="typeItem"><%= item %></div>
                             <% }); } %>
                             <% if (data.people[person].languages.length > 0) {data.people[person].languages.split(', ').forEach(item => { %>
-                            <span class="languageItem"><%= item %></span>
+                            <div class="languageItem"><%= item %></div>
                             <% }); } %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="bottom" class="sl">
-
+                        </div>
+                        <div class="sl">
                             <% printSocial(data.people[person].website, 'fas fa-globe-americas') %>
                             <% printSocial(data.people[person].social.github, 'fab fa-github') %>
                             <% printSocial(data.people[person].social.facebook, 'fab fa-facebook') %>
@@ -123,11 +110,10 @@ function caculateCardLengthPoints(card) {
                             <% printSocial(data.people[person].social.instagram, 'fab fa-instagram') %>
                             <% printSocial(data.people[person].social.flickr, 'fab fa-flickr') %>
                             <% printSocial(data.people[person].social.wikimedia, 'fab fa-wikipedia-w') %>
-
-                        </td>
-                    </tr>
-
-                </table>
+                        </div>
+                    
+                    </div>
+                </div>
             </div>
         </div>
         <% } 
@@ -137,23 +123,23 @@ function caculateCardLengthPoints(card) {
         <% /* PROJECT CARD */ for (let project in data.projects) { %> %>
         <div class="item project" style="--aspect-ratio:0.5;" data-index="<%=data.projects[project].index%>">
             <div class="item-content">
-                <table style="height: 100%;">
-                    <tr>
-                        <td>
+                <div style="height: 100%;">
+                    <div>
+                        <div>
                             <img src="/images/types/project.png" style="width: 100%;">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="height: 100%; vertical-align: top; padding: 25px;">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="projectbox">
                             <span class="title"><%=data.projects[project].title%></span>
                             <span class="subtitle">by <%=data.projects[project].owner.name%></span>
                             <span class="description">
                                 <%=data.projects[project].description.substr(0, 129)%><% if (data.projects[project].description.length > 130) { %><a
                                     href="#" class="truncated">...</a><% } %></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 20px;">
+                        </div>
+                    </div>
+                    <div>
+                        <div style="padding: 20px;">
                             <% if (data.projects[project].homepage) { %>
                             <a href="<%=data.projects[project].homepage%>"><i class="fas fa-globe-americas"></i>
                                 Website</a>
@@ -161,9 +147,9 @@ function caculateCardLengthPoints(card) {
                             <% if (data.projects[project].codebase) { %>
                             <a href="<%=data.projects[project].codebase%>"><i class="fab fa-github"></i> GitHub</a>
                             <% } %>
-                        </td>
-                    </tr>
-                </table>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
         <% } %>
@@ -174,25 +160,25 @@ function caculateCardLengthPoints(card) {
                 <!-- <span class="title"><%=data.collections[collection].title%></span>
                 <span class="subtitle">by <%=data.collections[collection].owner.name%></span>
                -->
-                <table style="height: 100%; width: 100%;">
-                    <tr>
-                        <td style="text-align: center;">
+                <div style="height: 100%; width: 100%;">
+                    <div>
+                        <div style="text-align: center;">
                             <img src="/images/types/collection.png" height="140">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="height: 100%; vertical-align: top; padding: 25px;">
+                        </div>
+                    </div>
+                    <div>
+                        <div style="height: 100%; vertical-align: top; padding: 25px;">
                             <span class="title"> <%=data.collections[collection].title%></span>
-                            <span class="subtitle">by <%=data.collections[collection].owner.name%>
+                            <span class="subtitle">from <%=data.collections[collection].organization%></span>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 20px;">
+                        </div>
+                    </div>
+                    <div>
+                        <div style="padding: 20px;">
 
-                        </td>
-                    </tr>
-                </table>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
