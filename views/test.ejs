@@ -178,12 +178,12 @@ function caculateCardLengthPoints(card) {
                         </div>
                     </div>
                     <div>
-                        <div class="projectbox">
-                            <span class="title"><%=data.projects[project].title%></span>
-                            <span class="subtitle">by <%=data.projects[project].owner.name%></span>
-                            <span class="description">
+                        <div class="v-box">
+                            <div class="title"><%=data.projects[project].title%></div>
+                            <div class="subtitle">by <%=data.projects[project].owner.name%></div>
+                            <div class="description">
                                 <%=data.projects[project].description.substr(0, 129)%><% if (data.projects[project].description.length > 130) { %><a
-                                    href="#" class="truncated">...</a><% } %></span>
+                                    href="#" class="truncated">...</a><% } %></div>
                         </div>
                     </div>
                     <div>
