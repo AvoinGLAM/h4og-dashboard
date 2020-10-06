@@ -27,14 +27,11 @@ app.get('/usercontent_cache/:filename', async function (req, res) {
     const filePath = path.join('./usercontent_cache/', req.params.filename);
     const buffer = readChunk.sync(filePath, 0, 4100);
     const storedMimeType = await fileType.fromBuffer(buffer);
-    console.log(storedMimeType);
     if (storedMimeType) {
         res.setHeader('Content-Type', storedMimeType.mime);
         fs.createReadStream(filePath).pipe(res);
-        console.log('Success!');
     } else {
         res.status(404).end();
-        console.log('Fail!');
     }
 
     //res.render('test', {data: data});
