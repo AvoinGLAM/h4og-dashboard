@@ -22,6 +22,10 @@ function merge(obj1, obj2) {
   }
 
 function parseRow(row, i) {
+    if (row['Spam'] == "yes") {
+        console.log('Spam!');
+        return;
+    }
     if (data.people[row['Sähköpostiosoite']] == undefined) {
         console.log('New people')
         data.people[row['Sähköpostiosoite']] = {};
@@ -112,7 +116,7 @@ module.exports = function (creds, spreadsheet) {
             await doc.useServiceAccountAuth(creds);
     
             await doc.loadInfo();
-            console.log(doc.title);
+            //console.log(doc.title);
             const sheet = doc.sheetsByIndex[0]; 
             const rows = await sheet.getRows();
         
