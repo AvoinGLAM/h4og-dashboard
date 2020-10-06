@@ -233,3 +233,23 @@ body {
     display: inline-block;
    
 }
+
+svg#timezoneMap:hover g {
+    opacity: 0.5;
+}
+
+svg#timezoneMap.activeMap g {
+    opacity: 0.3;
+}
+
+svg#timezoneMap g.activeTimezone {
+    opacity: 1 !important;
+}
+
+svg#timezoneMap g:hover {
+    opacity: 1 !important;
+
+}
+svg#timezoneMap g {
+    cursor: pointer;
+}
