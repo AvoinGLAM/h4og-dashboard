@@ -20,7 +20,24 @@ function merge(obj1, obj2) {
     }
     return answer
   }
-
+function parseTimezone(str) {
+    switch (str) {
+        case 'Americas (UTC-8...-3)':
+            return 1;
+            break;
+        case 'Europe, Africa & Middle East (UTC-2...+3)':
+            return 2;
+            break;
+        case 'India & Central Asia (UTC+4...+7)':
+            return 3;
+            break;
+        case 'Asia-Pacific (UTC+8...+12)':
+            return 4;
+            break;
+        default:
+            return -1;
+    }
+}
 function parseRow(row, i) {
     if (row['Spam'] == "yes") {
         console.log('Spam!');
@@ -36,7 +53,7 @@ function parseRow(row, i) {
         organization: row['Your organization'],
         special: row['Special'],
         description: row['Write one sentence about yourself to introduce you to the other participants'],
-        timezone: row["What's your timezone group?"],
+        timezone: parseTimezone(row["What's your timezone group?"]),
         type: row['Which of these best describe you'],
         skillsAndInterests: row['List some skills and interests you would like to work with'],
         languages: row['Which languages are you comfortable working with?'].trim().replaceAll('& ', ' ').replaceAll('and ', ' ').replaceAll(',', ' ').replace(/\s+/g, " ").split(' ').join(', '),

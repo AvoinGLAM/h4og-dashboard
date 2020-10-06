@@ -55,34 +55,82 @@ function caculateCardLengthPoints(card) {
             </ul>
         </div>
 
+        <div class="timezoneFilter">
+            <h2>Timezone</h2>
+            <%- include('timezoneMap.ejs'); -%>
+        </div>
+
     </div>
     <script>
         var radios = document.getElementsByName('typeFilterRadio');
+        var timezones = document.getElementsByClassName('timezoneArea');
         for (var i = 0, max = radios.length; i < max; i++) {
             radios[i].onclick = selectTypeFilter;
         }
-        let previousType;
+        for (var i = 0, max = timezones.length; i < max; i++) {
+            timezones[i].onclick = selectTimezoneFilter;
+        }
+        let selectedType;
 
         function selectTypeFilter(e) {
             if (e.target.checked) {
-                if (previousType != e.target.value) {
+                if (selectedType != e.target.value) {
                     //console.log(e.target.value);
-                    grid.filter(e.target.value);
-                    previousType = e.target.value;
+                    //grid.filter(e.target.value);
+                    selectedType = e.target.value;
                 } else {
                     console.log('Uncheck');
-                    grid.filter('*');
-                    previousType = undefined;
+                    //grid.filter('*');
+                    selectedType = undefined;
                     e.target.checked = false;
                 }
+                if (selectedType != '.person') {
+                    
+                    for (var i = 0, max = timezones.length; i < max; i++) {
+                        timezones[i].classList.remove('activeTimezone');
+                    }
+                    timezoneMapEl.classList.remove('activeMap');
+                    selectedTimezone = undefined;
+                }
+                updateFilter();
             }
+        }
+
+        let selectedTimezone;
+        const timezoneMapEl = document.getElementById('timezoneMap');
+
+        function selectTimezoneFilter(e) {
+            if (selectedType == '.person') {
+                for (var i = 0, max = timezones.length; i < max; i++) {
+                    timezones[i].classList.remove('activeTimezone');
+                }
+                if (selectedTimezone != e.target.parentElement.dataset.timezone) {
+                    timezoneMapEl.classList.add('activeMap');
+                    let target = e.target.parentElement;
+                    selectedTimezone = target.dataset.timezone;
+                    target.classList.add('activeTimezone');
+                    //grid.filter('[data-timezone="' + target.dataset.timezone + '"]');
+                } else {
+                    timezoneMapEl.classList.remove('activeMap');
+                    selectedTimezone = undefined;
+                    //grid.filter('*');
+                }
+                updateFilter();
+            }
+        }
+        function updateFilter() {
+            let filter = (selectedType ? selectedType : '') + (selectedTimezone ? '[data-timezone="' + selectedTimezone + '"]' : '');
+            filter = (filter ? filter : '*');
+            console.log('Apply filter ' + filter);
+            grid.filter(filter);
         }
     </script>
     <div class="grid">
         <% /* PERSON CARD */ for (let person in data.people) { 
             if (data.people[person].name.length > 0) { // caculateCardLengthPoints(data.people[person]) < 210
             %>
-        <div class="item person" style="--aspect-ratio:2;" data-index="<%= data.people[person].index %>">
+        <div class="item person" style="--aspect-ratio:2;" data-index="<%= data.people[person].index %>"
+            data-timezone="<%= data.people[person].timezone %>">
             <div class="item-content">
                 <table style="width: 100%; height: 100%;">
                     <tr>

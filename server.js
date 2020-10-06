@@ -12,7 +12,7 @@ let data;
     fs.writeFile('latest.json', JSON.stringify(data), (err) => {
         if (err) { console.log(err); }
     })
-    console.log(data);
+    //console.log(data);
 })();
 
 app.set('view engine', 'ejs');
