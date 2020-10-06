@@ -5,3 +5,6 @@ config/config.json
 config/google-key.json
 config/config.json
 latest.json
+public/images/typeFilter/collection_a.png
+public/images/typeFilter/people_a.png
+public/images/typeFilter/projects_a.png

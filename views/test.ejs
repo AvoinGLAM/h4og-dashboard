@@ -27,6 +27,57 @@ function caculateCardLengthPoints(card) {
 </head>
 
 <body>
+    <div class="filters">
+        <div class="typeFilter">
+            <h2>View</h2>
+            <ul>
+                <li>
+                    <input type='radio' name="typeFilterRadio" id="radio1" value=".collection" />
+                    <label for='radio1'>
+                        <img src="/images/typeFilter/collection.png">
+                        <span>Collections</span>
+                    </label>
+                </li>
+                <li>
+                    <input type='radio' name="typeFilterRadio" id="radio2" value=".person" />
+                    <label for='radio2'>
+                        <img src="/images/typeFilter/person.png">
+                        <span>People</span>
+                    </label>
+                </li>
+                <li>
+                    <input type='radio' name="typeFilterRadio" id="radio3" value=".project" />
+                    <label for='radio3'>
+                        <img src="/images/typeFilter/project.png">
+                        <span>Projects</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script>
+        var radios = document.getElementsByName('typeFilterRadio');
+        for (var i = 0, max = radios.length; i < max; i++) {
+            radios[i].onclick = selectTypeFilter;
+        }
+        let previousType;
+
+        function selectTypeFilter(e) {
+            if (e.target.checked) {
+                if (previousType != e.target.value) {
+                    //console.log(e.target.value);
+                    grid.filter(e.target.value);
+                    previousType = e.target.value;
+                } else {
+                    console.log('Uncheck');
+                    grid.filter('*');
+                    previousType = undefined;
+                    e.target.checked = false;
+                }
+            }
+        }
+    </script>
     <div class="grid">
         <% /* PERSON CARD */ for (let person in data.people) { 
             if (data.people[person].name.length > 0) { // caculateCardLengthPoints(data.people[person]) < 210

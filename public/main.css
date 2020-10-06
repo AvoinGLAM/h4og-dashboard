@@ -159,3 +159,48 @@ body {
 .item-content {
     position: relative;
 }
+
+.filters {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.filters h2 {
+    font-size: 20px;
+}
+
+.typeFilter ul {
+    list-style: none;
+    padding-left: 0;
+}
+.typeFilter li {
+    display: inline-block;
+    margin-right: 5px;
+}
+.typeFilter input {
+    display:none;
+}
+.typeFilter label {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+.typeFilter label img {
+    height: 70px;
+}
+.typeFilter input:checked + label img {
+    visibility: hidden;
+}
+.typeFilter label span {
+    display: none;
+    position: absolute;
+    top:  50%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    transform: translateY(-50%);
+}
+.typeFilter input:checked + label span {
+    display: inline-block;
+   
+}
