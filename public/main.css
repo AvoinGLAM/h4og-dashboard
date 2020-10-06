@@ -84,19 +84,23 @@ body {
 }
 
 .typeItem {
+
+    cursor: pointer;
+
     padding: 3px;
     background-color: #ffe67a;
     margin: 0 2px 2px 0;
     font-size: 0.8em;
-    display: inline-block;
+    display: inline-block !important;
 }
 
 .languageItem {
+   cursor: pointer;
     padding: 3px;
     background-color: #4DCFAB;
     margin: 0 2px 2px 0;
-    font-size: 13px;
-    display: inline-block;
+    font-size: 0.8em;
+    display: inline-block !important;
 }
 
 .description {
@@ -192,12 +196,19 @@ body {
 .filters {
     display: flex;
     margin-bottom: 50px;
+    margin-left: -30px;
 }
+
 
 .filters h2 {
     font-size: 20px;
 }
-
+.filter {
+    margin-left: 30px;
+}
+.typeFilter {
+    flex-shrink: 0;
+}
 .typeFilter ul {
     list-style: none;
     padding-left: 0;
@@ -252,4 +263,8 @@ svg#timezoneMap g:hover {
 }
 svg#timezoneMap g {
     cursor: pointer;
+}
+
+.activeLanguageBody .languageItem:not(.activeLanguage), .activeDescribeBody .typeItem:not(.activeDescribe) {
+    opacity: 0.3;
 }
