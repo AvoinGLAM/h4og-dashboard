@@ -184,19 +184,17 @@ function caculateCardLengthPoints(card) {
                             <div class="description">
                                 <%=data.projects[project].description.substr(0, 129)%><% if (data.projects[project].description.length > 130) { %><a
                                     href="#" class="truncated">...</a><% } %></div>
+                                    <div>
+                                        <% if (data.projects[project].homepage) { %>
+                                        <a href="<%=data.projects[project].homepage%>"><i class="fas fa-globe-americas"></i>
+                                            Website</a>
+                                        <% } %>
+                                        <% if (data.projects[project].codebase) { %>
+                                        <a href="<%=data.projects[project].codebase%>"><i class="fab fa-github"></i> GitHub</a>
+                                        <% } %>
+                                        </div>
                         </div>
                     </div>
-                    <div>
-                        <div style="padding: 20px;">
-                            <% if (data.projects[project].homepage) { %>
-                            <a href="<%=data.projects[project].homepage%>"><i class="fas fa-globe-americas"></i>
-                                Website</a>
-                            <% } %>
-                            <% if (data.projects[project].codebase) { %>
-                            <a href="<%=data.projects[project].codebase%>"><i class="fab fa-github"></i> GitHub</a>
-                            <% } %>
-                            </div>
-                        </div>
                     </div>
             </div>
         </div>

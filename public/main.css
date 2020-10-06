@@ -35,11 +35,6 @@ body {
     }
 }
 
-.project .description {
-    margin-top: 20px;
-    overflow-wrap: anywhere;
-}
-
 .avatar {
     vertical-align: middle;
     object-fit: cover;
