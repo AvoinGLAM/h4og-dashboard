@@ -112,7 +112,7 @@ body {
     display: block;
     position: absolute;
     z-index: 1;
-    color: #000;
+    mix-blend-mode: multiply;
     /*max-width: 100%;*/
 }
 .person {
