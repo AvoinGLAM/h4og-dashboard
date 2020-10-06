@@ -43,7 +43,7 @@ function parseTimezone(str) {
             return 4;
             break;
         default:
-            return -1;
+            return undefined;
     }
 }
 async function cacheImage(url) {
@@ -71,16 +71,26 @@ async function cacheImage(url) {
 
 }
 
+function titleCase(str) {
+    var splitStr = str.toLowerCase().split(' ');
+    for (var i = 0; i < splitStr.length; i++) {
+        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+    }
+    return splitStr.join(' '); 
+ }
+ 
 async function parseRow(row, i) {
     if (row['Spam'] == "yes") {
-        console.log('Spam!');
+        //Spam!
         return;
     }
     if (data.people[row['Sähköpostiosoite']] == undefined) {
-        console.log('New people')
         data.people[row['Sähköpostiosoite']] = {};
     }
     let pictureURL = await cacheImage(row['Picture URL']);
+
+    let languages = titleCase(row['Which languages are you comfortable working with?'].trim().replaceAll('& ', ' ').replaceAll('and ', ' ').replaceAll(',', ' ').replace(/\s+/g, " ").replace(/ *\([^)]*\) */g, "")).split(' '); // clean up and try to normalize the messy data
+
     let tempPerson = {
         index: i,
         name: row['First name'],
@@ -88,9 +98,9 @@ async function parseRow(row, i) {
         special: row['Special'],
         description: row['Write one sentence about yourself to introduce you to the other participants'],
         timezone: parseTimezone(row["What's your timezone group?"]),
-        type: row['Which of these best describe you'],
+        type: titleCase(row['Which of these best describe you']).trim(),
         skillsAndInterests: row['List some skills and interests you would like to work with'],
-        languages: row['Which languages are you comfortable working with?'].trim().replaceAll('& ', ' ').replaceAll('and ', ' ').replaceAll(',', ' ').replace(/\s+/g, " ").split(' ').join(', '),
+        languages: languages.join(', '),
         website: row['Website'],
         social: {
             twitter: row['Twitter'],
@@ -104,11 +114,21 @@ async function parseRow(row, i) {
         picture: pictureURL,
         gravatar: gravatarURL(row['Sähköpostiosoite'])
     }
+    languages.forEach((language) => {
+        if (!data.meta.languages.join(', ').toLowerCase().includes(language.toLowerCase())) {
+            data.meta.languages.push(language);
+        }
+    });
+    row['Which of these best describe you'].split(', ').forEach((item) => {
+        if (!data.meta.types.join(',').toLowerCase().includes(item.toLowerCase().trim())) {
+            data.meta.types.push(titleCase(item).trim());
+        }
+    });
+
     data.people[row['Sähköpostiosoite']] = merge(tempPerson, data.people[row['Sähköpostiosoite']]);
     if (row['What kind of proposal is it?'] == 'Project') {
         let projectId = row['Sähköpostiosoite'] + '-' + row['Title'];
         if (data.projects[projectId] == undefined) {
-            console.log('New project')
             data.projects[projectId] = {};
         }
         data.projects[projectId] = {
@@ -127,7 +147,6 @@ async function parseRow(row, i) {
     } else if (row['What kind of proposal is it?'] == 'Dataset, collection') {
         let collectionId = row['Sähköpostiosoite'] + '-' + row['Title'];
         if (data.collections[collectionId] == undefined) {
-            console.log('New collection')
             data.collections[collectionId] = {};
         }
         data.collections[collectionId] = {
@@ -162,16 +181,18 @@ module.exports = function (creds, spreadsheet) {
             data = {
                 people: {},
                 projects: {},
-                collections: {}
+                collections: {},
+                meta: {
+                    languages: [],
+                    types: []
+                }
             };
 
             await doc.useServiceAccountAuth(creds);
 
             await doc.loadInfo();
-            //console.log(doc.title);
             const sheet = doc.sheetsByIndex[0];
             const rows = await sheet.getRows();
-
             rows.forEach(parseRow);
 
             return data;

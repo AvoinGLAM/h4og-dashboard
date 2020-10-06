@@ -11,12 +11,12 @@ let data;
 
 (async () => {
     data = await parse.updateData();
+    console.log('Ready!');
     fs.writeFile('latest.json', JSON.stringify(data), (err) => {
         if (err) {
             console.log(err);
         }
     })
-    //console.log(data);
 })();
 
 app.set('view engine', 'ejs');
@@ -33,11 +33,14 @@ app.get('/usercontent_cache/:filename', async function (req, res) {
     } else {
         res.status(404).end();
     }
-
-    //res.render('test', {data: data});
 });
 
-app.get('/', function (req, res) {
+app.get('/', async function (req, res) {
+    /*
+    let startTime = new Date().getTime();
+    data = await parse.updateData(); 
+    console.log('Refreshed data in ' + (new Date().getTime() - startTime) + 'ms !')
+    */
     res.render('test', {
         data: data
     });
