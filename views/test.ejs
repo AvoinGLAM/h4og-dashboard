@@ -129,21 +129,20 @@ function caculateCardLengthPoints(card) {
                         <div class="v-box">
                             <div class="title"><%=data.projects[project].title%></div>
                             <div class="subtitle">by <%=data.projects[project].owner.name%></div>
-                            <div class="description">
-                                <%=data.projects[project].description.substr(0, 129)%><% if (data.projects[project].description.length > 130) { %><a
-                                    href="#" class="truncated">...</a><% } %></div>
-                                    <div>
-                                        <% if (data.projects[project].homepage) { %>
-                                        <a href="<%=data.projects[project].homepage%>"><i class="fas fa-globe-americas"></i>
-                                            Website</a>
-                                        <% } %>
-                                        <% if (data.projects[project].codebase) { %>
-                                        <a href="<%=data.projects[project].codebase%>"><i class="fab fa-github"></i> GitHub</a>
-                                        <% } %>
-                                        </div>
+                            <div class="description"><%=data.projects[project].description.substr(0, 129)%><% if (data.projects[project].description.length > 130) { %><a href="#" class="truncated">...</a><% } %>
+                            </div>
+                            <div>
+                                <% if (data.projects[project].homepage) { %>
+                                <a href="<%=data.projects[project].homepage%>"><i class="fas fa-globe-americas"></i>
+                                    Website</a>
+                                <% } %>
+                                <% if (data.projects[project].codebase) { %>
+                                <a href="<%=data.projects[project].codebase%>"><i class="fab fa-github"></i> GitHub</a>
+                                <% } %>
+                            </div>
                         </div>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
         <% } %>
@@ -160,16 +159,20 @@ function caculateCardLengthPoints(card) {
                             <img src="/images/types/collection.png" height="140">
                         </div>
                     </div>
-                    <div>
-                        <div style="height: 100%; vertical-align: top; padding: 25px;">
-                            <span class="title"> <%=data.collections[collection].title%></span>
-                            <span class="subtitle">from <%=data.collections[collection].organization%></span>
 
-                        </div>
-                    </div>
-                    <div>
-                        <div style="padding: 20px;">
-
+                    <div class="v-box">
+                        <div class="title"><%=data.collections[collection].title%></div>
+                        <div class="subtitle">from <%=data.collections[collection].organization%></div>
+                        <div class="description"><%=data.collections[collection].description%></div>
+                        <div class="description"><%=data.collections[collection].access%></div>
+                        <div>
+                            <% if (data.collections[collection].homepage) { %>
+                            <a href="<%=data.collections[collection].homepage%>"><i class="fas fa-globe-americas"></i>
+                                Website</a>
+                            <% } %>
+                            <% if (data.collections[collection].codebase) { %>
+                            <a href="<%=data.collections[collection].codebase%>"><i class="fab fa-github"></i> GitHub</a>
+                            <% } %>
                         </div>
                     </div>
                 </div>

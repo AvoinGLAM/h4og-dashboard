@@ -152,6 +152,7 @@ async function parseRow(row, i) {
         data.collections[collectionId] = {
             index: i,
             title: row['Title'],
+            short: row['Write a one-sentence description to use on the web'],
             description: row['Description'],
             homepage: row['Link to documentation / homepage'],
             codebase: row['Link to the codebase'],
