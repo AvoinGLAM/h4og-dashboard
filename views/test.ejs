@@ -86,7 +86,9 @@ function caculateCardLengthPoints(card) {
                     </div>
                     <div class="infobox">
                     <div class="title"><%=data.people[person].name%></div>
-                    <div class="subtitle"><%=(data.people[person].organization ? 'from ' + data.people[person].organization : ' ')%>&nbsp;</div>
+                    <% if (data.people[person].organization) { %>
+                    <div class="subtitle">from <%=data.people[person].organization%></div>
+                    <% } %>
                             <div class="description"><%=data.people[person].description.substr(0, 79)%><% if (data.people[person].description.length > 80) { %><a href="#" class="truncated">...</a><% } %></div>
                             <div class="tags">
                             <% if (data.people[person].type.length > 0) { data.people[person].type.split(', ').forEach(item => { %>
@@ -164,7 +166,8 @@ function caculateCardLengthPoints(card) {
                         <div class="title"><%=data.collections[collection].title%></div>
                         <div class="subtitle">from <%=data.collections[collection].organization%></div>
                         <div class="description"><%=data.collections[collection].description%></div>
-                        <div class="description"><%=data.collections[collection].access%></div>
+                        <div class="description">Access: <%=data.collections[collection].access%></div>
+                        <div class="description">Contact: <%=data.collections[collection].contact%></div>
                         <div>
                             <% if (data.collections[collection].homepage) { %>
                             <a href="<%=data.collections[collection].homepage%>"><i class="fas fa-globe-americas"></i>
