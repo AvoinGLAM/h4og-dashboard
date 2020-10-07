@@ -125,9 +125,20 @@ body {
     background: rgba(255, 255, 0, 0.5);
     width: calc(230px * 2);
 }
-.project, .verticalPerson {
+.verticalPerson, .vertical {
     width: calc(230px * 1);
 }
+
+.square {
+    width: calc(230px * 2);
+}
+
+.thumbimage{
+    height: 140px;
+    width: 100%;
+    object-fit: contain;
+}
+
 /* 240px each column */ 
 .item::before {
     content: ' ';
