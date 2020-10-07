@@ -1,8 +1,6 @@
 body {
     margin: 40px;
     font-family: 'Roboto', sans-serif;
-    scrollbar-width: thin;          /* "auto" or "thin"  */
-    scrollbar-color: blue orange;   /* scroll thumb & track */
     zoom: 0.9;
 }
 
@@ -164,6 +162,8 @@ body {
     flex-direction: column;
     max-height: 287px;
     overflow-y: auto;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
 }
 
 .imagebox{
