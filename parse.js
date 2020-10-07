@@ -126,25 +126,7 @@ async function parseRow(row, i) {
     });
 
     data.people[row['Sähköpostiosoite']] = merge(tempPerson, data.people[row['Sähköpostiosoite']]);
-    if (row['What kind of proposal is it?'] == 'Project') {
-        let projectId = row['Sähköpostiosoite'] + '-' + row['Title'];
-        if (data.projects[projectId] == undefined) {
-            data.projects[projectId] = {};
-        }
-        data.projects[projectId] = {
-            index: i,
-            title: row['Title'],
-            description: row['Description'],
-            homepage: row['Link to documentation / homepage'],
-            codebase: row['Link to the codebase'],
-            thumbnail: row['Link to a thumbnail image'],
-            video: row['Link to a presentation video'],
-            owner: {
-                name: data.people[row['Sähköpostiosoite']].name,
-                email: row['Sähköpostiosoite']
-            }
-        };
-    } else if (row['What kind of proposal is it?'] == 'Dataset, collection') {
+    if (row['What kind of proposal is it?'] == 'Dataset, collection') {
         let collectionId = row['Sähköpostiosoite'] + '-' + row['Title'];
         if (data.collections[collectionId] == undefined) {
             data.collections[collectionId] = {};
@@ -168,8 +150,26 @@ async function parseRow(row, i) {
             other: row['Other considerations'],
             contact: row['Contact information']
         };
+    } else if (row['What kind of proposal is it?'] != '') {
+        let projectId = row['Sähköpostiosoite'] + '-' + row['Title'];
+        if (data.projects[projectId] == undefined) {
+            data.projects[projectId] = {};
+        }
+        data.projects[projectId] = {
+            index: i,
+            title: row['Title'],
+            short: row['Write a one-sentence description to use on the web'],
+            description: row['Description'],
+            homepage: row['Link to documentation / homepage'],
+            codebase: row['Link to the codebase'],
+            thumbnail: row['Link to a thumbnail image'],
+            video: row['Link to a presentation video'],
+            owner: {
+                name: data.people[row['Sähköpostiosoite']].name,
+                email: row['Sähköpostiosoite']
+            }
+        };
     }
-
 }
 
 function gravatarURL(email) {
