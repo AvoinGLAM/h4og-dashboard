@@ -133,7 +133,7 @@ function caculateCardLengthPoints(card) {
                             <div class="subtitle">by <%=data.projects[project].owner.name%></div>
                             <div class="description"><%=data.projects[project].description.substr(0, 129)%><% if (data.projects[project].description.length > 130) { %><a href="#" class="truncated">...</a><% } %>
                             </div>
-                            <div>
+                            <div class="links">
                                 <% if (data.projects[project].homepage) { %>
                                 <a href="<%=data.projects[project].homepage%>"><i class="fas fa-globe-americas"></i>
                                     Website</a>
@@ -155,12 +155,10 @@ function caculateCardLengthPoints(card) {
                 <!-- <span class="title"><%=data.collections[collection].title%></span>
                 <span class="subtitle">by <%=data.collections[collection].owner.name%></span>
                -->
-                <div style="height: 100%; width: 100%;">
-                    <div>
+                <div>
                         <div style="text-align: center;">
                             <img src="/images/types/collection.png" height="140">
                         </div>
-                    </div>
 
                     <div class="v-box">
                         <div class="title"><%=data.collections[collection].title%></div>
@@ -168,7 +166,7 @@ function caculateCardLengthPoints(card) {
                         <div class="description"><%=data.collections[collection].description%></div>
                         <div class="description">Access: <%=data.collections[collection].access%></div>
                         <div class="description">Contact: <%=data.collections[collection].contact%></div>
-                        <div>
+                        <div class="links">
                             <% if (data.collections[collection].homepage) { %>
                             <a href="<%=data.collections[collection].homepage%>"><i class="fas fa-globe-americas"></i>
                                 Website</a>
