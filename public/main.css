@@ -183,7 +183,6 @@ body {
 
 }
 
-
 .item.muuri-item-dragging {
     z-index: 3;
 }
@@ -204,15 +203,24 @@ body {
     display: flex;
     margin-bottom: 50px;
     margin-left: -30px;
+    flex-wrap: wrap;
 }
-
 
 .filters h2 {
     font-size: 20px;
 }
 .filter {
-    margin-left: 30px;
+    margin-left: 25px;
+    min-width: 200px;
+    max-width: 450px;
 }
+
+.timezoneFilter {
+    margin-left: 30px;
+    min-width: 117px;
+    max-width: 117px;
+}
+
 .typeFilter {
     flex-shrink: 0;
 }

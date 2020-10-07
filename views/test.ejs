@@ -89,7 +89,7 @@ function caculateCardLengthPoints(card) {
                     <% if (data.people[person].organization) { %>
                     <div class="subtitle">from <%=data.people[person].organization%></div>
                     <% } %>
-                            <div class="description"><%=data.people[person].description.substr(0, 79)%><% if (data.people[person].description.length > 80) { %><a href="#" class="truncated">...</a><% } %></div>
+                            <div class="description"><%=data.people[person].description%></div>
                             <div class="tags">
                             <% if (data.people[person].type.length > 0) { data.people[person].type.split(', ').forEach(item => { %>
 
@@ -131,8 +131,7 @@ function caculateCardLengthPoints(card) {
                         <div class="v-box">
                             <div class="title"><%=data.projects[project].title%></div>
                             <div class="subtitle">by <%=data.projects[project].owner.name%></div>
-                            <div class="description"><%=data.projects[project].description.substr(0, 129)%><% if (data.projects[project].description.length > 130) { %><a href="#" class="truncated">...</a><% } %>
-                            </div>
+                            <div class="description"><%=data.projects[project].description%></div>
                             <div class="links">
                                 <% if (data.projects[project].homepage) { %>
                                 <a href="<%=data.projects[project].homepage%>"><i class="fas fa-globe-americas"></i>
