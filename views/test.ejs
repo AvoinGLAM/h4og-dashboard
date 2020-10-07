@@ -85,30 +85,34 @@ function caculateCardLengthPoints(card) {
                     <img class="avatar waterMask" src="<%=(data.people[person].picture ? data.people[person].picture : data.people[person].gravatar)%>" onerror="this.src='<%=data.people[person].gravatar%>';this.onerror=() => {setDefaultAvatar(this)};">
                     </div>
                     <div class="infobox">
-                    <div class="title"><%=data.people[person].name%></div>
-                    <% if (data.people[person].organization) { %>
-                    <div class="subtitle">from <%=data.people[person].organization%></div>
-                    <% } %>
-                            <div class="description"><%=data.people[person].description%></div>
-                            <div class="tags">
-                            <% if (data.people[person].type.length > 0) { data.people[person].type.split(', ').forEach(item => { %>
+                        <div>
+                            <div class="title"><%=data.people[person].name%></div>
+                            <% if (data.people[person].organization) { %>
+                            <div class="subtitle">from <%=data.people[person].organization%></div>
+                            <% } %>
+                                    <div class="description"><%=data.people[person].description%></div>
+                                    <div class="tags">
+                                    <% if (data.people[person].type.length > 0) { data.people[person].type.split(', ').forEach(item => { %>
 
-                                <div class="typeItem"><%= item %></div>
-                            <% }); } %>
-                            <% if (data.people[person].languages.length > 0) {data.people[person].languages.split(', ').forEach(item => { %>
-                            <div class="languageItem"><%= item %></div>
-                            <% }); } %>
-                        </div>
-                        <div class="sl">
-                            <% printSocial(data.people[person].website, 'fas fa-globe-americas') %>
-                            <% printSocial(data.people[person].social.github, 'fab fa-github') %>
-                            <% printSocial(data.people[person].social.facebook, 'fab fa-facebook') %>
-                            <% printSocial(data.people[person].social.linkedin, 'fab fa-linkedin') %>
-                            <% printSocial(data.people[person].social.twitter, 'fab fa-twitter') %>
-                            <% printSocial(data.people[person].social.instagram, 'fab fa-instagram') %>
-                            <% printSocial(data.people[person].social.flickr, 'fab fa-flickr') %>
-                            <% printSocial(data.people[person].social.wikimedia, 'fab fa-wikipedia-w') %>
-                        </div>
+                                        <div class="typeItem"><%= item %></div>
+                                    <% }); } %>
+                                    <% if (data.people[person].languages.length > 0) {data.people[person].languages.split(', ').forEach(item => { %>
+                                    <div class="languageItem"><%= item %></div>
+                                    <% }); } %>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="sl">
+                                    <% printSocial(data.people[person].website, 'fas fa-globe-americas') %>
+                                    <% printSocial(data.people[person].social.github, 'fab fa-github') %>
+                                    <% printSocial(data.people[person].social.facebook, 'fab fa-facebook') %>
+                                    <% printSocial(data.people[person].social.linkedin, 'fab fa-linkedin') %>
+                                    <% printSocial(data.people[person].social.twitter, 'fab fa-twitter') %>
+                                    <% printSocial(data.people[person].social.instagram, 'fab fa-instagram') %>
+                                    <% printSocial(data.people[person].social.flickr, 'fab fa-flickr') %>
+                                    <% printSocial(data.people[person].social.wikimedia, 'fab fa-wikipedia-w') %>
+                                </div>
+                            </div>
                     
                     </div>
                 </div>
@@ -129,9 +133,11 @@ function caculateCardLengthPoints(card) {
                     <img src="/images/types/project.png" class="thumbimage">
                     <div>
                         <div class="v-box">
-                            <div class="title"><%=data.projects[project].title%></div>
-                            <div class="subtitle">by <%=data.projects[project].owner.name%></div>
-                            <div class="description"><%=data.projects[project].description%></div>
+                            <div>
+                                <div class="title"><%=data.projects[project].title%></div>
+                                <div class="subtitle">by <%=data.projects[project].owner.name%></div>
+                                <div class="description"><%=data.projects[project].description%></div>
+                            </div>
                             <div class="links">
                                 <% if (data.projects[project].homepage) { %>
                                 <a href="<%=data.projects[project].homepage%>"><i class="fas fa-globe-americas"></i>
@@ -154,8 +160,7 @@ function caculateCardLengthPoints(card) {
                 <!-- <span class="title"><%=data.collections[collection].title%></span>
                 <span class="subtitle">by <%=data.collections[collection].owner.name%></span>
                -->
-                <div style="height: 100%; width: 100%;">
-
+                <div>
                     <div>
                             <div class="itemThumbnail" style="background-image:url('<%=(data.collections[collection].thumbnail ? data.collections[collection].thumbnail : '/images/types/collection.png')%>');" ></div>
                           
