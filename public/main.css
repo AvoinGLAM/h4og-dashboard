@@ -55,6 +55,13 @@ body {
     padding: 5px 5px 0 0;
 }
 
+.itemThumbnail {
+    margin: 1em 1em 0 1em;
+    width: calc(100% - 1em - 1em);
+    height: 150px;
+    background-position: center center;
+    background-size: 100% auto;
+}
 .sl a {
     color: white;
     font-size: 18px;

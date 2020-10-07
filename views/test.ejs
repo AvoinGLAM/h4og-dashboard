@@ -154,10 +154,15 @@ function caculateCardLengthPoints(card) {
                 <!-- <span class="title"><%=data.collections[collection].title%></span>
                 <span class="subtitle">by <%=data.collections[collection].owner.name%></span>
                -->
-                <div>
-                        <div style="text-align: center;">
-                            <img src="/images/types/collection.png" height="140">
-                        </div>
+                <div style="height: 100%; width: 100%;">
+
+                    <div>
+                            <div class="itemThumbnail" style="background-image:url('<%=(data.collections[collection].thumbnail ? data.collections[collection].thumbnail : '/images/types/collection.png')%>');" ></div>
+                          
+                    
+                       
+                    </div>
+
 
                     <div class="v-box">
                         <div class="title"><%=data.collections[collection].title%></div>
