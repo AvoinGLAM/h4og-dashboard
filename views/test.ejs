@@ -91,7 +91,7 @@ function caculateCardLengthPoints(card) {
                                 <% if (data.people[person].organization) { %>
                                 <div class="subtitle">from <%=data.people[person].organization%></div>
                                 <% } %>
-                                <div class="scrollable">
+                                <div class="peopletxt scrollable">
                                 <div class="description"><%=data.people[person].description%></div>
                                 <div class="tags">
                                 <% if (data.people[person].type.length > 0) { data.people[person].type.split(', ').forEach(item => { %>
