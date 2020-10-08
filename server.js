@@ -43,6 +43,7 @@ app.get('/', async function (req, res) {
     data = await parse.updateData(); 
     console.log('Refreshed data in ' + (new Date().getTime() - startTime) + 'ms !')
     */
+   console.log(new Date(), '[HTTP] Requested / by ' + req.headers['user-agent']);
     res.render('test', {
         data: data,
         baseurl: config.baseurl || ''
