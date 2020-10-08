@@ -5,7 +5,9 @@ let doc;
 const fs = require('fs');
 const crypto = require('crypto');
 const stream = require('stream');
-const {promisify} = require('util');
+const {
+    promisify
+} = require('util');
 const got = require('got');
 const pipeline = promisify(stream.pipeline);
 let baseurl;
@@ -75,11 +77,43 @@ async function cacheImage(url) {
 function titleCase(str) {
     var splitStr = str.toLowerCase().split(' ');
     for (var i = 0; i < splitStr.length; i++) {
-        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
     }
-    return splitStr.join(' '); 
- }
- 
+    return splitStr.join(' ');
+}
+
+function normalizeSocial(input, urlStart) {
+    let str = input.trim().replace('www.', '');
+    let url;
+
+    if (urlStart.includes('wikimedia.org') && str.startsWith('User:')) {
+        str = str.split('User:')[1];
+    }
+    if (input.length > 0) {
+        if (!str.startsWith('http')) {
+            if (!str.startsWith(urlStart)) {
+                if (!str.startsWith('@')) {
+                    if (!str.includes('@') && !str.includes(' ')) {
+                        url = urlStart + str;
+                    } else {
+                        url = '';
+                    }
+                } else {
+                    url = urlStart + str.substring(1);
+                }
+            } else {
+                url = str;
+            }
+            
+        } else {
+            url = str;
+        }
+    } else {
+        url = '';
+    }
+
+    return url;
+}
 async function parseRow(row, i) {
     if (row['Spam'] == "yes") {
         //Spam!
@@ -104,13 +138,13 @@ async function parseRow(row, i) {
         languages: languages.join(', '),
         website: row['Website'],
         social: {
-            twitter: row['Twitter'],
-            facebook: row['Facebook'],
-            linkedin: row['LinkedIn'],
-            wikimedia: row['Wikimedia'],
-            github: row['GitHub'],
-            instagram: row['Instagram'],
-            flickr: row['Flickr'],
+            twitter: normalizeSocial(row['Twitter'], 'https://twitter.com/'),
+            facebook: normalizeSocial(row['Facebook'], 'https://facebook.com/'),
+            linkedin: normalizeSocial(row['LinkedIn'], 'https://www.linkedin.com/in/'),
+            wikimedia: normalizeSocial(row['Wikimedia'], 'https://meta.wikimedia.org/wiki/User:'),
+            github: normalizeSocial(row['GitHub'], 'https://github.com/'),
+            instagram: normalizeSocial(row['Instagram'], 'https://instagram.com/'),
+            flickr: normalizeSocial(row['Flickr'], 'https://www.flickr.com/photos/'),
         },
         picture: pictureURL,
         gravatar: gravatarURL(row['Sähköpostiosoite'])
