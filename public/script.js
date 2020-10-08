@@ -171,3 +171,4 @@ var grid = new Muuri('.grid', {
 });
 grid.refreshSortData();
 grid.sort('foo');
+
