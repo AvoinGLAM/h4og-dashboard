@@ -149,13 +149,13 @@ function caculateCardLengthPoints(card) {
                                     <a href="<%=data.projects[project].codebase%>"><i class="fab fa-github"></i>
                                         Codebase</a>
                                     <% } %>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
             <% } %>
 
             <% /* COLLECTION CARD */ for (let collection in data.collections) { %> %>
@@ -191,7 +191,7 @@ function caculateCardLengthPoints(card) {
                                 <a href="<%=data.collections[collection].codebase%>"><i class="fab fa-github"></i>
                                     GitHub</a>
                                 <% } %>
-                                <% if (data.collections[collection].api) { %>
+<!--                                 <% if (data.collections[collection].api) { %>
                                     <a href="<%=data.collections[collection].api%>"><i class="fab fa-cogs"></i>
                                         API</a>
                                 <% } %>
@@ -202,7 +202,7 @@ function caculateCardLengthPoints(card) {
                                 <% if (data.collections[collection].download) { %>
                                     <a href="<%=data.collections[collection].download%>"><i class="fas fa-download"></i>
                                         Download</a>
-                                <% } %>
+                                <% } %> -->
                             </div>
                         </div>
                     </div>
