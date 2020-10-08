@@ -173,6 +173,9 @@ async function parseRow(row, i) {
             description: row['Description'],
             homepage: row['Link to documentation / homepage'],
             codebase: row['Link to the codebase'],
+            api: row['API url'],
+            search: row['Search url'],
+            download: row['Download url'],
             thumbnail: row['Link to a thumbnail image'],
             owner: {
                 name: data.people[row['Sähköpostiosoite']].name,
@@ -197,9 +200,6 @@ async function parseRow(row, i) {
             description: row['Description'],
             homepage: row['Link to documentation / homepage'],
             codebase: row['Link to the codebase'],
-            api: row['API url'],
-            search: row['Search url'],
-            download: row['Download url'],
             thumbnail: row['Link to a thumbnail image'],
             video: row['Link to a presentation video'],
             owner: {
