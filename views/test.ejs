@@ -169,12 +169,14 @@ function caculateCardLengthPoints(card) {
 
 
                     <div class="v-box">
+                        <div class="upper">
                         <div class="title"><%=data.collections[collection].title%></div>
                         <div class="subtitle">from <%=data.collections[collection].organization%></div>
                         <div class="scrollable">
                             <div class="description"><%=data.collections[collection].description%></div>
                             <div class="description">Access: <%=data.collections[collection].access%></div>
-                        </div> 
+                        </div>
+                    </div>
                         <div class="links">
                             <div class="description">Contact: <%=data.collections[collection].contact%></div>
                             <% if (data.collections[collection].homepage) { %>

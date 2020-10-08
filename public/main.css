@@ -121,6 +121,7 @@ body {
 .upper {
     display: flex;
     flex-direction: column;
+    max-height: 220px;
 }
 
 .item {
@@ -237,7 +238,7 @@ body {
     font-size: 20px;
 }
 .filter {
-    margin-left: 25px;
+    margin-left: 20px;
     min-width: 200px;
     max-width: 450px;
 }
