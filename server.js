@@ -7,6 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const readChunk = require('read-chunk')
 const fileType = require('file-type')
+const cors = require('cors')
 let data;
 
 (async () => {
@@ -20,6 +21,7 @@ let data;
 })();
 
 app.set('view engine', 'ejs');
+app.use(cors())
 
 app.use(express.static('public'))
 
@@ -42,7 +44,8 @@ app.get('/', async function (req, res) {
     console.log('Refreshed data in ' + (new Date().getTime() - startTime) + 'ms !')
     */
     res.render('test', {
-        data: data
+        data: data,
+        baseurl: config.baseurl || ''
     });
 });
 
