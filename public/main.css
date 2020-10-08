@@ -110,17 +110,12 @@ body {
 
 .description {
     margin: 0.7em 0 0 0;
+    overflow-wrap: anywhere;
     font-size: 0.9em;
-    overflow-wrap: break-word;
 }
 
 .tags {
     margin: 0.7em 0;
-}
-
-.upper {
-    display: flex;
-    flex-direction: column;
 }
 
 .item {
@@ -146,14 +141,9 @@ body {
 }
 
 .thumbimage{
-    height: 150px;
+    height: 140px;
     width: 100%;
     object-fit: contain;
-}
-
-.scrollable {
-    overflow-y: auto;
-    overflow-wrap: break-word;
 }
 
 /* 240px each column */ 
@@ -188,7 +178,8 @@ body {
     padding: 1em;
     display: flex;
     flex-direction: column;
-    height: 270px;
+    height: 290px;
+    overflow-y: auto;
     justify-content: space-between;
 }
 
