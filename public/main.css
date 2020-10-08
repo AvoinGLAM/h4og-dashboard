@@ -39,7 +39,7 @@ body {
 .avatar {
     vertical-align: middle;
     object-fit: cover;
-    width: 150px;
+    width: 165px;
     margin: 0.7em;
 }
 
@@ -178,9 +178,10 @@ body {
     padding: 1em;
     display: flex;
     flex-direction: column;
-    height: 290px;
+    max-height: 287px;
     overflow-y: auto;
-    justify-content: space-between;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
 }
 
 .imagebox{
@@ -193,7 +194,6 @@ body {
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
-    justify-content: space-between;
 }
 
 .grid {
