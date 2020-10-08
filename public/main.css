@@ -3,6 +3,7 @@
     font-family: 'Roboto', sans-serif;
     color: black !important;
     zoom: 0.9;
+    line-height: normal;
 }
 
 .waterMask {
