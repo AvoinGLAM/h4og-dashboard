@@ -171,8 +171,3 @@ var grid = new Muuri('.grid', {
 });
 grid.refreshSortData();
 grid.sort('foo');
-
-function setDefaultAvatar(el) {
-    el.src = '/images/types/person.png';
-    // el.classList = 'avatar'; //looks more consistent, if we keep everything masked
-}

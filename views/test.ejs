@@ -84,7 +84,7 @@ function caculateCardLengthPoints(card) {
             <div class="item-content">
                 <div class="h-box">
                     <div class="imagebox">
-                    <img class="avatar waterMask" src="<%=(data.people[person].picture ? data.people[person].picture : data.people[person].gravatar)%>" onerror="this.src='<%=data.people[person].gravatar%>';this.onerror=() => {setDefaultAvatar(this)};">
+                    <img class="avatar waterMask" src="<%=(data.people[person].picture ? data.people[person].picture : data.people[person].gravatar)%>" onerror="this.src='<%=data.people[person].gravatar%>';this.onerror=() => {this.src = '/images/types/person.png';};">
                     </div>
                     <div class="infobox">
                         <div>
