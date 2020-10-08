@@ -1,6 +1,7 @@
-body {
+.appInner {
     margin: 0 40px;
     font-family: 'Roboto', sans-serif;
+    color: black;
     zoom: 0.9;
 }
 
