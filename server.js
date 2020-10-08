@@ -38,6 +38,7 @@ app.get('/usercontent_cache/:filename', async function (req, res) {
 });
 
 app.get('/', async function (req, res) {
+    let refreshed;
     if (process.env.NODE_ENV == 'production') {
         let startTime = new Date().getTime();
         data = await parse.updateData();
