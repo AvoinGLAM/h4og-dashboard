@@ -38,12 +38,12 @@ app.get('/usercontent_cache/:filename', async function (req, res) {
 });
 
 app.get('/', async function (req, res) {
-    /*
-    let startTime = new Date().getTime();
-    data = await parse.updateData(); 
-    console.log('Refreshed data in ' + (new Date().getTime() - startTime) + 'ms !')
-    */
-   console.log(new Date(), '[HTTP] Requested / by ' + req.headers['user-agent']);
+    if (process.env.NODE_ENV == 'production') {
+        let startTime = new Date().getTime();
+        data = await parse.updateData();
+        refreshed = (new Date().getTime() - startTime);
+    }
+    console.log(new Date(), '[HTTP] [R=' + (refreshed ? refreshed + 'ms' : 'n/A') + '] Requested / by ' + req.headers['user-agent']);
     res.render('test', {
         data: data,
         baseurl: config.baseurl || ''
