@@ -130,7 +130,9 @@ function caculateCardLengthPoints(card) {
                 <% } %>
                 <div class="item-content">
                     <div>
-                        <img src="<%=baseurl%>/images/types/project.png" class="thumbimage">
+                        <img 
+                        src="<%= baseurl + (data.projects[project].thumbnail ? data.projects[project].thumbnail : '/images/types/project.png')%>" style="object-fit: <%= (data.projects[project].thumbnail ? 'cover' : 'contain') %>;" onerror="this.style.objectFit = 'contain'; this.src = '<%=baseurl%>/images/types/project.png'"
+                        class="thumbimage">
                         <div>
                             <div class="v-box">
                                 <div class="upper">
@@ -163,9 +165,10 @@ function caculateCardLengthPoints(card) {
                -->
                     <div>
                         <div>
-                            <div class="itemThumbnail"
-                                style="background-image:url('<%=(data.collections[collection].thumbnail ? data.collections[collection].thumbnail : baseurl + '/images/types/collection.png')%>');">
-                            </div>
+                   
+                            <img 
+                        src="<%= baseurl + (data.collections[collection].thumbnail ? data.collections[collection].thumbnail : '/images/types/collection.png')%>" style="object-fit: <%= (data.collections[collection].thumbnail ? 'cover' : 'contain') %>;" onerror="this.style.objectFit = 'contain'; this.src = '<%=baseurl%>/images/types/collection.png'"
+                        class="thumbimage">
 
                         </div>
 
