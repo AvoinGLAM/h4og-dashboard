@@ -184,23 +184,24 @@ function caculateCardLengthPoints(card) {
                             <div class="links">
                                 <div class="description">Contact: <%=data.collections[collection].contact%></div>
                                 <% if (data.collections[collection].homepage) { %>
-                                <a href="<%=data.collections[collection].homepage%>"><i class="fas fa-globe-americas"></i>
+                                <a href="<%=data.collections[collection].homepage%>"><i
+                                        class="fas fa-globe-americas"></i>
                                     Website</a>
                                 <% } %>
                                 <% if (data.collections[collection].codebase) { %>
                                 <a href="<%=data.collections[collection].codebase%>"><i class="fab fa-github"></i>
                                     GitHub</a>
                                 <% } %>
-                                <% if (data.collections[collection].api) { %>
-                                    <a href="<%=data.collections[collection].api%>"><i class="fab fa-cogs"></i>
+                                <% if (data.projects[project].api) { %>
+                                    <a href="<%=data.projects[project].api%>"><i class="fab fa-cogs"></i>
                                         API</a>
                                 <% } %>
-                                <% if (data.collections[collection].search) { %>
-                                    <a href="<%=data.collections[collection].search%>"><i class="fas fa-search"></i>
+                                <% if (data.projects[project].search) { %>
+                                    <a href="<%=data.projects[project].search%>"><i class="fas fa-search"></i>
                                         Search</a>
                                 <% } %>
-                                <% if (data.collections[collection].download) { %>
-                                    <a href="<%=data.collections[collection].download%>"><i class="fas fa-download"></i>
+                                <% if (data.projects[project].download) { %>
+                                    <a href="<%=data.projects[project].download%>"><i class="fas fa-download"></i>
                                         Download</a>
                                 <% } %>
                             </div>
