@@ -85,6 +85,7 @@ function caculateCardLengthPoints(card) {
                     <img class="avatar waterMask" src="<%=(data.people[person].picture ? data.people[person].picture : data.people[person].gravatar)%>" onerror="this.src='<%=data.people[person].gravatar%>';this.onerror=() => {setDefaultAvatar(this)};">
                     </div>
                     <div class="infobox">
+<<<<<<< HEAD
                     <div class="title"><%=data.people[person].name%></div>
                     <% if (data.people[person].organization) { %>
                     <div class="subtitle">from <%=data.people[person].organization%></div>
@@ -109,6 +110,37 @@ function caculateCardLengthPoints(card) {
                             <% printSocial(data.people[person].social.flickr, 'fab fa-flickr') %>
                             <% printSocial(data.people[person].social.wikimedia, 'fab fa-wikipedia-w') %>
                         </div>
+=======
+                        <div>
+                            <div class="title"><%=data.people[person].name%></div>
+                                <% if (data.people[person].organization) { %>
+                                <div class="subtitle">from <%=data.people[person].organization%></div>
+                                <% } %>
+                                <div class="scrollable">
+                                <div class="description"><%=data.people[person].description%></div>
+                                <div class="tags">
+                                <% if (data.people[person].type.length > 0) { data.people[person].type.split(', ').forEach(item => { %>
+                                    <div class="typeItem"><%= item %></div>
+                                    <% }); } %>
+                                    <% if (data.people[person].languages.length > 0) {data.people[person].languages.split(', ').forEach(item => { %>
+                                    <div class="languageItem"><%= item %></div>
+                                    <% }); } %>
+                                </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="sl">
+                                    <% printSocial(data.people[person].website, 'fas fa-globe-americas') %>
+                                    <% printSocial(data.people[person].social.github, 'fab fa-github') %>
+                                    <% printSocial(data.people[person].social.facebook, 'fab fa-facebook') %>
+                                    <% printSocial(data.people[person].social.linkedin, 'fab fa-linkedin') %>
+                                    <% printSocial(data.people[person].social.twitter, 'fab fa-twitter') %>
+                                    <% printSocial(data.people[person].social.instagram, 'fab fa-instagram') %>
+                                    <% printSocial(data.people[person].social.flickr, 'fab fa-flickr') %>
+                                    <% printSocial(data.people[person].social.wikimedia, 'fab fa-wikipedia-w') %>
+                                </div>
+                            </div>
+>>>>>>> parent of 1f71269... Revert "towards controlling overflow"
                     
                     </div>
                 </div>
@@ -129,9 +161,17 @@ function caculateCardLengthPoints(card) {
                     <img src="/images/types/project.png" class="thumbimage">
                     <div>
                         <div class="v-box">
+<<<<<<< HEAD
                             <div class="title"><%=data.projects[project].title%></div>
                             <div class="subtitle">by <%=data.projects[project].owner.name%></div>
                             <div class="description"><%=data.projects[project].description%></div>
+=======
+                            <div class="upper">
+                                <div class="title"><%=data.projects[project].title%></div>
+                                <div class="subtitle">by <%=data.projects[project].owner.name%></div>
+                                <div class="description scrollable"><%=data.projects[project].description%></div>
+                            </div>
+>>>>>>> parent of 1f71269... Revert "towards controlling overflow"
                             <div class="links">
                                 <% if (data.projects[project].homepage) { %>
                                 <a href="<%=data.projects[project].homepage%>"><i class="fas fa-globe-americas"></i>
@@ -159,18 +199,18 @@ function caculateCardLengthPoints(card) {
                     <div>
                             <div class="itemThumbnail" style="background-image:url('<%=(data.collections[collection].thumbnail ? data.collections[collection].thumbnail : '/images/types/collection.png')%>');" ></div>
                           
-                    
-                       
                     </div>
 
 
                     <div class="v-box">
                         <div class="title"><%=data.collections[collection].title%></div>
                         <div class="subtitle">from <%=data.collections[collection].organization%></div>
-                        <div class="description"><%=data.collections[collection].description%></div>
-                        <div class="description">Access: <%=data.collections[collection].access%></div>
-                        <div class="description">Contact: <%=data.collections[collection].contact%></div>
+                        <div class="scrollable">
+                            <div class="description"><%=data.collections[collection].description%></div>
+                            <div class="description">Access: <%=data.collections[collection].access%></div>
+                        </div> 
                         <div class="links">
+                            <div class="description">Contact: <%=data.collections[collection].contact%></div>
                             <% if (data.collections[collection].homepage) { %>
                             <a href="<%=data.collections[collection].homepage%>"><i class="fas fa-globe-americas"></i>
                                 Website</a>

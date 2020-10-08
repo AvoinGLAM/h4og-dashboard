@@ -110,12 +110,17 @@ body {
 
 .description {
     margin: 0.7em 0 0 0;
-    overflow-wrap: anywhere;
     font-size: 0.9em;
+    overflow-wrap: break-word;
 }
 
 .tags {
     margin: 0.7em 0;
+}
+
+.upper {
+    display: flex;
+    flex-direction: column;
 }
 
 .item {
@@ -141,9 +146,14 @@ body {
 }
 
 .thumbimage{
-    height: 140px;
+    height: 150px;
     width: 100%;
     object-fit: contain;
+}
+
+.scrollable {
+    overflow-y: auto;
+    overflow-wrap: break-word;
 }
 
 /* 240px each column */ 
@@ -178,10 +188,15 @@ body {
     padding: 1em;
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     max-height: 287px;
     overflow-y: auto;
     scrollbar-color: rebeccapurple green;
     scrollbar-width: thin;
+=======
+    height: 270px;
+    justify-content: space-between;
+>>>>>>> parent of 1f71269... Revert "towards controlling overflow"
 }
 
 .imagebox{
