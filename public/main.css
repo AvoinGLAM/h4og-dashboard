@@ -199,11 +199,15 @@ body {
 } 
 
 .infobox {
-    padding: 1em 1em 1em 0;
+    padding: 0.8em 0.8em 0.8em 0;
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
     justify-content: space-between;
+}
+
+.peopletxt {
+    max-height: 144px;
 }
 
 .grid {
