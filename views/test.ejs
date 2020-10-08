@@ -191,6 +191,15 @@ function caculateCardLengthPoints(card) {
                                 <a href="<%=data.collections[collection].codebase%>"><i class="fab fa-github"></i>
                                     GitHub</a>
                                 <% } %>
+                                <% if (data.collections[collection].api) { %>
+                                    <a href="<%=data.collections[collection].api%>"><i class="fas fa-cogs"></i> API</a>
+                                <% } %>
+                                <% if (data.collections[collection].search) { %>
+                                    <a href="<%=data.collections[collection].search%>"><i class="fas fa-search"></i> Search</a>
+                                <% } %>
+                                <% if (data.collections[collection].download) { %>
+                                    <a href="<%=data.collections[collection].download%>"><i class="fas fa-download"></i >Download</a>
+                                <% } %>
                             </div>
                         </div>
                     </div>
