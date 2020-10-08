@@ -189,11 +189,14 @@ body {
     display: flex;
     flex-direction: column;
 <<<<<<< HEAD
+<<<<<<< HEAD
     max-height: 287px;
     overflow-y: auto;
     scrollbar-color: rebeccapurple green;
     scrollbar-width: thin;
 =======
+=======
+>>>>>>> parent of 1f71269... Revert "towards controlling overflow"
     height: 270px;
     justify-content: space-between;
 >>>>>>> parent of 1f71269... Revert "towards controlling overflow"
