@@ -87,7 +87,7 @@ function caculateCardLengthPoints(card) {
                     </div>
                     <div class="infobox">
                         <div>
-                            <div class="title"><%=data.people[person].name%></div>
+                            <div class="rubric"><%=data.people[person].name%></div>
                                 <% if (data.people[person].organization) { %>
                                 <div class="subtitle">from <%=data.people[person].organization%></div>
                                 <% } %>
@@ -136,7 +136,7 @@ function caculateCardLengthPoints(card) {
                     <div>
                         <div class="v-box">
                             <div class="upper">
-                                <div class="title"><%=data.projects[project].title%></div>
+                                <div class="rubric"><%=data.projects[project].title%></div>
                                 <div class="subtitle">by <%=data.projects[project].owner.name%></div>
                                 <div class="description scrollable"><%=data.projects[project].description%></div>
                             </div>
@@ -171,7 +171,7 @@ function caculateCardLengthPoints(card) {
 
                     <div class="v-box">
                         <div class="upper">
-                        <div class="title"><%=data.collections[collection].title%></div>
+                        <div class="rubric"><%=data.collections[collection].title%></div>
                         <div class="subtitle">from <%=data.collections[collection].organization%></div>
                         <div class="scrollable">
                             <div class="description"><%=data.collections[collection].description%></div>
