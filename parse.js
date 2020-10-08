@@ -8,6 +8,7 @@ const stream = require('stream');
 const {promisify} = require('util');
 const got = require('got');
 const pipeline = promisify(stream.pipeline);
+let baseurl;
 
 let data = {};
 String.prototype.replaceAll = function (search, replacement) {
@@ -61,12 +62,12 @@ async function cacheImage(url) {
                 }),
                 fs.createWriteStream(filename)
             );
-            return filename;
+            return baseurl + '/' + filename;
         } else {
             return url;
         }
     } else {
-        return filename;
+        return baseurl + '/' + filename;
     }
 
 }
@@ -176,8 +177,9 @@ function gravatarURL(email) {
     return 'https://www.gravatar.com/avatar/' + crypto.createHash('md5').update(email).digest('hex') + '?d=404';
 }
 
-module.exports = function (creds, spreadsheet) {
-    doc = new GoogleSpreadsheet(spreadsheet);
+module.exports = function (creds, config) {
+    doc = new GoogleSpreadsheet(config.spreadsheet);
+    baseurl = config.baseurl;
     return {
         updateData: async function () {
             data = {

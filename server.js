@@ -1,6 +1,6 @@
 const googleCreds = require('./config/google-key.json');
 const config = require('./config/config.json');
-const parse = require('./parse.js')(googleCreds, config.spreadsheet);
+const parse = require('./parse.js')(googleCreds, config);
 const express = require('express');
 const app = express();
 const fs = require('fs');
