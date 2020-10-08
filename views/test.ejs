@@ -147,9 +147,8 @@ function caculateCardLengthPoints(card) {
                                     <% } %>
                                     <% if (data.projects[project].codebase) { %>
                                     <a href="<%=data.projects[project].codebase%>"><i class="fab fa-github"></i>
-                                        Codebase</a>
+                                        GitHub</a>
                                     <% } %>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -191,18 +190,6 @@ function caculateCardLengthPoints(card) {
                                 <% if (data.collections[collection].codebase) { %>
                                 <a href="<%=data.collections[collection].codebase%>"><i class="fab fa-github"></i>
                                     GitHub</a>
-                                <% } %>
-                                <% if (data.projects[project].api) { %>
-                                    <a href="<%=data.projects[project].api%>"><i class="fab fa-cogs"></i>
-                                        API</a>
-                                <% } %>
-                                <% if (data.projects[project].search) { %>
-                                    <a href="<%=data.projects[project].search%>"><i class="fas fa-search"></i>
-                                        Search</a>
-                                <% } %>
-                                <% if (data.projects[project].download) { %>
-                                    <a href="<%=data.projects[project].download%>"><i class="fas fa-download"></i>
-                                        Download</a>
                                 <% } %>
                             </div>
                         </div>
