@@ -9,8 +9,11 @@ const readChunk = require('read-chunk')
 const fileType = require('file-type')
 const cors = require('cors')
 let data;
+let production = false;
 
 (async () => {
+    production = process.env.NODE_ENV.trim() == 'production';
+
     data = await parse.updateData();
     console.log('Ready!');
     fs.writeFile('latest.json', JSON.stringify(data), (err) => {
@@ -39,7 +42,7 @@ app.get('/usercontent_cache/:filename', async function (req, res) {
 
 app.get('/', async function (req, res) {
     let refreshed;
-    if (process.env.NODE_ENV == 'production') {
+    if (production) {
         let startTime = new Date().getTime();
         data = await parse.updateData();
         refreshed = (new Date().getTime() - startTime);
