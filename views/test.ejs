@@ -16,12 +16,12 @@ function caculateCardLengthPoints(card) {
 <html>
 
 <head>
-    <script src="/iframeResizer.contentWindow.min.js"></script>
+    <script src="<%=baseurl%>/iframeResizer.contentWindow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/haltu/muuri@0.9.3/dist/muuri.min.js"></script>
     <script src="https://kit.fontawesome.com/df830c3146.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="<%=baseurl%>/main.css">
 
     <title>Hack4OpenGlam Visualization</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,21 +35,21 @@ function caculateCardLengthPoints(card) {
                 <li>
                     <input type='radio' name="typeFilterRadio" id="radio1" value="collection" />
                     <label for='radio1'>
-                        <img src="/images/typeFilter/collection.png">
+                        <img src="<%=baseurl%>/images/typeFilter/collection.png">
                         <span>Collections</span>
                     </label>
                 </li>
                 <li>
                     <input type='radio' name="typeFilterRadio" id="radio2" value="person" />
                     <label for='radio2'>
-                        <img src="/images/typeFilter/person.png">
+                        <img src="<%=baseurl%>/images/typeFilter/person.png">
                         <span>People</span>
                     </label>
                 </li>
                 <li>
                     <input type='radio' name="typeFilterRadio" id="radio3" value="project" />
                     <label for='radio3'>
-                        <img src="/images/typeFilter/project.png">
+                        <img src="<%=baseurl%>/images/typeFilter/project.png">
                         <span>Projects</span>
                     </label>
                 </li>
@@ -132,7 +132,7 @@ function caculateCardLengthPoints(card) {
             <% } %>
             <div class="item-content">
                 <div>
-                    <img src="/images/types/project.png" class="thumbimage">
+                    <img src="<%=baseurl%>/images/types/project.png" class="thumbimage">
                     <div>
                         <div class="v-box">
                             <div class="upper">
@@ -164,7 +164,7 @@ function caculateCardLengthPoints(card) {
                -->
                 <div>
                     <div>
-                            <div class="itemThumbnail" style="background-image:url('<%=(data.collections[collection].thumbnail ? data.collections[collection].thumbnail : '/images/types/collection.png')%>');" ></div>
+                            <div class="itemThumbnail" style="background-image:url('<%=(data.collections[collection].thumbnail ? data.collections[collection].thumbnail : '<%=baseurl%>/images/types/collection.png')%>');" ></div>
                           
                     </div>
 
@@ -197,7 +197,7 @@ function caculateCardLengthPoints(card) {
     </div>
 
 
-    <script src="/script.js"></script>
+    <script src="<%=baseurl%>/script.js"></script>
 </body>
 
 </html>

@@ -44,7 +44,8 @@ app.get('/', async function (req, res) {
     console.log('Refreshed data in ' + (new Date().getTime() - startTime) + 'ms !')
     */
     res.render('test', {
-        data: data
+        data: data,
+        baseurl: config.baseurl || ''
     });
 });
 
