@@ -12,7 +12,9 @@ let data;
 let production = false;
 
 (async () => {
-    production = process.env.NODE_ENV.trim().toLowerCase() == 'production';
+    if (process.env.NODE_ENV) {
+        production = process.env.NODE_ENV.trim().toLowerCase() == 'production';
+    }
 
     data = await parse.updateData();
     console.log('Ready!');
