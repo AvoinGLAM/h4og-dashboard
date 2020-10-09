@@ -42,18 +42,26 @@ app.get('/usercontent_cache/:filename', async function (req, res) {
     }
 });
 
-app.get('/', async function (req, res) {
+app.get('/', async function (req, res, next) {
     let refreshed;
     if (production) {
         let startTime = new Date().getTime();
         data = await parse.updateData();
         refreshed = (new Date().getTime() - startTime);
     }
-    console.log(new Date(), '[HTTP] [R=' + (refreshed ? refreshed + 'ms' : 'n/A') + '] Requested / by ' + req.headers['user-agent']);
-    res.render('test', {
-        data: data,
-        baseurl: config.baseurl || ''
-    });
+    if (data != undefined) {
+        console.log(new Date(), '[HTTP] [R=' + (refreshed ? refreshed + 'ms' : 'n/A') + '] Requested / by ' + req.headers['user-agent']);
+        res.render('test', {
+            data: data,
+            baseurl: config.baseurl || ''
+        });
+    } else {
+        next();
+    }
+});
+
+app.use((req, res) => {
+    res.end('Something unexpected happened! Please come back later to try again.');
 });
 
 app.listen(process.env.PORT || 80);
