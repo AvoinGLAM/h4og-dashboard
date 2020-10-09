@@ -200,6 +200,7 @@ async function parseRow(row, i) {
             description: row['Description'],
             homepage: row['Link to documentation / homepage'],
             codebase: row['Link to the codebase'],
+            slack: row['Slack'],
             thumbnail: row['Link to a thumbnail image'],
             video: row['Link to a presentation video'],
             owner: {

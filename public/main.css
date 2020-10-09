@@ -108,13 +108,13 @@
 
 
 .description {
-    margin: 0.7em 0 0 0;
+    margin: 0.5em 0 0 0;
     font-size: 0.9em;
     overflow-wrap: break-word;
 }
 
 .tags {
-    margin: 0.7em 0;
+    margin: 0.5em 0;
 }
 
 .upper {
@@ -188,7 +188,7 @@
     padding: 1em;
     display: flex;
     flex-direction: column;
-    height: 265px;
+    height: 290px;
     justify-content: space-between;
 }
 

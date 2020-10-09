@@ -149,6 +149,10 @@ function caculateCardLengthPoints(card) {
                                     <a href="<%=data.projects[project].codebase%>"><i class="fab fa-github"></i>
                                         GitHub</a>
                                     <% } %>
+                                    <% if (data.projects[project].slack) { %>
+                                    <a href="<%=data.projects[project].slack%>"><i class="fab fa-slack"></i>
+                                        Join!</a>
+                                    <% } %>
                                 </div>
                             </div>
                         </div>
