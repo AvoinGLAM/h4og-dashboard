@@ -174,9 +174,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
             <% /* WORKSHOP CARD */ for (let workshop in data.workshops) { %> %>
                 <% if (data.workshops[workshop].title.length + data.workshops[workshop].short.length + data.workshops[workshop].owner.name.length + 60 > 150) { %>
-                <div class="item project square" style="--aspect-ratio:1;" data-index="<%=data.workshops[workshop].index%>">
+                <div class="item project square" style="--aspect-ratio:1;--random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%=data.workshops[workshop].index%>">
                     <% } else { %>
-                    <div class="item project vertical" style="--aspect-ratio:0.5;"
+                    <div class="item project vertical" style="--aspect-ratio:0.5;--random-deg:rotate(<%=randomRotation()%>deg);"
                         data-index="<%=data.workshops[workshop].index%>">
                         <% } %>
                         <div class="item-content">
