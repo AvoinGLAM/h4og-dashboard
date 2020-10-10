@@ -44,26 +44,28 @@ let modalOuter = document.getElementById('modalOuter');
 let modalCover = document.getElementById('modalCover');
 
 function openModal(e) {
-    let dataset = e.target.closest('.item').dataset;
-    animateCSS('#modalCover', 'fadeIn');
-    modalCover.style.display = 'block';
-
-
-    fetch('/modal?type=' + dataset.type + '&id=' + dataset.index)
-        .then(response => response.text())
-        .then(html => {
-            modalOuter.innerHTML = html;
-            if (document.getElementsByClassName(
-                'modalContainer'
-            ).length == 0) {
-                alert('Something unexpected happened, please try again later!');
-                modalCover.style.display = 'none';
-            } else {
-                animateCSS('.modalContainer', 'zoomIn');
-                modalOuter.style.display = 'block';
-            }
-
-        });
+    if (e.target.tagName.toUpperCase() != 'A' && !e.target.classList.contains('typeItem') && !e.target.classList.contains('languageItem')) {
+        let dataset = e.target.closest('.item').dataset;
+        animateCSS('#modalCover', 'fadeIn');
+        modalCover.style.display = 'block';
+    
+        fetch('/modal?type=' + dataset.type + '&id=' + dataset.index)
+            .then(response => response.text())
+            .then(html => {
+                modalOuter.innerHTML = html;
+                if (document.getElementsByClassName(
+                    'modalContainer'
+                ).length == 0) {
+                    alert('Something unexpected happened, please try again later!');
+                    modalCover.style.display = 'none';
+                } else {
+                    animateCSS('.modalContainer', 'zoomIn');
+                    modalOuter.style.display = 'block';
+                }
+    
+            });
+    }
+  
 }
 
 modalCover.onclick = closeModal;
@@ -224,7 +226,7 @@ function updateFilter() {
 }
 
 var grid = new Muuri('.grid', {
-    //dragEnabled: true,
+    //  dragEnabled: true,
     sortData: {
         foo: function (item, element) {
             return 10000 - (parseInt(element.getAttribute('data-index')) + 1);
