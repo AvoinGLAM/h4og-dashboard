@@ -111,6 +111,10 @@
     overflow-wrap: break-word;
 }
 
+.footer {
+    margin: 2em 1em;
+}
+
 .tags {
     margin: 0.5em 0;
 }
