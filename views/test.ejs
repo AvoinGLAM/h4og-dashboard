@@ -140,7 +140,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 data-index="<%=data.projects[project].index%>" data-type="projects">
                 <% } %>
                 <div class="item-content">
-                    <div>
+                        <div style="position: relative">
+                                <% if (data.projects[project].video) { %>
+                                    <span class="videoTag">VIDEO</span>
+        
+                                    <% } %>
+
                         <img 
                         src="<%= (data.projects[project].thumbnail ? data.projects[project].thumbnail : baseurl + '/images/types/project.png')%>" style="object-fit: <%= (data.projects[project].thumbnail ? 'cover' : 'contain') %>;" onerror="this.style.objectFit = 'contain'; this.src = '<%=baseurl%>/images/types/project.png'"
                         class="thumbimage">

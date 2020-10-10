@@ -190,13 +190,14 @@
 .modalContainer .thumbimage {
     width: 100%;
 }
+/*
 .projectModal .thumbimage {
     width: 100%;
     height: auto !important;
     max-height: 50%;
     max-height: 300px;
 }
-
+*/
 .scrollable {
     overflow-y: auto;
     overflow-wrap: break-word;
