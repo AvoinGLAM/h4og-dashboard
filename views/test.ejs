@@ -180,7 +180,11 @@ function caculateCardLengthPoints(card) {
                                             <div class="subtitle-h4og">by <%=data.workshops[workshop].owner.name%></div>
                                             <div class="description scrollable"><%=data.workshops[workshop].short%></div>
                                             <% if (data.workshops[workshop].time) { %>
-                                            <div class="description">Join the online workshop on Monday 19 October at <%=data.workshops[workshop].time%>:00 UTC</div>
+                                                <div class="ws">
+                                                    <div class="date">Join the workshop on Monday 19 October</div>
+                                                    <div class="time"><%=data.workshops[workshop].time%>:00 UTC</div>
+<!--                                                     <div class="ws-link">Join the workshop</div> -->
+                                                </div>
                                             <% } %>
                                         </div>
                                         <div class="links">
