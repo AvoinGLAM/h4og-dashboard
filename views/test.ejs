@@ -12,17 +12,27 @@ function printSocial(social, icon) {
 function caculateCardLengthPoints(card) {
     return card.organization.length + card.description.length + (card.skillsAndInterests.length * 1.7) + (card.languages.length * 1.7);
 }
+
+function randomRotation() {
+    return [3.7, -3.7, 3, -4, 3.2, -2.5][Math.floor(Math.random() * 6)];
+}
 %>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/haltu/muuri@0.9.3/dist/muuri.min.js"></script>
 <script src="https://kit.fontawesome.com/df830c3146.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
 <link rel="stylesheet" href="<%=baseurl%>/main.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <div class="appInner">
+    <div id="modalCover" style="display: none;"></div>
+    <div id="modalOuter" style="display: none;"></div>
     <div class="filters">
         <div class="typeFilter filter">
             <h2>View</h2>
@@ -72,9 +82,9 @@ function caculateCardLengthPoints(card) {
         <% /* PERSON CARD */ for (let person in data.people) { 
             if (data.people[person].name.length > 0) { // caculateCardLengthPoints(data.people[person]) < 210
             %>
-        <div class="item person" style="--aspect-ratio:2;" data-index="<%= data.people[person].index %>"
+        <div class="item person" style="--aspect-ratio:2;--random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%= data.people[person].index %>"
             data-timezone="<%= data.people[person].timezone %>" data-languages="<%=data.people[person].languages%>"
-            data-types="<%=data.people[person].type%>">
+            data-types="<%=data.people[person].type%>" data-type="people">
             <div class="item-content">
                 <div class="h-box">
                     <div class="imagebox">
@@ -123,10 +133,11 @@ function caculateCardLengthPoints(card) {
 
         <% /* PROJECT CARD */ for (let project in data.projects) { %> %>
         <% if (data.projects[project].short.length > 250) { %>
-        <div class="item project square" style="--aspect-ratio:1;" data-index="<%=data.projects[project].index%>">
+        <div class="item project square" style="--aspect-ratio:1; --random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%=data.projects[project].index%>" data-type="projects">
+
             <% } else { %>
-            <div class="item project vertical" style="--aspect-ratio:0.5;"
-                data-index="<%=data.projects[project].index%>">
+            <div class="item project vertical" style="--aspect-ratio:0.5;--random-deg:rotate(<%=randomRotation()%>deg);"
+                data-index="<%=data.projects[project].index%>" data-type="projects">
                 <% } %>
                 <div class="item-content">
                     <div>
@@ -209,11 +220,12 @@ function caculateCardLengthPoints(card) {
                     <% } %>
 
             <% /* COLLECTION CARD */ for (let collection in data.collections) { %> %>
-                <% if (data.collections[collection].short.length + (data.collections[collection].title.length * 2) + data.collections[collection].organization.length > 165) { %>
-                    <div class="item collection square" style="--aspect-ratio:1;" data-index="<%=data.collections[collection].index%>">
+ <% if (data.collections[collection].short.length + (data.collections[collection].title.length * 2) + data.collections[collection].organization.length > 165) { %>
+                    <div class="item collection square" style="--aspect-ratio:1;--random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%=data.collections[collection].index%>" data-type="collections">
                 <% } else { %>
-                    <div class="item collection vertical" style="--aspect-ratio:0.5;" data-index="<%=data.collections[collection].index%>">
+                    <div class="item collection vertical" style="--aspect-ratio:0.5;--random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%=data.collections[collection].index%>" data-type="collections">
                 <% } %>
+                
                 <div class="item-content">
                     <div>
                         <div>

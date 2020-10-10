@@ -1,0 +1,69 @@
+<%
+switch (type) {
+    case 'collections':
+    /* COLLECTION MODAL */ 
+%>
+<div class="modalContainer collectionModal">
+    <div id="modalInner">
+        <img src="<%= (data.thumbnail ? data.thumbnail : baseurl + '/images/types/collection.png')%>"
+            style="object-fit: <%= (data.thumbnail ? 'cover' : 'contain') %>;"
+            onerror="this.style.objectFit = 'contain'; this.src = '<%=baseurl%>/images/types/collection.png'"
+            class="thumbimage">
+        <div class="modalContent">
+            <div class="title"><%=data.title%></div>
+            <div class="subtitle-h4og">from <%=data.organization%></div>
+            <div class="description"><%=data.description%></div>
+            <div class="description">Access: <%=data.access%></div>
+            <div class="description">Contact: <%=data.contact%></div>
+            <% if (data.homepage) { %>
+            <a href="<%=data.homepage%>"><i class="fas fa-globe-americas"></i>
+                Website</a>
+            <% } %>
+            <% if (data.codebase) { %>
+            <a href="<%=data.codebase%>"><i class="fab fa-github"></i>
+                GitHub</a>
+            <% } %>
+            <% if (data.api) { %>
+            <a href="<%=data.api%>"><i class="fas fa-cogs"></i> API</a>
+            <% } %>
+            <% if (data.search) { %>
+            <a href="<%=data.search%>"><i class="fas fa-search"></i> Search</a>
+            <% } %>
+            <% if (data.download) { %>
+            <a href="<%=data.download%>"><i class="fas fa-download"></i>Download</a>
+            <% } %>
+        </div>
+    </div>
+</div>
+<%
+    break;
+    case 'people':
+    /* PERSON MODAL */
+%>
+<div class="modalContainer personModal">
+        <div id="modalInner">
+                <img class="avatar waterMask"
+                src="<%=(data.picture ? data.picture : data.gravatar)%>"
+                onerror="this.src='<%=data.gravatar%>';this.onerror=() => {this.src = '<%=baseurl%>/images/types/person.png';};">
+            <div class="modalContent">
+                <div class="title"><%=data.name%></div>
+            </div>
+        </div>
+    </div>
+
+<%
+    break;
+    case 'projects':
+    /* PROJECT MODAL */ 
+    %>
+
+<%
+        break;
+    default:
+%>
+Error
+<%
+    break;
+}
+
+%>

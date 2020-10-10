@@ -143,12 +143,21 @@
 }
 
 .item {
+    cursor: pointer;
     display: block;
     position: absolute;
     z-index: 1;
     mix-blend-mode: multiply;
     /*max-width: 100%;*/
+    
 }
+.item:before {
+    transition: transform 0.10s ease-in-out;
+}
+.item:hover:before {
+    transform: scale(1.1) var(--random-deg);
+}
+
 .person {
     width: calc(230px * 2);
 }
@@ -332,4 +341,71 @@ svg#timezoneMap g {
 
 .activeLanguageBody .languageItem:not(.activeLanguage), .activeDescribeBody .typeItem:not(.activeDescribe) {
     opacity: 0.3;
+}
+
+.modalContainer {
+    height: 100%;
+    --animate-duration: 0.2s;
+}
+
+.modalContainer::before {
+    content: ' ';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: transform 0.10s ease-in-out;
+}
+
+.collectionModal::before {
+    background-color: #F6DF61;
+}
+.personModal::before {
+    background-color: #F26B5D;
+}
+.projectModal::before {
+    background-color: #00CB9E;
+}
+
+
+#modalCover:hover ~ #modalOuter > .modalContainer::before {
+    transform: rotate(1deg);
+}   
+
+.modalContent {
+    position: relative;
+    padding: 15px;
+}
+
+#modalCover {
+    background-color: rgba(255,255,255,0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color 0.4s ease-out;
+    --animate-duration: 0.2s;
+
+}
+
+#modalCover:hover {
+    background-color: rgba(255,255,255,0.7);
+
+}
+
+#modalOuter {
+
+    z-index: 15;
+    width: 100%;
+    max-width: 600px;
+    
+    position: fixed;
+    left: 50%;
+    margin-top: 40px;
+    height: calc(100% - 80px);
+    transform: translateX(-50%);
+
 }
