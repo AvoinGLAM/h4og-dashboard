@@ -1,7 +1,28 @@
+const animateCSS = (element, animation, prefix = 'animate__') =>
+    // We create a Promise and return it
+    new Promise((resolve, reject) => {
+        const animationName = `${prefix}${animation}`;
+        const node = document.querySelector(element);
+
+        node.classList.add(`${prefix}animated`, animationName);
+
+        // When the animation ends, we clean the classes and resolve the Promise
+        function handleAnimationEnd() {
+            node.classList.remove(`${prefix}animated`, animationName);
+            resolve('Animation ended');
+        }
+
+        node.addEventListener('animationend', handleAnimationEnd, {
+            once: true
+        });
+    });
+
+
 var radios = document.getElementsByName('typeFilterRadio');
 var timezones = document.getElementsByClassName('timezoneArea');
 var languageItems = document.getElementsByClassName('languageItem');
 var typeItems = document.getElementsByClassName('typeItem');
+var cards = document.getElementsByClassName('item');
 for (var i = 0, max = radios.length; i < max; i++) {
     radios[i].onclick = selectTypeFilter;
 }
@@ -14,7 +35,46 @@ for (var i = 0, max = languageItems.length; i < max; i++) {
 for (var i = 0, max = typeItems.length; i < max; i++) {
     typeItems[i].onclick = selectDescribeFilter;
 }
+for (var i = 0, max = cards.length; i < max; i++) {
+    cards[i].onclick = openModal;
+}
 let selectedType;
+
+let modalOuter = document.getElementById('modalOuter');
+let modalCover = document.getElementById('modalCover');
+
+function openModal(e) {
+    let dataset = e.target.closest('.item').dataset;
+    fetch('/modal?type=' + dataset.type + '&id=' + dataset.index)
+        .then(response => response.text())
+        .then(html => {
+            modalOuter.innerHTML = html;
+            if (document.getElementsByClassName(
+                'modalContainer'
+            ).length == 0) {
+                alert('Something unexpected happened, please try again later!');
+            } else {
+                animateCSS('#modalCover', 'fadeIn');
+                animateCSS('.modalContainer', 'zoomIn');
+                modalCover.style.display = 'block';
+                modalOuter.style.display = 'block';
+            }
+
+        });
+}
+
+modalCover.onclick = function () {
+    animateCSS('#modalCover', 'fadeOut');
+
+    animateCSS('.modalContainer', 'zoomOut').then((msg) => {
+    modalOuter.innerHTML = '';
+        modalCover.classList.remove('animate__fadeOut');
+        modalCover.style.display = 'none';
+        modalOuter.style.display = 'none';
+    });
+
+    
+}
 
 function selectTypeFilter(e) {
     if (e.target.checked) {
@@ -171,4 +231,3 @@ var grid = new Muuri('.grid', {
 });
 grid.refreshSortData();
 grid.sort('foo');
-
