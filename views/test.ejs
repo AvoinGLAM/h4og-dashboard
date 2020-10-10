@@ -83,7 +83,7 @@ function caculateCardLengthPoints(card) {
                             onerror="this.src='<%=data.people[person].gravatar%>';this.onerror=() => {this.src = '<%=baseurl%>/images/types/person.png';};">
                     </div>
                     <div class="infobox">
-                        <div>
+                        <div class="upper">
                             <div class="title"><%=data.people[person].name%></div>
                             <% if (data.people[person].organization) { %>
                             <div class="subtitle-h4og">from <%=data.people[person].organization%></div>
