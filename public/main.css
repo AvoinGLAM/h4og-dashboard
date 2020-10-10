@@ -206,7 +206,7 @@
     padding: 1em;
     display: flex;
     flex-direction: column;
-    height: calc(290px - 2em);
+    height: 290px;
     justify-content: space-between;
 }
 
