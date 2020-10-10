@@ -87,11 +87,9 @@
 }
 
 .typeItem {
-
     cursor: pointer;
-
     padding: 3px;
-    background-color: #ffe67a;
+    background-color: #f6df61;
     margin: 0 2px 2px 0;
     font-size: 0.8em;
     display: inline-block !important;
