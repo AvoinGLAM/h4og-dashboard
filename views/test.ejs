@@ -214,7 +214,7 @@ function caculateCardLengthPoints(card) {
                     <div>
                         <div>
                             <img 
-                        src="<%= (data.collections[collection].thumbnail ? data.collections[collection].thumbnail : baseurl + '/images/types/collection.png')%>" style="object-fit: <%= (data.collections[collection].thumbnail ? 'cover' : 'contain') %>;" onerror="this.style.objectFit = 'contain'; this.src = '<%=baseurl%>/images/types/collection.png'"
+                        src="<%= (data.collections[collection].thumbnail ? data.collections[collection].thumbnail : baseurl + '/images/types/collection.png')%>" style="object-fit: <%= (data.collections[collection].thumbnail ? 'contain' : 'contain') %>;" onerror="this.style.objectFit = 'contain'; this.src = '<%=baseurl%>/images/types/collection.png'"
                         class="thumbimage">
 
                         </div>
@@ -259,6 +259,9 @@ function caculateCardLengthPoints(card) {
                 </div>
             </div>
             <% } %>
+        </div>
+        <div class="description">
+            Website development Mikael Hannolainen. Graphics Marco Villar <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">CC BY-NC-SA 4.0</a>.</div>
         </div>
         <script src="<%=baseurl%>/script.js"></script>
 
