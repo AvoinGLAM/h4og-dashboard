@@ -211,11 +211,14 @@
     display: flex;
 }
 
+.linkGroup {
+}
+
 .v-box {
     padding: 1em;
     display: flex;
     flex-direction: column;
-    height: 290px;
+    height: calc(290px - 2em);
     justify-content: space-between;
 }
 
@@ -374,9 +377,21 @@ svg#timezoneMap g {
 
 .modalContent {
     position: relative;
-    padding: 15px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 2em);
 }
+.modalThumbnail > img {
+    margin: 0 0 1em 0 !important;
 
+}
+.modalText {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
 #modalCover {
     background-color: rgba(255,255,255,0.85);
     position: fixed;

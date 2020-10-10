@@ -8,6 +8,8 @@ const path = require('path');
 const readChunk = require('read-chunk')
 const fileType = require('file-type')
 const cors = require('cors')
+const ejs = require('ejs')
+const linkify = require('linkifyjs/html');
 let data;
 let production = false;
 
@@ -80,15 +82,19 @@ function findEverywhereByIndex(index) {
     return (people || projects || collections);
 }*/
 function findByIndex(index, where) {
-    var result = Object.values(data[where]).filter(obj => {
-        return obj.index === index;
-    })
-    if (result.length > 0) {
-        return {
-            data: result[0],
-            type: where
-        };
-    } else {
+    try {
+        var result = Object.values(data[where]).filter(obj => {
+            return obj.index === index;
+        })
+        if (result.length > 0) {
+            return {
+                data: result[0],
+                type: where
+            };
+        } else {
+            return false;
+        }
+    } catch (e) {
         return false;
     }
 }
@@ -98,10 +104,17 @@ if (!production) {
         if (req.query.id && req.query.type) {
             let query = findByIndex(parseInt(req.query.id), req.query.type);
             console.log(query);
-            res.render('modal', {
-                ...query,
-                baseurl: config.baseurl || ''
-            });
+            if (query) {
+                res.render('modal', {
+                    ...query,
+                    baseurl: config.baseurl || '',
+                    escape: ejs.escapeXML,
+                    linkify: linkify
+                });
+            } else {
+                res.end('');
+            }
+
         } else {
             res.status(400).end('Bad Request');
         }

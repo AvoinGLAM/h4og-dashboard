@@ -45,6 +45,10 @@ let modalCover = document.getElementById('modalCover');
 
 function openModal(e) {
     let dataset = e.target.closest('.item').dataset;
+    animateCSS('#modalCover', 'fadeIn');
+    modalCover.style.display = 'block';
+
+
     fetch('/modal?type=' + dataset.type + '&id=' + dataset.index)
         .then(response => response.text())
         .then(html => {
@@ -53,17 +57,18 @@ function openModal(e) {
                 'modalContainer'
             ).length == 0) {
                 alert('Something unexpected happened, please try again later!');
+                modalCover.style.display = 'none';
             } else {
-                animateCSS('#modalCover', 'fadeIn');
                 animateCSS('.modalContainer', 'zoomIn');
-                modalCover.style.display = 'block';
                 modalOuter.style.display = 'block';
             }
 
         });
 }
 
-modalCover.onclick = function () {
+modalCover.onclick = closeModal;
+
+function closeModal() {
     animateCSS('#modalCover', 'fadeOut');
 
     animateCSS('.modalContainer', 'zoomOut').then((msg) => {
