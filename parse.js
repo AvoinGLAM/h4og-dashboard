@@ -175,7 +175,7 @@ async function parseRow(row, i) {
             codebase: row['Link to the codebase'],
             api: row['API url'],
             search: row['Search url'],
-            download: row['Download url'],
+            help: row['Help url'],
             thumbnail: row['Link to a thumbnail image'],
             owner: {
                 name: data.people[row['Sähköpostiosoite']].name,
@@ -187,6 +187,27 @@ async function parseRow(row, i) {
             copyright: row['Copyright status of the collection'],
             other: row['Other considerations'],
             contact: row['Contact information']
+        };
+    } else if (row['What kind of proposal is it?'] == 'Workshop') {
+        let workshopId = row['Sähköpostiosoite'] + '-' + row['Title'];
+        if (data.workshops[workshopId] == undefined) {
+            data.workshops[workshopId] = {};
+        }
+        data.workshops[workshopId] = {
+            index: i,
+            title: row['Title'],
+            short: row['Write a one-sentence description to use on the web'],
+            description: row['Description'],
+            homepage: row['Link to documentation / homepage'],
+            codebase: row['Link to the codebase'],
+            hopin: row['Hopin'],
+            time: row['Time'],
+            thumbnail: row['Link to a thumbnail image'],
+            video: row['Link to a presentation video'],
+            owner: {
+                name: data.people[row['Sähköpostiosoite']].name,
+                email: row['Sähköpostiosoite']
+            }
         };
     } else if (row['What kind of proposal is it?'] != '') {
         let projectId = row['Sähköpostiosoite'] + '-' + row['Title'];
@@ -224,6 +245,7 @@ module.exports = function (creds, config) {
                 people: {},
                 projects: {},
                 collections: {},
+                workshops: {},
                 meta: {
                     languages: [],
                     types: []

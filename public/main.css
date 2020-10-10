@@ -87,11 +87,9 @@
 }
 
 .typeItem {
-
     cursor: pointer;
-
     padding: 3px;
-    background-color: #ffe67a;
+    background-color: #f6df61;
     margin: 0 2px 2px 0;
     font-size: 0.8em;
     display: inline-block !important;
@@ -100,7 +98,7 @@
 .languageItem {
    cursor: pointer;
     padding: 3px;
-    background-color: #4DCFAB;
+    background-color: #65c7a1;
     margin: 0 2px 2px 0;
     font-size: 0.8em;
     display: inline-block !important;
@@ -111,6 +109,27 @@
     margin: 0.5em 0 0 0;
     font-size: 0.9em;
     overflow-wrap: break-word;
+}
+
+.ws {
+    margin-top: 1em;
+}
+
+.date {
+
+}
+
+.time {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.ws-link {
+    text-transform: uppercase;
+}
+
+.footer {
+    margin: 2em 1em;
 }
 
 .tags {

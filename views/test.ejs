@@ -93,7 +93,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                             onerror="this.src='<%=data.people[person].gravatar%>';this.onerror=() => {this.src = '<%=baseurl%>/images/types/person.png';};">
                     </div>
                     <div class="infobox">
-                        <div>
+                        <div class="upper">
                             <div class="title"><%=data.people[person].name%></div>
                             <% if (data.people[person].organization) { %>
                             <div class="subtitle-h4og">from <%=data.people[person].organization%></div>
@@ -132,8 +132,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     %>
 
         <% /* PROJECT CARD */ for (let project in data.projects) { %> %>
-        <% if (data.projects[project].description.length > 250) { %>
+        <% if (data.projects[project].short.length > 250) { %>
         <div class="item project square" style="--aspect-ratio:1; --random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%=data.projects[project].index%>" data-type="projects">
+
             <% } else { %>
             <div class="item project vertical" style="--aspect-ratio:0.5;--random-deg:rotate(<%=randomRotation()%>deg);"
                 data-index="<%=data.projects[project].index%>" data-type="projects">
@@ -148,19 +149,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                                 <div class="upper">
                                     <div class="title"><%=data.projects[project].title%></div>
                                     <div class="subtitle-h4og">by <%=data.projects[project].owner.name%></div>
-                                    <div class="description scrollable"><%=data.projects[project].description%></div>
+                                    <div class="description scrollable"><%=data.projects[project].short%></div>
                                 </div>
                                 <div class="links">
                                     <% if (data.projects[project].homepage) { %>
                                     <a href="<%=data.projects[project].homepage%>"><i class="fas fa-globe-americas"></i>
-                                        Website</a>
+                                        Web</a>
                                     <% } %>
                                     <% if (data.projects[project].codebase) { %>
                                     <a href="<%=data.projects[project].codebase%>"><i class="fab fa-github"></i>
-                                        GitHub</a>
+                                        Code</a>
                                     <% } %>
                                     <% if (data.projects[project].slack) { %>
-                                    <a href="<%=data.projects[project].slack%>"><i class="fab fa-slack"></i>
+                                    <a href="https://slack.com/app_redirect?team=T01AR9W40MC&channel=<%=data.projects[project].slack%>"><i class="fab fa-slack"></i>
                                         Join!</a>
                                     <% } %>
                                 </div>
@@ -171,17 +172,65 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             </div>
             <% } %>
 
+            <% /* WORKSHOP CARD */ for (let workshop in data.workshops) { %> %>
+                <% if (data.workshops[workshop].title.length + data.workshops[workshop].short.length + data.workshops[workshop].owner.name.length + 60 > 150) { %>
+                <div class="item project square" style="--aspect-ratio:1;" data-index="<%=data.workshops[workshop].index%>">
+                    <% } else { %>
+                    <div class="item project vertical" style="--aspect-ratio:0.5;"
+                        data-index="<%=data.workshops[workshop].index%>">
+                        <% } %>
+                        <div class="item-content">
+                            <div>
+                                <img 
+                                src="<%= (data.workshops[workshop].thumbnail ? data.workshops[workshop].thumbnail : baseurl + '/images/types/project.png')%>" style="object-fit: <%= (data.workshops[workshop].thumbnail ? 'cover' : 'contain') %>;" onerror="this.style.objectFit = 'contain'; this.src = '<%=baseurl%>/images/types/project.png'"
+                                class="thumbimage">
+                                <div>
+                                    <div class="v-box">
+                                        <div class="upper">
+                                            <div class="title"><%=data.workshops[workshop].title%></div>
+                                            <div class="subtitle-h4og">by <%=data.workshops[workshop].owner.name%></div>
+                                            <div class="description scrollable"><%=data.workshops[workshop].short%></div>
+                                            <% if (data.workshops[workshop].time) { %>
+                                                <div class="ws">
+                                                    <div class="date">Join the workshop on Monday 19 October</div>
+                                                    <div class="time"><%=data.workshops[workshop].time%>:00 UTC</div>
+<!--                                                     <div class="ws-link">Join the workshop</div> -->
+                                                </div>
+                                            <% } %>
+                                        </div>
+                                        <div class="links">
+                                            <% if (data.workshops[workshop].homepage) { %>
+                                            <a href="<%=data.workshops[workshop].homepage%>"><i class="fas fa-globe-americas"></i>
+                                                Web</a>
+                                            <% } %>
+                                            <% if (data.workshops[workshop].codebase) { %>
+                                            <a href="<%=data.workshops[workshop].codebase%>"><i class="fab fa-github"></i>
+                                                Code</a>
+                                            <% } %>
+                                            <% if (data.workshops[workshop].slack) { %>
+                                            <a href="https://slack.com/app_redirect?team=T01AR9W40MC&channel=<%=data.workshops[workshop].slack%>"><i class="fab fa-slack"></i>
+                                                Join!</a>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+
             <% /* COLLECTION CARD */ for (let collection in data.collections) { %> %>
-            <div class="item collection" style="--aspect-ratio:1; --random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%=data.collections[collection].index%>" data-type="collections">
+ <% if (data.collections[collection].short.length + (data.collections[collection].title.length * 2) + data.collections[collection].organization.length > 165) { %>
+                    <div class="item collection square" style="--aspect-ratio:1;--random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%=data.collections[collection].index%>" data-type="collections">
+                <% } else { %>
+                    <div class="item collection vertical" style="--aspect-ratio:0.5;--random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%=data.collections[collection].index%>" data-type="collections">
+                <% } %>
+                
                 <div class="item-content">
-                    <!-- <span class="title"><%=data.collections[collection].title%></span>
-                <span class="subtitle">by <%=data.collections[collection].owner.name%></span>
-               -->
                     <div>
                         <div>
-                   
                             <img 
-                        src="<%= (data.collections[collection].thumbnail ? data.collections[collection].thumbnail : baseurl + '/images/types/collection.png')%>" style="object-fit: <%= (data.collections[collection].thumbnail ? 'cover' : 'contain') %>;" onerror="this.style.objectFit = 'contain'; this.src = '<%=baseurl%>/images/types/collection.png'"
+                        src="<%= (data.collections[collection].thumbnail ? data.collections[collection].thumbnail : baseurl + '/images/types/collection.png')%>" style="object-fit: <%= (data.collections[collection].thumbnail ? 'contain' : 'cover') %>;" onerror="this.style.objectFit = 'cover'; this.src = '<%=baseurl%>/images/types/collection.png'"
                         class="thumbimage">
 
                         </div>
@@ -190,12 +239,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                                 <div class="title"><%=data.collections[collection].title%></div>
                                 <div class="subtitle-h4og">from <%=data.collections[collection].organization%></div>
                                 <div class="scrollable">
-                                    <div class="description"><%=data.collections[collection].description%></div>
-                                    <div class="description">Access: <%=data.collections[collection].access%></div>
+                                    <div class="description"><%=data.collections[collection].short%></div>
+<!--                                     <div class="description">Access: <%=data.collections[collection].access%></div> -->
                                 </div>
                             </div>
                             <div class="links">
+<!--                                 <% if (data.collections[collection].contact) { %>
                                 <div class="description">Contact: <%=data.collections[collection].contact%></div>
+                                <% } %> -->
                                 <% if (data.collections[collection].homepage) { %>
                                 <a href="<%=data.collections[collection].homepage%>"><i
                                         class="fas fa-globe-americas"></i>
@@ -203,7 +254,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                                 <% } %>
                                 <% if (data.collections[collection].codebase) { %>
                                 <a href="<%=data.collections[collection].codebase%>"><i class="fab fa-github"></i>
-                                    GitHub</a>
+                                    Dev</a>
                                 <% } %>
                                 <% if (data.collections[collection].api) { %>
                                     <a href="<%=data.collections[collection].api%>"><i class="fas fa-cogs"></i> API</a>
@@ -211,8 +262,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                                 <% if (data.collections[collection].search) { %>
                                     <a href="<%=data.collections[collection].search%>"><i class="fas fa-search"></i> Search</a>
                                 <% } %>
-                                <% if (data.collections[collection].download) { %>
-                                    <a href="<%=data.collections[collection].download%>"><i class="fas fa-download"></i >Download</a>
+                                <% if (data.collections[collection].help) { %>
+                                    <a href="<%=data.collections[collection].help%>"><i class="fas fa-question"></i> Help</a>
+                                <% } %>
+                                <% if (data.collections[collection].contact) { %>
+                                    <a href="mailto:<%=data.collections[collection].contact%>"><i class="far fa-envelope"></i> Contact</a>
                                 <% } %>
                             </div>
                         </div>
@@ -221,6 +275,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 </div>
             </div>
             <% } %>
+        </div>
+        <div class="description footer">
+            Website development Mikael Hannolainen. Graphics Marco Villar <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">CC BY-NC-SA 4.0</a>.</div>
         </div>
         <script src="<%=baseurl%>/script.js"></script>
 
