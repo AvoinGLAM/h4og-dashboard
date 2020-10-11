@@ -1,17 +1,6 @@
-
-@media only screen and (max-width: 480px), 
-only screen and (max-device-width: 480px) {
-    .appInner {
-        margin: 0;
-        font-family: 'Roboto', sans-serif;
-        color: black !important;
-        zoom: 0.65;
-        line-height: normal;
-    }
-}
-
 @media only screen 
-  and (max-width: 964px) {
+    and (max-width: 964px)
+    and (max-device-width: 964px) { 
     .appInner {
         margin: 0;
         font-family: 'Roboto', sans-serif;
