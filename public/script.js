@@ -49,7 +49,7 @@ function openModal(e) {
         animateCSS('#modalCover', 'fadeIn');
         modalCover.style.display = 'block';
     
-        fetch('/modal?type=' + dataset.type + '&id=' + dataset.index)
+        fetch(baseurl + '/modal?type=' + dataset.type + '&id=' + dataset.index)
             .then(response => response.text())
             .then(html => {
                 modalOuter.innerHTML = html;

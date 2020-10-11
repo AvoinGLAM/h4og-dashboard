@@ -17,7 +17,9 @@ function randomRotation() {
     return [1.7, -1.7, 1, -2, 1.2, -0.5][Math.floor(Math.random() * 6)];
 }
 %>
-
+<script>
+var baseurl = '<%=baseurl%>';
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/haltu/muuri@0.9.3/dist/muuri.min.js"></script>
 <script src="https://kit.fontawesome.com/df830c3146.js" crossorigin="anonymous"></script>
