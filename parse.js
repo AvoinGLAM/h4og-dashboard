@@ -133,6 +133,7 @@ async function parseRow(row, i) {
         special: row['Special'],
         description: row['Write one sentence about yourself to introduce you to the other participants'],
         timezone: parseTimezone(row["What's your timezone group?"]),
+        timezoneText: row["What's your timezone group?"],
         type: titleCase(row['Which of these best describe you']).trim(),
         skillsAndInterests: row['List some skills and interests you would like to work with'],
         languages: languages.join(', '),
@@ -185,6 +186,7 @@ async function parseRow(row, i) {
             country: row['The country of origin of the collection'],
             access: row['How can the collection be accessed?'],
             copyright: row['Copyright status of the collection'],
+            video: row['Link to a presentation video'],
             other: row['Other considerations'],
             contact: row['Contact information']
         };
