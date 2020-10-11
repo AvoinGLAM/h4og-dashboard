@@ -48,8 +48,8 @@ function openModal(e) {
         let dataset = e.target.closest('.item').dataset;
         animateCSS('#modalCover', 'fadeIn');
         modalCover.style.display = 'block';
-    
-        fetch(window.baseurl + '/modal?type=' + dataset.type + '&id=' + dataset.index)
+      // Hardcoded the baseurl as temporary fix
+        fetch('https://hack4openglam-visualization-dev.hannolainen.com/modal?type=' + dataset.type + '&id=' + dataset.index)
             .then(response => response.text())
             .then(html => {
                 modalOuter.innerHTML = html;
