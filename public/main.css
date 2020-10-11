@@ -4,6 +4,7 @@
     color: black !important;
     zoom: 0.9;
     line-height: normal;
+}
 
 .waterMask {
     -webkit-mask-image: url("/images/brush.png");
