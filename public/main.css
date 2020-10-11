@@ -1,25 +1,9 @@
-@media only screen 
-    and (max-width: 964px)
-    and (max-device-width: 964px) { 
-    .appInner {
-        margin: 0;
-        font-family: 'Roboto', sans-serif;
-        color: black !important;
-        zoom: 0.7;
-        line-height: normal;
-    }
-}
-
-@media only screen 
-  and (min-width: 965px) {
-    .appInner {
-        margin: 0 2em;
-        font-family: 'Roboto', sans-serif;
-        color: black !important;
-        zoom: 0.9;
-        line-height: normal;
-    }
-}
+.appInner {
+    margin: 0 2em;
+    font-family: 'Roboto', sans-serif;
+    color: black !important;
+    zoom: 0.9;
+    line-height: normal;
 
 .waterMask {
     -webkit-mask-image: url("/images/brush.png");
