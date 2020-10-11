@@ -98,7 +98,7 @@ function findByIndex(index, where) {
         return false;
     }
 }
-if (!production) {
+//if (!production) {
     /* development routes */
     app.get('/modal', async function (req, res, next) {
         if (req.query.id && req.query.type) {
@@ -119,7 +119,7 @@ if (!production) {
             res.status(400).end('Bad Request');
         }
     });
-}
+//}
 
 app.use((req, res) => {
     res.end('Something unexpected happened! Please come back later to try again.');
