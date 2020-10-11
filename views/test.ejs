@@ -145,7 +145,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                         <div style="position: relative">
                                 <% if (data.projects[project].video) { %>
                                     <span class="videoTag">VIDEO</span>
-        
                                     <% } %>
 
                         <img 
@@ -155,7 +154,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                             <div class="v-box">
                                 <div class="upper">
                                     <div class="title"><%=data.projects[project].title%></div>
-                                    <div class="subtitle-h4og">by <%=data.projects[project].owner.name%></div>
+                                    <div class="subtitle-h4og">by <%= (data.projects[project].presenters ? data.projects[project].presenters : data.projects[project].owner.name) %></div>
+<!--                                     <div class="subtitle-h4og">by <%=data.projects[project].owner.name%></div> -->
                                     <div class="description scrollable"><%=data.projects[project].short%></div>
                                 </div>
                                 <div class="links">
