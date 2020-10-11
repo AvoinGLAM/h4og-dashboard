@@ -230,7 +230,63 @@ photoOrVideoHeader(data, 'collection');
 
 <%
         break;
-    default:
+        case 'workshops':
+        %>
+
+
+        <div class="modalContainer projectModal">
+            <div id="modalInner">
+                <div class="item-content">
+                    <div>
+                        <div class="modalContent">
+                            <div class="modalThumbnail">
+                                <%
+                                    photoOrVideoHeader(data, 'project');
+                                                            %>
+                            </div>
+                            <div class="modalText">
+                                    <div class="title"><%=data.title%></div>
+                                    <div class="subtitle-h4og">by <%=data.owner.name%></div>
+                            
+        
+                                <div class="scrollable">
+                                    <div class="description">
+                                        <%-linkify(escape(data.description), {target: '_blank', rel: 'noopener'}).replaceAll('\n','<br>')%>
+                                    </div>
+                                    <% if (data.time) { %>
+                                        <div class="ws">
+                                            <div class="date">Join the workshop on Monday 19 October</div>
+                                            <div class="time"><%=data.time%>:00 UTC</div>
+<!--                                                     <div class="ws-link">Join the workshop</div> -->
+                                        </div>
+                                    <% } %>
+                                </div>
+                            </div>
+                            <div class="links">
+                                <div class="linkGroup">
+                                        <% if (data.homepage) { %>
+                                            <a target="_blank" rel="noopener" href="<%=data.homepage%>"><i class="fas fa-globe-americas"></i>
+                                                Web</a>
+                                            <% } %>
+                                            <% if (data.codebase) { %>
+                                            <a target="_blank" rel="noopener" href="<%=data.codebase%>"><i class="fab fa-github"></i>
+                                                Code</a>
+                                            <% } %>
+                                            <% if (data.slack) { %>
+                                            <a target="_blank" rel="noopener" href="https://slack.com/app_redirect?team=T01AR9W40MC&channel=<%=data.slack%>"><i class="fab fa-slack"></i>
+                                                Join!</a>
+                                            <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%
+            break;
+        default:
 %>
 Error
 <%
