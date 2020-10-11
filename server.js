@@ -8,8 +8,6 @@ const path = require('path');
 const readChunk = require('read-chunk')
 const fileType = require('file-type')
 const cors = require('cors')
-const ejs = require('ejs')
-const linkify = require('linkifyjs/html');
 let data;
 let production = false;
 
@@ -61,65 +59,6 @@ app.get('/', async function (req, res, next) {
         next();
     }
 });
-/*
-function findEverywhereByIndex(index) {
-    function find(index, where) {
-        var result = Object.values(data[where]).filter(obj => {
-            return obj.index === index;
-        })
-        if (result.length > 0) {
-            return {
-                data: result[0],
-                type: where
-            };
-        } else {
-            return false;
-        }
-    }
-    let people =        find(index, 'people');
-    let projects =      find(index, 'projects');
-    let collections =   find(index, 'collections');
-    return (people || projects || collections);
-}*/
-function findByIndex(index, where) {
-    try {
-        var result = Object.values(data[where]).filter(obj => {
-            return obj.index === index;
-        })
-        if (result.length > 0) {
-            return {
-                data: result[0],
-                type: where
-            };
-        } else {
-            return false;
-        }
-    } catch (e) {
-        return false;
-    }
-}
-if (!production) {
-    /* development routes */
-    app.get('/modal', async function (req, res, next) {
-        if (req.query.id && req.query.type) {
-            let query = findByIndex(parseInt(req.query.id), req.query.type);
-            console.log(query);
-            if (query) {
-                res.render('modal', {
-                    ...query,
-                    baseurl: config.baseurl || '',
-                    escape: ejs.escapeXML,
-                    linkify: linkify
-                });
-            } else {
-                res.end('');
-            }
-
-        } else {
-            res.status(400).end('Bad Request');
-        }
-    });
-}
 
 app.use((req, res) => {
     res.end('Something unexpected happened! Please come back later to try again.');
