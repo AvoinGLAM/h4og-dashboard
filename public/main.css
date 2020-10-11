@@ -1,5 +1,5 @@
 .appInner {
-    margin: 0;
+    margin: 0 2em;
     font-family: 'Roboto', sans-serif;
     color: black !important;
     zoom: 0.9;
@@ -139,7 +139,7 @@
 }
 
 .footer {
-    margin: 2em 1em;
+    margin-top: 3em;
 }
 
 .tags {
@@ -294,7 +294,7 @@
 .filter {
     margin-left: 20px;
     min-width: 200px;
-    max-width: 450px;
+    max-width: 425px;
 }
 
 .timezoneFilter {

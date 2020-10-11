@@ -158,15 +158,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                                 </div>
                                 <div class="links">
                                     <% if (data.projects[project].homepage) { %>
-                                    <a target="_blank" rel="noopener" href="<%=data.projects[project].homepage%>"><i class="fas fa-globe-americas"></i>
+
+                                    <a href="<%=data.projects[project].homepage%>" target="_blank"  rel="noopener" ><i class="fas fa-globe-americas"></i>
                                         Web</a>
                                     <% } %>
                                     <% if (data.projects[project].codebase) { %>
-                                    <a target="_blank" rel="noopener" href="<%=data.projects[project].codebase%>"><i class="fab fa-github"></i>
+                                    <a href="<%=data.projects[project].codebase%>" target="_blank" rel="noopener" ><i class="fab fa-github"></i>
                                         Code</a>
                                     <% } %>
                                     <% if (data.projects[project].slack) { %>
-                                    <a target="_blank" rel="noopener" href="https://slack.com/app_redirect?team=T01AR9W40MC&channel=<%=data.projects[project].slack%>"><i class="fab fa-slack"></i>
+                                    <a href="https://slack.com/app_redirect?team=T01AR9W40MC&channel=<%=data.projects[project].slack%>"  rel="noopener"  target="_blank"><i class="fab fa-slack"></i>
                                         Join!</a>
                                     <% } %>
                                 </div>
@@ -205,15 +206,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                                         </div>
                                         <div class="links">
                                             <% if (data.workshops[workshop].homepage) { %>
-                                            <a target="_blank" rel="noopener" href="<%=data.workshops[workshop].homepage%>"><i class="fas fa-globe-americas"></i>
+
+                                            <a href="<%=data.workshops[workshop].homepage%>" target="_blank" rel="noopener" ><i class="fas fa-globe-americas"></i>
                                                 Web</a>
                                             <% } %>
                                             <% if (data.workshops[workshop].codebase) { %>
-                                            <a target="_blank" rel="noopener" href="<%=data.workshops[workshop].codebase%>"><i class="fab fa-github"></i>
+                                            <a href="<%=data.workshops[workshop].codebase%>" target="_blank" rel="noopener" ><i class="fab fa-github"></i>
                                                 Code</a>
                                             <% } %>
                                             <% if (data.workshops[workshop].slack) { %>
-                                            <a target="_blank" rel="noopener" href="https://slack.com/app_redirect?team=T01AR9W40MC&channel=<%=data.workshops[workshop].slack%>"><i class="fab fa-slack"></i>
+                                            <a href="https://slack.com/app_redirect?team=T01AR9W40MC&channel=<%=data.workshops[workshop].slack%>"  rel="noopener" target="_blank"><i class="fab fa-slack"></i>
+
                                                 Join!</a>
                                             <% } %>
                                         </div>
@@ -257,25 +260,29 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                                 <div class="description">Contact: <%=data.collections[collection].contact%></div>
                                 <% } %> -->
                                 <% if (data.collections[collection].homepage) { %>
-                                <a target="_blank" rel="noopener" href="<%=data.collections[collection].homepage%>"><i
+
+                                <a href="<%=data.collections[collection].homepage%>" target="_blank" rel="noopener" ><i
+
                                         class="fas fa-globe-americas"></i>
                                     Website</a>
                                 <% } %>
                                 <% if (data.collections[collection].codebase) { %>
-                                <a target="_blank" rel="noopener" href="<%=data.collections[collection].codebase%>"><i class="fab fa-github"></i>
+
+                                <a href="<%=data.collections[collection].codebase%>" target="_blank" rel="noopener" ><i class="fab fa-github"></i>
                                     Dev</a>
                                 <% } %>
                                 <% if (data.collections[collection].api) { %>
-                                    <a target="_blank" rel="noopener" href="<%=data.collections[collection].api%>"><i class="fas fa-cogs"></i> API</a>
+                                    <a href="<%=data.collections[collection].api%>" target="_blank" rel="noopener" ><i class="fas fa-cogs"></i> API</a>
                                 <% } %>
                                 <% if (data.collections[collection].search) { %>
-                                    <a target="_blank" rel="noopener" href="<%=data.collections[collection].search%>"><i class="fas fa-search"></i> Search</a>
+                                    <a href="<%=data.collections[collection].search%>" target="_blank" rel="noopener" ><i class="fas fa-search"></i> Search</a>
                                 <% } %>
                                 <% if (data.collections[collection].help) { %>
-                                    <a target="_blank" rel="noopener" href="<%=data.collections[collection].help%>"><i class="fas fa-question"></i> Help</a>
+                                    <a href="<%=data.collections[collection].help%>" target="_blank" rel="noopener" ><i class="fas fa-question"></i> Help</a>
                                 <% } %>
                                 <% if (data.collections[collection].contact) { %>
-                                    <a target="_blank" rel="noopener" href="mailto:<%=data.collections[collection].contact%>"><i class="far fa-envelope"></i> Contact</a>
+                                    <a href="mailto:<%=data.collections[collection].contact%>" target="_blank" rel="noopener" ><i class="far fa-envelope"></i> Contact</a>
+
                                 <% } %>
                             </div>
                         </div>
