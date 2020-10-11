@@ -161,10 +161,6 @@ async function parseRow(row, i) {
         }
     });
 
-    row['Presenters'].split(/\n/g).forEach((item) => {
-        data.project.presenters.push(item).substr(0, lastIndexOf(' ')).trim().join(', ');
-    });
-
     data.people[row['Sähköpostiosoite']] = merge(tempPerson, data.people[row['Sähköpostiosoite']]);
     if (row['What kind of proposal is it?'] == 'Dataset, collection') {
         let collectionId = row['Sähköpostiosoite'] + '-' + row['Title'];
