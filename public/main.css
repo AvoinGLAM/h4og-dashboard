@@ -203,6 +203,10 @@
     overflow-wrap: break-word;
 }
 
+.scrollable::-webkit-scrollbar {
+    display: none;
+  }
+
 /* 240px each column */ 
 .item::before {
     content: ' ';
