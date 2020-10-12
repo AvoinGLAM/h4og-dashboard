@@ -134,7 +134,7 @@ async function parseRow(row, i) {
         description: row['Write one sentence about yourself to introduce you to the other participants'],
         timezone: parseTimezone(row["What's your timezone group?"]),
         timezoneText: row["What's your timezone group?"],
-        type: titleCase(row['Which of these best describe you']).trim(),
+        type: row['Which of these best describe you'].trim(),
         skillsAndInterests: row['List some skills and interests you would like to work with'],
         languages: languages.join(', '),
         website: row['Website'],
@@ -157,7 +157,7 @@ async function parseRow(row, i) {
     });
     row['Which of these best describe you'].split(', ').forEach((item) => {
         if (!data.meta.types.join(',').toLowerCase().includes(item.toLowerCase().trim())) {
-            data.meta.types.push(titleCase(item).trim());
+            data.meta.types.push(item).trim();
         }
     });
 
@@ -183,6 +183,7 @@ async function parseRow(row, i) {
                 email: row['Sähköpostiosoite']
             },
             organization: row['The holder of the collection'],
+            presenters: row['Presenters'],
             country: row['The country of origin of the collection'],
             access: row['How can the collection be accessed?'],
             copyright: row['Copyright status of the collection'],
@@ -224,7 +225,6 @@ async function parseRow(row, i) {
             homepage: row['Link to documentation / homepage'],
             codebase: row['Link to the codebase'],
             slack: row['Slack'],
-            presenters: row['Presenters'],
             thumbnail: row['Link to a thumbnail image'],
             video: row['Link to a presentation video'],
             owner: {
