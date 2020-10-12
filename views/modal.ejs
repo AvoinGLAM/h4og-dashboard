@@ -148,6 +148,9 @@ photoOrVideoHeader(data, 'collection');
                             <div class="description">
                                 <%-linkify(escape(data.description), {target: '_blank', rel: 'noopener'}).replaceAll('\n','<br>')%>
                             </div>
+                            <div class="description">
+                                <%-linkify(escape(data.interests), {target: '_blank', rel: 'noopener'}).replaceAll('\n','<br>')%>
+                            </div>
                             <div class="tags">
                                 <% if (data.type.length > 0) { data.type.split(', ').forEach(item => { %>
                                 <div class="typeItem"><%= item %></div>
@@ -203,7 +206,6 @@ photoOrVideoHeader(data, 'collection');
                             <div class="description">
                                 <%-linkify(escape(data.description), {target: '_blank', rel: 'noopener'}).replaceAll('\n','<br>')%>
                             </div>
-                          
                         </div>
                     </div>
                     <div class="links">

@@ -172,6 +172,7 @@ async function parseRow(row, i) {
             title: row['Title'],
             short: row['Write a one-sentence description to use on the web'],
             description: row['Description'],
+            interests: row['List some skills and interests you would like to work with'],
             homepage: row['Link to documentation / homepage'],
             codebase: row['Link to the codebase'],
             api: row['API url'],
