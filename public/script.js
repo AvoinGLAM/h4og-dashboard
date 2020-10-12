@@ -42,16 +42,19 @@ let selectedType;
 
 let modalOuter = document.getElementById('modalOuter');
 let modalCover = document.getElementById('modalCover');
-
+let modelCoverLoader = document.getElementById('modalCoverLoader');
 function openModal(e) {
     if (e.target.tagName.toUpperCase() != 'A' && !e.target.classList.contains('typeItem') && !e.target.classList.contains('languageItem')) {
         let dataset = e.target.closest('.item').dataset;
         animateCSS('#modalCover', 'fadeIn');
         modalCover.style.display = 'block';
+        modalCoverLoader.style.display = 'block';
       // Hardcoded the baseurl as temporary fix
         fetch('https://hack4openglam-visualization-dev.hannolainen.com/modal?type=' + dataset.type + '&id=' + dataset.index)
             .then(response => response.text())
             .then(html => {
+                modalCoverLoader.style.display = 'none';
+
                 modalOuter.innerHTML = html;
                 if (document.getElementsByClassName(
                     'modalContainer'
