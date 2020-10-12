@@ -55,7 +55,7 @@ async function cacheImage(url) {
     let filename = 'usercontent_cache/' + hash;
     if (!fs.existsSync(filename)) {
         if (url.startsWith('http')) {
-            console.log('Downloading ' + filename)
+            console.log('[CACHE] Downloading ' + filename)
             await pipeline(
                 got.stream(url, {
                     headers: {

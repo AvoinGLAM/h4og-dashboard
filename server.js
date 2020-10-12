@@ -16,10 +16,16 @@ let production = false;
 (async () => {
     if (process.env.NODE_ENV) {
         production = process.env.NODE_ENV.trim().toLowerCase() == 'production';
+    } else {
+        data = await parse.updateData();
+        console.log('[DEVELOPMENT] Data parsed and saved to the variable!');
     }
-
-    data = await parse.updateData();
-    console.log('Ready!');
+    if (config.spreadsheet && googleCreds.client_email) {
+        console.log('[H4OG] Make sure to have sheet ' + config.spreadsheet + ' shared to ' + googleCreds.client_email);
+    } else {
+        throw 'Configuration variables missing';
+    }
+    console.log('');
     fs.writeFile('latest.json', JSON.stringify(data), (err) => {
         if (err) {
             console.log(err);
@@ -99,26 +105,25 @@ function findByIndex(index, where) {
     }
 }
 //if (!production) {
-    /* development routes */
-    app.get('/modal', async function (req, res, next) {
-        if (req.query.id && req.query.type) {
-            let query = findByIndex(parseInt(req.query.id), req.query.type);
-            console.log(query);
-            if (query) {
-                res.render('modal', {
-                    ...query,
-                    baseurl: config.baseurl || '',
-                    escape: ejs.escapeXML,
-                    linkify: linkify
-                });
-            } else {
-                res.end('');
-            }
-
+/* development routes */
+app.get('/modal', async function (req, res, next) {
+    if (req.query.id && req.query.type) {
+        let query = findByIndex(parseInt(req.query.id), req.query.type);
+        if (query) {
+            res.render('modal', {
+                ...query,
+                baseurl: config.baseurl || '',
+                escape: ejs.escapeXML,
+                linkify: linkify
+            });
         } else {
-            res.status(400).end('Bad Request');
+            res.end('');
         }
-    });
+
+    } else {
+        res.status(400).end('Bad Request');
+    }
+});
 //}
 
 app.use((req, res) => {
