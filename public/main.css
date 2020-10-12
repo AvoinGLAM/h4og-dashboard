@@ -279,6 +279,7 @@
 
 .item-content {
     position: relative;
+    height: 100%;
 }
 
 .filters {
@@ -390,6 +391,11 @@ svg#timezoneMap g {
     background-color: #00CB9E;
 }
 
+#modalInner{
+    height: 100%;
+}
+
+
 
 #modalCover:hover ~ #modalOuter > .modalContainer::before {
     transform: rotate(1deg);
@@ -400,7 +406,7 @@ svg#timezoneMap g {
     padding: 1em;
     display: flex;
     flex-direction: column;
-    height: calc(100% - 2em);
+    height: 100%;
 }
 .modalThumbnail > img {
     margin: 0 !important;
