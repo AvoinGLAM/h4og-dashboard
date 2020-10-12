@@ -130,4 +130,6 @@ app.use((req, res) => {
     res.end('Something unexpected happened! Please come back later to try again.');
 });
 
-app.listen(process.env.PORT || 80);
+app.listen(process.env.PORT || 80, () => {
+    console.log('[HTTP] Server ready!');
+});
