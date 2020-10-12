@@ -156,7 +156,7 @@ async function parseRow(row, i) {
         }
     });
     row['Which of these best describe you'].split(', ').forEach((item) => {
-        if (!data.meta.types.join(',').toLowerCase().includes(item.toLowerCase().trim())) {
+        if (!data.meta.types.join(',').includes(item.trim())) {
             data.meta.types.push(item).trim();
         }
     });
