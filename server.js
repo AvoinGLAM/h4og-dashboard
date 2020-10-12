@@ -104,11 +104,10 @@ function findByIndex(index, where) {
         return false;
     }
 }
-//if (!production) {
-/* development routes */
 app.get('/modal', async function (req, res, next) {
     if (req.query.id && req.query.type) {
         let query = findByIndex(parseInt(req.query.id), req.query.type);
+        console.log('[HTTP] Requested modal id ' + req.query.id + ', type ' + req.query.type + (query ? ' (found ' + (query.data.name || query.data.title || '?') + ')' : ' (not found!)'));
         if (query) {
             res.render('modal', {
                 ...query,
@@ -119,12 +118,10 @@ app.get('/modal', async function (req, res, next) {
         } else {
             res.end('');
         }
-
     } else {
         res.status(400).end('Bad Request');
     }
 });
-//}
 
 app.use((req, res) => {
     res.end('Something unexpected happened! Please come back later to try again.');
