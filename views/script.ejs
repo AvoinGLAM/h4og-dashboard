@@ -101,7 +101,6 @@ function cardClickEvent(e) {
 
 
 function closeModal() {
-    window.location.hash = '/';
     animateCSS('#modalCover', 'fadeOut');
 
     animateCSS('.modalContainer', 'zoomOut').then((msg) => {
@@ -111,6 +110,7 @@ function closeModal() {
         modalOuter.style.display = 'none';
     });
 
+    window.location.hash = '/';
 
 }
 
