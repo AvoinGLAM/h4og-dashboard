@@ -53,7 +53,7 @@ function checkHash() {
         console.log(type, id);
         openCard(type, id);
     } else {
-        //closeModal();
+        closeModal();
     }
 }
 checkHash();
@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     modalCover.onclick = closeModal;
 }, false);
-modalCover.onclick = closeModal;
 
 function cardClickEvent(e) {
     if (e.target.tagName.toUpperCase() != 'A' && !e.target.classList.contains('typeItem') && !e.target.classList.contains('languageItem')) {
