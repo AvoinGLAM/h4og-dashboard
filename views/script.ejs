@@ -57,6 +57,7 @@ function checkHash() {
     }
 }
 checkHash();
+
 function openCard(type, index) {
     animateCSS('#modalCover', 'fadeIn');
     modalCover.style.display = 'block';
@@ -68,11 +69,11 @@ function openCard(type, index) {
 
             modalOuter.innerHTML = html;
             if (document.getElementsByClassName(
-                'modalContainer'
-            ).length == 0) {
+                    'modalContainer'
+                ).length == 0) {
                 alert('Something unexpected happened, please try again later!');
                 modalCover.style.display = 'none';
-                window.location.hash='/';
+                window.location.hash = '/';
             } else {
                 animateCSS('.modalContainer', 'zoomIn');
                 modalOuter.style.display = 'block';
@@ -82,9 +83,11 @@ function openCard(type, index) {
 }
 
 
-window.onhashchange = checkHash;
 
-document.addEventListener('DOMContentLoaded', function(){ 
+document.addEventListener('DOMContentLoaded', function () {
+
+    window.onhashchange = checkHash;
+
     modalCover.onclick = closeModal;
 }, false);
 
@@ -93,22 +96,22 @@ function cardClickEvent(e) {
         let dataset = e.target.closest('.item').dataset;
         window.location.hash = '/' + dataset.type + '/' + dataset.index;
     }
-  
+
 }
 
 
 function closeModal() {
-    window.location.hash='/';
+    window.location.hash = '/';
     animateCSS('#modalCover', 'fadeOut');
-    
+
     animateCSS('.modalContainer', 'zoomOut').then((msg) => {
-    modalOuter.innerHTML = '';
+        modalOuter.innerHTML = '';
         modalCover.classList.remove('animate__fadeOut');
         modalCover.style.display = 'none';
         modalOuter.style.display = 'none';
     });
 
-    
+
 }
 
 function selectTypeFilter(e) {
