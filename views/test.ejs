@@ -16,210 +16,253 @@ function caculateCardLengthPoints(card) {
 function randomRotation() {
     return [1.7, -1.7, 1, -2, 1.2, -0.5][Math.floor(Math.random() * 6)];
 }
+
+function printProjectPresenters(data) {
+     if (data.presenters) {
+        let i = 0;
+        data.presenters.forEach(presenter => {
+            i++;
+        if (presenter.address) {
+            %>
+<a href="<%=(presenter.address.includes('@') ? 'mailto:' : '')%><%=presenter.address%>">
+    <%
+        }
+            %>
+    <%=presenter.name%><%-(presenter.address ? '</a>' : '')%><%=(i != data.presenters.length ? ', ' : '')%>
+    <%
+        });
+    } else {
+        %>
+    <%=data.owner.name%>
+    <%
+    }
+
+    }
 %>
-<script>
-window.baseurl = '<%=baseurl%>';
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/haltu/muuri@0.9.3/dist/muuri.min.js"></script>
-<script src="https://kit.fontawesome.com/df830c3146.js" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
-<link rel="stylesheet" href="<%=baseurl%>/main.css">
+    <script>
+        window.baseurl = '<%=baseurl%>';
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/haltu/muuri@0.9.3/dist/muuri.min.js"></script>
+    <script src="https://kit.fontawesome.com/df830c3146.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="<%=baseurl%>/main.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="appInner">
-    <div id="modalCover" style="display: none;">
-    <img src="<%=baseurl%>/loader.gif" style="display: none;" id="modalCoverLoader">
-    </div>
-    <div id="modalOuter" style="display: none;"></div>
-    <div class="filters">
-        <div class="typeFilter filter">
-            <h2>View</h2>
-            <ul>
-                <li>
-                    <input type='radio' name="typeFilterRadio" id="radio1" value="collection" />
-                    <label for='radio1'>
-                        <img src="<%=baseurl%>/images/typeFilter/collection.png">
-                        <span>Collections</span>
-                    </label>
-                </li>
-                <li>
-                    <input type='radio' name="typeFilterRadio" id="radio2" value="person" />
-                    <label for='radio2'>
-                        <img src="<%=baseurl%>/images/typeFilter/person.png">
-                        <span>People</span>
-                    </label>
-                </li>
-                <li>
-                    <input type='radio' name="typeFilterRadio" id="radio3" value="project" />
-                    <label for='radio3'>
-                        <img src="<%=baseurl%>/images/typeFilter/project.png">
-                        <span>Projects</span>
-                    </label>
-                </li>
-            </ul>
+    <div class="appInner">
+        <div id="modalCover" style="display: none;">
+            <img src="<%=baseurl%>/loader.gif" style="display: none;" id="modalCoverLoader">
         </div>
+        <div id="modalOuter" style="display: none;"></div>
+        <div class="filters">
+            <div class="typeFilter filter">
+                <h2>View</h2>
+                <ul>
+                    <li>
+                        <input type='radio' name="typeFilterRadio" id="radio1" value="collection" />
+                        <label for='radio1'>
+                            <img src="<%=baseurl%>/images/typeFilter/collection.png">
+                            <span>Collections</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type='radio' name="typeFilterRadio" id="radio2" value="person" />
+                        <label for='radio2'>
+                            <img src="<%=baseurl%>/images/typeFilter/person.png">
+                            <span>People</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type='radio' name="typeFilterRadio" id="radio3" value="project" />
+                        <label for='radio3'>
+                            <img src="<%=baseurl%>/images/typeFilter/project.png">
+                            <span>Projects</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
 
-        <div class="timezoneFilter filter">
-            <h2>Timezone</h2>
-            <%- include('timezoneMap.ejs'); -%>
+            <div class="timezoneFilter filter">
+                <h2>Timezone</h2>
+                <%- include('timezoneMap.ejs'); -%>
+            </div>
+            <div class="languageFilter filter">
+                <h2>Language</h2>
+                <% if (data.meta.languages.length > 0) { data.meta.languages.forEach(item => { %>
+                <span class="languageItem"><%= item %></span>
+                <% }); } %>
+            </div>
+            <div class="describeFilter filter">
+                <h2>Type</h2>
+                <% if (data.meta.types.length > 0) { data.meta.types.forEach(item => { %>
+                <span class="typeItem"><%= item %></span>
+                <% }); } %>
+            </div>
         </div>
-        <div class="languageFilter filter">
-            <h2>Language</h2>
-            <% if (data.meta.languages.length > 0) { data.meta.languages.forEach(item => { %>
-            <span class="languageItem"><%= item %></span>
-            <% }); } %>
-        </div>
-        <div class="describeFilter filter">
-            <h2>Type</h2>
-            <% if (data.meta.types.length > 0) { data.meta.types.forEach(item => { %>
-            <span class="typeItem"><%= item %></span>
-            <% }); } %>
-        </div>
-    </div>
-    <div class="grid">
-        <% /* PERSON CARD */ for (let person in data.people) { 
+        <div class="grid">
+            <% /* PERSON CARD */ for (let person in data.people) { 
             if (data.people[person].name.length > 0) { // caculateCardLengthPoints(data.people[person]) < 210
             %>
-        <div class="item person" style="--aspect-ratio:2;--random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%= data.people[person].index %>"
-            data-timezone="<%= data.people[person].timezone %>" data-languages="<%=data.people[person].languages%>"
-            data-types="<%=data.people[person].type%>" data-type="people">
-            <div class="item-content">
-                <div class="h-box">
-                    <div class="imagebox">
-                        <img class="avatar waterMask"
-                            src="<%=(data.people[person].picture ? data.people[person].picture : data.people[person].gravatar)%>"
-                            onerror="this.src='<%=data.people[person].gravatar%>';this.onerror=() => {this.src = '<%=baseurl%>/images/types/person.png';};">
-                    </div>
-                    <div class="infobox">
-                        <div class="upper">
-                            <div class="title"><%=data.people[person].name%></div>
-                            <% if (data.people[person].organization) { %>
-                            <div class="subtitle-h4og">from <%=data.people[person].organization%></div>
-                            <% } %>
-                            <div class="peopletxt scrollable">
-                                <div class="description"><%=data.people[person].description%></div>
-                                <div class="tags">
-                                    <% if (data.people[person].type.length > 0) { data.people[person].type.split(', ').forEach(item => { %>
-                                    <div class="typeItem"><%= item %></div>
-                                    <% }); } %>
-                                    <% if (data.people[person].languages.length > 0) {data.people[person].languages.split(', ').forEach(item => { %>
-                                    <div class="languageItem"><%= item %></div>
-                                    <% }); } %>
+            <div class="item person" style="--aspect-ratio:2;--random-deg:rotate(<%=randomRotation()%>deg);"
+                data-index="<%= data.people[person].index %>" data-timezone="<%= data.people[person].timezone %>"
+                data-languages="<%=data.people[person].languages%>" data-types="<%=data.people[person].type%>"
+                data-type="people">
+                <div class="item-content">
+                    <div class="h-box">
+                        <div class="imagebox">
+                            <img class="avatar waterMask"
+                                src="<%=(data.people[person].picture ? data.people[person].picture : data.people[person].gravatar)%>"
+                                onerror="this.src='<%=data.people[person].gravatar%>';this.onerror=() => {this.src = '<%=baseurl%>/images/types/person.png';};">
+                        </div>
+                        <div class="infobox">
+                            <div class="upper">
+                                <div class="title"><%=data.people[person].name%></div>
+                                <% if (data.people[person].organization) { %>
+                                <div class="subtitle-h4og">from <%=data.people[person].organization%></div>
+                                <% } %>
+                                <div class="peopletxt scrollable">
+                                    <div class="description"><%=data.people[person].description%></div>
+                                    <div class="tags">
+                                        <% if (data.people[person].type.length > 0) { data.people[person].type.split(', ').forEach(item => { %>
+                                        <div class="typeItem"><%= item %></div>
+                                        <% }); } %>
+                                        <% if (data.people[person].languages.length > 0) {data.people[person].languages.split(', ').forEach(item => { %>
+                                        <div class="languageItem"><%= item %></div>
+                                        <% }); } %>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="sl">
-                                <% printSocial(data.people[person].website, 'fas fa-globe-americas') %>
-                                <% printSocial(data.people[person].social.github, 'fab fa-github') %>
-                                <% printSocial(data.people[person].social.facebook, 'fab fa-facebook') %>
-                                <% printSocial(data.people[person].social.linkedin, 'fab fa-linkedin') %>
-                                <% printSocial(data.people[person].social.twitter, 'fab fa-twitter') %>
-                                <% printSocial(data.people[person].social.instagram, 'fab fa-instagram') %>
-                                <% printSocial(data.people[person].social.flickr, 'fab fa-flickr') %>
-                                <% printSocial(data.people[person].social.wikimedia, 'fab fa-wikipedia-w') %>
+                            <div>
+                                <div class="sl">
+                                    <% printSocial(data.people[person].website, 'fas fa-globe-americas') %>
+                                    <% printSocial(data.people[person].social.github, 'fab fa-github') %>
+                                    <% printSocial(data.people[person].social.facebook, 'fab fa-facebook') %>
+                                    <% printSocial(data.people[person].social.linkedin, 'fab fa-linkedin') %>
+                                    <% printSocial(data.people[person].social.twitter, 'fab fa-twitter') %>
+                                    <% printSocial(data.people[person].social.instagram, 'fab fa-instagram') %>
+                                    <% printSocial(data.people[person].social.flickr, 'fab fa-flickr') %>
+                                    <% printSocial(data.people[person].social.wikimedia, 'fab fa-wikipedia-w') %>
+                                </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <% } 
+            <% } 
     }
     %>
 
-        <% /* PROJECT CARD */ for (let project in data.projects) { %> %>
-        <% if (data.projects[project].short.length > 250) { %>
-        <div class="item project square" style="--aspect-ratio:1; --random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%=data.projects[project].index%>" data-type="projects">
-
-            <% } else { %>
-            <div class="item project vertical" style="--aspect-ratio:0.5;--random-deg:rotate(<%=randomRotation()%>deg);"
+            <% /* PROJECT CARD */ for (let project in data.projects) { %> %>
+            <% if (data.projects[project].short.length > 250) { %>
+            <div class="item project square" style="--aspect-ratio:1; --random-deg:rotate(<%=randomRotation()%>deg);"
                 data-index="<%=data.projects[project].index%>" data-type="projects">
-                <% } %>
-                <div class="item-content">
+
+                <% } else { %>
+                <div class="item project vertical"
+                    style="--aspect-ratio:0.5;--random-deg:rotate(<%=randomRotation()%>deg);"
+                    data-index="<%=data.projects[project].index%>" data-type="projects">
+                    <% } %>
+                    <div class="item-content">
                         <div style="position: relative">
-                                <% if (data.projects[project].video) { %>
-                                    <span class="videoTag">VIDEO</span>
-                                    <% } %>
+                            <% if (data.projects[project].video) { %>
+                            <span class="videoTag">VIDEO</span>
+                            <% } %>
 
-                        <img 
-                        src="<%= (data.projects[project].thumbnail ? data.projects[project].thumbnail : baseurl + '/images/types/project.png')%>" style="object-fit: <%= (data.projects[project].thumbnail ? 'cover' : 'contain') %>;" onerror="this.style.objectFit = 'contain'; this.src = '<%=baseurl%>/images/types/project.png'"
-                        class="thumbimage">
-                        <div>
-                            <div class="v-box">
-                                <div class="upper">
-                                    <div class="title"><%=data.projects[project].title%></div>
-                                    <div class="subtitle-h4og">by <%= (data.projects[project].presenters ? data.projects[project].presenters : data.projects[project].owner.name) %></div>
-<!--                                     <div class="subtitle-h4og">by <%=data.projects[project].owner.name%></div> -->
-                                    <div class="description scrollable"><%=data.projects[project].short%></div>
-                                </div>
-                                <div class="links">
-                                    <% if (data.projects[project].homepage) { %>
+                            <img src="<%= (data.projects[project].thumbnail ? data.projects[project].thumbnail : baseurl + '/images/types/project.png')%>"
+                                style="object-fit: <%= (data.projects[project].thumbnail ? 'cover' : 'contain') %>;"
+                                onerror="this.style.objectFit = 'contain'; this.src = '<%=baseurl%>/images/types/project.png'"
+                                class="thumbimage">
+                            <div>
+                                <div class="v-box">
+                                    <div class="upper">
+                                        <div class="title"><%=data.projects[project].title%></div>
+                                        <div class="subtitle-h4og">by
 
-                                    <a href="<%=data.projects[project].homepage%>" target="_blank"  rel="noopener" ><i class="fas fa-globe-americas"></i>
-                                        Web</a>
-                                    <% } %>
-                                    <% if (data.projects[project].codebase) { %>
-                                    <a href="<%=data.projects[project].codebase%>" target="_blank" rel="noopener" ><i class="fab fa-github"></i>
-                                        Code</a>
-                                    <% } %>
-                                    <% if (data.projects[project].slack) { %>
-                                    <a href="https://slack.com/app_redirect?team=T01AR9W40MC&channel=<%=data.projects[project].slack%>"  rel="noopener"  target="_blank"><i class="fab fa-slack"></i>
-                                        Join!</a>
-                                    <% } %>
+                                            <%
+                                        printProjectPresenters(data.projects[project]);
+                                        %>
+                                        </div>
+                                        <!--                                     <div class="subtitle-h4og">by <%=data.projects[project].owner.name%></div> -->
+                                        <div class="description scrollable"><%=data.projects[project].short%></div>
+                                    </div>
+                                    <div class="links">
+                                        <% if (data.projects[project].homepage) { %>
+
+                                        <a href="<%=data.projects[project].homepage%>" target="_blank" rel="noopener"><i
+                                                class="fas fa-globe-americas"></i>
+                                            Web</a>
+                                        <% } %>
+                                        <% if (data.projects[project].codebase) { %>
+                                        <a href="<%=data.projects[project].codebase%>" target="_blank" rel="noopener"><i
+                                                class="fab fa-github"></i>
+                                            Code</a>
+                                        <% } %>
+                                        <% if (data.projects[project].slack) { %>
+                                        <a href="https://slack.com/app_redirect?team=T01AR9W40MC&channel=<%=data.projects[project].slack%>"
+                                            rel="noopener" target="_blank"><i class="fab fa-slack"></i>
+                                            Join!</a>
+                                        <% } %>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <% } %>
+                <% } %>
 
-            <% /* WORKSHOP CARD */ for (let workshop in data.workshops) { %> %>
+                <% /* WORKSHOP CARD */ for (let workshop in data.workshops) { %> %>
                 <% if (data.workshops[workshop].title.length + data.workshops[workshop].short.length + data.workshops[workshop].owner.name.length + 60 > 150) { %>
-                <div class="item project square" style="--aspect-ratio:1;--random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%=data.workshops[workshop].index%>" data-type="workshops">
+                <div class="item project square" style="--aspect-ratio:1;--random-deg:rotate(<%=randomRotation()%>deg);"
+                    data-index="<%=data.workshops[workshop].index%>" data-type="workshops">
                     <% } else { %>
-                    <div class="item project vertical" style="--aspect-ratio:0.5;--random-deg:rotate(<%=randomRotation()%>deg);"
+                    <div class="item project vertical"
+                        style="--aspect-ratio:0.5;--random-deg:rotate(<%=randomRotation()%>deg);"
                         data-index="<%=data.workshops[workshop].index%>" data-type="workshops">
                         <% } %>
                         <div class="item-content">
                             <div>
-                                <img 
-                                src="<%= (data.workshops[workshop].thumbnail ? data.workshops[workshop].thumbnail : baseurl + '/images/types/project.png')%>" style="object-fit: <%= (data.workshops[workshop].thumbnail ? 'cover' : 'contain') %>;" onerror="this.style.objectFit = 'contain'; this.src = '<%=baseurl%>/images/types/project.png'"
-                                class="thumbimage">
+                                <img src="<%= (data.workshops[workshop].thumbnail ? data.workshops[workshop].thumbnail : baseurl + '/images/types/project.png')%>"
+                                    style="object-fit: <%= (data.workshops[workshop].thumbnail ? 'cover' : 'contain') %>;"
+                                    onerror="this.style.objectFit = 'contain'; this.src = '<%=baseurl%>/images/types/project.png'"
+                                    class="thumbimage">
                                 <div>
                                     <div class="v-box">
                                         <div class="upper">
                                             <div class="title"><%=data.workshops[workshop].title%></div>
-                                            <div class="subtitle-h4og">by <%=data.workshops[workshop].owner.name%></div>
-                                            <div class="description scrollable"><%=data.workshops[workshop].short%></div>
+                                            <div class="subtitle-h4og">by 
+
+                                                <%
+                                    printProjectPresenters(data.workshops[workshop]);
+                                            %>
+                                            </div>
+                                            <div class="description scrollable"><%=data.workshops[workshop].short%>
+                                            </div>
                                             <% if (data.workshops[workshop].time) { %>
-                                                <div class="ws">
-                                                    <div class="date">Join the workshop on Monday 19 October</div>
-                                                    <div class="time"><%=data.workshops[workshop].time%>:00 UTC</div>
-<!--                                                     <div class="ws-link">Join the workshop</div> -->
-                                                </div>
+                                            <div class="ws">
+                                                <div class="date">Join the workshop on Monday 19 October</div>
+                                                <div class="time"><%=data.workshops[workshop].time%>:00 UTC</div>
+                                                <!--                                                     <div class="ws-link">Join the workshop</div> -->
+                                            </div>
                                             <% } %>
                                         </div>
                                         <div class="links">
                                             <% if (data.workshops[workshop].homepage) { %>
 
-                                            <a href="<%=data.workshops[workshop].homepage%>" target="_blank" rel="noopener" ><i class="fas fa-globe-americas"></i>
+                                            <a href="<%=data.workshops[workshop].homepage%>" target="_blank"
+                                                rel="noopener"><i class="fas fa-globe-americas"></i>
                                                 Web</a>
                                             <% } %>
                                             <% if (data.workshops[workshop].codebase) { %>
-                                            <a href="<%=data.workshops[workshop].codebase%>" target="_blank" rel="noopener" ><i class="fab fa-github"></i>
+                                            <a href="<%=data.workshops[workshop].codebase%>" target="_blank"
+                                                rel="noopener"><i class="fab fa-github"></i>
                                                 Code</a>
                                             <% } %>
                                             <% if (data.workshops[workshop].slack) { %>
-                                            <a href="https://slack.com/app_redirect?team=T01AR9W40MC&channel=<%=data.workshops[workshop].slack%>"  rel="noopener" target="_blank"><i class="fab fa-slack"></i>
+                                            <a href="https://slack.com/app_redirect?team=T01AR9W40MC&channel=<%=data.workshops[workshop].slack%>"
+                                                rel="noopener" target="_blank"><i class="fab fa-slack"></i>
 
                                                 Join!</a>
                                             <% } %>
@@ -231,74 +274,86 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                     </div>
                     <% } %>
 
-            <% /* COLLECTION CARD */ for (let collection in data.collections) { %> %>
- <% if (data.collections[collection].short.length + (data.collections[collection].title.length * 2) + data.collections[collection].organization.length > 165) { %>
-                    <div class="item collection square" style="--aspect-ratio:1;--random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%=data.collections[collection].index%>" data-type="collections">
-                <% } else { %>
-                    <div class="item collection vertical" style="--aspect-ratio:0.5;--random-deg:rotate(<%=randomRotation()%>deg);" data-index="<%=data.collections[collection].index%>" data-type="collections">
-                <% } %>
-                
-                <div class="item-content">
-                    <div style="position: relative">
-                        <% if (data.collections[collection].video) { %>
-                            <span class="videoTag">VIDEO</span>
-
+                    <% /* COLLECTION CARD */ for (let collection in data.collections) { %> %>
+                    <% if (data.collections[collection].short.length + (data.collections[collection].title.length * 2) + data.collections[collection].organization.length > 165) { %>
+                    <div class="item collection square"
+                        style="--aspect-ratio:1;--random-deg:rotate(<%=randomRotation()%>deg);"
+                        data-index="<%=data.collections[collection].index%>" data-type="collections">
+                        <% } else { %>
+                        <div class="item collection vertical"
+                            style="--aspect-ratio:0.5;--random-deg:rotate(<%=randomRotation()%>deg);"
+                            data-index="<%=data.collections[collection].index%>" data-type="collections">
                             <% } %>
-                        <div>
-                            <img 
-                        src="<%= (data.collections[collection].thumbnail ? data.collections[collection].thumbnail : baseurl + '/images/types/collection.png')%>" style="object-fit: <%= (data.collections[collection].thumbnail ? 'contain' : 'cover') %>;" onerror="this.style.objectFit = 'cover'; this.src = '<%=baseurl%>/images/types/collection.png'"
-                        class="thumbimage">
 
-                        </div>
-                        <div class="v-box">
-                            <div class="upper">
-                                <div class="title"><%=data.collections[collection].title%></div>
-                                <div class="subtitle-h4og">from <%=data.collections[collection].organization%></div>
-                                <div class="scrollable">
-                                    <div class="description"><%=data.collections[collection].short%></div>
-<!--                                     <div class="description">Access: <%=data.collections[collection].access%></div> -->
-                                </div>
-                            </div>
-                            <div class="links">
-<!--                                 <% if (data.collections[collection].contact) { %>
+                            <div class="item-content">
+                                <div style="position: relative">
+                                    <% if (data.collections[collection].video) { %>
+                                    <span class="videoTag">VIDEO</span>
+
+                                    <% } %>
+                                    <div>
+                                        <img src="<%= (data.collections[collection].thumbnail ? data.collections[collection].thumbnail : baseurl + '/images/types/collection.png')%>"
+                                            style="object-fit: <%= (data.collections[collection].thumbnail ? 'contain' : 'cover') %>;"
+                                            onerror="this.style.objectFit = 'cover'; this.src = '<%=baseurl%>/images/types/collection.png'"
+                                            class="thumbimage">
+
+                                    </div>
+                                    <div class="v-box">
+                                        <div class="upper">
+                                            <div class="title"><%=data.collections[collection].title%></div>
+                                            <div class="subtitle-h4og">from
+                                                <%=data.collections[collection].organization%></div>
+                                            <div class="scrollable">
+                                                <div class="description"><%=data.collections[collection].short%></div>
+                                                <!--                                     <div class="description">Access: <%=data.collections[collection].access%></div> -->
+                                            </div>
+                                        </div>
+                                        <div class="links">
+                                            <!--                                 <% if (data.collections[collection].contact) { %>
                                 <div class="description">Contact: <%=data.collections[collection].contact%></div>
                                 <% } %> -->
-                                <% if (data.collections[collection].homepage) { %>
+                                            <% if (data.collections[collection].homepage) { %>
 
-                                <a href="<%=data.collections[collection].homepage%>" target="_blank" rel="noopener" ><i
+                                            <a href="<%=data.collections[collection].homepage%>" target="_blank"
+                                                rel="noopener"><i class="fas fa-globe-americas"></i>
+                                                Website</a>
+                                            <% } %>
+                                            <% if (data.collections[collection].codebase) { %>
 
-                                        class="fas fa-globe-americas"></i>
-                                    Website</a>
-                                <% } %>
-                                <% if (data.collections[collection].codebase) { %>
+                                            <a href="<%=data.collections[collection].codebase%>" target="_blank"
+                                                rel="noopener"><i class="fab fa-github"></i>
+                                                Dev</a>
+                                            <% } %>
+                                            <% if (data.collections[collection].api) { %>
+                                            <a href="<%=data.collections[collection].api%>" target="_blank"
+                                                rel="noopener"><i class="fas fa-cogs"></i> API</a>
+                                            <% } %>
+                                            <% if (data.collections[collection].search) { %>
+                                            <a href="<%=data.collections[collection].search%>" target="_blank"
+                                                rel="noopener"><i class="fas fa-search"></i> Search</a>
+                                            <% } %>
+                                            <% if (data.collections[collection].help) { %>
+                                            <a href="<%=data.collections[collection].help%>" target="_blank"
+                                                rel="noopener"><i class="fas fa-question"></i> Help</a>
+                                            <% } %>
+                                            <% if (data.collections[collection].contact) { %>
+                                            <a href="mailto:<%=data.collections[collection].contact%>" target="_blank"
+                                                rel="noopener"><i class="far fa-envelope"></i> Contact</a>
 
-                                <a href="<%=data.collections[collection].codebase%>" target="_blank" rel="noopener" ><i class="fab fa-github"></i>
-                                    Dev</a>
-                                <% } %>
-                                <% if (data.collections[collection].api) { %>
-                                    <a href="<%=data.collections[collection].api%>" target="_blank" rel="noopener" ><i class="fas fa-cogs"></i> API</a>
-                                <% } %>
-                                <% if (data.collections[collection].search) { %>
-                                    <a href="<%=data.collections[collection].search%>" target="_blank" rel="noopener" ><i class="fas fa-search"></i> Search</a>
-                                <% } %>
-                                <% if (data.collections[collection].help) { %>
-                                    <a href="<%=data.collections[collection].help%>" target="_blank" rel="noopener" ><i class="fas fa-question"></i> Help</a>
-                                <% } %>
-                                <% if (data.collections[collection].contact) { %>
-                                    <a href="mailto:<%=data.collections[collection].contact%>" target="_blank" rel="noopener" ><i class="far fa-envelope"></i> Contact</a>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                <% } %>
                             </div>
                         </div>
+                        <% } %>
                     </div>
-
+                    <div class="description footer">
+                        Website development Mikael Hannolainen. Graphics Marco Villar <a
+                            href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">CC BY-NC-SA 4.0</a>.
+                    </div>
                 </div>
-            </div>
-            <% } %>
-        </div>
-        <div class="description footer">
-            Website development Mikael Hannolainen. Graphics Marco Villar <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">CC BY-NC-SA 4.0</a>.</div>
-        </div>
-        <script src="<%=baseurl%>/script.js"></script>
+                <script src="<%=baseurl%>/script.js"></script>
 
-    </div>
+            </div>

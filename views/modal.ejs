@@ -49,6 +49,31 @@ function photoOrVideoHeader(data, tp) {
 <%
 }
 
+function printProjectPresenters(data) {
+    if (data.presenters) {
+       let i = 0;
+       data.presenters.forEach(presenter => {
+           i++;
+       if (presenter.address) {
+           %>
+<a href="<%=(presenter.address.includes('@') ? 'mailto:' : '')%><%=presenter.address%>">
+   <%
+       }
+           %>
+   <%=presenter.name%><%-(presenter.address ? '</a>' : '')%><%=(i != data.presenters.length ? ', ' : '')%>
+   <%
+       });
+   } else {
+       %>
+   <%=data.owner.name%>
+   <%
+   }
+
+   }
+
+/* END HELPER FUNCTIONS */ 
+
+
 switch (type) {
     case 'collections':
     /* COLLECTION MODAL */ 
@@ -194,7 +219,9 @@ photoOrVideoHeader(data, 'collection');
                     </div>
                     <div class="modalText">
                             <div class="title"><%=data.title%></div>
-                            <div class="subtitle-h4og">by <%=data.owner.name%></div>
+                            <div class="subtitle-h4og">by <%
+                                printProjectPresenters(data);
+                            %></div>
                     
 
                         <div class="scrollable">
@@ -241,7 +268,9 @@ photoOrVideoHeader(data, 'collection');
                             </div>
                             <div class="modalText">
                                     <div class="title"><%=data.title%></div>
-                                    <div class="subtitle-h4og">by <%=data.owner.name%></div>
+                                    <div class="subtitle-h4og">by <%
+                                        printProjectPresenters(data);
+                                    %></div>
                             
         
                                 <div class="scrollable">
