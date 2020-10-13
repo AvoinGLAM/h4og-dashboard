@@ -61,7 +61,7 @@ function checkHash() {
     }
 }
 checkHash();
-
+window.onhashchange = checkHash;
 function openModal(type, index) {
     animateCSS('#modalCover', 'fadeIn');
     modalCover.style.display = 'block';
