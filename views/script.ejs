@@ -62,6 +62,8 @@ function checkHash() {
 }
 checkHash();
 window.onhashchange = checkHash;
+modalCover.onclick = closeModal;
+
 function openModal(type, index) {
     animateCSS('#modalCover', 'fadeIn');
     modalCover.style.display = 'block';
@@ -101,12 +103,6 @@ function closeModal() {
 }
 
 
-document.addEventListener('DOMContentLoaded', function () {
-
-    window.onhashchange = checkHash;
-
-    modalCover.onclick = closeModal;
-}, false);
 
 
 function cardClickEvent(e) {
