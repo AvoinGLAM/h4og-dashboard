@@ -294,10 +294,6 @@ function printProjectPresenters(data) {
 
 
                             <% } %>
-                                    <% if (data.collections[collection].video) { %>
-                                    <span class="videoTag">VIDEO</span>
-
-                                    <% } %>
                                     <div>
                                         <img src="<%= (data.collections[collection].thumbnail ? data.collections[collection].thumbnail : baseurl + '/images/types/collection.png')%>"
                                             style="object-fit: <%= (data.collections[collection].thumbnail ? 'contain' : 'cover') %>;"
