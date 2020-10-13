@@ -104,7 +104,7 @@ function normalizeSocial(input, urlStart) {
             } else {
                 url = str;
             }
-            
+
         } else {
             url = str;
         }
@@ -113,6 +113,34 @@ function normalizeSocial(input, urlStart) {
     }
 
     return url;
+}
+function parsePresenters(data) {
+    if (data) {
+        presenters = [];
+        presentersRows = data.trim().split('\n');
+        presentersRows.forEach((presenter) => {
+            let name = '';
+            let address = '';
+            if (presenter.includes(',') || presenter.includes(' ')) {
+                let presenterData = presenter.trim().replace(', ', ',').split(/,| /g);
+
+                if (presenterData[presenterData.length - 1].includes('.')) {
+                    address = presenterData[presenterData.length - 1];
+                    presenterData.pop();
+                }
+                name = presenterData.join(' ');
+            } else {
+                name = presenter;
+            }
+            presenters.push({
+                name: name,
+                address: address
+            });
+        });
+        return presenters;
+    } else {
+        return;
+    }
 }
 async function parseRow(row, i) {
     if (row['Spam'] == "yes") {
@@ -196,6 +224,7 @@ async function parseRow(row, i) {
         if (data.workshops[workshopId] == undefined) {
             data.workshops[workshopId] = {};
         }
+        let presenters = parsePresenters(row['Presenters']);
         data.workshops[workshopId] = {
             index: i,
             title: row['Title'],
@@ -205,6 +234,7 @@ async function parseRow(row, i) {
             codebase: row['Link to the codebase'],
             hopin: row['Hopin'],
             time: row['Time'],
+            presenters: presenters,
             thumbnail: row['Link to a thumbnail image'],
             video: row['Link to a presentation video'],
             owner: {
@@ -217,6 +247,8 @@ async function parseRow(row, i) {
         if (data.projects[projectId] == undefined) {
             data.projects[projectId] = {};
         }
+        let presenters = parsePresenters(row['Presenters']);
+        
         data.projects[projectId] = {
             index: i,
             title: row['Title'],
@@ -225,7 +257,7 @@ async function parseRow(row, i) {
             homepage: row['Link to documentation / homepage'],
             codebase: row['Link to the codebase'],
             slack: row['Slack'],
-            presenters: row['Presenters'],
+            presenters: presenters,
             thumbnail: row['Link to a thumbnail image'],
             video: row['Link to a presentation video'],
             owner: {
