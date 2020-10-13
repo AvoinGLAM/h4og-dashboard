@@ -104,6 +104,10 @@ function findByIndex(index, where) {
         return false;
     }
 }
+app.get('/script.js', function (req, res)  {
+    res.setHeader('Content-Type', 'application/javascript');
+    res.render('script', {baseurl: config.baseurl || ''});
+})
 app.get('/modal', async function (req, res, next) {
     if (req.query.id && req.query.type) {
         let query = findByIndex(parseInt(req.query.id), req.query.type);

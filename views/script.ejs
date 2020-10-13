@@ -49,8 +49,7 @@ function openModal(e) {
         animateCSS('#modalCover', 'fadeIn');
         modalCover.style.display = 'block';
         modalCoverLoader.style.display = 'block';
-      // Hardcoded the baseurl as temporary fix
-        fetch('https://hack4openglam-visualization-dev.hannolainen.com/modal?type=' + dataset.type + '&id=' + dataset.index)
+        fetch('<%=baseurl%>/modal?type=' + dataset.type + '&id=' + dataset.index)
             .then(response => response.text())
             .then(html => {
                 modalCoverLoader.style.display = 'none';
