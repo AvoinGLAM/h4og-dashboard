@@ -41,6 +41,8 @@ fetch(loaderRoot)
                             ).style.visibility = "visible";
                         });
                         
+
+                        window.onhashchange = checkHash;
                     }
                 );
             }
