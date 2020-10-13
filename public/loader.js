@@ -31,6 +31,44 @@ fetch(loaderRoot)
                 loadJS(
                     loaderRoot + "/script.js",
                     function () {
+                        function openModal(type, index) {
+                            animateCSS('#modalCover', 'fadeIn');
+                            modalCover.style.display = 'block';
+                            modalCoverLoader.style.display = 'block';
+                            fetch('<%=baseurl%>/modal?type=' + type + '&id=' + index)
+                                .then(response => response.text())
+                                .then(html => {
+                                    modalCoverLoader.style.display = 'none';
+
+                                    modalOuter.innerHTML = html;
+                                    if (document.getElementsByClassName(
+                                            'modalContainer'
+                                        ).length == 0) {
+                                        alert('Something unexpected happened, please try again later!');
+                                        modalCover.style.display = 'none';
+                                        window.location.hash = '/';
+                                    } else {
+                                        animateCSS('.modalContainer', 'zoomIn');
+                                        modalOuter.style.display = 'block';
+                                    }
+
+                                });
+                        }
+
+                        function closeModal() {
+                            animateCSS('#modalCover', 'fadeOut');
+
+                            animateCSS('.modalContainer', 'zoomOut').then((msg) => {
+                                modalOuter.innerHTML = '';
+                                modalCover.classList.remove('animate__fadeOut');
+                                modalCover.style.display = 'none';
+                                modalOuter.style.display = 'none';
+                            });
+
+                            window.location.hash = '/';
+
+                        }
+
                         grid.layout(function (items, hasLayoutChanged) {
                             document.getElementById(
                                 "hack4openglam-visualization-loading"
