@@ -232,7 +232,8 @@ var grid = new Muuri('.grid', {
     //  dragEnabled: true,
     sortData: {
         foo: function (item, element) {
-            return 10000 - (parseInt(element.getAttribute('data-index')) + 1);
+            return Math.floor(Math.random() * 10000);
+            //return 10000 - (parseInt(element.getAttribute('data-index')) + 1);
         }
     },
     layout: {
