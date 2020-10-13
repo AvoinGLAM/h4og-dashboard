@@ -98,12 +98,13 @@
 
 .videoTag {
     padding: 3px;
-    background-color: rgba(255,255,255,0.5);
-    font-size: 0.8em;
+/*     background-color: rgba(255,255,255,0.5); */
+    font-size: 1.2em;
     display: inline-block !important;
     position: absolute;
     top: 10px;
     right: 10px;
+    color: white;
 }
 .languageItem {
    cursor: pointer;
@@ -119,6 +120,10 @@
     margin: 0.5em 0 0 0;
     font-size: 0.9em;
     overflow-wrap: break-word;
+}
+
+.modalText .description {
+    font-size:1em;
 }
 
 .ws {
