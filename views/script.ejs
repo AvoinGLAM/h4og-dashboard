@@ -54,7 +54,10 @@ function checkHash() {
         console.log(type, id);
         openModal(type, id);
     } else {
-        closeModal();
+        if (modalOuter.display == 'block') {
+            closeModal();
+        }
+        
     }
 }
 checkHash();
