@@ -198,7 +198,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                                     <div class="v-box">
                                         <div class="upper">
                                             <div class="title"><%=data.workshops[workshop].title%></div>
-                                            <div class="subtitle-h4og">by <%= (data.projects[project].presenters ? data.projects[project].presenters : data.projects[project].owner.name) %></div>
+                                            <div class="subtitle-h4og">by <%= (data.workshops[workshop].presenters ? data.workshops[workshop].presenters : data.workshops[workshop].owner.name) %></div>
 <!--                                             <div class="subtitle-h4og">by <%=data.workshops[workshop].owner.name%></div> -->
                                             <div class="description scrollable"><%=data.workshops[workshop].short%></div>
                                             <% if (data.workshops[workshop].time) { %>
