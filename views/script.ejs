@@ -57,7 +57,7 @@ function checkHash() {
         closeModal();
     }
 }
-checkHash();
+//checkHash();
 
 function openModal(type, index) {
     animateCSS('#modalCover', 'fadeIn');
@@ -98,13 +98,13 @@ function closeModal() {
 }
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
 
     window.onhashchange = checkHash;
 
     modalCover.onclick = closeModal;
 }, false);
+
 
 function cardClickEvent(e) {
     if (e.target.tagName.toUpperCase() != 'A' && !e.target.classList.contains('typeItem') && !e.target.classList.contains('languageItem')) {

@@ -41,11 +41,7 @@ fetch(loaderRoot)
                             ).style.visibility = "visible";
                         });
                         
-                        document.addEventListener('DOMContentLoaded', function () {
-
-                            window.onhashchange = checkHash;
-                        
-                        }, false);
+                   
                     }
                 );
             }
