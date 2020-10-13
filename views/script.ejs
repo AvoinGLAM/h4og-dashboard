@@ -45,26 +45,60 @@ let modalCover = document.getElementById('modalCover');
 let modelCoverLoader = document.getElementById('modalCoverLoader');
 
 
+function checkHash() {
+    if (window.location.hash.length > 3) {
+        let hashSplit = window.location.hash.substr(2).split('/');
+        let type = hashSplit[0];
+        let id = hashSplit[1];
+        console.log(type, id);
+        openModal(type, id);
+    } else {
+        closeModal();
+    }
+}
+checkHash();
 
+function openModal(type, index) {
+    animateCSS('#modalCover', 'fadeIn');
+    modalCover.style.display = 'block';
+    modalCoverLoader.style.display = 'block';
+    fetch('<%=baseurl%>/modal?type=' + type + '&id=' + index)
+        .then(response => response.text())
+        .then(html => {
+            modalCoverLoader.style.display = 'none';
 
+            modalOuter.innerHTML = html;
+            if (document.getElementsByClassName(
+                    'modalContainer'
+                ).length == 0) {
+                alert('Something unexpected happened, please try again later!');
+                modalCover.style.display = 'none';
+                window.location.hash = '/';
+            } else {
+                animateCSS('.modalContainer', 'zoomIn');
+                modalOuter.style.display = 'block';
+            }
+
+        });
+}
+
+function closeModal() {
+    animateCSS('#modalCover', 'fadeOut');
+
+    animateCSS('.modalContainer', 'zoomOut').then((msg) => {
+        modalOuter.innerHTML = '';
+        modalCover.classList.remove('animate__fadeOut');
+        modalCover.style.display = 'none';
+        modalOuter.style.display = 'none';
+    });
+
+    window.location.hash = '/';
+
+}
 
 
 
 document.addEventListener('DOMContentLoaded', function () {
-
-
-    function checkHash() {
-        if (window.location.hash.length > 3) {
-            let hashSplit = window.location.hash.substr(2).split('/');
-            let type = hashSplit[0];
-            let id = hashSplit[1];
-            console.log(type, id);
-            openModal(type, id);
-        } else {
-            closeModal();
-        }
-    }
-    checkHash();
 
     window.onhashchange = checkHash;
 
