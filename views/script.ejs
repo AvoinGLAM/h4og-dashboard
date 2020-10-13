@@ -44,7 +44,7 @@ let modalOuter = document.getElementById('modalOuter');
 let modalCover = document.getElementById('modalCover');
 let modelCoverLoader = document.getElementById('modalCoverLoader');
 
-console.log(window.location.hash);
+console.log("The hash is " + window.location.hash);
 
 function openModal(e) {
     if (e.target.tagName.toUpperCase() != 'A' && !e.target.classList.contains('typeItem') && !e.target.classList.contains('languageItem')) {
