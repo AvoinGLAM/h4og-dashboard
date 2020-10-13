@@ -1,6 +1,7 @@
 const animateCSS = (element, animation, prefix = 'animate__') =>
     // We create a Promise and return it
     new Promise((resolve, reject) => {
+        console.log(element, animation);
         const animationName = `${prefix}${animation}`;
         const node = document.querySelector(element);
 
