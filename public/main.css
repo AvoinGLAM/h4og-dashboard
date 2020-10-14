@@ -6,6 +6,11 @@
     line-height: normal;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .waterMask {
     -webkit-mask-image: url("/images/brush.png");
     -webkit-mask-size: contain;
