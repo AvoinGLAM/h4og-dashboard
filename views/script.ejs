@@ -52,6 +52,7 @@ function checkHash() {
         let id = hashSplit[1];
         openModal(type, id);
     } else {
+        document.title = 'Hack4OpenGLAM';
         if (modalOuter.style.display == 'block') {
             closeModal();
         }
@@ -72,12 +73,16 @@ function openModal(type, index) {
             modalCoverLoader.style.display = 'none';
 
             modalOuter.innerHTML = html;
+
+            document.title = 'Hack4OpenGLAM | ' + document.getElementById('modalTitle').value;
+
             if (document.getElementsByClassName(
                     'modalContainer'
                 ).length == 0) {
                 alert('Something unexpected happened, please try again later!');
                 modalCover.style.display = 'none';
                 window.location.hash = '/';
+                document.title = 'Hack4OpenGLAM';
             } else {
                 animateCSS('.modalContainer', 'zoomIn');
                 modalOuter.style.display = 'block';
@@ -85,6 +90,22 @@ function openModal(type, index) {
 
         });
 }
+
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    if ("key" in evt) {
+        isEscape = (evt.key === "Escape" || evt.key === "Esc");
+    } else {
+        isEscape = (evt.keyCode === 27);
+    }
+    if (isEscape) {
+        if (modalOuter.style.display == 'block') {
+            closeModal();
+        }
+    }
+};
+
 
 function closeModal() {
     animateCSS('#modalCover', 'fadeOut');
@@ -95,7 +116,7 @@ function closeModal() {
         modalCover.style.display = 'none';
         modalOuter.style.display = 'none';
     });
-
+    document.title = 'Hack4OpenGLAM';
     window.location.hash = '/';
 
 }
