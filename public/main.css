@@ -166,7 +166,6 @@ a:hover {
 .upper {
     display: flex;
     flex-direction: column;
-    max-height: 175px;
 }
 
 .item {
@@ -295,6 +294,10 @@ a:hover {
     flex-direction: column;
     overflow-y: hidden;
     justify-content: space-between;
+}
+
+.infobox .upper {
+    max-height: 175px;
 }
 
 .peopletxt {
