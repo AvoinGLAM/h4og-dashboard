@@ -50,27 +50,32 @@ function parseTimezone(str) {
     }
 }
 async function cacheImage(url) {
-    const cacheSalt = 'just-in-case';
-    let hash = crypto.createHash('md5').update(url + cacheSalt).digest("hex");
-    let filename = 'usercontent_cache/' + hash;
-    if (!fs.existsSync(filename)) {
-        if (url.startsWith('http')) {
-            console.log('[CACHE] Downloading ' + filename)
-            await pipeline(
-                got.stream(url, {
-                    headers: {
-                        'Accept': 'image/*'
-                    }
-                }),
-                fs.createWriteStream(filename)
-            );
-            return baseurl + '/' + filename;
+    try {
+        const cacheSalt = 'just-in-case';
+        let hash = crypto.createHash('md5').update(url + cacheSalt).digest("hex");
+        let filename = 'usercontent_cache/' + hash;
+        if (!fs.existsSync(filename)) {
+            if (url.startsWith('http')) {
+                console.log('[CACHE] Downloading ' + filename)
+                await pipeline(
+                    got.stream(url, {
+                        headers: {
+                            'Accept': 'image/*'
+                        }
+                    }),
+                    fs.createWriteStream(filename)
+                );
+                return baseurl + '/' + filename;
+            } else {
+                return url;
+            }
         } else {
-            return url;
+            return baseurl + '/' + filename;
         }
-    } else {
-        return baseurl + '/' + filename;
+    } catch (e) {
+        return url;
     }
+   
 
 }
 
