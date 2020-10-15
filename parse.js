@@ -217,7 +217,8 @@ async function parseRow(row, i) {
             copyright: row['Copyright status of the collection'],
             video: row['Link to a presentation video'],
             other: row['Other considerations'],
-            contact: row['Contact information']
+            contact: row['Contact information'],
+            type: row['What kind of proposal is it?']
         };
     } else if (row['What kind of proposal is it?'] == 'Workshop') {
         let workshopId = row['Sähköpostiosoite'] + '-' + row['Title'];
@@ -235,6 +236,7 @@ async function parseRow(row, i) {
             hopin: row['Hopin'],
             time: row['Time'],
             presenters: presenters,
+            typ: row['What kind of proposal is it?'],
             thumbnail: row['Link to a thumbnail image'],
             video: row['Link to a presentation video'],
             owner: {
@@ -258,6 +260,7 @@ async function parseRow(row, i) {
             codebase: row['Link to the codebase'],
             slack: row['Slack'],
             presenters: presenters,
+            type: row['What kind of proposal is it?'],
             thumbnail: row['Link to a thumbnail image'],
             video: row['Link to a presentation video'],
             owner: {
