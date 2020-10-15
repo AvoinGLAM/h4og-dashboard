@@ -195,6 +195,9 @@ async function parseRow(row, i) {
         if (data.collections[collectionId] == undefined) {
             data.collections[collectionId] = {};
         }
+
+        let pictureURL = await cacheImage(row['Link to a thumbnail image']);
+
         data.collections[collectionId] = {
             index: i,
             title: row['Title'],
@@ -206,7 +209,7 @@ async function parseRow(row, i) {
             api: row['API url'],
             search: row['Search url'],
             help: row['Help url'],
-            thumbnail: row['Link to a thumbnail image'],
+            thumbnail: pictureURL,
             owner: {
                 name: data.people[row['Sähköpostiosoite']].name,
                 email: row['Sähköpostiosoite']
@@ -225,6 +228,7 @@ async function parseRow(row, i) {
         if (data.workshops[workshopId] == undefined) {
             data.workshops[workshopId] = {};
         }
+        let pictureURL = await cacheImage(row['Link to a thumbnail image']);
         let presenters = parsePresenters(row['Presenters']);
         data.workshops[workshopId] = {
             index: i,
@@ -236,8 +240,8 @@ async function parseRow(row, i) {
             hopin: row['Hopin'],
             time: row['Time'],
             presenters: presenters,
+            thumbnail: pictureURL,
             typ: row['What kind of proposal is it?'],
-            thumbnail: row['Link to a thumbnail image'],
             video: row['Link to a presentation video'],
             owner: {
                 name: data.people[row['Sähköpostiosoite']].name,
@@ -249,6 +253,7 @@ async function parseRow(row, i) {
         if (data.projects[projectId] == undefined) {
             data.projects[projectId] = {};
         }
+        let pictureURL = await cacheImage(row['Link to a thumbnail image']);
         let presenters = parsePresenters(row['Presenters']);
         
         data.projects[projectId] = {
@@ -260,8 +265,10 @@ async function parseRow(row, i) {
             codebase: row['Link to the codebase'],
             slack: row['Slack'],
             presenters: presenters,
+
             type: row['What kind of proposal is it?'],
-            thumbnail: row['Link to a thumbnail image'],
+            thumbnail: pictureURL,
+
             video: row['Link to a presentation video'],
             owner: {
                 name: data.people[row['Sähköpostiosoite']].name,
