@@ -235,6 +235,7 @@ async function parseRow(row, i) {
             hopin: row['Hopin'],
             time: row['Time'],
             presenters: presenters,
+            type: row['What kind of proposal is it?'],
             thumbnail: row['Link to a thumbnail image'],
             video: row['Link to a presentation video'],
             owner: {
@@ -258,6 +259,7 @@ async function parseRow(row, i) {
             codebase: row['Link to the codebase'],
             slack: row['Slack'],
             presenters: presenters,
+            type: row['What kind of proposal is it?'],
             thumbnail: row['Link to a thumbnail image'],
             video: row['Link to a presentation video'],
             owner: {
