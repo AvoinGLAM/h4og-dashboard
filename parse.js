@@ -50,32 +50,27 @@ function parseTimezone(str) {
     }
 }
 async function cacheImage(url) {
-    try {
-        const cacheSalt = 'just-in-case';
-        let hash = crypto.createHash('md5').update(url + cacheSalt).digest("hex");
-        let filename = 'usercontent_cache/' + hash;
-        if (!fs.existsSync(filename)) {
-            if (url.startsWith('http')) {
-                console.log('[CACHE] Downloading ' + filename)
-                await pipeline(
-                    got.stream(url, {
-                        headers: {
-                            'Accept': 'image/*'
-                        }
-                    }),
-                    fs.createWriteStream(filename)
-                );
-                return baseurl + '/' + filename;
-            } else {
-                return url;
-            }
-        } else {
+    const cacheSalt = 'just-in-case';
+    let hash = crypto.createHash('md5').update(url + cacheSalt).digest("hex");
+    let filename = 'usercontent_cache/' + hash;
+    if (!fs.existsSync(filename)) {
+        if (url.startsWith('http')) {
+            console.log('[CACHE] Downloading ' + filename)
+            await pipeline(
+                got.stream(url, {
+                    headers: {
+                        'Accept': 'image/*'
+                    }
+                }),
+                fs.createWriteStream(filename)
+            );
             return baseurl + '/' + filename;
+        } else {
+            return url;
         }
-    } catch (e) {
-        return url;
+    } else {
+        return baseurl + '/' + filename;
     }
-   
 
 }
 
@@ -200,9 +195,6 @@ async function parseRow(row, i) {
         if (data.collections[collectionId] == undefined) {
             data.collections[collectionId] = {};
         }
-
-        let pictureURL = await cacheImage(row['Link to a thumbnail image']);
-
         data.collections[collectionId] = {
             index: i,
             title: row['Title'],
@@ -214,7 +206,7 @@ async function parseRow(row, i) {
             api: row['API url'],
             search: row['Search url'],
             help: row['Help url'],
-            thumbnail: pictureURL,
+            thumbnail: row['Link to a thumbnail image'],
             owner: {
                 name: data.people[row['Sähköpostiosoite']].name,
                 email: row['Sähköpostiosoite']
@@ -225,15 +217,13 @@ async function parseRow(row, i) {
             copyright: row['Copyright status of the collection'],
             video: row['Link to a presentation video'],
             other: row['Other considerations'],
-            contact: row['Contact information'],
-            type: row['What kind of proposal is it?']
+            contact: row['Contact information']
         };
     } else if (row['What kind of proposal is it?'] == 'Workshop') {
         let workshopId = row['Sähköpostiosoite'] + '-' + row['Title'];
         if (data.workshops[workshopId] == undefined) {
             data.workshops[workshopId] = {};
         }
-        let pictureURL = await cacheImage(row['Link to a thumbnail image']);
         let presenters = parsePresenters(row['Presenters']);
         data.workshops[workshopId] = {
             index: i,
@@ -245,8 +235,7 @@ async function parseRow(row, i) {
             hopin: row['Hopin'],
             time: row['Time'],
             presenters: presenters,
-            thumbnail: pictureURL,
-            typ: row['What kind of proposal is it?'],
+            thumbnail: row['Link to a thumbnail image'],
             video: row['Link to a presentation video'],
             owner: {
                 name: data.people[row['Sähköpostiosoite']].name,
@@ -258,7 +247,6 @@ async function parseRow(row, i) {
         if (data.projects[projectId] == undefined) {
             data.projects[projectId] = {};
         }
-        let pictureURL = await cacheImage(row['Link to a thumbnail image']);
         let presenters = parsePresenters(row['Presenters']);
         
         data.projects[projectId] = {
@@ -270,10 +258,7 @@ async function parseRow(row, i) {
             codebase: row['Link to the codebase'],
             slack: row['Slack'],
             presenters: presenters,
-
-            type: row['What kind of proposal is it?'],
-            thumbnail: pictureURL,
-
+            thumbnail: row['Link to a thumbnail image'],
             video: row['Link to a presentation video'],
             owner: {
                 name: data.people[row['Sähköpostiosoite']].name,
