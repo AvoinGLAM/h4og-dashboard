@@ -191,6 +191,9 @@ function printProjectPresenters(data) {
                                         </div>
                                         <!--                                     <div class="subtitle-h4og">by <%=data.projects[project].owner.name%></div> -->
                                         <div class="description scrollable"><%=data.projects[project].short%></div>
+                                        <div class="tags">
+                                            <div class="typeItem"><%=data.projects[project].type%></div>
+                                        </div>
                                     </div>
                                     <div class="links">
                                         <% if (data.projects[project].homepage) { %>
@@ -244,6 +247,9 @@ function printProjectPresenters(data) {
                                             %>
                                             </div>
                                             <div class="description scrollable"><%=data.workshops[workshop].short%>
+                                            </div>
+                                            <div class="tags">
+                                                <div class="typeItem"><%=data.workshops[workshop].type%></div>
                                             </div>
 
                                             <% if (data.workshops[workshop].time) { %>

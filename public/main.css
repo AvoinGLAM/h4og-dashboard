@@ -6,6 +6,16 @@
     line-height: normal;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
 .waterMask {
     -webkit-mask-image: url("/images/brush.png");
     -webkit-mask-size: contain;
@@ -79,11 +89,13 @@
     color: unset;
     text-transform: unset;
     font-family: 'Roboto', sans-serif;
+    line-height: 1em;
 }
 
 .subtitle-h4og {
     font-weight: bold;
     font-size: 0.9em;
+    margin-top: 0.4em;
 }
 
 .typeItem {
@@ -154,7 +166,7 @@
 .upper {
     display: flex;
     flex-direction: column;
-    max-height: 220px;
+    max-height: 175px;
 }
 
 .item {
