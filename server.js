@@ -16,10 +16,9 @@ let production = false;
 (async () => {
     if (process.env.NODE_ENV) {
         production = process.env.NODE_ENV.trim().toLowerCase() == 'production';
-    } else {
-        data = await parse.updateData();
-        console.log('[DEVELOPMENT] Data parsed and saved to the variable!');
     }
+    data = await parse.updateData();
+    console.log('[H4OG] Data parsed for preload and saved to the variable!');
     if (config.spreadsheet && googleCreds.client_email) {
         console.log('[H4OG] Make sure to have sheet ' + config.spreadsheet + ' shared to ' + googleCreds.client_email);
     } else {
