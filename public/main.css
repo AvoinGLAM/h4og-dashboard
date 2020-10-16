@@ -92,8 +92,16 @@ a:hover {
     line-height: 1em;
 }
 
+.modalText .title, .bigger {
+    font-size:1.4em;
+}
+
+.modalText .subtitle-h4og {
+    font-size: 1em;
+}
+
 .bigger {
-    line-height: 2em;
+    margin: 1em 0;
 } 
 
 .subtitle-h4og {
