@@ -163,7 +163,7 @@ async function parseRow(row, i) {
         timezone: parseTimezone(row["What's your timezone group?"]),
         timezoneText: row["What's your timezone group?"],
         type: titleCase(row['Which of these best describe you']).trim(),
-        skillsAndInterests: row['List some skills and interests you would like to work with'],
+        interests: row['List some skills and interests you would like to work with'],
         languages: languages.join(', '),
         website: row['Website'],
         social: {
@@ -201,7 +201,7 @@ async function parseRow(row, i) {
             type: row['What kind of proposal is it?'],
             short: row['Write a one-sentence description to use on the web'],
             description: row['Description'],
-            interests: row['List some skills and interests you would like to work with'],
+/*             interests: row['List some skills and interests you would like to work with'], */
             homepage: row['Link to documentation / homepage'],
             codebase: row['Link to the codebase'],
             api: row['API url'],
