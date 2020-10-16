@@ -92,6 +92,10 @@ a:hover {
     line-height: 1em;
 }
 
+.bigger {
+    line-height: 2em;
+} 
+
 .subtitle-h4og {
     font-weight: bold;
     font-size: 0.9em;
