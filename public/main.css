@@ -101,7 +101,8 @@ a:hover {
 }
 
 .bigger {
-    margin: 1em 0;
+    margin: 0.5em 0em 1em 0em;
+    line-height: 1.2em;
 } 
 
 .subtitle-h4og {
