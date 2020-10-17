@@ -274,6 +274,12 @@ function printProjectPresenters(data) {
 
                                                 Join!</a>
                                             <% } %>
+                                            <% if (data.workshops[workshop].slack) { %>
+                                                <a href="https://slack.com/app_redirect?team=T01AR9W40MC&channel=<%=data.workshops[workshop].slack%>" rel="noopener" target="_blank"><i class="fab fa-slack"></i> Channel!</a>
+                                            <% } %>
+                                            <% if (data.workshops[workshop].sched) { %>
+                                                <a href="<%=data.workshops[workshop].sched%>" rel="noopener" target="_blank"><i class="fas fa-sign-in-alt"></i> Join!</a>
+                                            <% } %>
                                         </div>
                                     </div>
                                 </div>

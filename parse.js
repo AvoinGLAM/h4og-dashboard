@@ -235,6 +235,7 @@ async function parseRow(row, i) {
             codebase: row['Link to the codebase'],
             hopin: row['Hopin'],
             time: row['Time'],
+            sched: row['Sched'],
             presenters: presenters,
             type: row['What kind of proposal is it?'],
             thumbnail: row['Link to a thumbnail image'],
