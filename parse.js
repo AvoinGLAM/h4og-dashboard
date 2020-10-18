@@ -207,6 +207,7 @@ async function parseRow(row, i) {
             api: row['API url'],
             search: row['Search url'],
             help: row['Help url'],
+            slack: row['Slack'],
             thumbnail: row['Link to a thumbnail image'],
             owner: {
                 name: data.people[row['Sähköpostiosoite']].name,
