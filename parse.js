@@ -21,11 +21,11 @@ String.prototype.replaceAll = function (search, replacement) {
 function merge(obj1, obj2) {
     answer = {}
     for (key in obj1) {
-        if (answer[key] === undefined || answer[key] === null || answer[key] == '')
+        if (answer[key] === undefined || answer[key] === null || answer[key] == '' || key == 'index')
             answer[key] = obj1[key];
     }
     for (key in obj2) {
-        if (answer[key] === undefined || answer[key] === null || answer[key] == '')
+        if (answer[key] === undefined || answer[key] === null || answer[key] == '' || key == 'index')
             answer[key] = obj2[key];
     }
     return answer
