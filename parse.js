@@ -174,7 +174,6 @@ async function parseRow(row, i) {
             github: normalizeSocial(row['GitHub'], 'https://github.com/'),
             instagram: normalizeSocial(row['Instagram'], 'https://instagram.com/'),
             flickr: normalizeSocial(row['Flickr'], 'https://www.flickr.com/photos/'),
-            profile: normalizeSocial(row['Profile'], 'https://hack4openglam.slack.com/team/'),
         },
         picture: pictureURL,
         gravatar: gravatarURL(row['Sähköpostiosoite'])
