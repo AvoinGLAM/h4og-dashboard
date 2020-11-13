@@ -221,7 +221,7 @@ async function parseRow(row, i) {
             other: row['Other considerations'],
             contact: row['Contact information']
         };
-    } else if (row['What kind of proposal is it?'] == 'Workshop') {
+    } else if (row['What kind of proposal is it?'] == 'Workshop' || row['What kind of proposal is it?'] == 'Kickoff session' ) {
         let workshopId = row['Sähköpostiosoite'] + '-' + row['Title'];
         if (data.workshops[workshopId] == undefined) {
             data.workshops[workshopId] = {};
