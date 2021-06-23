@@ -1,30 +1,42 @@
 {
-  "name": "hack4openglam-visualization",
-  "version": "1.0.0",
-  "description": "Web app for visualizing Hack4OpenGLAM Google Form data as different shaped post-it notes",
-  "main": "ecosystem.config.js",
+  "name": "h4og-dashboard",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "cors": "^2.8.5",
-    "ejs": "^3.1.5",
-    "express": "^4.17.1",
-    "file-type": "^15.0.1",
-    "google-spreadsheet": "^3.0.13",
-    "got": "^11.7.0",
-    "linkifyjs": "^2.1.9",
-    "read-chunk": "^3.2.0"
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@tippyjs/react": "^4.2.5",
+    "axios": "^0.21.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "v1migrate:win32": "node tools/v1migration/migrate.js && copy tools\\v1migration\\output.json src\\data.json /Y"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ahnl/hack4openglam-visualization.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "ahnl",
-  "bugs": {
-    "url": "https://github.com/ahnl/hack4openglam-visualization/issues"
-  },
-  "homepage": "https://github.com/ahnl/hack4openglam-visualization#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

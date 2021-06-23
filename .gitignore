@@ -1,12 +1,28 @@
-node_modules/
-headerValues.json
-data.json
-config/config.json
-config/google-key.json
-config/config.json
-latest.json
-public/images/typeFilter/collection_a.png
-public/images/typeFilter/people_a.png
-public/images/typeFilter/projects_a.png
-public/images/timezoneMap.svg
-usercontent_cache/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+tools/v1migration/usercontent_cache
+tools/v1migration/latest.json
+tools/v1migration/output.json
+src/data.json

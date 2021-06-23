@@ -1,51 +1,70 @@
-# Hack4OpenGLAM Google Forms Data Visualization
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+# Getting Started with Create React App
 
-## Getting Started
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Installation
-Clone this repo to your local machine. Run command `npm install` to install the required dependencies.
+## Available Scripts
 
-### Setup
-#### Step 1: Set up your Google Project & enable the Sheets API
+In the project directory, you can run:
 
-1. Go to the [Google Developers Console](https://console.developers.google.com/)
-2. Select your project or create a new one (and then select it)
-3. Enable the Sheets API for your project
-4. In the sidebar on the left, select APIs & Services > Library
-5. Search for "sheets"
-6. Click on "Google Sheets API"
-7. click the blue "Enable" button
+### `yarn start`
 
-#### Step 2: Create a service account
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-1. Follow steps above to set up project and enable sheets API
-2. Create a service account for your project
-* In the sidebar on the left, select APIs & Services > Credentials
-* Click blue "+ CREATE CREDENITALS" and select "Service account" option
-* Enter name, description, click "CREATE"
-* You can skip permissions, click "CONTINUE"
-* Click "+ CREATE KEY" button
-* Select the "JSON" key type option
-* Click "Create" button
-* your JSON key file is generated and downloaded to your machine (it is the only copy!)
-* click "DONE"
-* note your service account's email address (also available in the JSON key file)
-3. **Share the Google Sheet (that is connected to the Forms) with your service account using the email noted above** (important)
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-#### Step 3: Create the configuration files
+### `yarn test`
 
-1. Move the JSON key file downloaded in the previous step to `config/google-key.json`
-2. Create a JSON file `config/config.json`, with the following content:
-```json
-{
-    "spreadsheet": "SPREADSHEET_ID_HERE"
-}
-```
-You can obtain the spreadsheet ID from the URL-address of the spreadsheet, which looks like this: `https://docs.google.com/spreadsheets/d/[SPREADSHEET_ID_IS_HERE]/edit`
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Usage
+### `yarn build`
 
-Run the server using `npm start`. The server will start on http://localhost:80.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-You can also optionally specify `PORT` environment variable to change the http server port. 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
