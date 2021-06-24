@@ -19,6 +19,11 @@
     color: rgba(0,0,0,0.7);
 }
 
+.cardLink {
+    text-decoration: none;
+    display: contents;
+}
+
 .peopleCard, .collectionsCard {
     cursor: pointer;
     outline-offset: -0.5rem;

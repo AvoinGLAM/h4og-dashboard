@@ -2,7 +2,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useLocation
+  useLocation,
+  useParams
 } from "react-router-dom";
 
 import data from './data.json';
@@ -67,6 +68,16 @@ function Results() {
     </div>
   )
 }
+
+function CardPage() {
+  const { slug } = useParams();
+  const location = useLocation();
+  const type = location.pathname.split('/')[1];
+
+  const card = data.find(p => p.type === type && p.slug === slug);
+  return <h3>{card.name}</h3>;
+}
+
 function App() {
 console.log(data)
 
@@ -82,6 +93,9 @@ console.log(data)
           <Route exact path={[...(Object.values(displayTypes).map(val => `/${val}`))]}>
             <Filters />
             <Results />
+          </Route>
+          <Route exact path={[...(Object.values(displayTypes).map(val => `/${val}/:slug`))]}>
+            <CardPage />
           </Route>
         </Switch>
       </div>

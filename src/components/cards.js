@@ -4,22 +4,29 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
 import { getDisplayTypeName } from '../displayTypes';
 
+import {
+  Link,
+} from "react-router-dom";
+
+
 
 export function Collections({ data }) {
   console.log(data);
   return (
-    <div className="collectionsCard">
-      <div className="picture">
-          <img src={data.media.thumbnail ? `//images.weserv.nl/?url=${data.media.thumbnail}&w=308&h=348&fit=cover` : defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
-        </div>
-        <div className="content">
-          <span className="cardType">{getDisplayTypeName(data.type)}</span>
-          <h3>{data.name}</h3>
-          <span>
-            {data.shortDescription}
-          </span>
-        </div>
-    </div>
+    <Link to={`/${data.type}/${data.slug}/`} className="cardLink">
+      <div className="collectionsCard">
+        <div className="picture">
+            <img src={data.media.thumbnail ? `//images.weserv.nl/?url=${data.media.thumbnail}&w=308&h=348&fit=cover` : defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
+          </div>
+          <div className="content">
+            <span className="cardType">{getDisplayTypeName(data.type)}</span>
+            <h3>{data.name}</h3>
+            <span>
+              {data.shortDescription}
+            </span>
+          </div>
+      </div>
+    </Link>
   )
 }
 export function People({ data }) {
@@ -34,6 +41,7 @@ export function People({ data }) {
     }
   }
   return (
+    <Link to={`/${data.type}/${data.slug}/`} className="cardLink">
       <div className="peopleCard">
         <div className="picture">
           <img src={data.picture ? `//images.weserv.nl/?url=${data.picture}&w=308&h=348&fit=cover` : defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
@@ -59,6 +67,7 @@ export function People({ data }) {
           ''  
           }
         </div>
-    </div>
+      </div>
+    </Link>
   )
 }

@@ -17,6 +17,31 @@ const cityOptions = [
     "Asia"
 ];
 
+let takenSlugs = [];
+
+function createSlug(input, i) {
+    function slugifyString(text)
+    {
+        return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')           // Replace spaces with -
+        .replace(/[^\w-]+/g, '')       // Remove all non-word chars
+        .replace(/--+/g, '-')         // Replace multiple - with single -
+        .replace(/^-+/, '')             // Trim - from start of text
+        .replace(/-+$/, '');            // Trim - from end of text
+    }
+
+    let slug = slugifyString(input + (i ? `-${i}` : ''));
+
+    if (takenSlugs.includes(slug)) {
+        if (i == undefined) i = 0;
+        i++;
+        return createSlug(input, i);
+    } else {
+        takenSlugs.push(slug);
+        return slug;
+    }
+}
+
 /**
  * Tests if picture url is accessible and is an image
  * @param {String} url 
@@ -81,7 +106,8 @@ for (const email in data.people) {
         const defaultPictureIndex = Math.floor(Math.random() * 9);
         // We pick random number 1-9 for default avatar for missing avatars
 
-        const indexFromMigration = person.index;
+        const slug = createSlug(name);
+        const index = person.index;
 
         resolve({
             type,
@@ -93,7 +119,8 @@ for (const email in data.people) {
             picture,
             defaultPictureIndex,
             email,
-            indexFromMigration
+            index,
+            slug
         });
     }))
 }
@@ -125,7 +152,8 @@ for (const collectionId in data.collections) {
         const copyright = collection.copyright;
         const email = collection.contact;
 
-        const indexFromMigration = collection.index;
+        const index = collection.index;
+        const slug = createSlug(name);
 
         const defaultPictureIndex = Math.floor(Math.random() * 9);
 
@@ -144,7 +172,8 @@ for (const collectionId in data.collections) {
             copyright,
             email,
             defaultPictureIndex,
-            indexFromMigration
+            index,
+            slug
         });
     }))
 }
@@ -152,11 +181,7 @@ for (const collectionId in data.collections) {
 Promise.all(promises)
     .then((results) => {
         results = results.filter(p => p.name != '');
-        results.sort((a, b) => (a.indexFromMigration - b.indexFromMigration));
-        results = results.map(i => {
-            delete i.indexFromMigration;
-            return i;
-        });
+        results.sort((a, b) => (a.index - b.index));
 
         console.log(`Saving ${results.length} results`)
         fs.writeFile('output.json', JSON.stringify(results, null, 4));
