@@ -31,3 +31,11 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `yarn v1migrate:win32`
 
 Migrates Hack4OpenGLAM 2020's data into Hack4OpenGLAM 2021's data format. Can be used as a sample dataset for development purposes. Move the `latest.json` and `usercontent_cache/` in the `tools/v1migration/` folder first. You can ask Mikael for a copy of the dataset.
+
+## Attributions
+
+### [/src/assets/images/frame.png](https://github.com/ahnl/h4og-dashboard/blob/master/src/assets/images/frame.png)
+Commons user Sailko, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons
+
+### [/src/assets/images/frame2.png](https://github.com/ahnl/h4og-dashboard/blob/master/src/assets/images/frame2.png)
+["Goldener Bilderrahmen - gold picture frame"](https://www.flickr.com/photos/37977505@N00/2303608353) by [eriwst](https://www.flickr.com/photos/37977505@N00) is licensed under [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/?ref=ccsearch&atype=rich)

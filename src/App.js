@@ -12,13 +12,8 @@ import './styles/App.css';
 import { SelectButton } from './components/input';
 import { People, Collections } from './components/cards';
 import postcards02Light from './assets/images/postcards_02_light.jpg';
-const displayTypes = {
-  "All": "",
-  "Workshops": "workshops",
-  "People": "people",
-  "Projects": "projects",
-  "Collections": "collections"
-};
+
+import { displayTypes } from './displayTypes.js';
 
 function Filters() {  
   let {pathname} = useLocation();

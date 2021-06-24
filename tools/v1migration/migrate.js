@@ -78,7 +78,7 @@ for (const email in data.people) {
         const languages = person.languages.split(', ').map(i => languageOptions[i] || 'unknown');
         const city = cityOptions[person.timezone] || 'The Earth'; 
         const picture = await testPictureUrl(person.picture.length > 0 ? person.picture : person.gravatar); // assuming the v1 server is still up and hosts the pictures
-        const defaultAvatarIndex = Math.floor(Math.random() * 9);
+        const defaultPictureIndex = Math.floor(Math.random() * 9);
         // We pick random number 1-9 for default avatar for missing avatars
 
         const indexFromMigration = person.index;
@@ -91,7 +91,7 @@ for (const email in data.people) {
             languages,
             city,
             picture,
-            defaultAvatarIndex,
+            defaultPictureIndex,
             email,
             indexFromMigration
         });
@@ -127,6 +127,8 @@ for (const collectionId in data.collections) {
 
         const indexFromMigration = collection.index;
 
+        const defaultPictureIndex = Math.floor(Math.random() * 9);
+
         resolve({
             name,
             type, 
@@ -141,6 +143,7 @@ for (const collectionId in data.collections) {
             country,
             copyright,
             email,
+            defaultPictureIndex,
             indexFromMigration
         });
     }))
