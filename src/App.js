@@ -10,7 +10,7 @@ import data from './data.json';
 
 import './styles/App.css';
 import { SelectButton } from './components/input';
-import { People } from './components/cards';
+import { People, Collections } from './components/cards';
 import postcards02Light from './assets/images/postcards_02_light.jpg';
 const displayTypes = {
   "All": "",
@@ -41,7 +41,8 @@ function Results() {
   let displayType = pathname.slice(1);
 
   const typeComponents = {
-    "people": People
+    "people": People,
+    "collections": Collections
   };
 
   /*const data = [
@@ -59,9 +60,15 @@ function Results() {
   
   return (
     <div className="container resultGrid">
-      {data.map(item => typeComponents[item.type]({
-        data: item
-      }))}
+      {data.map(item => {
+        if (typeComponents[item.type] === undefined) {
+          console.log(`Couldn't find component for type ${item.type}`);
+          return <></>;
+        }
+        return typeComponents[item.type]({
+          data: item
+        });
+      })}
     </div>
   )
 }

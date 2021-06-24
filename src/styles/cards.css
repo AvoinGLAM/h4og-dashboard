@@ -1,20 +1,29 @@
 .resultGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 1rem;
+    /*grid-gap: 1rem;*/
+    grid-auto-flow: dense;
 }
+
+.cardPadding {
+    padding: 0.5rem;
+}
+
+/* People */
+
 .peopleCard {
     background-image: url('../assets/images/old_paper6_2_1.png'); /* 2:1 */
     background-size: 100% 100%;
     aspect-ratio: 2 / 1; /* to-do: make this cross browser*/
-    width: calc(100% - 1rem);
+    width: 100%;
     display: flex;
-    padding: 0.5rem;
+    /*padding: 0.5rem;*/
 }
 
 .peopleCard .picture {
     position: relative;
     aspect-ratio: 308 / 348;
+    margin: 0.5rem;
 }
 
 .peopleCard .picture img {
@@ -36,10 +45,23 @@
 }
 
 .peopleCard .content {
-    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem 0;
 }
 
 .peopleCard .content * {
     margin-bottom: 0.5rem;
     display: block;
+}
+
+/* Collections */
+
+.collectionsCard {
+    grid-row: span 2;
+    background-image: url('../assets/images/old_paper6_2_1.png'); /* 2:1 */
+    background-size: 100% 100%;
+    aspect-ratio: 1 / 1; /* to-do: make this cross browser*/
+    width: 100%;
+    display: flex;
+    /*padding: 0.5rem;*/
 }

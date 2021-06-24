@@ -33,6 +33,40 @@ function testPictureUrl(url) {
     })
 }
 
+/**
+ * Input human written presenter info (answer to the question "Write the name and email address of each presenter on a separate row. You can leave the email address out if you wish. ") and return machine readable array with objects of name and address
+ * @param {String} data 
+ * @returns {Array}
+ */
+function parsePresenters(data) {
+    if (data) {
+        presenters = [];
+        presentersRows = data.trim().split('\n');
+        presentersRows.forEach((presenter) => {
+            let name = '';
+            let address = '';
+            if (presenter.includes(',') || presenter.includes(' ')) {
+                let presenterData = presenter.trim().replace(', ', ',').split(/,| /g);
+
+                if (presenterData[presenterData.length - 1].includes('.')) {
+                    address = presenterData[presenterData.length - 1];
+                    presenterData.pop();
+                }
+                name = presenterData.join(' ');
+            } else {
+                name = presenter;
+            }
+            presenters.push({
+                name: name,
+                address: address
+            });
+        });
+        return presenters;
+    } else {
+        return;
+    }
+}
+
 // people
 for (const email in data.people) {
     promises.push(new Promise(async (resolve, reject) => {
@@ -47,6 +81,8 @@ for (const email in data.people) {
         const defaultAvatarIndex = Math.floor(Math.random() * 9);
         // We pick random number 1-9 for default avatar for missing avatars
 
+        const indexFromMigration = person.index;
+
         resolve({
             type,
             name,
@@ -56,15 +92,71 @@ for (const email in data.people) {
             city,
             picture,
             defaultAvatarIndex,
-            email
+            email,
+            indexFromMigration
+        });
+    }))
+}
+
+for (const collectionId in data.collections) {
+    promises.push(new Promise(async (resolve, reject) => {
+        
+        const collection = data.collections[collectionId];
+        const name = collection.title;
+        const type = "collections";
+
+        const shortDescription = collection.short;
+        const description = collection.description;
+        const access = collection.access;
+        const considerations = "";
+
+        const presenters = [{...collection.owner}];
+        const links = {
+            homepage: collection.homepage,
+            codebase: collection.codebase,
+            organization: ''
+        };
+        const media = {
+            thumbnail: await testPictureUrl(collection.thumbnail),
+            video: collection.video
+        };
+        const organization = collection.organization; // holder of the collection
+        const country = collection.country;
+        const copyright = collection.copyright;
+        const email = collection.contact;
+
+        const indexFromMigration = collection.index;
+
+        resolve({
+            name,
+            type, 
+            shortDescription,
+            description,
+            access,
+            considerations,
+            presenters,
+            links,
+            media,
+            organization,
+            country,
+            copyright,
+            email,
+            indexFromMigration
         });
     }))
 }
 
 Promise.all(promises)
     .then((results) => {
+        results = results.filter(p => p.name != '');
+        results.sort((a, b) => (a.indexFromMigration - b.indexFromMigration));
+        results = results.map(i => {
+            delete i.indexFromMigration;
+            return i;
+        });
+
         console.log(`Saving ${results.length} results`)
-        fs.writeFile('output.json', JSON.stringify(results.filter(p => p.name != ''), null, 4));
+        fs.writeFile('output.json', JSON.stringify(results, null, 4));
     })
     .catch((reason) => {
         console.log(reason);
