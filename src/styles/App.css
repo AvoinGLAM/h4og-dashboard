@@ -8,7 +8,10 @@ body {
 
 .header {
   padding: var(--container-margin);
+  display: flex;
 }
+
+.header h1 {flex: 1;}
 
 h1 {
   color: #EB480D;
@@ -36,4 +39,31 @@ h3 {
   margin: 0; 
   font-size: 1.2rem;
   font-weight: normal;
+}
+
+.center {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+button {
+  background-image: url('../assets/images/postcards_02_input.png');
+  background-size: cover;
+  text-align: left;
+  border: none;
+  padding: 0.6rem 3rem;
+  border-radius: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+button {
+  outline: 3px solid transparent;
+  transition: outline 0.1s;
+}
+
+button:hover {
+  outline: 3px solid #EDD6A6;
 }

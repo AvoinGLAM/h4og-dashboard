@@ -3,7 +3,8 @@ import {
   Switch,
   Route,
   useLocation,
-  useParams
+  useParams,
+  useHistory
 } from "react-router-dom";
 
 import data from './data.json';
@@ -11,10 +12,9 @@ import data from './data.json';
 
 import './styles/App.css';
 import { SelectButton } from './components/input';
-import { People, Collections } from './components/cards';
 import postcards02Light from './assets/images/postcards_02_light.jpg';
 
-import { displayTypes } from './displayTypes.js';
+import { displayTypes, typeComponents } from './displayTypes.js';
 
 function Filters() {  
   let {pathname} = useLocation();
@@ -33,25 +33,8 @@ function Filters() {
 }
 
 function Results() {
-  let {pathname} = useLocation();
-  let displayType = pathname.slice(1);
-
-  const typeComponents = {
-    "people": People,
-    "collections": Collections
-  };
-
-  /*const data = [
-    {
-      type: "people",
-      name: "Elon Musk",
-      skills: ["Entrepreneur", "Designer", "Programmer"],
-      languages: ["en", "fr"],
-      company: "SpaceX",
-      city: "California",
-      picture: "https://static.dezeen.com/uploads/2021/06/elon-musk-architect_dezeen_1704_col_0.jpg"
-    }
-  ]*/
+  //let {pathname} = useLocation();
+  //let displayType = pathname.slice(1);
   //    Filter: {Object.keys(displayTypes).find(key => displayTypes[key] === displayType)}
   
   return (
@@ -61,7 +44,7 @@ function Results() {
           console.log(`Couldn't find component for type ${item.type}`);
           return <></>;
         }
-        return typeComponents[item.type]({
+        return typeComponents[item.type].card({
           data: item
         });
       })}
@@ -69,33 +52,47 @@ function Results() {
   )
 }
 
-function CardPage() {
+function SinglePage() {
   const { slug } = useParams();
   const location = useLocation();
   const type = location.pathname.split('/')[1];
 
   const card = data.find(p => p.type === type && p.slug === slug);
-  return <h3>{card.name}</h3>;
+
+  return typeComponents[card.type].page({
+    data: card
+  });
 }
 
-function App() {
-console.log(data)
+function Header(props) {
+  const history = useHistory();
 
+  return (
+    <div className="header">
+      <h1>Hack4OpenGLAM Dashboard</h1>
+      {props.backButton ?
+      <div>
+        <button onClick={() => history.goBack()}>&lt; {props.backButton}</button>
+      </div>
+      :
+      ''}
+    </div>
+  )
+}
+function App() {
   console.log(Object.values(displayTypes).map(val => `/${val}`))
   return (
     <Router>
       <div className="App">
-        <div className="header">
-          <h1>Hack4OpenGLAM Dashboard</h1>
-        </div>
-        
         <Switch>
           <Route exact path={[...(Object.values(displayTypes).map(val => `/${val}`))]}>
+            <Header />
             <Filters />
             <Results />
           </Route>
           <Route exact path={[...(Object.values(displayTypes).map(val => `/${val}/:slug`))]}>
-            <CardPage />
+            <Header backButton="Back to Results"/>
+            <SinglePage />
           </Route>
         </Switch>
       </div>

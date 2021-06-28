@@ -1,16 +1,14 @@
-import '../styles/cards.css';
-import { defaultPictures } from '../defaultPictures';
+import '../../styles/cards.css';
+import { defaultPictures } from '../../defaultPictures';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
-import { getDisplayTypeName } from '../displayTypes';
+import { getDisplayTypeName } from '../../displayTypes';
 
 import {
   Link,
 } from "react-router-dom";
 
-
-
-export function Collections({ data }) {
+export function CollectionsCard({ data }) {
   console.log(data);
   return (
     <Link to={`/${data.type}/${data.slug}/`} className="cardLink">
@@ -29,7 +27,7 @@ export function Collections({ data }) {
     </Link>
   )
 }
-export function People({ data }) {
+export function PeopleCard({ data }) {
   function prettifySkills(skills) {
     if (skills.length === 0) {
       return;
@@ -44,13 +42,15 @@ export function People({ data }) {
     <Link to={`/${data.type}/${data.slug}/`} className="cardLink">
       <div className="peopleCard">
         <div className="picture">
-          <img src={data.picture ? `//images.weserv.nl/?url=${data.picture}&w=308&h=348&fit=cover` : defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
+          <img src={data.picture ? `//images.weserv.nl/?url=${data.picture}&w=348&h=348&fit=cover` : defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
         </div>
         <div className="content">
           <span className="cardType">{getDisplayTypeName(data.type)}</span>
 
           <h3>{data.name}</h3>
 
+          <span>{data.description}</span>
+          {/*}
           {data.skills.length === 1 ?
             <span>{data.skills[0]}</span>
             :
@@ -58,14 +58,15 @@ export function People({ data }) {
               <span>{prettifySkills(data.skills)}</span>
             </Tippy>
           }
-          {/*data.company.trim().length + data.city.trim().length === 0 ? '' :
+          {data.company.trim().length + data.city.trim().length === 0 ? '' :
             <span>{data.company.trim().length === 0 ? '' : `${data.company}, `}{data.city}</span>
-        */}
+        }
           {data.company.trim().length > 0 ? 
           <span>{data.company}</span>
           :
           ''  
           }
+          */}
         </div>
       </div>
     </Link>

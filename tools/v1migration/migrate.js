@@ -103,6 +103,10 @@ for (const email in data.people) {
         const languages = person.languages.split(', ').map(i => languageOptions[i] || 'unknown');
         const city = cityOptions[person.timezone] || 'The Earth'; 
         const picture = await testPictureUrl(person.picture.length > 0 ? person.picture : person.gravatar); // assuming the v1 server is still up and hosts the pictures
+
+        const description = person.description;
+        const social = person.social;
+
         const defaultPictureIndex = Math.floor(Math.random() * 9);
         // We pick random number 1-9 for default avatar for missing avatars
 
@@ -120,6 +124,8 @@ for (const email in data.people) {
             defaultPictureIndex,
             email,
             index,
+            description,
+            social,
             slug
         });
     }))

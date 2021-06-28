@@ -1,0 +1,60 @@
+.cardHeader {
+    display: flex;
+}
+
+.cardHeader .picture {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    max-height: 200px;
+}
+
+.cardHeader .picture img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardHeader .picture::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/frame.png');
+    z-index: 2;
+    pointer-events: none;
+}
+
+.cardHeader .content {
+    flex: 1;
+    padding: 1rem 1.5rem;
+}
+
+.cardHeader .content span {
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.cardHeader .big {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+
+.cardHeader .big span {
+    text-align: right;
+}
+
+.cardHeader .big span:nth-child(1) {
+    font-size: 1.2rem;
+}
+
+.cardHeader .big span:nth-child(2) {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.page .center:nth-child(2) {
+    margin-top: 2rem;
+}
