@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  app:
+    build: .
+    image: docker.pkg.github.com/avoinglam/h4og-dashboard/h4og-dashboard
+    volumes:
+     - ./config/:/usr/src/app/config/
