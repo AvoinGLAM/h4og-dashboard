@@ -35,10 +35,12 @@ export function PeoplePage({data}) {
                                 <span>{data.company.trim().length === 0 ? '' : `${data.company}, `}{data.city}</span>
                             }
                         </div>
+                        {/*
                         <div className="big">
                             <span>Local Time</span>
                             <span>13.28 PM</span>
                         </div>
+                        */}
                     </div>
                 </div>
             </div>

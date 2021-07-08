@@ -1,0 +1,3736 @@
+[
+    {
+        "type": "people",
+        "name": "Susanna",
+        "company": "CC Finland",
+        "skills": [
+            "Open Culture Advocate",
+            "Designer",
+            "Storyteller",
+            "Photographer Or Documentarist",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "fi"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/0b96991aff54a138d73fa820866405e1",
+        "defaultPictureIndex": 0,
+        "email": "susanna.anas@gmail.com",
+        "index": 0,
+        "description": "I am program coordinator for Hack4OpenGLAM.",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "susanna"
+    },
+    {
+        "type": "people",
+        "name": "Arturo A.",
+        "company": "",
+        "skills": [
+            "Humanist"
+        ],
+        "languages": [
+            "unknown"
+        ],
+        "city": "Americas",
+        "picture": false,
+        "defaultPictureIndex": 8,
+        "email": "arturo_3xv@hotmail.com",
+        "index": 1,
+        "description": "I am a passionate reader and I am in favor of the freedom of knowledge",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "arturo-a"
+    },
+    {
+        "type": "people",
+        "name": "Oorna",
+        "company": "",
+        "skills": [
+            "Storyteller",
+            "Humanist"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "India",
+        "picture": "https://www.gravatar.com/avatar/df0e74b65b4b27243bd47d9fb62d7f82?d=404",
+        "defaultPictureIndex": 0,
+        "email": "oorna.r@gmail.com",
+        "index": 2,
+        "description": "I'm a writer, editor and librarian. I love fiction and I'm fascinated by South Asia and its history.",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "oorna"
+    },
+    {
+        "type": "people",
+        "name": "Ryan",
+        "company": "Smithsonian",
+        "skills": [
+            "Open Culture Advocate",
+            "Designer",
+            "Developer",
+            "Glam Professional"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Americas",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/231d701997e1dda7970529e53f3c315b",
+        "defaultPictureIndex": 0,
+        "email": "kingr@si.edu",
+        "index": 3,
+        "description": "Program Manager for the Smithsonian Open Access initiative.",
+        "social": {
+            "twitter": "https://twitter.com/ryancanhelpyou",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/ryancanhelpyou/",
+            "wikimedia": "",
+            "github": "https://github.com/Smithsonian/OpenAccess",
+            "instagram": "https://instagram.com/ryancanhelpyou",
+            "flickr": ""
+        },
+        "slug": "ryan"
+    },
+    {
+        "name": "Smithsonian Open Access",
+        "type": "collections",
+        "shortDescription": "Welcome to Smithsonian Open Access, where you can download, share, and reuse millions of the Smithsonian’s images—right now, without asking.",
+        "description": "Welcome to Smithsonian Open Access, where you can download, share, and reuse millions of the Smithsonian’s images—right now, without asking. With new platforms and tools, you have easier access to nearly 3 million 2D and 3D digital items from our collections—with many more to come. This includes images and data from across the Smithsonian’s 19 museums, nine research centers, libraries, archives, and the National Zoo.",
+        "access": "API, GitHub, Smithsonian Web Platforms, Google Arts + Culture",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Ryan",
+                "email": "kingr@si.edu"
+            }
+        ],
+        "links": {
+            "homepage": "https://www.si.edu/openaccess",
+            "codebase": "https://www.si.edu/openaccess/devtools",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "http://hack4openglam-visualization-dev.hannolainen.com/usercontent/SOA%20Social%20Graphic_1200x1200_SquareFINAL.jpg",
+            "video": "https://www.youtube.com/watch?list=PLL71NEDhCwbHCf0gz0U_XMdnNubAsmTVj&v=B5vC2kweCNk&feature=emb_logo"
+        },
+        "organization": "The Smithsonian Institution",
+        "country": "US",
+        "copyright": "CC0",
+        "email": "kingr@si.edu",
+        "defaultPictureIndex": 4,
+        "index": 3,
+        "slug": "smithsonian-open-access"
+    },
+    {
+        "type": "people",
+        "name": "Shukadev",
+        "company": "Center for Development and Digital Humanities",
+        "skills": [
+            "Open Culture Advocate",
+            "Technologist"
+        ],
+        "languages": [
+            "unknown"
+        ],
+        "city": "India",
+        "picture": false,
+        "defaultPictureIndex": 1,
+        "email": "amgains@gmail.com",
+        "index": 4,
+        "description": "I am working with government bodies and they don't like the open data concept!",
+        "social": {
+            "twitter": "https://twitter.com/amgains",
+            "facebook": "https://facebook.com/amgains",
+            "linkedin": "https://www.linkedin.com/in/amgains",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/amgains",
+            "flickr": ""
+        },
+        "slug": "shukadev"
+    },
+    {
+        "type": "people",
+        "name": "Michelle",
+        "company": "Wikimedia Nederland ",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 3,
+        "email": "vanlanschot@wikimedia.nl",
+        "index": 5,
+        "description": "project leader GLAM, Education and Wiki goes Caribbean ",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:MichellevL_(WMNL)",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "michelle"
+    },
+    {
+        "type": "people",
+        "name": "Majd",
+        "company": "",
+        "skills": [
+            "Open Culture Advocate",
+            "Developer",
+            "Glam Professional",
+            "Technologist"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "unknown"
+        ],
+        "city": "Americas",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/1378555046ed1aa41c85d19960a5cba3",
+        "defaultPictureIndex": 1,
+        "email": "hi@majdal.cc",
+        "index": 6,
+        "description": "I work with maps, co-created PalOpenMaps.org",
+        "social": {
+            "twitter": "https://twitter.com/majdal",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "https://ar.wikipedia.org/wiki/%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85:Majdal.cc",
+            "github": "https://github.com/majdal/",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "majd"
+    },
+    {
+        "type": "people",
+        "name": "Sushumna",
+        "company": "telugutrunk.in",
+        "skills": [
+            "Open Culture Advocate",
+            "Storyteller",
+            "Technologist",
+            "Ed Tech Coach And E-learning Developer"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "India",
+        "picture": "https://www.gravatar.com/avatar/e2954ff249978233e8acb6528a5f3109?d=404",
+        "defaultPictureIndex": 5,
+        "email": "sushumnarao@gmail.com",
+        "index": 7,
+        "description": "My motto is to create awareness about CC licences and motivate artists, writers etc. to launch their marerial with CC Licence",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "sushumna"
+    },
+    {
+        "type": "people",
+        "name": "katherine",
+        "company": "RMIT University",
+        "skills": [
+            "Glam Professional"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Asia",
+        "picture": false,
+        "defaultPictureIndex": 5,
+        "email": "katherine.jarvie@rmit.edu.au",
+        "index": 8,
+        "description": "RMIT University",
+        "social": {
+            "twitter": "https://twitter.com/KathyGallen",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/katherinegallen/?originalSubdomain=au",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": "http://rmit.edu.au"
+        },
+        "slug": "katherine"
+    },
+    {
+        "type": "people",
+        "name": "Sumit ",
+        "company": "Centre for Detection of Fake News and Disinformation",
+        "skills": [
+            "Open Culture Advocate",
+            "Humanist"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "India",
+        "picture": false,
+        "defaultPictureIndex": 6,
+        "email": "snarula@gwa.amity.edu",
+        "index": 9,
+        "description": "I catch Fake News and Disinformation",
+        "social": {
+            "twitter": "https://twitter.com/snarula2",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "sumit"
+    },
+    {
+        "type": "people",
+        "name": "Ayten",
+        "company": "'Ivan Sergeevich Turgenev\"Primary school,Razgrad,Bulgaria",
+        "skills": [
+            "Open Culture Advocate",
+            "Humanist",
+            "Teacher"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 2,
+        "email": "ayten_kyazimova@abv.bg",
+        "index": 10,
+        "description": "I am a teacher who works on an Erasmus + project on Cultural Heritage",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "ayten"
+    },
+    {
+        "type": "people",
+        "name": "Albin",
+        "company": "",
+        "skills": [
+            "Open Culture Advocate",
+            "Developer",
+            "Glam Professional",
+            "Technologist",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 5,
+        "email": "albin.post@gmail.com",
+        "index": 11,
+        "description": "https://meta.wikimedia.org/wiki/User:Abbe98",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "albin"
+    },
+    {
+        "type": "people",
+        "name": "Liesbeth",
+        "company": "Leiden University Library",
+        "skills": [
+            "Glam Professional"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 0,
+        "email": "e.m.van.wijk@library.leidenuniv.nl",
+        "index": 12,
+        "description": "I can't wait to make the digitised treasures of our Library available to the general public!",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:wijkemvan",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "liesbeth"
+    },
+    {
+        "name": "Upgrade Source links in Image Collection South East Asia",
+        "type": "collections",
+        "shortDescription": "Update links to the source of photographs in Category:KITLV on Wikimedia",
+        "description": "Many of the thousands of links to source have become outdated when the images were migrated to a new system (http://digitalcollections.universiteitleiden.nl). I would like to update the collection and restore the link to the institution where they belong to. ",
+        "access": "In the Leiden University repository (https://digitalcollections.universiteitleiden.nl/view/collection/kitlvphotos) most photographs are available in TIFF; most uploaded photographs to wikimedia commons in the past are JPG. Updating the handles is highest priority, but enriching the wikimedia files with structured metadata an possibly IIIF is second. ",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Liesbeth",
+                "email": "e.m.van.wijk@library.leidenuniv.nl"
+            }
+        ],
+        "links": {
+            "homepage": "https://digitalcollections.universiteitleiden.nl/view/collection/kitlvphotos",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": ""
+        },
+        "organization": "Leiden University Library",
+        "country": "South East Asia and Netherlands",
+        "copyright": "PDM / Public Domain",
+        "email": "e.m.van.wijk@library.leidenuniv.nl",
+        "defaultPictureIndex": 3,
+        "index": 12,
+        "slug": "upgrade-source-links-in-image-collection-south-east-asia"
+    },
+    {
+        "type": "people",
+        "name": "Kelly",
+        "company": "",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Americas",
+        "picture": false,
+        "defaultPictureIndex": 8,
+        "email": "l.kellyfitzpatrick@gmail.com",
+        "index": 13,
+        "description": "Hello! I'm an open access and digital collections specialist based in Cambridge, M.A.",
+        "social": {
+            "twitter": "https://twitter.com/fitzbub",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "https://github.com/lkfitz",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "kelly"
+    },
+    {
+        "type": "people",
+        "name": "Sami",
+        "company": "Wikimedia Tunisia UG",
+        "skills": [
+            "Open Culture Advocate",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 3,
+        "email": "mlouhisami@gmail.com",
+        "index": 14,
+        "description": "Advocate for a free and open knowledge, president of Wikimedia Tunisia. ",
+        "social": {
+            "twitter": "https://twitter.com/Sami_Mlouhi",
+            "facebook": "https://facebook.com/sami.mlouhi.7/",
+            "linkedin": "https://linkedin.com/in/sami-mlouhi-7a709578/",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:Sami_Mlouhi",
+            "github": "",
+            "instagram": "https://instagram.com/mlouhisami/?hl=fr",
+            "flickr": ""
+        },
+        "slug": "sami"
+    },
+    {
+        "type": "people",
+        "name": "Bodhisattwa",
+        "company": "CIS-A2K",
+        "skills": [
+            "Wikimedian"
+        ],
+        "languages": [
+            "unknown",
+            "en"
+        ],
+        "city": "India",
+        "picture": false,
+        "defaultPictureIndex": 1,
+        "email": "bodhisattwa.rgkmc@gmail.com",
+        "index": 15,
+        "description": "I am a Wikimedia volunteer currently working as Wikidata coordinator at CIS-A2K.",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "bodhisattwa"
+    },
+    {
+        "type": "people",
+        "name": "Tove",
+        "company": "Hack4OpenGLAM / Aalto University Archives, Finland",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "fi"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/e76915e799e64d7400b6c21a98af1a38",
+        "defaultPictureIndex": 2,
+        "email": "tove.orsted@gmail.com",
+        "index": 16,
+        "description": "Digital GLAM Archivist/Activist/Anarchist",
+        "social": {
+            "twitter": "https://twitter.com/toveorsted",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/toveorsted/",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": "https://flickr.com/photos/aaltocommons/page1"
+        },
+        "slug": "tove"
+    },
+    {
+        "name": "Student life during 100- years",
+        "type": "collections",
+        "shortDescription": "Audio-visual collections born from learning, research and artistic activities of the University. ",
+        "description": "Aalto University archive has digitalised over 200 000 teaching-related slides, thousands of photographs, and many drawings created by students. We are publishing them continuesly on the finnish platform Finna",
+        "access": "Finna api",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Tove",
+                "email": "tove.orsted@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://aalto.finna.fi/Search/Results?view=grid&filter%5B%5D=%7Eformat%3A%220%2FWorkOfArt%2F%22&filter%5B%5D=%7Eformat%3A%220%2FImage%2F%22&filter%5B%5D=%7Eformat%3A%220%2FOther%2F%22&filter%5B%5D=%7Eformat%3A%220%2FPhysicalObject%2F%22&filter%5B%5D=online_boolean%3A%221%22&hiddenFilters%5B%5D=building%3A%221%2FAALTO%2Fraami%2F%22&type=AllFields&sort=main_date_str+asc",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://www.aalto.fi/sites/g/files/flghsv161/files/styles/o_914w_ah_n/public/2019-11/18095028976_95de518f56_k.jpg?itok=UJOFHS6G",
+            "video": "https://youtu.be/7inzTQJ5bAE"
+        },
+        "organization": "Aalto University Archives",
+        "country": "Finland",
+        "copyright": "PDM / Public Domain, CC BY, CC BY-SA, CC NC or ND clauses",
+        "email": "tove.orsted@gmail.com",
+        "defaultPictureIndex": 4,
+        "index": 16,
+        "slug": "student-life-during-100-years"
+    },
+    {
+        "type": "people",
+        "name": "Vahur",
+        "company": "Ajapaik (MTÜ Eesti Fotopärand)",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 2,
+        "email": "vahur@ajapaik.ee",
+        "index": 17,
+        "description": "photographic heritage and crowdsourcing enthusiast",
+        "social": {
+            "twitter": "https://twitter.com/puik",
+            "facebook": "",
+            "linkedin": "http://linkedin.com/in/vahurpuik",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:Puik",
+            "github": "https://github.com/puik",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "vahur"
+    },
+    {
+        "type": "people",
+        "name": "Kayode",
+        "company": "",
+        "skills": [
+            "Storyteller",
+            "Technologist",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 0,
+        "email": "kayusyussuf@yahoo.com",
+        "index": 18,
+        "description": "Kayode is excited about history and stories",
+        "social": {
+            "twitter": "https://twitter.com/k_whybaba",
+            "facebook": "https://facebook.com/kayusyussuf",
+            "linkedin": "https://www.linkedin.com/in/kayusyussuf",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:kayusyussuf",
+            "github": "",
+            "instagram": "https://instagram.com/kayusyussuf",
+            "flickr": ""
+        },
+        "slug": "kayode"
+    },
+    {
+        "type": "people",
+        "name": "Tuomas",
+        "company": "Yle Archives",
+        "skills": [
+            "Glam Professional"
+        ],
+        "languages": [
+            "en",
+            "fi"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 1,
+        "email": "tuomas.nolvi@yle.fi",
+        "index": 19,
+        "description": "Historian working at Yle Archives in Finland.",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "tuomas"
+    },
+    {
+        "type": "people",
+        "name": "jenifer ",
+        "company": "unholytale",
+        "skills": [
+            "Open Culture Advocate",
+            "Artist",
+            "Designer",
+            "Photographer Or Documentarist"
+        ],
+        "languages": [
+            "unknown",
+            "en"
+        ],
+        "city": "Americas",
+        "picture": "https://www.gravatar.com/avatar/d81582ead768dd5a091089705f5b5c59?d=404",
+        "defaultPictureIndex": 5,
+        "email": "jenifergorexxx@gmail.com",
+        "index": 20,
+        "description": "Iam student almost graduated of professor of Photography",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/unholytale/",
+            "flickr": ""
+        },
+        "slug": "jenifer"
+    },
+    {
+        "type": "people",
+        "name": "Sam",
+        "company": "The AfroCine Project",
+        "skills": [
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 3,
+        "email": "samoye_@hotmail.com",
+        "index": 21,
+        "description": "I am a long-term Wikipedia editor and the founder of The AfroCine Project ",
+        "social": {
+            "twitter": "https://twitter.com/samoyeyele",
+            "facebook": "",
+            "linkedin": "https://www.linkedin.com/in/samoyeyele",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/samoyeyele",
+            "flickr": ""
+        },
+        "slug": "sam"
+    },
+    {
+        "type": "people",
+        "name": "Vladimir",
+        "company": "SMART PAPER",
+        "skills": [
+            "Technologist"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 1,
+        "email": "vb@smartpaper.fi",
+        "index": 22,
+        "description": "I am activist of Open Knowledge Finland, developing startup solution for Opening Access via enhanced public library books / Open GLAM & Founding Member of MyData Global",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "vladimir"
+    },
+    {
+        "type": "people",
+        "name": "Fernando",
+        "company": "Alquimétricos",
+        "skills": [
+            "Open Culture Advocate",
+            "Artist",
+            "Designer",
+            "Technologist",
+            "Maker",
+            "Toy Developer"
+        ],
+        "languages": [
+            "unknown",
+            "en",
+            "unknown"
+        ],
+        "city": "Americas",
+        "picture": false,
+        "defaultPictureIndex": 7,
+        "email": "ferdaguanno@gmail.com",
+        "index": 23,
+        "description": "OER STEAM DIY toys developer",
+        "social": {
+            "twitter": "https://twitter.com/alquimetricos",
+            "facebook": "https://facebook.com/alquimetricos",
+            "linkedin": "https://linkedin.com/company/alquimetricos",
+            "wikimedia": "",
+            "github": "https://github.com/Open-Hardware-Leaders/Alquimetricos/",
+            "instagram": "https://instagram.com/alquimetricos",
+            "flickr": ""
+        },
+        "slug": "fernando"
+    },
+    {
+        "type": "people",
+        "name": "Nasir",
+        "company": "Creative Commons Bangladesh",
+        "skills": [
+            "Open Culture Advocate",
+            "Artist",
+            "Designer",
+            "Developer",
+            "Storyteller",
+            "Photographer Or Documentarist",
+            "Glam Professional",
+            "Humanist",
+            "Technologist",
+            "Wikimedian"
+        ],
+        "languages": [
+            "unknown",
+            "en"
+        ],
+        "city": "India",
+        "picture": false,
+        "defaultPictureIndex": 3,
+        "email": "nasir8891@gmail.com",
+        "index": 24,
+        "description": "I am Nasir from Bangladesh. An open source activist by passion, full stack developer and photographer by profession. Contributing to open source projects for more than 12 years. ",
+        "social": {
+            "twitter": "https://twitter.com/nasir8891",
+            "facebook": "https://facebook.com/nasir.khan.saikat",
+            "linkedin": "https://linkedin.com/in/nasirkhansaikat/",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:Nasirkhan",
+            "github": "https://github.com/nasirkhan",
+            "instagram": "https://instagram.com/nasirkhansaikat/",
+            "flickr": "https://flickr.com/photos/nasir-khan/"
+        },
+        "slug": "nasir"
+    },
+    {
+        "type": "people",
+        "name": "Ozgur",
+        "company": "Creative Culture Lab Sembolo",
+        "skills": [
+            "Open Culture Advocate",
+            "Artist",
+            "Designer",
+            "Storyteller",
+            "Photographer Or Documentarist",
+            "Technologist",
+            "Intercultural Dialogue"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/69c55a7ec4f8a382eebad8e5fdddb67a",
+        "defaultPictureIndex": 6,
+        "email": "ozgur.onal@ogr.deu.edu.tr",
+        "index": 25,
+        "description": "I am a cultural researcher & digital storyteller for cultural heritage",
+        "social": {
+            "twitter": "",
+            "facebook": "https://facebook.com/onal10/",
+            "linkedin": "https://linkedin.com/in/ozguronal45867231789/",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/ozgr.onal",
+            "flickr": ""
+        },
+        "slug": "ozgur"
+    },
+    {
+        "type": "people",
+        "name": "Anni",
+        "company": "The National Museum of Finland",
+        "skills": [
+            "Humanist"
+        ],
+        "languages": [
+            "fi",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 0,
+        "email": "anni.minkkinen@kansallismuseo.fi",
+        "index": 26,
+        "description": " I' m a researcher of the prison museum collection at the National Museum of Finland.",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "https://fi.linkedin.com/public-profile/in/anni-minkkinen-036640183?challengeId=AQHfmIOEndi-AgAAAXVAH36L2gptDpPNEShQU1x2sfYH2-qjp9j2OvzMOPUQ1HV7DDzs_ADiiFJP_2rVBDvLoFHrXPYtrozgJw&submissionId=c6894d86-b059-3f16-9f1c-55b82ee36c28",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/anminkki/",
+            "flickr": ""
+        },
+        "slug": "anni"
+    },
+    {
+        "name": "The Cell 12",
+        "type": "collections",
+        "shortDescription": "The dataset consists of objects from a 29-year-old prisoner’s cell.",
+        "description": "The dataset consists of objects from a 29-year-old prisoner’s cell which was included to the Prison museum collection when Hämeenlinna prison closed in 1993. The whole collection of cell 12 contains the prisoner’s personal belongings as well as the prison’s property. The prisoner already had nine prior convictions of assaults, thefts, robberies and traffic violations. His latest sentence, of some three years, he completed at his own request, in a prison near his home after Hämeenlinna prison closed.",
+        "access": "The collection is accessed on a website (finna.fi) and images are in jpg format at finna.fi.",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Anni",
+                "email": "anni.minkkinen@kansallismuseo.fi"
+            }
+        ],
+        "links": {
+            "homepage": "https://finna.fi/Search/Results?filter%5B%5D=%7Eformat_ext_str_mv%3A%220%2FPhysicalObject%2F%22&filter%5B%5D=%7Ebuilding%3A%221%2FSuomen+kansallismuseo%2FVankilamuseon+kokoelma%2F%22&lookfor=%22VA200%3A%22&type=AllFields",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": "https://www.youtube.com/watch?v=ZybfZd6rWoQ&feature=youtu.be"
+        },
+        "organization": "The National Museum of Finland",
+        "country": "Finland",
+        "copyright": "CC BY",
+        "email": "anni.minkkinen@kansallismuseo.fi",
+        "defaultPictureIndex": 3,
+        "index": 26,
+        "slug": "the-cell-12"
+    },
+    {
+        "type": "people",
+        "name": "Helena",
+        "company": "The National Museum of Finland",
+        "skills": [
+            "Humanist"
+        ],
+        "languages": [
+            "fi",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 8,
+        "email": "helena.schulman@kansallismuseo.fi",
+        "index": 27,
+        "description": "Humanist working as a researcher in the Finnish National museum (prison collection)",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "helena"
+    },
+    {
+        "name": "The Cell 12",
+        "type": "collections",
+        "shortDescription": "The dataset consists of objects from a 29-year-old prisoner’s cell",
+        "description": "The dataset consists of objects from a 29-year-old prisoner’s cell which was included to the Prison museum collection when Hämeenlinna prison closed in 1993. The whole collection of cell 12 contains the prisoner’s personal belongings as well as the prison’s property. The prisoner already had nine prior convictions of assaults, thefts, robberies and traffic violations. His latest sentence, of some three years, he completed at his own request, in a prison near his home after Hämeenlinna prison closed.",
+        "access": "The collection is accessed on a website (Finna.fi) and images are in jpg-format ",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Helena",
+                "email": "helena.schulman@kansallismuseo.fi"
+            }
+        ],
+        "links": {
+            "homepage": "https://finna.fi/Search/Results?filter%5B%5D=%7Eformat_ext_str_mv%3A%220%2FPhysicalObject%2F%22&filter%5B%5D=%7Ebuilding%3A%221%2FSuomen+kansallismuseo%2FVankilamuseon+kokoelma%2F%22&lookfor=%22VA200%3A%22&type=AllFields",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": "https://www.youtube.com/watch?v=ZybfZd6rWoQ&feature=youtu.be"
+        },
+        "organization": "The National Museum of Finland",
+        "country": "Finland",
+        "copyright": "CC BY",
+        "email": "helena.schulman@kansallismuseo.fi",
+        "defaultPictureIndex": 7,
+        "index": 27,
+        "slug": "the-cell-12-1"
+    },
+    {
+        "type": "people",
+        "name": "Donald",
+        "company": "DONMILLER-DESIGN",
+        "skills": [
+            "Artist",
+            "Designer"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Americas",
+        "picture": "https://www.gravatar.com/avatar/bf92b173815b1c57ebf8b20252cd64b4?d=404",
+        "defaultPictureIndex": 4,
+        "email": "megatronscube88@gmail.com",
+        "index": 28,
+        "description": "Hello im Don Miller i love to collaberate and learn from other artist",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:donmilla27",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "donald"
+    },
+    {
+        "type": "people",
+        "name": "Tinghui",
+        "company": "Friedrich Schiller University of Jena",
+        "skills": [
+            "Open Culture Advocate",
+            "Humanist"
+        ],
+        "languages": [
+            "unknown",
+            "unknown",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": "https://www.gravatar.com/avatar/5ba8b6e0fbd0d51a18f3e99328d9d13e?d=404",
+        "defaultPictureIndex": 7,
+        "email": "tinghui.duan@gmail.com",
+        "index": 29,
+        "description": "I'm fascinated by the power of cultural heritage and want to make it accessible to the next negeration.",
+        "social": {
+            "twitter": "https://twitter.com/naudgnit",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "https://github.com/t-duan",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "tinghui"
+    },
+    {
+        "type": "people",
+        "name": "Angeliki",
+        "company": "University of Hamburg",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional",
+            "Researcher"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/64f7f3449b909f502c3cc03b3fdbc557",
+        "defaultPictureIndex": 6,
+        "email": "angeliki.tzouganatou@uni-hamburg.de",
+        "index": 31,
+        "description": "I am a PhD fellow at the University of Hamburg, with the EU POEM project, looking into openknowledge for GLAMs from a macro-level, exploring new economic models.",
+        "social": {
+            "twitter": "https://twitter.com/antzouganatou",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/angeliki-tzouganatou-7b246812a/",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "angeliki"
+    },
+    {
+        "type": "people",
+        "name": "Katri",
+        "company": "",
+        "skills": [
+            "Artist",
+            "Designer"
+        ],
+        "languages": [
+            "fi",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 2,
+        "email": "katri.niinikangas@gmail.com",
+        "index": 32,
+        "description": "I'm a graphic designer with passion for using old photos etc. creatively. ",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "katri"
+    },
+    {
+        "type": "people",
+        "name": "Laurel",
+        "company": "",
+        "skills": [
+            "Open Culture Advocate"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 3,
+        "email": "laurel.zuckerman@gmail.com",
+        "index": 33,
+        "description": "I’m working on linking datasets containing art provenances.",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/laurel-zuckerman-4043a65/",
+            "wikimedia": "",
+            "github": "https://github.com/parisdata/",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "laurel"
+    },
+    {
+        "type": "people",
+        "name": "Quoc-Tan",
+        "company": "University of Hamburg",
+        "skills": [
+            "Open Culture Advocate",
+            "Young Researcher"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 4,
+        "email": "quoc-tan.tran@uni-hamburg.de",
+        "index": 34,
+        "description": "I’m a PhD fellow working in the project POEM and I would like to look at the intersection between the OpenGLAM ideals and the qualities of digital infrastructures in the cultural heritage sector.",
+        "social": {
+            "twitter": "https://twitter.com/qtantran",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "quoc-tan"
+    },
+    {
+        "name": "Museums APIs",
+        "type": "collections",
+        "shortDescription": "List of APIs from ProgrammableWeb's API directory",
+        "description": "The ProgrammableWeb API directory lists APIs of different types.",
+        "access": "The web page lists different APIs that are accessed individually",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Susanna",
+                "email": "susanna.anas@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://www.programmableweb.com/category/museums/api",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": ""
+        },
+        "organization": "The ProgrammableWeb",
+        "country": "",
+        "copyright": "",
+        "email": "",
+        "defaultPictureIndex": 8,
+        "index": 35,
+        "slug": "museums-apis"
+    },
+    {
+        "type": "people",
+        "name": "Brian",
+        "company": "University of British Columbia School of Information",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional",
+            "Humanist"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Americas",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/3c6b3ee87d5ba6681e004ee0f691a730",
+        "defaultPictureIndex": 5,
+        "email": "bmwatson1989@gmail.com",
+        "index": 36,
+        "description": "PhD. Student, Archivist, and Historian interested in Ethical Cataloging, History of Sexuality, and Linked Data. ",
+        "social": {
+            "twitter": "https://twitter.com/brimwats",
+            "facebook": "https://facebook.com/brimwats",
+            "linkedin": "",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:brimwats",
+            "github": "https://github.com/brimwats",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "brian"
+    },
+    {
+        "name": "Museum APIs",
+        "type": "collections",
+        "shortDescription": "A collection of museum, gallery, library, archive, archaeology and assorted sources for machine-readable data",
+        "description": "A collection of museum, gallery, library, archive, archaeology and assorted sources for machine-readable data",
+        "access": "",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Susanna",
+                "email": "susanna.anas@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "http://museum-api.pbworks.com/w/page/21933420/Museum%C2%A0APIs",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": ""
+        },
+        "organization": "Mia Ridge",
+        "country": "",
+        "copyright": "",
+        "email": "",
+        "defaultPictureIndex": 8,
+        "index": 37,
+        "slug": "museum-apis"
+    },
+    {
+        "type": "people",
+        "name": "Taika",
+        "company": "The Finnish National Gallery",
+        "skills": [
+            "Glam Professional"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 7,
+        "email": "hackathon@kansallisgalleria.fi",
+        "index": 38,
+        "description": "I'm Web Producer at the Finnish National Gallery and we have an API of 12 000 CC0 art works.",
+        "social": {
+            "twitter": "https://twitter.com/K_Galleria",
+            "facebook": "https://facebook.com/kansallisgalleria",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/finnishnationalgallery/",
+            "flickr": ""
+        },
+        "slug": "taika"
+    },
+    {
+        "type": "people",
+        "name": "Franziska",
+        "company": "University of Glasgow",
+        "skills": [
+            "Glam Professional",
+            "Researcher"
+        ],
+        "languages": [
+            "unknown",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 6,
+        "email": "Franziska.mucha@glasgow.ac.uk",
+        "index": 39,
+        "description": "I am a museum practitioner and researcher interested in digital and participatory museum practices.",
+        "social": {
+            "twitter": "https://twitter.com/FranziskaMucha",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "franziska"
+    },
+    {
+        "name": "Yle's Press Photographs",
+        "type": "collections",
+        "shortDescription": "Over 200 historical press related photographs on e.g. equipment and people participating in radio broadcasts and early tv productions.",
+        "description": "Over 200 historical press related photographs on e.g. equipment and people participating in radio broadcasts and early tv productions.",
+        "access": "Files on Wikimedia Commons. Jpegs and some videos",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Tuomas",
+                "email": "tuomas.nolvi@yle.fi"
+            }
+        ],
+        "links": {
+            "homepage": "https://commons.wikimedia.org/wiki/Category:Finnish_Broadcasting_Company_Yle_Archives",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Tamvision%E2%80%99s_camera_operators_Tuomo_Kurikka%2C_Lasse_Koskinen_and_Kauno_Peltola_pose_next_to_television_cameras_at_Frenckell%E2%80%99s_studio_in_Tampere%2C_1.2.1965_%2820181333428%29.jpg",
+            "video": ""
+        },
+        "organization": "Yle Archives",
+        "country": "Finland",
+        "copyright": "PDM / Public Domain, CC BY",
+        "email": "tuomas.nolvi@yle.fi",
+        "defaultPictureIndex": 6,
+        "index": 40,
+        "slug": "yles-press-photographs"
+    },
+    {
+        "name": "Database of Finnish Open Culture Data by Hack4FI",
+        "type": "collections",
+        "shortDescription": "Database of open cultural datasets curated by Finnish open culture hackathon Hack4FI",
+        "description": "Database of open cultural datasets curated by Finnish open culture hackathon Hack4FI - Hack your Heritage!",
+        "access": "various",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "",
+                "email": "hack4openglam@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://hack4.fi/portfolio_cat/2020/",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Hack4FI_2020_logo_color.png/768px-Hack4FI_2020_logo_color.png",
+            "video": ""
+        },
+        "organization": "Open Knowledge Finland / AvoinGLAM",
+        "country": "Finland",
+        "copyright": "PDM / Public Domain, CC0, CC BY",
+        "email": "hack4fi@gmail.com",
+        "defaultPictureIndex": 7,
+        "index": 41,
+        "slug": "database-of-finnish-open-culture-data-by-hack4fi"
+    },
+    {
+        "type": "people",
+        "name": "Carol",
+        "company": "Saint Louis Art Museum",
+        "skills": [
+            "Developer",
+            "Music Maker",
+            "Glam Professional",
+            "Humanist",
+            "Technologist"
+        ],
+        "languages": [
+            "unknown"
+        ],
+        "city": "Americas",
+        "picture": false,
+        "defaultPictureIndex": 0,
+        "email": "carol.a.clark@gmail.com",
+        "index": 43,
+        "description": "I'm a museum collections DBA interested in broadening my horizons.",
+        "social": {
+            "twitter": "https://twitter.com/GLAMDataCarol",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/carol-a-clark-2114711a/",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "carol"
+    },
+    {
+        "type": "people",
+        "name": "AHMAD WAFIQ AQIL ",
+        "company": "WIKIMEDIA COMMUNITY USER GROUP MALAYSIA",
+        "skills": [
+            "Open Culture Advocate",
+            "Humanist",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Asia",
+        "picture": false,
+        "defaultPictureIndex": 2,
+        "email": "wafiqaqil01@gmail.com",
+        "index": 44,
+        "description": "I'm a member of Wikimedia Community User Group Malaysia and had involved in Wikimedia Project (Wikimedia Commons, Wikipedia etc) for 2 years",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:CyberTroopers",
+            "github": "",
+            "instagram": "https://instagram.com/iam.feii",
+            "flickr": ""
+        },
+        "slug": "ahmad-wafiq-aqil"
+    },
+    {
+        "name": "Wikimedia Commons",
+        "type": "collections",
+        "shortDescription": "a collection of 64,690,837 freely usable media files to which anyone can contribute",
+        "description": "a collection of 64,690,837 freely usable media files to which anyone can contribute",
+        "access": "https://commons.wikimedia.org/wiki/Commons:File_types",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "",
+                "email": "hack4openglam@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://commons.wikimedia.org/",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/446px-Commons-logo.svg.png",
+            "video": ""
+        },
+        "organization": "Wikimedia Foundation",
+        "country": "global",
+        "copyright": "PDM / Public Domain, CC0, CC BY, CC BY-SA",
+        "email": "",
+        "defaultPictureIndex": 5,
+        "index": 46,
+        "slug": "wikimedia-commons"
+    },
+    {
+        "name": "Wikidata",
+        "type": "collections",
+        "shortDescription": "the free knowledge base with 89,915,356 data items that anyone can edit.",
+        "description": "the free knowledge base with 89,915,356 data items that anyone can edit",
+        "access": "",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "",
+                "email": "hack4openglam@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://www.wikidata.org/",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/6/66/Wikidata-logo-en.svg",
+            "video": ""
+        },
+        "organization": "Wikimedia Foundation",
+        "country": "global",
+        "copyright": "CC0",
+        "email": "",
+        "defaultPictureIndex": 2,
+        "index": 47,
+        "slug": "wikidata"
+    },
+    {
+        "name": "Wikisource",
+        "type": "collections",
+        "shortDescription": "The free library that anyone can improve",
+        "description": "Wikisource – The Free Library – is a Wikimedia Foundation project to create a growing free content library of source texts, as well as translations of source texts in any language",
+        "access": "texts",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "",
+                "email": "hack4openglam@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://en.wikisource.org/wiki/Main_Page",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/410px-Wikisource-logo.svg.png",
+            "video": ""
+        },
+        "organization": "Wikimedia Foundation",
+        "country": "",
+        "copyright": "PDM / Public Domain",
+        "email": "",
+        "defaultPictureIndex": 3,
+        "index": 48,
+        "slug": "wikisource"
+    },
+    {
+        "type": "people",
+        "name": "Jolan",
+        "company": "Europeana",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional",
+            "Humanist",
+            "Wikimedian",
+            "Digital Librarian"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/cbcd464827ae2dbaa7be54cb12a0ccd4",
+        "defaultPictureIndex": 7,
+        "email": "jolan.wuyts@europeana.eu",
+        "index": 49,
+        "description": "I work on API community outreach for Europeana by introducing our API suite to interested developers and spurring on innovative integrations of our API. Let's have a chat!",
+        "social": {
+            "twitter": "https://twitter.com/jolanwuyts",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/jolanwuyts/",
+            "wikimedia": "https://wikidata.org/wiki/User:CalvinBall",
+            "github": "https://github.com/Hobbesball",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "jolan"
+    },
+    {
+        "name": "Europeana",
+        "type": "collections",
+        "shortDescription": "Discover inspiring cultural heritage from European museums, galleries, libraries and archives",
+        "description": "Europeana Collections provides access to over 50 million digitised items – books, music, artworks and more – with sophisticated search and filter tools to help you find what you’re looking for.",
+        "access": "Europeana provides access to millions of books, music, artworks and more ",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "",
+                "email": "jolan.wuyts@europeana.eu"
+            }
+        ],
+        "links": {
+            "homepage": "",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/4/46/EU_basic_logo_portrait_black.png",
+            "video": ""
+        },
+        "organization": "Europeana is an initiative of the European Union, financed by the European Union’s Connecting Europe Facility and European Union Member States",
+        "country": "Europe",
+        "copyright": "PDM / Public Domain, CC0, CC BY, CC BY-SA, CC NC or ND clauses, Other open licenses, In copyright",
+        "email": "",
+        "defaultPictureIndex": 6,
+        "index": 49,
+        "slug": "europeana"
+    },
+    {
+        "type": "people",
+        "name": "Noémi",
+        "company": "Eurométropole de Strasbourg",
+        "skills": [
+            "Open Culture Advocate",
+            "Wikimedian"
+        ],
+        "languages": [
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 7,
+        "email": "noemi.cobolet@protonmail.com",
+        "index": 50,
+        "description": "Fantastic librarian #metadata #creativity",
+        "social": {
+            "twitter": "https://twitter.com/coboveille",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:Coboveille",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "nomi"
+    },
+    {
+        "name": "Sources of Australian GLAM data",
+        "type": "collections",
+        "shortDescription": "Sources of Australian GLAM data collected by GLAM Workbench",
+        "description": "Sources of Australian GLAM data collected by GLAM Workbench",
+        "access": "",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "",
+                "email": "hack4openglam@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://glam-workbench.github.io/glam-data-list/",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": ""
+        },
+        "organization": "GLAM Workbench",
+        "country": "Australia",
+        "copyright": "",
+        "email": "",
+        "defaultPictureIndex": 2,
+        "index": 51,
+        "slug": "sources-of-australian-glam-data"
+    },
+    {
+        "type": "people",
+        "name": "Virginia",
+        "company": "",
+        "skills": [
+            "Open Culture Advocate",
+            "Designer",
+            "Developer",
+            "Storyteller",
+            "Humanist"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Europe",
+        "picture": "https://www.gravatar.com/avatar/5a31bce26cada1b9d9bc70a890b6f372?d=404",
+        "defaultPictureIndex": 4,
+        "email": "vboyero@gmail.com",
+        "index": 52,
+        "description": "Maps nut, historian by education, games producer by chance",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "virginia"
+    },
+    {
+        "type": "people",
+        "name": "Andrea",
+        "company": "Opendata.ch",
+        "skills": [
+            "Open Culture Advocate"
+        ],
+        "languages": [
+            "unknown",
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/b7c8adb2ae26a55fcd1d35a377fb2cad",
+        "defaultPictureIndex": 7,
+        "email": "andrea.allemann@opendata.ch",
+        "index": 53,
+        "description": "I'm intersted in opening cultural data and I'm organizing GLAMhack 21 @ ETH Library. ",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "andrea"
+    },
+    {
+        "name": "The Finnish National Gallery API",
+        "type": "collections",
+        "shortDescription": "The Finnish National Gallery API enables you to retrieve images and data of some 12 000 CC0 art works.",
+        "description": "The API provides access to the Finnish National Gallery’s collections of copyright-free materials. The API enables you to retrieve images and data of approximately 12,000 works. The images and data are available in machine-readable format.",
+        "access": "API",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Taika",
+                "email": "hackathon@kansallisgalleria.fi"
+            }
+        ],
+        "links": {
+            "homepage": "https://www.kansallisgalleria.fi/api/swagger/",
+            "codebase": "https://www.kansallisgalleria.fi/apikey/login",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": "https://youtu.be/qehdZS8px4c"
+        },
+        "organization": "The Finnish National Gallery",
+        "country": "Finland",
+        "copyright": "CC0",
+        "email": "hackathon@kansallisgalleria.fi",
+        "defaultPictureIndex": 4,
+        "index": 55,
+        "slug": "the-finnish-national-gallery-api"
+    },
+    {
+        "type": "people",
+        "name": "Anni",
+        "company": "Pori Art Museum",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional",
+            "Humanist",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "fi",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 4,
+        "email": "anni.saisto@pori.fi",
+        "index": 57,
+        "description": "I am devoted to  promote open culture and cultural heritage in Wikidata, Wikipedia and Wikimedia Commons",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:Antasa",
+            "github": "",
+            "instagram": "https://instagram.com/poriartmuseum",
+            "flickr": ""
+        },
+        "slug": "anni-1"
+    },
+    {
+        "name": "Collection data in Wikidata & Wikimedia Commons",
+        "type": "collections",
+        "shortDescription": "Metadata from museum collections in Wikidata & selected photographs of paintings & buildings in Wikimedia Commons",
+        "description": "You can find our data from Wikidata:\nLönnström Art Museum (art collection of ca 350 works): https://w.wiki/GNv\nPori Art Museum (City of Pori Art collection, ca 2300 works): https://w.wiki/PrQ\nLapua City Museums (ca 60 historical photographs, including Alvar Aalto's architecture): https://w.wiki/fms\nJyväskylä University Museum (Jyväskylä University buildings including coordinates): https://w.wiki/fji\n\nAnd photographs in Wikimedia Commons:\nLönnström Art Museum (ca. 50 photos of historical paintings): https://commons.wikimedia.org/wiki/Category:Paintings_in_the_Lonnstrom_Artmuseum\nPori Art Museum (ca. 20 photos of historical paintings & works on paper):\nhttps://commons.wikimedia.org/wiki/Category:Media_from_Pori_Art_Museum\nJyväskylä University Museum (200 historical photographs) https://commons.wikimedia.org/wiki/Category:Collections_of_the_Jyv%C3%A4skyl%C3%A4_University_Museum\n",
+        "access": "Collections are in Wikidata anda Wikimedia Commons",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Anni",
+                "email": "anni.saisto@pori.fi"
+            }
+        ],
+        "links": {
+            "homepage": "",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": ""
+        },
+        "organization": "Lönnström Art Museum, Pori Art Museum, Lapua City Museums, Jyväskylä University Museum",
+        "country": "Finland",
+        "copyright": "PDM / Public Domain, CC0, CC BY",
+        "email": "anni.saisto@pori.fi, sanna.oikarinen@pori.fi",
+        "defaultPictureIndex": 1,
+        "index": 57,
+        "slug": "collection-data-in-wikidata-wikimedia-commons"
+    },
+    {
+        "type": "people",
+        "name": "Pekka",
+        "company": "Finnish Broadcasting Company (Yle)",
+        "skills": [
+            "Developer",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "fi"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 7,
+        "email": "pekka.kauranen@yle.fi",
+        "index": 58,
+        "description": "Information Specialist at Yle Archives and amateur programmer. ",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "pekka"
+    },
+    {
+        "type": "people",
+        "name": "Thomas",
+        "company": "sketchfab.com",
+        "skills": [
+            "Technologist"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/02a38496d91a0e90e545de60ce93c0a1",
+        "defaultPictureIndex": 7,
+        "email": "thomas.flynn@sketchfab.com",
+        "index": 59,
+        "description": "As Cultural Heritage Lead at Sketchfab I help GLAM organisations capture their collections in 3D and publish the resulting 3D models for online viewing as well as download under Creative Commons licenses.",
+        "social": {
+            "twitter": "https://twitter.com/twitter.com/nebulousflynn",
+            "facebook": "https://facebook.com/Sketchfab/",
+            "linkedin": "https://linkedin.com/in/nebulousflynn",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/sketchfab/",
+            "flickr": ""
+        },
+        "slug": "thomas"
+    },
+    {
+        "name": "Cultural Heritage 3D Models on Sketchfab",
+        "type": "collections",
+        "shortDescription": "Sketchfab hosts 3D models from hundreds of GLAM organisations from all over the world, many thousands of which are available for download and remix under Creative Commons licenses - everything from dinosaur skeletons, ancient Egyptian statues, archaeological digs and more are available.",
+        "description": "Sketchfab hosts the largest and most diverse consolidated collection of cultural heritage 3D data. Individual GLAM organisations and projects have created profiles on sketchfab.com and uploaded their own unique 3D data to make it available for exploration and reuse by anyone online.\n\nUses for 3D data are diverse: you can render hi res images and video straight from the Sketchfab viewer; combine, edit & animate; 3D print; create interactive 3D games; VR & AR scenes and filters for Instagram.\n\nWe've run our own remix challenges in the past (https://sketchfab.com/blogs/community/sketchfab-remix-challenge-re-imagining-ancient-art/) and the results were wonderful (https://sketchfab.com/search?q=tag%3Achremixchallenge&sort_by=-likeCount&type=models).\n\nWe are excited to see what new possibilities the hack4openglam community dream up.",
+        "access": "All 3D models are available for download in glTF and USDZ formats as well as originally uploaded formats (OBJ, FBX, PLY, STL, etc.) directly on sketchfab.com or using the Sketchfab API (https://sketchfab.com/developers) ",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Thomas",
+                "email": "thomas.flynn@sketchfab.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://sketchfab.com/3d-models/categories/cultural-heritage-history?date=month&sort_by=-likeCount",
+            "codebase": "https://sketchfab.com/developers",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": "https://vimeo.com/43600255"
+        },
+        "organization": "Various",
+        "country": "Various",
+        "copyright": "CC0, CC BY, CC BY-SA, CC NC or ND clauses",
+        "email": "thomas.flynn@sketchfab.com",
+        "defaultPictureIndex": 8,
+        "index": 59,
+        "slug": "cultural-heritage-3d-models-on-sketchfab"
+    },
+    {
+        "name": "Digital Public Library of America",
+        "type": "collections",
+        "shortDescription": "Discover 40,786,219 images, texts, videos, and sounds from across the United States",
+        "description": "The Digital Public Library of America empowers people to learn, grow, and contribute to a diverse and better-functioning society by maximizing access to our shared history, culture, and knowledge.",
+        "access": "Web search, download, API, GitHub",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "",
+                "email": "hack4openglam@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://dp.la/",
+            "codebase": "https://github.com/dpla",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/0/0d/DPLA_square_logo.jpg",
+            "video": ""
+        },
+        "organization": "DPLA",
+        "country": "United States",
+        "copyright": "PDM / Public Domain, CC0, CC BY, CC BY-SA, CC NC or ND clauses, Other open licenses, In copyright",
+        "email": "",
+        "defaultPictureIndex": 1,
+        "index": 60,
+        "slug": "digital-public-library-of-america"
+    },
+    {
+        "name": "Trove",
+        "type": "collections",
+        "shortDescription": "Search Trove to explore amazing collections from Australian libraries, universities, museums, galleries and archives. It’s free and available online all day, every day. ",
+        "description": "Trove hosts digital copies of newspapers, Government Gazettes, maps, magazines and newsletters as well as books, pictures, photographs, archived websites, music and interviews. Even information about famous Australians, including copies of letters, diaries and personal archives. ",
+        "access": "API, web",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "",
+                "email": "hack4openglam@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://trove.nla.gov.au/",
+            "codebase": "https://glam-workbench.github.io/",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://assets.nla.gov.au/logos/trove/trove-colour.svg",
+            "video": ""
+        },
+        "organization": "National Library of Australia",
+        "country": "Australia",
+        "copyright": "PDM / Public Domain, CC0, CC BY, CC BY-SA, CC NC or ND clauses, Other open licenses, In copyright",
+        "email": "",
+        "defaultPictureIndex": 6,
+        "index": 61,
+        "slug": "trove"
+    },
+    {
+        "name": "Japan Search",
+        "type": "collections",
+        "shortDescription": "Japan's national, integrated and cross-sectoral portal website",
+        "description": "Japan Search is a national platform for aggregating metadata of digital resources of various fields and operated by the National Diet Library, Japan, in cooperation with a variety of organizations in Japan under policies established by the Working Group Steering Committee of the Digital Archives Japan Promotion Committee.",
+        "access": "Search, SPARQL endpoint",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "",
+                "email": "hack4openglam@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://jpsearch.go.jp/",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://jpsearch.go.jp/assets/img/brand/logo-horizontal-4c.svg",
+            "video": ""
+        },
+        "organization": "National Diet Library",
+        "country": "Japan",
+        "copyright": "",
+        "email": "",
+        "defaultPictureIndex": 2,
+        "index": 62,
+        "slug": "japan-search"
+    },
+    {
+        "name": "Digital NZ",
+        "type": "collections",
+        "shortDescription": "DigitalNZ is the search site for all things New Zealand.",
+        "description": "We connect you to reliable digital collections from our content partners, including libraries, museums, galleries, government departments, the media, community groups, and others. On DigitalNZ you can discover more than 30 million digital items from more than 200 organisations on any topic, all for free. You'll find videos, newspapers, maps, photographs, audio recordings, artworks and news reports.",
+        "access": "Search, API",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "",
+                "email": "hack4openglam@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://digitalnz.org/",
+            "codebase": "https://digitalnz.org/developers/code-samples-and-libraries",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://digitalnz.org/assets/pod-and-text-b93d2a942c11c24d832f81d89605905469dcf58e33e171cddce525cde7b7e5ba.png",
+            "video": ""
+        },
+        "organization": "National Library of New Zealand",
+        "country": "New Zealand",
+        "copyright": "",
+        "email": "",
+        "defaultPictureIndex": 7,
+        "index": 63,
+        "slug": "digital-nz"
+    },
+    {
+        "type": "people",
+        "name": "Louise",
+        "company": "Tactical Tech",
+        "skills": [
+            "Events Coordinator"
+        ],
+        "languages": [
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 7,
+        "email": "louisehisayasu@gmail.com",
+        "index": 65,
+        "description": "Hi, I'm Louise, I am an events coordinator on The Glass Room, an exhibition of varying formats that explores data, privacy and our relationship with the technologies and platforms we use in our everyday lives. ",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "louise"
+    },
+    {
+        "type": "people",
+        "name": "Ranjit",
+        "company": "",
+        "skills": [
+            "Artist",
+            "Designer",
+            "Music Maker",
+            "Storyteller",
+            "Photographer Or Documentarist"
+        ],
+        "languages": [
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 5,
+        "email": "drystate@gmail.com",
+        "index": 66,
+        "description": "artists & designers working with archives",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "ranjit"
+    },
+    {
+        "type": "people",
+        "name": "Jose Eduardo",
+        "company": "Europeana",
+        "skills": [
+            "Open Culture Advocate",
+            "Developer",
+            "Technologist"
+        ],
+        "languages": [
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 6,
+        "email": "joseed.cejudo@europeana.eu",
+        "index": 67,
+        "description": "I am a Machine Learning Engineer at Europeana, and my main interest is in automatic enrichment",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "jose-eduardo"
+    },
+    {
+        "type": "people",
+        "name": "Ivonne",
+        "company": "Goethe-Institut Jakarta",
+        "skills": [
+            "Open Culture Advocate",
+            "Wikimedian"
+        ],
+        "languages": [
+            "unknown",
+            "en"
+        ],
+        "city": "India",
+        "picture": false,
+        "defaultPictureIndex": 5,
+        "email": "ivonne.kristiani@goethe.de",
+        "index": 69,
+        "description": "Open Access & Open Culture advocate from Jakarta, Indonesia. A Wikimedian and member of Creative Commons Indonesia. Also working on Retas Budaya, Indonesia cultural hackathon.",
+        "social": {
+            "twitter": "https://twitter.com/ipoone",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "https://id.wikipedia.org/wiki/Pengguna:06Ivonne",
+            "github": "",
+            "instagram": "https://instagram.com/instagram.com/ivonne.kristiani/",
+            "flickr": ""
+        },
+        "slug": "ivonne"
+    },
+    {
+        "name": "Retas Budaya Open Culture Collection",
+        "type": "collections",
+        "shortDescription": "Open cultural collection (images and texts) from Indonesian GLAM institutions in partnership with Retas Budaya, cultural hack & festival.",
+        "description": "Collection of 11 GLAM institutions partnering with Retas Budaya, cultural hack and festival. Retas Budaya brings together GLAM institutions (Galleries, Libraries, Archives, Museums) with creative minds and tech enthusiasts to bring about collaborations and innovations from open cultural data.\n\nMore info:\ngoethe.de/retasbudaya",
+        "access": "Mostly .jpg, .png, and .pdf",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Ivonne",
+                "email": "ivonne.kristiani@goethe.de"
+            }
+        ],
+        "links": {
+            "homepage": "https://www.goethe.de/prj/hyc/en/ido/glp.html",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": ""
+        },
+        "organization": "Sumatran Numismatic Museum, Horison Magazine, Dewantara Kirti Griya Museum, Dirgantara Mandala Museum,  Ajip Rosidi Library, Museum Bank Indonesia,  Museum Pasifika, Indonesian Islamic Art Museum,  Indonesian Heritage Museum, History of Java Museum,  Indonesian Visual Art Archive ",
+        "country": "Indonesia",
+        "copyright": "PDM / Public Domain, CC BY-SA",
+        "email": "",
+        "defaultPictureIndex": 5,
+        "index": 69,
+        "slug": "retas-budaya-open-culture-collection"
+    },
+    {
+        "name": "DAG Museum's open access collection",
+        "type": "collections",
+        "shortDescription": "13 historic artworks from India",
+        "description": "13 historic artworks from India",
+        "access": "JPGs at Flicrk",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "",
+                "email": "hack4openglam@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://www.flickr.com/photos/189116622@N04/sets/72157714909390382/",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": ""
+        },
+        "organization": "DAG Museum",
+        "country": "India",
+        "copyright": "CC BY-SA",
+        "email": "",
+        "defaultPictureIndex": 2,
+        "index": 70,
+        "slug": "dag-museums-open-access-collection"
+    },
+    {
+        "name": "Swiss Open Data Sets",
+        "type": "collections",
+        "shortDescription": "This page contains a list of open heritage data from and/or about Switzerland.",
+        "description": "This websites collects over 100 datasets from Swiss heritage institutions. It contains collections of images, maps, geodata, and statistics. ",
+        "access": "This is a list of data sets available in a variety of formats",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Andrea",
+                "email": "andrea.allemann@opendata.ch"
+            }
+        ],
+        "links": {
+            "homepage": "http://make.opendata.ch/wiki/data:glam_ch",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "http://make.opendata.ch/wiki/_media/data:tarot.png",
+            "video": ""
+        },
+        "organization": "Opendata.ch",
+        "country": "Switzerland",
+        "copyright": "Other open licenses",
+        "email": "",
+        "defaultPictureIndex": 4,
+        "index": 71,
+        "slug": "swiss-open-data-sets"
+    },
+    {
+        "type": "people",
+        "name": "Jane",
+        "company": "Wikidata",
+        "skills": [
+            "Open Culture Advocate",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 7,
+        "email": "jane023@gmail.com",
+        "index": 72,
+        "description": "I am a volunteer with the Wikidata Sum of all Paintings project",
+        "social": {
+            "twitter": "https://twitter.com/janedarnell",
+            "facebook": "https://facebook.com/jane023.darnell",
+            "linkedin": "",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:jane023",
+            "github": "",
+            "instagram": "https://instagram.com/darnelljane",
+            "flickr": ""
+        },
+        "slug": "jane"
+    },
+    {
+        "type": "people",
+        "name": "Larissa",
+        "company": "Swedish National Heritage Board",
+        "skills": [
+            "Glam Professional"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "unknown",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 3,
+        "email": "larissa.borck@raa.se",
+        "index": 73,
+        "description": "Opening up cultural heritage by digital means - and representing the SOCH, the Swedish national aggregator for cultural heritage data here.",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "larissa"
+    },
+    {
+        "type": "people",
+        "name": "Jouni",
+        "company": "University of Helsinki and Aalto University",
+        "skills": [
+            "Developer",
+            "Technologist"
+        ],
+        "languages": [
+            "fi",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/4ea2478bd797b25169864b2933de0bd7",
+        "defaultPictureIndex": 6,
+        "email": "jouni.tuominen@aalto.fi",
+        "index": 74,
+        "description": "Linked Data specialist, researcher",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "jouni"
+    },
+    {
+        "type": "people",
+        "name": "Petri",
+        "company": "Aalto University",
+        "skills": [
+            "Technologist"
+        ],
+        "languages": [
+            "fi",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/80d8634017769af61aed1bcff680e5b4",
+        "defaultPictureIndex": 4,
+        "email": "petri.leskinen@aalto.fi",
+        "index": 75,
+        "description": "Computer Scientist",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/secoresearch/?hl=fi",
+            "flickr": ""
+        },
+        "slug": "petri"
+    },
+    {
+        "name": "BiographySampo",
+        "type": "collections",
+        "shortDescription": "BiographySampo is a linked open data collection of more than 6000 historical Finnish people.",
+        "description": "BiographySampo – Finnish National Biographies on the Semantic Web",
+        "access": "The data is accessible by the sparql query endpoint http://ldf.fi/nbf/sparql",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Petri",
+                "email": "petri.leskinen@aalto.fi"
+            }
+        ],
+        "links": {
+            "homepage": "https://seco.cs.aalto.fi/projects/biografiasampo/en/",
+            "codebase": "https://www.ldf.fi/dataset/nbf",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": "https://vimeo.com/328419960"
+        },
+        "organization": "Society of Finnish Literature (Suomalaisen Kirjallisuuden Seura), Semantic Computing Research Group (SeCo, Aalto University)",
+        "country": "Finland",
+        "copyright": "CC BY",
+        "email": "petri.leskinen@aalto.fi",
+        "defaultPictureIndex": 4,
+        "index": 75,
+        "slug": "biographysampo"
+    },
+    {
+        "type": "people",
+        "name": "Mikko",
+        "company": "University of Helsinki & Aalto University",
+        "skills": [
+            "Developer",
+            "Music Maker",
+            "Technologist"
+        ],
+        "languages": [
+            "fi",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/58e4817307957bbed50b6a6600fcb567",
+        "defaultPictureIndex": 6,
+        "email": "mikko.koho@helsinki.fi",
+        "index": 76,
+        "description": "Digital Humanities and Linked Data researcher",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "mikko"
+    },
+    {
+        "name": "Mapping Manuscript Migrations Knowledge Graph",
+        "type": "collections",
+        "shortDescription": "The Mapping Manuscript Migrations knowledge graph links disparate datasets from Europe and North America to provide an international view of the history and provenance of medieval and Renaissance manuscripts.",
+        "description": "The Mapping Manuscript Migrations knowledge graph links disparate datasets from Europe and North America to provide an international view of the history and provenance of medieval and Renaissance manuscripts. Researchers are able to analyse and visualize the aggregated data at scales ranging from individual manuscripts to thousands of manuscripts.\n\nMMM uses Linked Open Data principles and technology to combine data from three important manuscript databases:\n• Schoenberg Database of Manuscripts\n• Bibale\n• Medieval Manuscripts in Oxford Libraries\n\nThe portal is publicly available at: https://mappingmanuscriptmigrations.org/ \n\nThe SPARQL endpoint for the MMM data is available at: http://ldf.fi/mmm/sparql\n\nThe MMM Knowledge Graph (20+ million RDF triples) can be downloaded from Zenodo: https://zenodo.org/record/3935259\n\nTechnical documentation for the MMM project can be found on GitHub: \nhttps://mapping-manuscript-migrations.github.io/",
+        "access": "SPARQL endpoint, RDF data in Zenodo",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Mikko",
+                "email": "mikko.koho@helsinki.fi"
+            }
+        ],
+        "links": {
+            "homepage": "http://blog.mappingmanuscriptmigrations.org",
+            "codebase": "https://github.com/mapping-manuscript-migrations",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": ""
+        },
+        "organization": "Aalto University, Oxford e-Research Centre (the Bodleian Libraries), the University of Pennsylvania Libraries, the Institut de recherche et d’histoire des textes",
+        "country": "International",
+        "copyright": "CC BY, CC NC or ND clauses",
+        "email": "mikko.koho@helsinki.fi",
+        "defaultPictureIndex": 5,
+        "index": 76,
+        "slug": "mapping-manuscript-migrations-knowledge-graph"
+    },
+    {
+        "type": "people",
+        "name": "Aleksandra",
+        "company": "Europeana",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "unknown",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": "https://www.gravatar.com/avatar/8fa90cc0f4c1aae665ef9968a161d0da?d=404",
+        "defaultPictureIndex": 8,
+        "email": "aleksandra.strzelichowska@europeana.eu",
+        "index": 77,
+        "description": "I believe culture is for everyone and I'm doing my best to bring it to people in fun ways.",
+        "social": {
+            "twitter": "https://twitter.com/olaapje",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/astrzelichowska/",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/olaapje",
+            "flickr": ""
+        },
+        "slug": "aleksandra"
+    },
+    {
+        "type": "people",
+        "name": "Jan",
+        "company": "Wikimedians for Sustainable Development",
+        "skills": [
+            "Open Culture Advocate",
+            "Wikimedian"
+        ],
+        "languages": [
+            "unknown",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/15a70f035d12fc81e69fff4dc7ee7eef",
+        "defaultPictureIndex": 1,
+        "email": "ainali.jan@gmail.com",
+        "index": 78,
+        "description": "Open ALL enthusiast.",
+        "social": {
+            "twitter": "https://twitter.com/Jan_Ainali",
+            "facebook": "http://facebook.com/jan.ainali",
+            "linkedin": "http://se.linkedin.com/in/janainali",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:Ainali",
+            "github": "https://github.com/Ainali",
+            "instagram": "https://instagram.com/jan_ainali/",
+            "flickr": ""
+        },
+        "slug": "jan"
+    },
+    {
+        "type": "people",
+        "name": "Tore",
+        "company": "Atang",
+        "skills": [
+            "Glam Professional"
+        ],
+        "languages": [
+            "unknown",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 3,
+        "email": "tore.danielsson@gmail.com",
+        "index": 79,
+        "description": "Ferrum Ultima Salus",
+        "social": {
+            "twitter": "https://twitter.com/toredanielsson",
+            "facebook": "https://facebook.com//ToreDanielsson",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/toredanielsson",
+            "flickr": ""
+        },
+        "slug": "tore"
+    },
+    {
+        "type": "people",
+        "name": "Joan",
+        "company": "Wayne State University",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional",
+            "Educator"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Americas",
+        "picture": false,
+        "defaultPictureIndex": 7,
+        "email": "ee4525@wayne.edu",
+        "index": 80,
+        "description": "Teaching MLIS students about metadata, digital libraries and digital preservation with research interests in art museum collection images and data.",
+        "social": {
+            "twitter": "https://twitter.com/joanebeaudoin",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/joan-e-beaudoin/",
+            "wikimedia": "",
+            "github": "https://github.com/bejapa",
+            "instagram": "",
+            "flickr": "https://flickr.com/photos/bejapa/albums"
+        },
+        "slug": "joan"
+    },
+    {
+        "type": "people",
+        "name": "Bas",
+        "company": "Rijksmuseum Amsterdam",
+        "skills": [
+            "Open Culture Advocate"
+        ],
+        "languages": [
+            "unknown",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 7,
+        "email": "b.nederveen@rijksmuseum.nl",
+        "index": 81,
+        "description": "I'm an information specialist at the department of Collection Information & Archive with special interest in Research Data Management and terminology",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/bas-nederveen-5a077b5/",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "bas"
+    },
+    {
+        "type": "people",
+        "name": "Lina",
+        "company": "Projekt Fredrika",
+        "skills": [
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "fi"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 8,
+        "email": "lina@projektfredrika.fi",
+        "index": 82,
+        "description": "I work for Projekt Fredrika, a registered association that improves the coverage of Swedish Finland and Swedish in Finland on Wikipedia, Wikidata and Wikimedia Commons.",
+        "social": {
+            "twitter": "https://twitter.com/projektfredrika",
+            "facebook": "https://facebook.com/projektfredrika",
+            "linkedin": "",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:Lina_Fredrika",
+            "github": "",
+            "instagram": "https://instagram.com/projektfredrika",
+            "flickr": ""
+        },
+        "slug": "lina"
+    },
+    {
+        "name": "Birger Carlstedt's artwork as open data",
+        "type": "collections",
+        "shortDescription": "Artwork of the Finland-Swedish painter Birger Carlstedt (1907-1975) has been made available to everyone under an open license on Wikimedia Commons.",
+        "description": "The artist Birger Carlstedt's (1907-1975) artwork has been made available to everyone under an open license on Wikimedia Commons. The artwork is owned by Konstsamfundet, and it is the first time an art museum opens up a collection this way while the copyright is still in force. Aided by Projekt Fredrika and Wikimedia Suomi, Konstsamfundet made Carlstedt's art available to everyone under an open license in June 2020.",
+        "access": "https://commons.wikimedia.org/wiki/Category:Birger_Carlstedt",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Lina",
+                "email": "lina@projektfredrika.fi"
+            }
+        ],
+        "links": {
+            "homepage": "https://projektfredrika.fi/birger-english/",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": false,
+            "video": ""
+        },
+        "organization": "Konstsamfundet / Amos Rex",
+        "country": "Finland",
+        "copyright": "CC BY-SA",
+        "email": "lina@projektfredrika.fi",
+        "defaultPictureIndex": 8,
+        "index": 82,
+        "slug": "birger-carlstedts-artwork-as-open-data"
+    },
+    {
+        "type": "people",
+        "name": "Mariana",
+        "company": "Biennale of Western Balkans",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional",
+            "Humanist"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/2ff42b6dea68334ff136d2954dd60592",
+        "defaultPictureIndex": 3,
+        "email": "xuzami@gmail.com",
+        "index": 83,
+        "description": "Here for the joy of Open GLAM! Interested in digital intangible heritage",
+        "social": {
+            "twitter": "https://twitter.com/marianaziku",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "https://github.com/mziku",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "mariana"
+    },
+    {
+        "type": "people",
+        "name": "Evelin",
+        "company": "Open GLAM",
+        "skills": [
+            "Open Culture Advocate",
+            "Humanist",
+            "Wikimedian"
+        ],
+        "languages": [
+            "unknown"
+        ],
+        "city": "Americas",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/eac5a66ed879ad5214a5f2f13ca7c96d",
+        "defaultPictureIndex": 6,
+        "email": "scann@creativecommons.org",
+        "index": 84,
+        "description": "Open GLAM advocate",
+        "social": {
+            "twitter": "https://twitter.com/openglam",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "evelin"
+    },
+    {
+        "type": "people",
+        "name": "Francisco",
+        "company": "Creative Commons",
+        "skills": [
+            "Designer"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Americas",
+        "picture": false,
+        "defaultPictureIndex": 6,
+        "email": "francisco@creativecommons.org",
+        "index": 85,
+        "description": "Designer interested on services and worldwide communities. Experience on service and user experience. Illustrator amateur",
+        "social": {
+            "twitter": "https://twitter.com/fcoveram",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/fcovera/",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "francisco"
+    },
+    {
+        "type": "people",
+        "name": "Kimmo",
+        "company": "Wikimedia Suomi ry",
+        "skills": [
+            "Open Culture Advocate",
+            "Developer"
+        ],
+        "languages": [
+            "fi",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 8,
+        "email": "kimmo.virtanen@wikimedia.fi",
+        "index": 86,
+        "description": "Coder and wikimedist",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:zache",
+            "github": "https://github.com/zache-fi",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "kimmo"
+    },
+    {
+        "type": "people",
+        "name": "Kat",
+        "company": "sciencestories.io",
+        "skills": [
+            "Open Culture Advocate",
+            "Storyteller",
+            "Glam Professional",
+            "Technologist",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Americas",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/b9f170a794dca744f51c4fa1af50e050",
+        "defaultPictureIndex": 8,
+        "email": "katherine.thornton@yale.edu",
+        "index": 87,
+        "description": "Co-founder of sciencestories.io, Wikidatan, forager.",
+        "social": {
+            "twitter": "https://twitter.com/unforgettingsci",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "kat"
+    },
+    {
+        "type": "people",
+        "name": "Ilias",
+        "company": "Coding da Vinci",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional",
+            "Technologist"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 2,
+        "email": "ikyriazi@alumni.iu.edu",
+        "index": 88,
+        "description": "I am a data curator for the cultural hackathon Coding da Vinci. My background is libraries, music, and somewhat creative coding.",
+        "social": {
+            "twitter": "https://twitter.com/elikyr",
+            "facebook": "https://facebook.com/ikyriazis/",
+            "linkedin": "https://linkedin.com/in/ikyriazis/",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "ilias"
+    },
+    {
+        "name": "The Coding da Vinci Collection",
+        "type": "collections",
+        "shortDescription": "Open Data in Germany.",
+        "description": "Open Data available via the German cultural hackathon Coding da Vinci (2014 - today).",
+        "access": "File dumps, APIs, Commons, etc.",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Ilias",
+                "email": "ikyriazi@alumni.iu.edu"
+            }
+        ],
+        "links": {
+            "homepage": "https://codingdavinci.de/de/daten",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://pbs.twimg.com/profile_images/444127683610300416/97om7wQ__400x400.png",
+            "video": ""
+        },
+        "organization": "GLAMs of the German cultural sector.",
+        "country": "Germany",
+        "copyright": "PDM / Public Domain, CC0, CC BY, CC BY-SA",
+        "email": "i.kyriazis@dnb.de",
+        "defaultPictureIndex": 6,
+        "index": 88,
+        "slug": "the-coding-da-vinci-collection"
+    },
+    {
+        "type": "people",
+        "name": "Gustavo ",
+        "company": "Museu da Imagem e do Som do Rio de Janeiro",
+        "skills": [
+            "Glam Professional"
+        ],
+        "languages": [
+            "unknown"
+        ],
+        "city": "Americas",
+        "picture": false,
+        "defaultPictureIndex": 8,
+        "email": "comunicacaomisrj@gmail.com",
+        "index": 89,
+        "description": "Setor de Comunicação do MIS",
+        "social": {
+            "twitter": "https://twitter.com/MISRJ",
+            "facebook": "https://facebook.com/MIS.RJ",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/mis.rio/",
+            "flickr": ""
+        },
+        "slug": "gustavo"
+    },
+    {
+        "type": "people",
+        "name": "Olga",
+        "company": "National Library of Russia",
+        "skills": [
+            "Glam Professional"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 2,
+        "email": "dr.mrob@yahoo.com",
+        "index": 90,
+        "description": "Just would like like to stay tuned in and see what I can do",
+        "social": {
+            "twitter": "https://twitter.com/dig_librarian",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/olga-barysheva-127003192/",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:US812",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "olga"
+    },
+    {
+        "type": "people",
+        "name": "Sandra",
+        "company": "Wikimedia",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional",
+            "Wikimedian",
+            "Information Architect",
+            "Digital Content Producer"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/8b5eed9525d0f946da25e51b21f2556f",
+        "defaultPictureIndex": 7,
+        "email": "sandra.fauconnier@gmail.com",
+        "index": 91,
+        "description": "Wikimedian and GLAM professional, interested in all things open and linked, and in digital sustainability",
+        "social": {
+            "twitter": "https://twitter.com/sanseveria",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/sandrafauconnier/",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:Spinster",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "sandra-1"
+    },
+    {
+        "type": "people",
+        "name": "Ivo",
+        "company": "MTÜ Wikimedia Eesti",
+        "skills": [
+            "Designer",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/a9522ed4385ef8fdef34ff68329c6050",
+        "defaultPictureIndex": 4,
+        "email": "ivo.kruusamagi@gmail.com",
+        "index": 92,
+        "description": "Wikipedian from Estonia",
+        "social": {
+            "twitter": "",
+            "facebook": "https://facebook.com/ivo.kruusamagi",
+            "linkedin": "https://linkedin.com/in/ivo-kruusam%C3%A4gi-24771332/",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:Kruusam%C3%A4gi",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "ivo"
+    },
+    {
+        "type": "people",
+        "name": "Tomi",
+        "company": "the National Archives of Finland",
+        "skills": [
+            "Open Culture Advocate",
+            "Glam Professional",
+            "Humanist"
+        ],
+        "languages": [
+            "fi",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/ce691fe9fceda64561111ea814216a00",
+        "defaultPictureIndex": 8,
+        "email": "tomi.ahoranta@arkisto.fi",
+        "index": 93,
+        "description": "Cultural heritage enthusiast during and outside working hours.",
+        "social": {
+            "twitter": "https://twitter.com/TomiAhoranta",
+            "facebook": "",
+            "linkedin": "https://www.linkedin.com/in/tomiahoranta",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "tomi"
+    },
+    {
+        "type": "people",
+        "name": "Kristen",
+        "company": "Wikitongues",
+        "skills": [
+            "Open Culture Advocate",
+            "Humanist",
+            "Wikimedian"
+        ],
+        "languages": [
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 2,
+        "email": "kristen@wikitongues.org",
+        "index": 94,
+        "description": "Language advocate and linguist",
+        "social": {
+            "twitter": "https://twitter.com/ktchernes",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/kristen-tcherneshoff/",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "kristen"
+    },
+    {
+        "type": "people",
+        "name": "Kimberli",
+        "company": "Wikimedia Suomâ",
+        "skills": [
+            "Humanist",
+            "Technologist",
+            "Wikimedian",
+            "Translator",
+            "Terminologist"
+        ],
+        "languages": [
+            "fi",
+            "en",
+            "unknown",
+            "unknown",
+            "unknown",
+            "unknown",
+            "unknown",
+            "unknown",
+            "unknown",
+            "unknown",
+            "unknown",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 1,
+        "email": "kimberli.makarainen@tuni.fi",
+        "index": 95,
+        "description": " ",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "https://en.wikipedia.org/wiki/User:Yupik",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "kimberli"
+    },
+    {
+        "type": "people",
+        "name": "Raiza",
+        "company": "Universidad Francisco de Paula Santander, UFPS, Colombia",
+        "skills": [
+            "Open Culture Advocate",
+            "Designer",
+            "Storyteller",
+            "Humanist",
+            "Legal Practitioner"
+        ],
+        "languages": [
+            "unknown",
+            "en"
+        ],
+        "city": "Americas",
+        "picture": false,
+        "defaultPictureIndex": 3,
+        "email": "raizalorenabv@ufps.edu.co",
+        "index": 96,
+        "description": "Architect. Conceiver, Thinker and Researcher. Learner by teaching! :)",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "https://www.linkedin.com/in/linkedin.com/in/raizabarreravega",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "raiza"
+    },
+    {
+        "type": "people",
+        "name": "Sandra",
+        "company": "",
+        "skills": [
+            "Artist",
+            "Storyteller"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Europe",
+        "picture": "https://www.gravatar.com/avatar/694309e377225671751a24d69e0ac2a0?d=404",
+        "defaultPictureIndex": 0,
+        "email": "hello@sandratrostel.de",
+        "index": 98,
+        "description": "I'm a filmmaker/ storyteller who is interested in Creative Commons licenses in film.",
+        "social": {
+            "twitter": "https://twitter.com/filmgizmo",
+            "facebook": "https://facebook.com/sandra.trostel",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "sandra"
+    },
+    {
+        "name": "Swedish Open Cultural Heritage (SOCH)",
+        "type": "collections",
+        "shortDescription": "Your access point to Swedish cultural heritage data on the web",
+        "description": "SOCH is a web service which harvests metadata from the databases of cultural heritage institutions in Sweden, indexes and links the data, and then publishes it, allowing third parties to build on and use the data via a web-API. SOCH is also a national aggregator for Sweden, to deliver data to Europeana. ",
+        "access": "API and the search engine Kringla",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Larissa",
+                "email": "larissa.borck@raa.se"
+            }
+        ],
+        "links": {
+            "homepage": "https://www.raa.se/in-english/digital-services/about-soch/",
+            "codebase": "https://www.raa.se/in-english/digital-services/about-soch/api-in-english/",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://www.raa.se/app/themes/raa-external/assets/images/riksantikvarieambetet-colored.svg",
+            "video": ""
+        },
+        "organization": "Swedish National Heritage Board",
+        "country": "Sweden",
+        "copyright": "PDM / Public Domain, CC0, CC BY, CC BY-SA, CC NC or ND clauses, Other open licenses",
+        "email": "larissa.borck@raa.se",
+        "defaultPictureIndex": 0,
+        "index": 99,
+        "slug": "swedish-open-cultural-heritage-soch"
+    },
+    {
+        "type": "people",
+        "name": "Medhavi",
+        "company": "The Heritage Lab",
+        "skills": [
+            "Open Culture Advocate",
+            "Storyteller",
+            "Wikimedian",
+            "Digital Content Creator"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "India",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/b8abdcb0a4de1852d5ea70f8708b48da",
+        "defaultPictureIndex": 8,
+        "email": "medhavi@theheritagelab.in",
+        "index": 100,
+        "description": "On a lifelong mission to make (south asian) art & cultural heritage digitally accessible + engaging for people. I believe in information-activism. Curious and forever learning! ",
+        "social": {
+            "twitter": "https://twitter.com/MedhaviGandhi",
+            "facebook": "",
+            "linkedin": "https://globalartaccess.org/curatorial-competition-finalists",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/theheritagelab",
+            "flickr": ""
+        },
+        "slug": "medhavi"
+    },
+    {
+        "type": "people",
+        "name": "Andrew",
+        "company": "Metropolitan Museum of Art",
+        "skills": [
+            "Open Culture Advocate",
+            "Developer",
+            "Photographer Or Documentarist",
+            "Glam Professional",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Americas",
+        "picture": "https://hack4openglam-visualization-dev.hannolainen.com/usercontent_cache/e0f066792765a9e86917d5d319f02a8e",
+        "defaultPictureIndex": 2,
+        "email": "andrew.lih@gmail.com",
+        "index": 101,
+        "description": "I'm the Wikimedia Strategist at the Metropolitan Museum of Art working with Wikidata, collections data, AI, machine learning",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "andrew"
+    },
+    {
+        "name": "Met Museum Open Access API",
+        "type": "collections",
+        "shortDescription": "Metropolitan Museum of Art (US) API, images and metadata",
+        "description": "Metropolitan Museum of Art (US) API, images and metadata available in on Github and via API calls",
+        "access": "REST API, Github database dump, Wikidata",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "Andrew",
+                "email": "andrew.lih@gmail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+            "codebase": "https://github.com/metmuseum",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://avatars1.githubusercontent.com/u/13870646?s=200&v=4",
+            "video": "https://www.youtube.com/watch?v=8tZunqPOdAE"
+        },
+        "organization": "Metropolitan Museum of Art",
+        "country": "Various",
+        "copyright": "CC0",
+        "email": "andrew.lih@gmail.com",
+        "defaultPictureIndex": 1,
+        "index": 101,
+        "slug": "met-museum-open-access-api"
+    },
+    {
+        "type": "people",
+        "name": "Régis ",
+        "company": "Biblissima, Campus Condorcet ",
+        "skills": [
+            "Developer",
+            "Humanist",
+            "Technologist"
+        ],
+        "languages": [
+            "unknown",
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 8,
+        "email": "regis.robineau@biblissima-condorcet.fr",
+        "index": 102,
+        "description": "I'm the technical coordinator of the Biblissima project (Paris), an observatory for medieval and renaissance written cultural heritage. I'm also a IIIF expert (https://iiif.io)",
+        "social": {
+            "twitter": "https://twitter.com/regisrob",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "https://github.com/regisrob",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "rgis"
+    },
+    {
+        "type": "people",
+        "name": "Carolina",
+        "company": "",
+        "skills": [
+            "Open Culture Advocate",
+            "Designer",
+            "Glam Professional"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Americas",
+        "picture": false,
+        "defaultPictureIndex": 7,
+        "email": "carolina.tanigushi@gmail.com",
+        "index": 103,
+        "description": "Interested in open science and bad at introducing herself",
+        "social": {
+            "twitter": "https://twitter.com/caroltanigushi",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "https://github.com/carolinatanigushi",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "carolina"
+    },
+    {
+        "type": "people",
+        "name": "Veera",
+        "company": "Goldsmiths, University of London",
+        "skills": [
+            "Artist",
+            "Designer",
+            "Developer",
+            "Storyteller",
+            "Technologist"
+        ],
+        "languages": [
+            "en",
+            "fi",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 7,
+        "email": "veera.i.jussila@gmail.com",
+        "index": 106,
+        "description": "Creative coder specialized in machine learning and web apps. I'm interested in researching museum collections and archives by coding and creating interactive experiences.",
+        "social": {
+            "twitter": "",
+            "facebook": "https://facebook.com/veera.jussila/",
+            "linkedin": "https://linkedin.com/in/veerajussila/",
+            "wikimedia": "",
+            "github": "https://github.com/vjuss",
+            "instagram": "https://instagram.com/veeraidaj",
+            "flickr": ""
+        },
+        "slug": "veera"
+    },
+    {
+        "type": "people",
+        "name": "Revekka",
+        "company": "Inter Alia / GLAM Hack initiative",
+        "skills": [
+            "Open Culture Advocate",
+            "Project Manager"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 4,
+        "email": "glam.hack.events@gmail.com",
+        "index": 108,
+        "description": "I am the inspirer and curator of GLAM Hack, a series of events on the creative reuses of digital cultural heritage based in Athens, Greece.",
+        "social": {
+            "twitter": "https://twitter.com/HackGlam",
+            "facebook": "https://facebook.com/GLAMHack",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/glam.hack/",
+            "flickr": ""
+        },
+        "slug": "revekka"
+    },
+    {
+        "type": "people",
+        "name": "Tom",
+        "company": "OpenRefine",
+        "skills": [
+            "Developer",
+            "Wikimedian"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Americas",
+        "picture": "https://www.gravatar.com/avatar/cea4e8526cb0fcfc942322639e5c72bc?d=404",
+        "defaultPictureIndex": 1,
+        "email": "tfmorris@gmail.com",
+        "index": 109,
+        "description": "OpenRefine core committer & past project leader, DST4L instructor, data wrangler",
+        "social": {
+            "twitter": "https://twitter.com/tfmorris",
+            "facebook": "",
+            "linkedin": "https://linkedin.com/in/tfmorris/",
+            "wikimedia": "",
+            "github": "https://github.com/tfmorris",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "tom"
+    },
+    {
+        "type": "people",
+        "name": "Alden",
+        "company": "Creative Commons",
+        "skills": [
+            "Developer",
+            "Technologist"
+        ],
+        "languages": [
+            "unknown",
+            "unknown"
+        ],
+        "city": "Americas",
+        "picture": "https://www.gravatar.com/avatar/32853a2ab283e0093bf088d8af5d3cdc?d=404",
+        "defaultPictureIndex": 5,
+        "email": "alden@creativecommons.org",
+        "index": 110,
+        "description": "I'm a software engineer at Creative Commons",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "https://github.com/aldenstpage/",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "alden"
+    },
+    {
+        "type": "people",
+        "name": "Momoko",
+        "company": "",
+        "skills": [
+            "Open Culture Advocate",
+            "Designer"
+        ],
+        "languages": [
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 8,
+        "email": "hayashi.mk@rgn4d.neomailbox.ch",
+        "index": 111,
+        "description": "I have always been interested in art and design, and have done research in visual literacy and information design related to the use of cultural resources.",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "momoko"
+    },
+    {
+        "type": "people",
+        "name": "Heikki",
+        "company": "WMFI",
+        "skills": [
+            "Open Culture Advocate",
+            "Photographer Or Documentarist",
+            "Humanist",
+            "Wikimedian",
+            "Navigator"
+        ],
+        "languages": [
+            "fi",
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 7,
+        "email": "heikki.kastemaa@saunalahti.fi",
+        "index": 112,
+        "description": "I navigate in culture",
+        "social": {
+            "twitter": "",
+            "facebook": "https://facebook.com/Kulttuurinavigaattori",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "heikki"
+    },
+    {
+        "type": "people",
+        "name": "Inker-Anni",
+        "company": "Sámi Archives, Finland",
+        "skills": [
+            "Archivist"
+        ],
+        "languages": [
+            "fi",
+            "unknown",
+            "unknown",
+            "en"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 8,
+        "email": "inker-anni.linkola-aikio@arkisto.fi",
+        "index": 113,
+        "description": "Senior Research Officer",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "inker-anni"
+    },
+    {
+        "type": "people",
+        "name": "Sofia",
+        "company": "",
+        "skills": [
+            "Glam Professional"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": "https://www.gravatar.com/avatar/060b5ed34b84c7c18e806f89ad76baa0?d=404",
+        "defaultPictureIndex": 7,
+        "email": "sofiatsimini@yahoo.com",
+        "index": 114,
+        "description": " ",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "sofia"
+    },
+    {
+        "type": "people",
+        "name": "Arunesh",
+        "company": "",
+        "skills": [
+            "Open Culture Advocate",
+            "Artist",
+            "Designer",
+            "Storyteller",
+            "Technologist"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "unknown"
+        ],
+        "city": "India",
+        "picture": false,
+        "defaultPictureIndex": 8,
+        "email": "arunesh.varade@yahoo.in",
+        "index": 116,
+        "description": "Creative Enthusiast",
+        "social": {
+            "twitter": "https://twitter.com/AruneshV",
+            "facebook": "https://facebook.com/Enlightened.babaji.26/",
+            "linkedin": "https://linkedin.com/in/arunesh-varade-a75ab8125/",
+            "wikimedia": "",
+            "github": "https://github.com/FairlyNewHere",
+            "instagram": "https://instagram.com/kya_fark_padtahai/",
+            "flickr": ""
+        },
+        "slug": "arunesh"
+    },
+    {
+        "type": "people",
+        "name": "Bettina ",
+        "company": "Fortepan ",
+        "skills": [
+            "Open Culture Advocate",
+            "Digital Content Producer"
+        ],
+        "languages": [
+            "en",
+            "unknown"
+        ],
+        "city": "Americas",
+        "picture": false,
+        "defaultPictureIndex": 6,
+        "email": "fabos@uni.edu",
+        "index": 117,
+        "description": "I am a professor of Interactive Digital Studies at the University of Northern Iowa and one of the founding members of Fortepan Iowa",
+        "social": {
+            "twitter": "",
+            "facebook": "https://facebook.com/fortepan.us/",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "https://instagram.com/fortepaniowa/",
+            "flickr": ""
+        },
+        "slug": "bettina"
+    },
+    {
+        "type": "people",
+        "name": "Maria",
+        "company": "",
+        "skills": [
+            "Artist"
+        ],
+        "languages": [
+            "en"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 6,
+        "email": "maria.kousoula@hotmail.com",
+        "index": 119,
+        "description": "I am an openglam advocate!",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "maria"
+    },
+    {
+        "type": "people",
+        "name": "Yoko",
+        "company": "",
+        "skills": [
+            "Open Culture Advocate",
+            "Wikimedian",
+            "Translator With Archivist Background"
+        ],
+        "languages": [
+            "unknown",
+            "en"
+        ],
+        "city": "Asia",
+        "picture": false,
+        "defaultPictureIndex": 3,
+        "email": "Omotechomw@gmail.com",
+        "index": 121,
+        "description": "Hi, I am volunteer translator on Wikimedia wikis, and OSM ja-en-ja. Would love to join translators for pages you need in ja language.",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:Omotecho",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "yoko"
+    },
+    {
+        "type": "people",
+        "name": "Paavo",
+        "company": "",
+        "skills": [
+            "Open Culture Advocate",
+            "Developer",
+            "Humanist",
+            "Wikimedian"
+        ],
+        "languages": [
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 7,
+        "email": "paavo.h.jordman@utu.fi",
+        "index": 122,
+        "description": "I am an Ethnology & Geoinformatics student and enthusiast of open cultural heritage and participatory GIS",
+        "social": {
+            "twitter": "",
+            "facebook": "",
+            "linkedin": "",
+            "wikimedia": "",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "paavo"
+    },
+    {
+        "name": "KU Leuven heritage collections dataset",
+        "type": "collections",
+        "shortDescription": "Machine-actionable datasets of documentary heritage",
+        "description": "Full datasets from KU Leuven Libraries' collections offered as open data for digital humanities research and other creative engagement ",
+        "access": "CSV format, accessed from GitHub and Zenodo",
+        "considerations": "",
+        "presenters": [
+            {
+                "name": "",
+                "email": "zik@mail.com"
+            }
+        ],
+        "links": {
+            "homepage": "https://github.com/KULeuvenDigitalisering",
+            "codebase": "",
+            "organization": ""
+        },
+        "media": {
+            "thumbnail": "https://avatars1.githubusercontent.com/u/52287191?s=460&u=af2dfd5fb5c16e29feb8c29fdd32bbbaa92aa830&v=4",
+            "video": ""
+        },
+        "organization": "KU Leuven Libraries",
+        "country": "Belgium",
+        "copyright": "PDM / Public Domain",
+        "email": "ziku@mail.com",
+        "defaultPictureIndex": 8,
+        "index": 124,
+        "slug": "ku-leuven-heritage-collections-dataset"
+    },
+    {
+        "type": "people",
+        "name": "Z. ",
+        "company": "Multimedia Institute / GLAM Croatia ",
+        "skills": [
+            "Open Culture Advocate",
+            "Artist",
+            "Designer",
+            "Wikimedian",
+            "Community Organizer And Cultural Worker"
+        ],
+        "languages": [
+            "en",
+            "unknown",
+            "unknown",
+            "unknown"
+        ],
+        "city": "Europe",
+        "picture": false,
+        "defaultPictureIndex": 2,
+        "email": "GLAM@mi2.hr",
+        "index": 125,
+        "description": "I am initiating GLAM work in Croatia for the first time (as far as I know)",
+        "social": {
+            "twitter": "https://twitter.com/Zblace",
+            "facebook": "https://facebook.com/GLAMwiki-Croatia-100270685207739/",
+            "linkedin": "",
+            "wikimedia": "https://meta.wikimedia.org/wiki/User:Zblace",
+            "github": "",
+            "instagram": "",
+            "flickr": ""
+        },
+        "slug": "z"
+    }
+]

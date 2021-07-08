@@ -3,8 +3,9 @@ import { PeoplePage, CollectionsPage } from './components/types/pages';
 
 export const displayTypes = {
     "All": "",
-    "Workshops": "workshops",
     "People": "people",
+
+    "Workshops": "workshops",
     "Projects": "projects",
     "Collections and Datasets": "collections"
 };
@@ -16,6 +17,7 @@ export const typeComponents = {
         card: PeopleCard,
         page: PeoplePage
     },
+    
     "collections": {
         card: CollectionsCard,
         page: CollectionsPage

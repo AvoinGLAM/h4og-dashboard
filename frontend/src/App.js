@@ -7,7 +7,7 @@ import {
   useHistory
 } from "react-router-dom";
 
-import data from './data.json';
+//import data from './data.json';
 
 
 import './styles/App.css';
@@ -15,6 +15,7 @@ import { SelectButton } from './components/input';
 import postcards02Light from './assets/images/postcards_02_light.jpg';
 
 import { displayTypes, typeComponents } from './displayTypes.js';
+import { useEffect, useState } from "react";
 
 function Filters() {  
   let {pathname} = useLocation();
@@ -32,11 +33,12 @@ function Filters() {
   )
 }
 
-function Results() {
+function Results({data}) {
   //let {pathname} = useLocation();
   //let displayType = pathname.slice(1);
   //    Filter: {Object.keys(displayTypes).find(key => displayTypes[key] === displayType)}
   
+
   return (
     <div className="container resultGrid">
       {data.map(item => {
@@ -49,19 +51,26 @@ function Results() {
         });
       })}
     </div>
-  )
+  ) 
 }
 
-function SinglePage() {
+function SinglePage({data}) {
   const { slug } = useParams();
   const location = useLocation();
   const type = location.pathname.split('/')[1];
 
-  const card = data.find(p => p.type === type && p.slug === slug);
 
-  return typeComponents[card.type].page({
-    data: card
-  });
+  
+  try {
+    const card = data.find(p => p.type === type && p.slug === slug);
+    console.log(card)
+    return typeComponents[card.type].page({
+      data: card
+    });
+  } catch (e) {
+    return <></>;
+  }
+ 
 }
 
 function Header(props) {
@@ -75,11 +84,27 @@ function Header(props) {
         <button onClick={() => history.goBack()}>&lt; {props.backButton}</button>
       </div>
       :
-      ''}
+      <div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-ANlrZl9HDIYOP8d2MRzFK7v6WOuzNOpYxy2Roy-pgX3BOg/viewform">
+      <button>Event Registration</button>
+      </a>
+    </div>
+      }
     </div>
   )
 }
 function App() {
+
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch('/data.json')
+    .then(res => res.json())
+    .then((json) => {
+      console.log(json)
+      setData(json);
+    })
+  }, [])
+
   console.log(Object.values(displayTypes).map(val => `/${val}`))
   return (
     <Router>
@@ -88,11 +113,11 @@ function App() {
           <Route exact path={[...(Object.values(displayTypes).map(val => `/${val}`))]}>
             <Header />
             <Filters />
-            <Results />
+            <Results data={data} />
           </Route>
           <Route exact path={[...(Object.values(displayTypes).map(val => `/${val}/:slug`))]}>
             <Header backButton="Back to Results"/>
-            <SinglePage />
+            <SinglePage data={data} />
           </Route>
         </Switch>
       </div>
