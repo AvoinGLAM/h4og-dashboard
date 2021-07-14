@@ -3,3 +3,5 @@ backend/data.json
 tools/v1migration/latest.json
 tools/v1migration/output.json
 tools/v1migration/usercontent_cache/
+tools/v1migration/oldlatest.json
+tools/v1migration/server.js

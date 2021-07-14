@@ -61,7 +61,7 @@ import { proposalTypes } from './utils.js';
         requirements: data[46],
         level: data[47]
     },
-    followUpFlag: data[52]
+    followUpFlag: data[55] // Make sure this matches with the letters in import.js
 });
 
 /**

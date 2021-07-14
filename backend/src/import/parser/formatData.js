@@ -46,7 +46,8 @@ const people = async (row, index) => {
         meta: { // Meta object will be removed later in the import process
             emailAllowed: person.emailAllowed, 
             followUpFlag: row.followUpFlag,
-            rowIncludesProjectProposal: rawRow.findDataTypes(row).includes("projects")
+            rowIncludesProjectProposal: rawRow.findDataTypes(row).includes("projects"),
+            lastName: person.lastName
         }
     }
 }

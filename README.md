@@ -44,3 +44,8 @@ Commons user Sailko, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, vi
 
 ## Back-end
 
+### Troubleshooting
+
+#### `Error: invalid_grant: Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values in the JWT claim.`
+Check if the clock in the Docker container is off. You can re-sync the clock by running the following command:
+`docker run --rm --privileged node:lts-alpine hwclock -s`

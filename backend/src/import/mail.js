@@ -6,14 +6,12 @@ const transport = nodemailer.createTransport(config.smtp);
 const isDryRun = process.argv.includes('--dry-run') ? 'DRY ' : '';
 
 export const sendMail = (options) => {
-    logger.info(`${isDryRun}Sending mail to ${options.to}`);
+    logger.info(`${isDryRun}Sending mail to ${options.to} (${options.internal})`);
 
     if (isDryRun) return;
     return transport.sendMail({
         from: config.mailFrom,
         ...options
-    }).catch(reason => {
-        logger.error(reason);
     });
 };
 
