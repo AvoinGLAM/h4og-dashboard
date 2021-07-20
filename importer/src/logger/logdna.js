@@ -1,5 +1,5 @@
 import Logger from 'logdna';
-import config from '../../../config/config.json';
+import config from '../../../config/importer/config.json';
 import * as defaultLogger from './default.js';
 import os from 'os';
 

@@ -11,8 +11,8 @@ logger.info(`\nHack4OpenGLAM Dashboard backend v${process.env.npm_package_versio
 
 const app = express();
 
-app.use('/', appRoute);
 app.use('/api/', apiRoute);
+app.use('/', appRoute);
 
 app.listen(config.httpPort, () => {
     logger.info(`HTTP server is runinng on port ${config.httpPort}`);

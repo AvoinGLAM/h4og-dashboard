@@ -1,4 +1,4 @@
-import config from '../../../config/config.json';
+import config from '../../../config/importer/config.json';
 import axios from 'axios';
 import logger from '../logger/logger.js';
 

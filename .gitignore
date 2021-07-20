@@ -6,3 +6,5 @@ tools/v1migration/usercontent_cache/
 tools/v1migration/oldlatest.json
 tools/v1migration/server.js
 node_modules/
+data/
+backend/web/

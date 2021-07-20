@@ -1,4 +1,4 @@
-import config from '../../../config/config.json';
+import config from '../../../config/importer/config.json';
 import * as logdnaLogger from './logdna.js';
 import * as defaultLogger from './default.js';
 

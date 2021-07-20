@@ -1,7 +1,16 @@
 version: "3.7"
 services:
-  app:
-    build: .
-    image: docker.pkg.github.com/avoinglam/h4og-dashboard/h4og-dashboard
+  importer:
+    build: ./importer/
+    image: docker.pkg.github.com/avoinglam/h4og-dashboard/importer
     volumes:
      - ./config/:/usr/src/app/config/
+     - ./data/:/usr/src/app/data/
+  backend:
+    build: ./backend/
+    image: docker.pkg.github.com/avoinglam/h4og-dashboard/backend
+    volumes:
+      - ./config/:/usr/src/app/config/
+      - ./data/:/usr/src/app/data/
+    ports:
+      - 8080:80

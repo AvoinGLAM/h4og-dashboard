@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import config from '../../../config/config.json';
+import config from '../../../config/importer/config.json';
 import logger from '../logger/logger.js';
 
 const transport = nodemailer.createTransport(config.smtp);

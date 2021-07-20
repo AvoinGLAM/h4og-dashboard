@@ -99,10 +99,10 @@ function App() {
   const [data, setData] = useState([]);
   
   const baseResultsUrl = (process.env.NODE_ENV === 'development' ? 'http://localhost:80/api/results' : '/api/results');
-  const [queryParams, setQueryParams] = useState({type: ''});
+  const [queryParams, setQueryParams] = useState({initial: true});
 
-  // Initial data load from the server
   useEffect(() => {
+    if (queryParams.initial === true) return;
     
     const resultsUrl = `${baseResultsUrl}?${Object.keys(queryParams).map(key => key + '=' + queryParams[key]).join('&')}`;
 

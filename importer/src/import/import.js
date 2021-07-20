@@ -2,8 +2,8 @@ import { GoogleSpreadsheet } from 'google-spreadsheet';
 import fs from 'fs/promises';
 import path from 'path';
 
-import config from '../../../config/config.json';
-import googleKey from '../../../config/google-key.json';
+import config from '../../../config/importer/config.json';
+import googleKey from '../../../config/importer/google-key.json';
 import { parseTable } from './parser/parser.js';
 import { createChannel } from './mattermost.js';
 import { addNewSubscriber } from './mailerlite.js';
@@ -14,7 +14,7 @@ import logger from '../logger/logger.js';
 
 const isDryRun = process.argv.includes('--dry-run') ? 'DRY ' : '';
 
-const dataFilePath = path.join(path.resolve(), '../data.json');
+const dataFilePath = path.join(path.resolve(), '../data/data.json');
 
 /**
  * Run tasks for new added items
