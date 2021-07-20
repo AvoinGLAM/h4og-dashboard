@@ -155,3 +155,25 @@
     pointer-events: none;
 }
 
+/* Ghost */
+
+.ghostCard {
+    aspect-ratio: 2 / 1; /* to-do: make this cross browser*/
+    width: 100%;
+    display: flex;
+    /*padding: 0.5rem;*/
+    position: relative;
+    outline: 5px dashed #ccc;
+    outline-offset: -1rem;
+}
+
+.ghostCard:after {
+    content: '?';
+    position: absolute;
+    left: 50%;
+    top: 50%;  
+    transform: translate(-50%, -50%);
+    color: #aaa;
+    font-family: 'Ultra', serif;
+    font-size: 2rem;
+}

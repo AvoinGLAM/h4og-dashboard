@@ -12,7 +12,7 @@ export function Results({data}) {
           {data.map(item => {
             if (typeComponents[item.type] === undefined) {
               console.log(`Couldn't find component for type ${item.type}`);
-              return <></>;
+              return typeComponents["ghost"].card();
             }
             return typeComponents[item.type].card({
               data: item

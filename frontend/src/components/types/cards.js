@@ -73,3 +73,9 @@ export function PeopleCard({ data }) {
     </Link>
   )
 }
+
+export function GhostCard() {
+  return (
+    <div className="ghostCard"></div>
+  )
+}
