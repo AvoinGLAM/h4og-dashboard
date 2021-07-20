@@ -14,7 +14,7 @@ import logger from '../logger/logger.js';
 
 const isDryRun = process.argv.includes('--dry-run') ? 'DRY ' : '';
 
-const dataFilePath = path.join(path.resolve(), 'data.json');
+const dataFilePath = path.join(path.resolve(), '../data.json');
 
 /**
  * Run tasks for new added items
@@ -104,6 +104,8 @@ export const importData = async () => {
         // Delete email key, if user declined from showing it publicly
         if (!item.meta?.emailAllowed) delete item.email; 
         if (item.meta) delete item.meta;
+
+        return item;
     });
 
     logger.info(`${isDryRun}Saving updated cells`);

@@ -1,5 +1,5 @@
 import Logger from 'logdna';
-import config from '../../../config/backend/config.json';
+import config from '../../../config/config.json';
 import * as defaultLogger from './default.js';
 import os from 'os';
 
@@ -9,7 +9,7 @@ export const createLogger = () => {
     defaultLogger.info("Creating a logdna logger...");
     logger = Logger.createLogger(config.logdnaKey, {
         hostname: os.hostname(),
-        app: 'h4og-dashboard-backend',
+        app: 'h4og-dashboard-importer',
         index_meta: true
     });
 }

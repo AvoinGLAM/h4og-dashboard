@@ -1,20 +1,16 @@
 {
   "dependencies": {
-    "axios": "^0.21.1",
     "chalk": "^4.1.1",
     "express": "^4.17.1",
-    "google-spreadsheet": "^3.1.15",
-    "logdna": "^3.5.2",
-    "nodemailer": "^6.6.2"
+    "logdna": "^3.5.2"
   },
   "name": "h4og-dashboard-backend",
-  "version": "0.2.2",
-  "main": "index.js",
+  "version": "0.1.0",
+  "main": "src/index.js",
   "type": "module",
   "devDependencies": {},
   "scripts": {
     "start": "node --experimental-json-modules src/index.js",
-    "start-dry": "node --experimental-json-modules src/index.js --dry-run",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

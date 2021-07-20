@@ -7,9 +7,6 @@ import {
   useHistory
 } from "react-router-dom";
 
-//import data from './data.json';
-
-
 import './styles/App.css';
 import { SelectButton } from './components/input';
 import postcards02Light from './assets/images/postcards_02_light.jpg';
@@ -39,6 +36,7 @@ function Results({data}) {
   //    Filter: {Object.keys(displayTypes).find(key => displayTypes[key] === displayType)}
   
 
+  console.log(data);
   return (
     <div className="container resultGrid">
       {data.map(item => {
@@ -80,15 +78,15 @@ function Header(props) {
     <div className="header">
       <h1>Hack4OpenGLAM Dashboard</h1>
       {props.backButton ?
-      <div>
-        <button onClick={() => history.goBack()}>&lt; {props.backButton}</button>
-      </div>
+        <div>
+          <button onClick={() => history.goBack()}>&lt; {props.backButton}</button>
+        </div>
       :
-      <div>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-ANlrZl9HDIYOP8d2MRzFK7v6WOuzNOpYxy2Roy-pgX3BOg/viewform">
-      <button>Event Registration</button>
-      </a>
-    </div>
+        <div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-ANlrZl9HDIYOP8d2MRzFK7v6WOuzNOpYxy2Roy-pgX3BOg/viewform">
+              <button>Event Registration</button>
+            </a>
+        </div>
       }
     </div>
   )
@@ -96,8 +94,14 @@ function Header(props) {
 function App() {
 
   const [data, setData] = useState([]);
+  
+
+  // Initial data load from the server
   useEffect(() => {
-    fetch('/data.json')
+    const dataPath = (process.env.NODE_ENV == 'development' ? '/data.json' : '/api/results');
+    console.log(dataPath);
+
+    fetch(dataPath)
     .then(res => res.json())
     .then((json) => {
       console.log(json)
