@@ -49,7 +49,7 @@
 }
 
 /* bottom inner shadows for long & overflowing collection cards */
-.collectionsCard::after, .projectsCard::after, .peopleCard .content::after {
+.collectionsCard::after, .projectsCard::after, .peopleCard::after {
     content: '';
     position: absolute;
     top: 0.5rem; left: 0.5rem;
@@ -58,7 +58,6 @@
     z-index: 3;
     pointer-events: none;
 }
-
 
 .peopleCard .content, .collectionsCard .content, .projectsCard .content {
     margin: 1rem 0;
@@ -98,6 +97,7 @@
     position: relative;
     aspect-ratio: 308 / 348;
     margin: 1rem;
+    z-index: 5;
 }
 
 .peopleCard .picture img {
@@ -117,7 +117,6 @@
     z-index: 2;
     pointer-events: none;
 }
-
 
 /* Collections */
 
