@@ -1,6 +1,6 @@
 import '../../styles/cards.css';
 import { defaultPictures } from '../../defaultPictures';
-import Tippy from '@tippyjs/react';
+//import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
 import { getDisplayTypeName } from '../../displayTypes';
 
@@ -28,6 +28,7 @@ export function CollectionsCard({ data }) {
   )
 }
 export function PeopleCard({ data }) {
+  /*
   function prettifySkills(skills) {
     if (skills.length === 0) {
       return;
@@ -37,7 +38,7 @@ export function PeopleCard({ data }) {
       let randomSkill = skills[Math.floor(Math.random() * skills.length)];
       return `${randomSkill}, +${skills.length - 1} more`
     }
-  }
+  }*/
   return (
     <Link to={`/${data.type}/${data.slug}/`} className="cardLink">
       <div className="peopleCard">

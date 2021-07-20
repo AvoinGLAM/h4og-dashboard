@@ -14,9 +14,17 @@ import postcards02Light from './assets/images/postcards_02_light.jpg';
 import { displayTypes, typeComponents } from './displayTypes.js';
 import { useEffect, useState } from "react";
 
-function Filters() {  
+function Filters({queryParams, setQueryParams}) {  
   let {pathname} = useLocation();
   let displayType = pathname.slice(1) || '';
+
+  useEffect(() => {
+    const newQueryParams = {};
+    if (displayType !== '') newQueryParams.type = displayType;
+
+    if (JSON.stringify(queryParams) === JSON.stringify(newQueryParams)) return;
+    setQueryParams(newQueryParams)
+  }, [displayType, queryParams, setQueryParams]);
 
   return (
     <div className="container" style={{backgroundImage: "url('" + postcards02Light + "')"}}>
@@ -34,9 +42,7 @@ function Results({data}) {
   //let {pathname} = useLocation();
   //let displayType = pathname.slice(1);
   //    Filter: {Object.keys(displayTypes).find(key => displayTypes[key] === displayType)}
-  
 
-  console.log(data);
   return (
     <div className="container resultGrid">
       {data.map(item => {
@@ -56,8 +62,6 @@ function SinglePage({data}) {
   const { slug } = useParams();
   const location = useLocation();
   const type = location.pathname.split('/')[1];
-
-
   
   try {
     const card = data.find(p => p.type === type && p.slug === slug);
@@ -68,7 +72,6 @@ function SinglePage({data}) {
   } catch (e) {
     return <></>;
   }
- 
 }
 
 function Header(props) {
@@ -95,19 +98,22 @@ function App() {
 
   const [data, setData] = useState([]);
   
+  const baseResultsUrl = (process.env.NODE_ENV === 'development' ? 'http://localhost:80/api/results' : '/api/results');
+  const [queryParams, setQueryParams] = useState({type: ''});
 
   // Initial data load from the server
   useEffect(() => {
-    const dataPath = (process.env.NODE_ENV == 'development' ? '/data.json' : '/api/results');
-    console.log(dataPath);
+    
+    const resultsUrl = `${baseResultsUrl}?${Object.keys(queryParams).map(key => key + '=' + queryParams[key]).join('&')}`;
 
-    fetch(dataPath)
+    console.log(resultsUrl)
+    fetch(resultsUrl)
     .then(res => res.json())
     .then((json) => {
       console.log(json)
       setData(json);
     })
-  }, [])
+  }, [queryParams, baseResultsUrl])
 
   console.log(Object.values(displayTypes).map(val => `/${val}`))
   return (
@@ -116,7 +122,7 @@ function App() {
         <Switch>
           <Route exact path={[...(Object.values(displayTypes).map(val => `/${val}`))]}>
             <Header />
-            <Filters />
+            <Filters queryParams={queryParams} setQueryParams={setQueryParams} />
             <Results data={data} />
           </Route>
           <Route exact path={[...(Object.values(displayTypes).map(val => `/${val}/:slug`))]}>
