@@ -1,5 +1,5 @@
-import { PeopleCard, CollectionsCard, GhostCard } from './components/types/cards';
-import { PeoplePage, CollectionsPage } from './components/types/pages';
+import { PeopleCard, CollectionsCard, GhostCard, ProjectsCard } from './components/types/cards';
+import { PeoplePage, CollectionsPage, ProjectsPage } from './components/types/pages';
 
 export const displayTypes = {
     "All": "",
@@ -25,6 +25,11 @@ export const typeComponents = {
 
     "ghost": {
         card: GhostCard
+    },
+
+    "projects": {
+        card: ProjectsCard,
+        page: ProjectsPage
     }
 };
 

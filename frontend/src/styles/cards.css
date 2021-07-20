@@ -1,6 +1,6 @@
 .resultGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     /* 4gaps adds up to 4rem */
     grid-auto-flow: dense;
     width: calc(100% - 4rem + 1rem);
@@ -24,19 +24,19 @@
     display: contents;
 }
 
-.peopleCard, .collectionsCard {
+.peopleCard, .collectionsCard, .projectsCard {
     cursor: pointer;
     outline-offset: -0.5rem;
     outline: 3px solid transparent;
     transition: outline 0.1s;
 }
 
-.peopleCard:hover, .collectionsCard:hover {
+.peopleCard:hover, .collectionsCard:hover, .projectsCard:hover {
     outline: 3px solid #EDD6A6;
     
 }
 
-.peopleCard::before, .collectionsCard::before {
+.peopleCard::before, .collectionsCard::before, .projectsCard::before {
     content: '';
     position: absolute;
     top: 0; left: 0;
@@ -48,7 +48,7 @@
 }
 
 /* bottom inner shadows for long & overflowing collection cards */
-.collectionsCard::after {
+.collectionsCard::after, .projectsCard::after {
     content: '';
     position: absolute;
     top: 0.5rem; left: 0.5rem;
@@ -59,7 +59,7 @@
 }
 
 
-.peopleCard .content, .collectionsCard .content {
+.peopleCard .content, .collectionsCard .content, .projectsCard .content {
     margin: 1rem 0;
     margin-right: 1rem;
     padding: 0.5rem 0;
@@ -72,12 +72,12 @@
     flex: 1;
 
 }
-.collectionsCard .content {
+.collectionsCard .content, .projectsCard .content {
     margin: 0.5rem 1rem 0.5rem 1rem;
     padding: 0 1rem 1.5rem 1rem;
 }
 
-.peopleCard .content *, .collectionsCard .content * {
+.peopleCard .content *, .collectionsCard .content *, .projectsCard .content * {
     margin-bottom: 0.5rem;
     display: block;
 }
@@ -85,6 +85,7 @@
 /* People */
 
 .peopleCard {
+    grid-column: span 2;
     aspect-ratio: 2 / 1; /* to-do: make this cross browser*/
     width: 100%;
     display: flex;
@@ -120,6 +121,7 @@
 /* Collections */
 
 .collectionsCard {
+    grid-column: span 2;
     grid-row: span 2;
     aspect-ratio: 1 / 1; /* to-do: make this cross browser*/
     width: 100%;
@@ -154,6 +156,44 @@
     z-index: 2;
     pointer-events: none;
 }
+
+/* Projects */
+
+.projectsCard {
+    aspect-ratio: 1 / 2; /* to-do: make this cross browser*/
+    width: 100%;
+    display: flex;
+    position: relative;
+    /*padding: 0.5rem;*/
+    flex-direction: column;
+    grid-row: span 2;
+    
+}
+
+.projectsCard .picture {
+    position: relative;
+    aspect-ratio: 348 / 348;
+    margin: 1rem;
+}
+
+.projectsCard .picture img {
+    width: 100%;
+    aspect-ratio: 348 / 348;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projectsCard .picture::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/frame_square.png');
+    z-index: 2;
+    pointer-events: none;
+}
+
 
 /* Ghost */
 

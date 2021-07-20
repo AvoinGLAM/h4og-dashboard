@@ -50,3 +50,9 @@ export function PeoplePage({data}) {
         </div>
     );
 }
+
+export function ProjectsPage() {
+    return (
+      <div></div>
+    );
+  }
