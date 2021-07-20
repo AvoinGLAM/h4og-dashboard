@@ -1,6 +1,6 @@
-# Hack4OpenGLAM Dashboard
+# Hack4OpenGLAM Dashboard 
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+[![Build and push](https://github.com/AvoinGLAM/h4og-dashboard/actions/workflows/main.yml/badge.svg)](https://github.com/AvoinGLAM/h4og-dashboard/actions/workflows/main.yml)
 
 The app fetches data from Google Forms, parses it, and visualizes it publicly on a web interface. [Learn more about Hack4OpenGLAM (summit.creativecommons.org)...](https://summit.creativecommons.org/hack4openglam-launch/)
 
