@@ -1,0 +1,66 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Build and publish
+
+on:
+  push:
+    branches: ['master']
+
+env:
+  REGISTRY: docker.pkg.github.com
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v1
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata for importer
+        id: meta-importer
+        uses: docker/metadata-action@v3
+        with:
+          images: ${{ env.REGISTRY }}/avoinglam/h4og-dashboard/importer
+          
+      - name: Extract metadata for backend
+        id: meta-backend
+        uses: docker/metadata-action@v3
+        with:
+          images: ${{ env.REGISTRY }}/avoinglam/h4og-dashboard/backend
+
+      - name: Build and push importer Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: ./importer/
+          push: true
+          tags: ${{ steps.meta-importer.outputs.tags }}
+          labels: ${{ steps.meta-importer.outputs.labels }}
+          
+      - name: Build frontend React app
+        run: |
+          cd frontend
+          npm i
+          npm run build
+          cd ..
+          
+      - name: Build and push backend Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: ./backend/
+          push: true
+          tags: ${{ steps.meta-backend.outputs.tags }}
+          labels: ${{ steps.meta-backend.outputs.labels }}
