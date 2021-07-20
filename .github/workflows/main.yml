@@ -3,11 +3,11 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Build and publish
+name: Build and push
 
 on:
   push:
-    branches: ['master']
+    branches: ['production']
 
 env:
   REGISTRY: docker.pkg.github.com
