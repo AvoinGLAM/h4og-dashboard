@@ -49,7 +49,7 @@
 }
 
 /* bottom inner shadows for long & overflowing collection cards */
-.collectionsCard::after, .projectsCard::after, .peopleCard::after {
+.collectionsCard::after, .projectsCard::after, .peopleCard .content::after {
     content: '';
     position: absolute;
     top: 0.5rem; left: 0.5rem;
