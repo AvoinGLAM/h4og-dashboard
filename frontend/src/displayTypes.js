@@ -1,36 +1,21 @@
-import { PeopleCard, CollectionsCard, GhostCard, ProjectsCard } from './components/types/cards';
-import { PeoplePage, CollectionsPage, ProjectsPage } from './components/types/pages';
+import people from './components/types/people';
+import collections from './components/types/collections';
+import ghost from './components/types/ghost';
+import projects from './components/types/projects';
 
 export const displayTypes = {
     "All": "",
     "People": "people",
-
     "Workshops": "workshops",
     "Projects": "projects",
     "Collections and Datasets": "collections"
 };
 
-// "Card" stands for what is shown in the results
-// "Single" stands for a full page about the single card
 export const typeComponents = {
-    "people": {
-        card: PeopleCard,
-        page: PeoplePage
-    },
-    
-    "collections": {
-        card: CollectionsCard,
-        page: CollectionsPage
-    },
-
-    "ghost": {
-        card: GhostCard
-    },
-
-    "projects": {
-        card: ProjectsCard,
-        page: ProjectsPage
-    }
+    people,
+    collections,
+    ghost,
+    projects
 };
 
 export function getDisplayTypeName(displayType) {
