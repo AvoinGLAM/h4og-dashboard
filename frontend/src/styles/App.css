@@ -14,7 +14,7 @@ body {
 .header h1 {flex: 1;}
 
 h1 {
-  color: #EB480D;
+  color: #121212;
   font-family: 'Goblin One', serif; 
   margin: 0; 
   font-size: 1.7rem;
@@ -53,7 +53,7 @@ button {
   text-align: left;
   border: none;
   padding: 0.6rem 3rem;
-  border-radius: 0;
+  border-radius: 1.5rem;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   cursor: pointer;

@@ -135,7 +135,7 @@
 .collectionsCard .picture {
     position: relative;
     aspect-ratio: 348 / 154;
-    margin: 1rem;
+    margin: 1rem 1rem 0.5rem 1rem;
 }
 
 .collectionsCard .picture img {

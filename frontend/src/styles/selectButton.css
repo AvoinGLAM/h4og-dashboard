@@ -3,10 +3,10 @@
   width: 100%;
   background-image: url('../assets/images/postcards_02_input.png');
   background-size: cover;
-  text-align: left;
+  text-align: center;
   border: none;
   padding: 0.6rem;
-  border-radius: 0;
+  border-radius: 1.5rem;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   cursor: pointer;

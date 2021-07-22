@@ -70,10 +70,11 @@ function PeoplePage({data}) {
                         </div>
                         <div className="content">
                             <h3>{data.name}</h3>
-                            <span>{data.skills.join(', ')}</span>
                             {data.company.trim().length + data.city.trim().length === 0 ? '' :
-                                <span>{data.company.trim().length === 0 ? '' : `${data.company}, `}{data.city}</span>
+                                <span class="from">from {data.company.trim().length === 0 ? '' : `${data.company}, `}{data.city}</span>
                             }
+                            <span>I am {data.skills.join(', ')}</span>
+                            <span>Let's talk about...</span>
                         </div>
                         {/*
                         <div className="big">
@@ -84,9 +85,9 @@ function PeoplePage({data}) {
                     </div>
                 </div>
             </div>
-            <div className="center">
+{/*             <div className="center">
                 {data.description}
-            </div>
+            </div> */}
         </div>
     );
 }
