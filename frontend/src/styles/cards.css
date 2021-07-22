@@ -13,7 +13,7 @@
 
 .cardType {
     text-transform: uppercase;
-    font-size: 14px;
+/*     font-size: 14px; */
     display: block;
     margin-bottom: 0 !important;
     color: rgba(0,0,0,0.7);
@@ -60,13 +60,12 @@
 }
 
 .peopleCard .content, .collectionsCard .content, .projectsCard .content {
-    margin: 1rem 0;
-    margin-right: 1rem;
-    padding: 0.5rem 0;
-    font-size: 0.85rem;
+    margin: 1rem 0.5rem 1rem 0;
+/*     padding: 0.5rem 15px 0.5rem 0; */
+    font-size: 0.8rem;
     color: #121212;
 
-    overflow-y: hidden;
+    overflow-y: auto;
     overflow-x: hidden;
     
     flex: 1;
@@ -74,7 +73,7 @@
 }
 .collectionsCard .content, .projectsCard .content {
     margin: 0 0.6rem 0.5rem 0.7rem;
-    padding: 0 1rem 1.5rem 1rem;
+    padding: 0 0.5rem 1rem 0.5rem;
 }
 
 .peopleCard .content *, .collectionsCard .content *, .projectsCard .content * {
@@ -96,7 +95,7 @@
 .peopleCard .picture {
     position: relative;
     aspect-ratio: 308 / 348;
-    margin: 1rem;
+    margin: 1rem 0.5rem 1rem 1rem;
     z-index: 5;
 }
 
@@ -173,7 +172,7 @@
 .projectsCard .picture {
     position: relative;
     aspect-ratio: 348 / 308;
-    margin: 1rem;
+    margin: 1rem 1rem 0.5rem 1rem;
 }
 
 .projectsCard .picture img {
@@ -214,6 +213,6 @@
     top: 50%;  
     transform: translate(-50%, -50%);
     color: #aaa;
-    font-family: 'Ultra', serif;
+    font-family: 'Goblin One', serif;
     font-size: 2rem;
 }
