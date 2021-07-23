@@ -73,18 +73,18 @@ function PeoplePage({data}) {
                         <div className="content">
                             <h3>{data.name}</h3>
                             {data.company.trim().length + data.city.trim().length === 0 ? '' :
-                                <span class="from">from {data.company.trim().length === 0 ? '' : `${data.company} & `}{data.city}</span>
+                                <span className="from">from {data.company.trim().length === 0 ? '' : `${data.company} & `}{data.city}</span>
                             }
                             <span>I am {data.skills.join(', ')}</span>
                             <span>Let's talk about...</span>
                             <h4>My projects</h4>
-                            <div class="smallcard">
+                            <div className="smallcard">
                             <div className="picture smallpic">
                               <img src={defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
                             </div>
-                            <div class="smallinfo">
-                              <div class="cardType">project type</div>
-                              <h3 class="cardName">Project name</h3>
+                            <div className="smallinfo">
+                              <div className="cardType">project type</div>
+                              <h3 className="cardName">Project name</h3>
                             </div>
                           </div>
                           {/*

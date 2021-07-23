@@ -45,19 +45,19 @@ function ProjectsPage({data}) {
                       <h3>{data.name}</h3> 
                       <span>{data.description}</span>
                       <h4>Contact</h4>
-                      <div class="smallcard">
+                      <div className="smallcard">
                         <div className="picture smallpic">
                           <img src={defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
                         </div>
-                        <div class="smallinfo">
-                          <h3 class="cardName">Name</h3>
-                          <span class="from">from company & city</span>
+                        <div className="smallinfo">
+                          <h3 className="cardName">Name</h3>
+                          <span className="from">from company & city</span>
                         </div>
                       </div>
                       <h4>Links</h4>
                       <span><a href={data.links.homepage} target="blank">Homepage</a></span>
                       <span><a href={data.links.codebase} targer="blank">Codebase</a></span>
-                      <div class="cta">
+                      <div className="cta">
                         <a href={"https://community.okf.fi/hack4openglam/channels/project-" + data.slug} target="blank">
                           <button>Join the project channel!</button>
                         </a>
