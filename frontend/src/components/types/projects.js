@@ -7,6 +7,8 @@ import { defaultPictures } from '../../defaultPictures';
 import 'tippy.js/dist/tippy.css'; // optional
 import { getDisplayTypeName } from '../../displayTypes';
 
+import postcards02Light from '../../assets/images/postcards_02_light.jpg';
+
 import {
   Link,
 } from "react-router-dom";
@@ -30,9 +32,30 @@ function ProjectsCard({ data }) {
     );
 }
 
-function ProjectsPage() {
+function ProjectsPage({data}) {
     return (
-      <div></div>
+      <div className="projectsPage page">
+        <div className="container" style={{backgroundImage: "url('" + postcards02Light + "')"}}>
+            <div className="center">
+                <div className="cardHeader">
+                    <div className="picture">
+{/*                         <img src={data.picture ? `//images.weserv.nl/?url=${data.picture}&w=348&h=348&fit=cover` : defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
+ */}                    </div>
+                    <div className="content">
+                      <h3>{data.name}</h3> 
+                      <span>{data.description}</span>
+                      <h4>Contact</h4>
+                      <span>Image of the submitter</span>
+                      <span>Link to the submitter's card</span>
+                      <h4>Links</h4>
+                      <span>{data.links.homepage}</span>
+                      <span>{data.links.codebase}</span>
+                      <span><a href="https://community.okf.fi/hack4openglam/channels/project-saint-george-on-a-bike">Join the project channel!</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
     );
 }
 

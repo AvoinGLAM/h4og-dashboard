@@ -61,10 +61,12 @@ button {
 }
 
 button {
-  outline: 3px solid transparent;
   transition: outline 0.1s;
 }
 
 button:hover {
-  outline: 3px solid #EDD6A6;
+  border: none;
+  box-shadow: 0 0 0 2pt #d65637;
+  outline: none;
+  transition: .1s;
 }

@@ -71,7 +71,7 @@ function PeoplePage({data}) {
                         <div className="content">
                             <h3>{data.name}</h3>
                             {data.company.trim().length + data.city.trim().length === 0 ? '' :
-                                <span class="from">from {data.company.trim().length === 0 ? '' : `${data.company}, `}{data.city}</span>
+                                <span class="from">from {data.company.trim().length === 0 ? '' : `${data.company} & `}{data.city}</span>
                             }
                             <span>I am {data.skills.join(', ')}</span>
                             <span>Let's talk about...</span>
