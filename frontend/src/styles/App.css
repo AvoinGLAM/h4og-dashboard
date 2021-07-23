@@ -47,6 +47,10 @@ h3 {
   margin: 0 auto;
 }
 
+.cta button {
+  background-image: url(../assets/images/yellow.png);
+}
+
 button {
   background-image: url('../assets/images/postcards_02_input.png');
   background-size: cover;

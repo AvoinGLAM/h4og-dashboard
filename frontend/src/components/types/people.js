@@ -86,14 +86,16 @@ function PeoplePage({data}) {
                             </div>
                           </div>
                             <h4>Contact</h4>
-                              <span>{data.social.website}</span>
-                              <span>{data.social.twitter}</span>
-                              <span>{data.social.github}</span>
-                              <span>{data.social.facebook}</span>
-                              <span>{data.social.instagram}</span>
-                              <span>{data.social.flickr}</span>
-                              <span>{data.social.linkedin}</span>
-                              <span>{data.social.wikimedia}</span>
+                            <div class="socials">
+                              {data.social.website.trim().length === 0 ? '' : <span><a href={data.social.website}>Website</a></span>}
+                              {data.social.twitter.trim().length === 0 ? '' : <span><a href={data.social.twitter}>Twitter</a></span>}
+                              {data.social.github.trim().length === 0 ? '' : <span><a href={data.social.github}>GitHub</a></span>}
+                              {data.social.facebook.trim().length === 0 ? '' : <span><a href={data.social.facebook}>Facebook</a></span>}
+                              {data.social.instagram.trim().length === 0 ? '' : <span><a href={data.social.instagram}>Instagram</a></span>}
+                              {data.social.flickr.trim().length === 0 ? '' : <span><a href={data.social.flickr}>Flickr</a></span>}
+                              {data.social.linkedin.trim().length === 0 ? '' : <span><a href={data.social.linkedin}>LinkedIn</a></span>}
+                              {data.social.wikimedia.trim().length === 0 ? '' : <span><a href={data.social.wikimedia}>Wikimedia</a></span>}
+                            </div>
                         </div>
                         {/*
                         <div className="big">

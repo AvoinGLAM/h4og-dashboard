@@ -55,10 +55,13 @@ function ProjectsPage({data}) {
                         </div>
                       </div>
                       <h4>Links</h4>
-                      <span>{data.links.homepage}</span>
-                      <span>{data.links.codebase}</span>
-                      <h4>Work together!</h4>
-                      <span><a href="https://community.okf.fi/hack4openglam/channels/">Join the project channel!</a></span>
+                      <span><a href={data.links.homepage} target="blank">Homepage</a></span>
+                      <span><a href={data.links.codebase} targer="blank">Codebase</a></span>
+                      <div class="cta">
+                        <a href={"https://community.okf.fi/hack4openglam/channels/project-" + data.slug} target="blank">
+                          <button>Join the project channel!</button>
+                        </a>
+                      </div>
                     </div>
                 </div>
             </div>
