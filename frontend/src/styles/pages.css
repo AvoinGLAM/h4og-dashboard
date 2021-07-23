@@ -26,6 +26,19 @@
     pointer-events: none;
 }
 
+.smallpic {
+    height: 4rem;
+}
+
+.smallcard {
+    display: flex;
+}
+
+.smallinfo {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
 .cardHeader .content {
     flex: 1;
     padding: 0.5rem 1.5rem;

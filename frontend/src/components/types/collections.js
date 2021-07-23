@@ -23,9 +23,7 @@ function CollectionsCard({ data }) {
             <div className="content">
               <span className="cardType">{getDisplayTypeName(data.type)}</span>
               <h3>{data.name}</h3>
-              <span>
-                {data.shortDescription}
-              </span>
+              <span>{data.shortDescription}</span>
             </div>
         </div>
       </Link>
@@ -42,11 +40,8 @@ function CollectionsPage({data}) {
                     </div>
                     <div>
                         <h3>{data.name}</h3>
+                        <span>{data.description.trim().length === 0 ? data.shortDescription : data.description}</span>
                     </div>
-
-                    <span>
-                          {data.shortDescription}
-                        </span>
                 </div>
             </div>
       </div>
