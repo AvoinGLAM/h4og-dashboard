@@ -27,16 +27,22 @@
 }
 
 .smallpic {
-    height: 4rem;
+    height: 3rem;
 }
 
 .smallcard {
     display: flex;
+    padding: 0.5rem;
+    background: white;
+    width: fit-content;
 }
 
 .smallinfo {
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
     font-size: 0.8rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .cardHeader .content {

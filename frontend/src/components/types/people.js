@@ -81,8 +81,8 @@ function PeoplePage({data}) {
                               <img src={defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
                             </div>
                             <div class="smallinfo">
+                              <div class="cardType">project type</div>
                               <h3 class="cardName">Project name</h3>
-                              <span class="from">from company & city</span>
                             </div>
                           </div>
                             <h4>Contact</h4>
