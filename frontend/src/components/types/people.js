@@ -12,6 +12,8 @@ import {
   Link,
 } from "react-router-dom";
 
+import { Socials, isSocialsEmpty } from '../socials';
+
 function PeopleCard({ data }) {
     /*
     function prettifySkills(skills) {
@@ -85,8 +87,9 @@ function PeoplePage({data}) {
                               <h3 class="cardName">Project name</h3>
                             </div>
                           </div>
+                          {/*
                             <h4>Contact</h4>
-                            <div class="socials">
+                            <div className="socials">
                               {data.social.website.trim().length === 0 ? '' : <span><a href={data.social.website}>Website</a></span>}
                               {data.social.twitter.trim().length === 0 ? '' : <span><a href={data.social.twitter}>Twitter</a></span>}
                               {data.social.github.trim().length === 0 ? '' : <span><a href={data.social.github}>GitHub</a></span>}
@@ -96,7 +99,9 @@ function PeoplePage({data}) {
                               {data.social.linkedin.trim().length === 0 ? '' : <span><a href={data.social.linkedin}>LinkedIn</a></span>}
                               {data.social.wikimedia.trim().length === 0 ? '' : <span><a href={data.social.wikimedia}>Wikimedia</a></span>}
                             </div>
+                          */}
                         </div>
+                        
                         {/*
                         <div className="big">
                             <span>Local Time</span>
@@ -106,9 +111,13 @@ function PeoplePage({data}) {
                     </div>
                 </div>
             </div>
-{/*             <div className="center">
-                {data.description}
-            </div> */}
+            <div className="center">
+              { isSocialsEmpty(data.social) ? null : <>
+                <h3>Contact</h3>
+                <Socials data={data.social} />
+              </>}
+                
+            </div> 
         </div>
     );
 }

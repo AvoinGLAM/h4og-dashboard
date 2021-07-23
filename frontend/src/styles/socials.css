@@ -1,0 +1,27 @@
+.socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.socialTile {
+    text-decoration: none;
+    color: #121212;
+    display: block;
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/images/postcards_02_input.png');
+    padding: 1rem;
+
+    outline: 3px solid transparent;
+    transition: outline 0.1s;
+}
+
+.platformName {
+    margin-left: 1rem;
+}
+
+.socialTile:hover {
+    outline: 3px solid #EDD6A6;
+}
