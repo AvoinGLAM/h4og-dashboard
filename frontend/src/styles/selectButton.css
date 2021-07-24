@@ -1,12 +1,12 @@
 
 .selectButton {
   width: 100%;
-  background-image: url('../assets/images/postcards_02_input.png');
+  background-image: url('../assets/images/pink.png');
   background-size: cover;
-  text-align: left;
+  text-align: center;
   border: none;
   padding: 0.6rem;
-  border-radius: 0;
+  border-radius: 1.5rem;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   cursor: pointer;
@@ -26,7 +26,7 @@
   background-color: rgba(255,255,255,0);
 }
 .selectButton.selected {
-  font-weight: bold;
+/*   font-weight: bold; */
   opacity: 1;
   color: black;
 }

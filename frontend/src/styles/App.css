@@ -6,6 +6,11 @@ body {
   --container-margin: 2rem;
 }
 
+a {
+  color:#eb480d;
+  text-decoration: none;
+}
+
 .header {
   padding: var(--container-margin);
   display: flex;
@@ -14,7 +19,7 @@ body {
 .header h1 {flex: 1;}
 
 h1 {
-  color: #EB480D;
+  color: #121212;
   font-family: 'Goblin One', serif; 
   margin: 0; 
   font-size: 1.7rem;
@@ -47,13 +52,17 @@ h3 {
   margin: 0 auto;
 }
 
+.cta button {
+  background-image: url(../assets/images/yellow.png);
+}
+
 button {
   background-image: url('../assets/images/postcards_02_input.png');
   background-size: cover;
   text-align: left;
   border: none;
   padding: 0.6rem 3rem;
-  border-radius: 0;
+  border-radius: 1.5rem;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   cursor: pointer;
@@ -61,10 +70,12 @@ button {
 }
 
 button {
-  outline: 3px solid transparent;
   transition: outline 0.1s;
 }
 
 button:hover {
-  outline: 3px solid #EDD6A6;
+  border: none;
+  box-shadow: 0 0 0 2pt #d65637;
+  outline: none;
+  transition: .1s;
 }

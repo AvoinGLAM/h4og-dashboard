@@ -1,6 +1,6 @@
 {
-  "name": "h4og-dashboard",
-  "version": "0.1.0",
+  "name": "h4og-dashboard-web",
+  "version": "2.2.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -10,6 +10,7 @@
     "axios": "^0.21.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"

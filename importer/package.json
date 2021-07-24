@@ -7,7 +7,7 @@
     "nodemailer": "^6.6.2"
   },
   "name": "h4og-dashboard-importer",
-  "version": "0.3.0",
+  "version": "2.3.0",
   "main": "index.js",
   "type": "module",
   "devDependencies": {},
