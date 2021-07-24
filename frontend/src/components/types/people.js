@@ -86,18 +86,6 @@ function PeoplePage({data}) {
                           }
                           <span>I am {data.skills.join(', ')}</span>
                           <span>Let's talk about...</span>
-                          {/*
-                          <h4>My projects</h4>
-                          <div className="smallcard">
-                            <div className="picture smallpic">
-                              <img src={defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
-                            </div>
-                            <div className="smallinfo">
-                              <div className="cardType">project type</div>
-                              <h3 className="cardName">Project name</h3>
-                            </div>
-                          </div>
-                          */}
                       </div>
                       
                       {/*

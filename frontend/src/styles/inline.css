@@ -1,30 +1,34 @@
 /* Socials */
 .socials {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
     gap: 1rem;
-    margin: 1.5rem 0 2rem 0;
+    margin: 1.5rem 0 2rem;
+    flex-wrap: wrap;
 }
 
 .socialTile {
     text-decoration: none;
-    color: #121212;
-    display: block;
+    color: #ffffff;
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
     align-items: center;
-    background-image: url('../assets/images/old_paper6_2_1.png');
-    padding: 1rem;
-
+    background-image: url('../assets/images/green.png');
+    padding: 0.5rem 1rem;
     outline: 3px solid transparent;
-    transition: outline 0.1s;
+    transition: outline .1s;
+    border-radius: 2rem;
 }
 
 .platformName {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 
 .socialTile:hover {
-    outline: 3px solid #EDD6A6;
+    border: none;
+    box-shadow: 0 0 0 2pt #0c8a86;
+    outline: none;
+    transition: .1s;
 }
 
 /* Proposals */

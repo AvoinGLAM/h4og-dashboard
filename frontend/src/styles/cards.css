@@ -60,7 +60,7 @@
 }
 
 .peopleCard .content, .collectionsCard .content, .projectsCard .content {
-    margin: 1rem 0.5rem 1rem 0;
+    margin: 1.5rem 1rem 1.5rem 0.5rem;
 /*     padding: 0.5rem 15px 0.5rem 0; */
     font-size: 0.8rem;
     color: #121212;
