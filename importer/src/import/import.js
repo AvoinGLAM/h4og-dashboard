@@ -1,6 +1,7 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import fs from 'fs/promises';
 import path from 'path';
+import crypto from 'crypto';
 
 import config from '../../../config/importer/config.json';
 import googleKey from '../../../config/importer/google-key.json';
@@ -101,6 +102,9 @@ export const importData = async () => {
 
     out = out.map(item => {
         // Clean up object
+
+        item.ownerHash = md5(item.email || item.meta?.owner?.email);
+
         // Delete email key, if user declined from showing it publicly
         if (!item.meta?.emailAllowed) delete item.email; 
         if (item.meta) delete item.meta;
@@ -114,3 +118,5 @@ export const importData = async () => {
     await fs.writeFile(dataFilePath, JSON.stringify(out, null, 2));
     logger.info(`Saved data.json`);
 };
+
+const md5 = (str) => crypto.createHash('md5').update(config.hashSalt + str).digest('hex');
