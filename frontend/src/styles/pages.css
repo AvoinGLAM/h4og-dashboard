@@ -47,7 +47,6 @@
 
 .cta {
     margin-top: 1.5rem;
-    background-image: url(../assets/images/pink.png);
 }
 
 .cardHeader .content {
@@ -58,6 +57,10 @@
 .cardHeader .content span {
     margin-top: 0.5rem;
     display: block;
+}
+
+.content .smallinfo .from  {
+    margin-top: 0;
 }
 
 .cardHeader .big {

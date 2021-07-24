@@ -6,6 +6,11 @@ body {
   --container-margin: 2rem;
 }
 
+a {
+  color:#eb480d;
+  text-decoration: none;
+}
+
 .header {
   padding: var(--container-margin);
   display: flex;
