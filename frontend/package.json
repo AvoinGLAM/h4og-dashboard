@@ -1,6 +1,6 @@
 {
   "name": "h4og-dashboard-web",
-  "version": "0.2.0",
+  "version": "2.2.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
