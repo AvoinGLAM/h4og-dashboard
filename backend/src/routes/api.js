@@ -11,6 +11,7 @@ router.use(cors());
 router.get('/results', (req, res) => {
     let results = data.filter(item => {
         if (req.query.type ? item.type != req.query.type : false) return;
+        if (req.query.type ? item.ownerHash != req.query.ownerHash : false) return;
         
         return item;
     })

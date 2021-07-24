@@ -13,29 +13,23 @@ import { Results } from './components/results.js';
 import { Filters } from './components/filters.js';
 import { Header } from './components/header.js';
 import { DetailsPage } from './components/detailsPage.js';
+import api from "./api";
 
 
 
 function App() {
 
   const [data, setData] = useState([]);
-  
-  const baseResultsUrl = (process.env.NODE_ENV === 'development' ? 'http://localhost:80/api/results' : '/api/results');
   const [queryParams, setQueryParams] = useState({initial: true});
 
   useEffect(() => {
-    if (queryParams.initial === true) return;
+    (async () => {
+      if (queryParams.initial === true) return;
     
-    const resultsUrl = `${baseResultsUrl}?${Object.keys(queryParams).map(key => key + '=' + queryParams[key]).join('&')}`;
-
-    console.log(resultsUrl)
-    fetch(resultsUrl)
-    .then(res => res.json())
-    .then((json) => {
-      console.log(json)
-      setData(json);
-    })
-  }, [queryParams, baseResultsUrl])
+      const results = await api.getResults(queryParams);
+      setData(results);
+    })();
+  }, [queryParams])
 
   console.log(Object.values(displayTypes).map(val => `/${val}`))
   return (

@@ -1,6 +1,6 @@
 import { FaTwitter, FaGithub, FaFacebook, FaInstagram, FaFlickr, FaLinkedin, FaWikipediaW, FaGlobe } from 'react-icons/fa';
 
-import '../styles/socials.css';
+import '../../styles/inline.css';
 
 const socialPlatforms = {
     "website": {

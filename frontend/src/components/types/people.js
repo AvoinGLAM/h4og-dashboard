@@ -12,9 +12,11 @@ import {
   Link,
 } from "react-router-dom";
 
-import { Socials, isSocialsEmpty } from '../socials';
+import { Socials, isSocialsEmpty } from '../inline/socials';
+import { Proposals, getProposalsByOwner } from '../inline/proposals';
+import { useEffect, useState } from 'react';
 
-function PeopleCard({ data }) {
+export function PeopleCard({ data }) {
     /*
     function prettifySkills(skills) {
       if (skills.length === 0) {
@@ -62,23 +64,31 @@ function PeopleCard({ data }) {
 }
 
 function PeoplePage({data}) {
-    return (
-        <div className="peoplePage page">
-            <div className="container" style={{backgroundImage: "url('" + postcards02Light + "')"}}>
-                <div className="center">
-                    <div className="cardHeader">
-                        <div className="picture">
-                            <img src={data.picture ? `//images.weserv.nl/?url=${data.picture}&w=348&h=348&fit=cover` : defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
-                        </div>
-                        <div className="content">
-                            <h3>{data.name}</h3>
-                            {data.company.trim().length + data.city.trim().length === 0 ? '' :
-                                <span className="from">from {data.company.trim().length === 0 ? '' : `${data.company} & `}{data.city}</span>
-                            }
-                            <span>I am {data.skills.join(', ')}</span>
-                            <span>Let's talk about...</span>
-                            <h4>My projects</h4>
-                            <div className="smallcard">
+  const [proposals, setProposals] = useState([]);
+  useEffect(() => {
+    (async () => {
+      setProposals(await getProposalsByOwner(data.ownerHash));
+    })();
+  }, [data]);
+
+  return (
+      <div className="peoplePage page">
+          <div className="container" style={{backgroundImage: "url('" + postcards02Light + "')"}}>
+              <div className="center">
+                  <div className="cardHeader">
+                      <div className="picture">
+                          <img src={data.picture ? `//images.weserv.nl/?url=${data.picture}&w=348&h=348&fit=cover` : defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
+                      </div>
+                      <div className="content">
+                          <h3>{data.name}</h3>
+                          {data.company.trim().length + data.city.trim().length === 0 ? '' :
+                              <span className="from">from {data.company.trim().length === 0 ? '' : `${data.company} & `}{data.city}</span>
+                          }
+                          <span>I am {data.skills.join(', ')}</span>
+                          <span>Let's talk about...</span>
+                          {/*
+                          <h4>My projects</h4>
+                          <div className="smallcard">
                             <div className="picture smallpic">
                               <img src={defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
                             </div>
@@ -87,39 +97,28 @@ function PeoplePage({data}) {
                               <h3 className="cardName">Project name</h3>
                             </div>
                           </div>
-                          {/*
-                            <h4>Contact</h4>
-                            <div className="socials">
-                              {data.social.website.trim().length === 0 ? '' : <span><a href={data.social.website}>Website</a></span>}
-                              {data.social.twitter.trim().length === 0 ? '' : <span><a href={data.social.twitter}>Twitter</a></span>}
-                              {data.social.github.trim().length === 0 ? '' : <span><a href={data.social.github}>GitHub</a></span>}
-                              {data.social.facebook.trim().length === 0 ? '' : <span><a href={data.social.facebook}>Facebook</a></span>}
-                              {data.social.instagram.trim().length === 0 ? '' : <span><a href={data.social.instagram}>Instagram</a></span>}
-                              {data.social.flickr.trim().length === 0 ? '' : <span><a href={data.social.flickr}>Flickr</a></span>}
-                              {data.social.linkedin.trim().length === 0 ? '' : <span><a href={data.social.linkedin}>LinkedIn</a></span>}
-                              {data.social.wikimedia.trim().length === 0 ? '' : <span><a href={data.social.wikimedia}>Wikimedia</a></span>}
-                            </div>
                           */}
-                        </div>
-                        
-                        {/*
-                        <div className="big">
-                            <span>Local Time</span>
-                            <span>13.28 PM</span>
-                        </div>
-                        */}
-                    </div>
-                </div>
-            </div>
-            <div className="center">
-              { isSocialsEmpty(data.social) ? null : <>
-                <h3>Contact</h3>
-                <Socials data={data.social} />
-              </>}
-                
-            </div> 
-        </div>
-    );
+                      </div>
+                      
+                      {/*
+                      <div className="big">
+                          <span>Local Time</span>
+                          <span>13.28 PM</span>
+                      </div>
+                      */}
+                  </div>
+              </div>
+          </div>
+          <div className="center">
+            { isSocialsEmpty(data.social) ? null : <>
+              <h3>Contact</h3>
+              <Socials data={data.social} />
+            </>}
+            <h3>Proposals</h3>
+            <Proposals data={proposals} />
+          </div> 
+      </div>
+  );
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
