@@ -117,7 +117,7 @@ function PeoplePage({data}) {
             { proposals.length > 0 ? <>
               <h3>Proposals</h3>
               <Proposals data={proposals} />
-            </> : 0 }
+            </> : null }
             
           </div> 
       </div>
