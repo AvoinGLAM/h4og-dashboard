@@ -79,3 +79,7 @@ button:hover {
   outline: none;
   transition: .1s;
 }
+
+.topbutton:hover {
+  box-shadow: 0 0 0 2pt #EDD6A6;
+}
