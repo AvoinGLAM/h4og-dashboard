@@ -7,7 +7,7 @@ import {
 import './styles/App.css';
 
 import { displayTypes } from './displayTypes.js';
-import { useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 
 import { Results } from './components/results.js';
 import { Filters } from './components/filters.js';
@@ -15,39 +15,40 @@ import { Header } from './components/header.js';
 import { DetailsPage } from './components/detailsPage.js';
 import api from "./api";
 
-
-
 function App() {
-
   const [data, setData] = useState([]);
-  const [queryParams, setQueryParams] = useState({initial: true});
 
-  useEffect(() => {
-    (async () => {
-      if (queryParams.initial === true) return;
-    
-      const results = await api.getResults(queryParams);
-      setData(results);
-    })();
-  }, [queryParams])
+  const loadData = useCallback(async (queryParams) => {
+    let newData = await api.getResults(queryParams);
+    console.log('Loaded new data', newData)
 
-  console.log(Object.values(displayTypes).map(val => `/${val}`))
+    setData(d => {
+      newData = newData.filter((i) => (
+        !d.some(j => j.slug === i.slug)
+      ));
+      return [
+        ...d,
+        ...newData
+      ];
+    });
+  }, []);
+  
   return (
     <Router>
       <div className="App">
         <Switch>
           <Route exact path={[...(Object.values(displayTypes).map(val => `/${val}`))]}>
             <Header />
-            <Filters queryParams={queryParams} setQueryParams={setQueryParams} />
+            <Filters loadData={loadData} />
             <Results data={data} />
           </Route>
           <Route exact path={[...(Object.values(displayTypes).map(val => `/${val}/:slug`))]}>
             <Header backButton="Back to Results"/>
-            <DetailsPage data={data} />
+            <DetailsPage data={data} loadData={loadData} />
           </Route>
         </Switch>
       </div>
-    </Router>    
+    </Router>
   );
 }
 

@@ -114,8 +114,11 @@ function PeoplePage({data}) {
               <h3>Contact</h3>
               <Socials data={data.social} />
             </>}
-            <h3>Proposals</h3>
-            <Proposals data={proposals} />
+            { proposals.length > 0 ? <>
+              <h3>Proposals</h3>
+              <Proposals data={proposals} />
+            </> : 0 }
+            
           </div> 
       </div>
   );
