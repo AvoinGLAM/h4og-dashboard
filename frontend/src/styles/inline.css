@@ -8,6 +8,7 @@
 
 .socialTile {
     text-decoration: none;
+    background-size: cover;
     color: #ffffff;
     display: -webkit-flex;
     display: flex;

@@ -32,10 +32,10 @@ h1 {
 }
 
 .inputGroup {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 0.5rem;
+  justify-content: center;
 }
 
 h3 {

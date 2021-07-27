@@ -85,7 +85,7 @@ function PeoplePage({data}) {
                               <span className="from">from {data.company.trim().length === 0 ? '' : `${data.company} & `}{data.city}</span>
                           }
                           <span>I am {data.skills.join(', ')}</span>
-                          <span>Let's talk about...</span>
+                          <span>Let's talk about... (interests) in (languages)!</span>
                       </div>
                       
                       {/*
