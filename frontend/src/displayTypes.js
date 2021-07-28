@@ -10,7 +10,7 @@ export const displayTypes = {
     "People": "people",
     "Workshops": "workshops",
     "Projects": "projects",
-    "Technology, tool or platform": "tools",
+    //"Technology, tool or platform": "tools",
     "Collections and Datasets": "collections"
 };
 
