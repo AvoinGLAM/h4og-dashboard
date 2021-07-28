@@ -1,18 +1,24 @@
 
 .selectButton {
   width: 100%;
-  background-image: url('../assets/images/pink.png');
+  background-image: url('../assets/images/beige.png');
   background-size: cover;
   text-align: center;
   border: none;
   padding: 0.6rem 2rem;
-  border-radius: 1.5rem;
+  border-radius: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   cursor: pointer;
   position: relative;
 }
 
+.selectButton.selected {
+  background-image: url('../assets/images/pink.png');
+
+}
+
+/*
 .selectButton::after {
   content: '';  
   background-color: rgba(255,255,255,0.5);
@@ -25,11 +31,9 @@
   background-color: rgba(255,255,255,0);
 }
 .selectButton.selected {
-/*   font-weight: bold; */
   opacity: 1;
   color: black;
 }
-
 .selectGroup:hover .selectButton.selected::after {
   background-color: rgba(255,255,255,0.5);
 }
@@ -40,3 +44,4 @@
 .selectGroup:hover .selectButton:hover::after {
   background-color: rgba(255,255,255,0);
 }
+*/

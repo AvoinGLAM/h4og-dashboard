@@ -102,9 +102,25 @@ const workshops = async (row, index) => {
     };
 }
 
+const tools = async (row, index) => {
+    const { proposal } = row;
+    const data = {
+        ...proposalBase(row, index),
+        type: "tools",
+        media: {
+            thumbnail: await utils.testPictureUrl(proposal.media.thumbnail),
+            video: proposal.media.video,
+        }
+    };
+    data.meta.followUpFlag = row.followUpFlag;
+
+    return data;
+};
+
 export const type = {
     "people": people,
     "collections": collections,
     "workshops": workshops,
     "projects": projects,
+    "tools": tools
 }

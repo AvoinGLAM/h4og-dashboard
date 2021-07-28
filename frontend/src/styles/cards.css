@@ -204,6 +204,8 @@
     position: relative;
     outline: 5px dashed #ccc;
     outline-offset: -1rem;
+
+    grid-column: span 2;
 }
 
 .ghostCard:after {

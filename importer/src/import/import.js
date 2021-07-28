@@ -24,16 +24,18 @@ const dataFilePath = path.join(path.resolve(), '../data/data.json');
  * @param {Object} context 
  */
 const firstTimeTasks = async (item, ctx) => {
+    const followUpFlagCell = ctx.sheet.getCellByA1(`BD${item.index + 2}`);
+
     if (item?.meta.followUpFlag != "1" && item?.meta.followUpFlag != "2") {
         // Flag has not been set off yet, thus this is a new item
-        const followUpFlagCell = ctx.sheet.getCellByA1(`BD${item.index + 2}`);
+        
 
-        if (item.type == "projects") {
-            // Case: New project and person
+        if (item.type != "people") {
+            // Case: New project/collection/tool/workshop and person
             const ownerDetails = item.meta.owner;
 
             // Create a channel
-            await createChannel(item.name, item.slug)
+            await createChannel(item.name, item.type, item.slug)
                 // Send a welcome email
                 .then(() => sendMail({
                     to: ownerDetails.email,

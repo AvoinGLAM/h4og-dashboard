@@ -4,7 +4,15 @@ import logger from '../logger/logger.js';
 
 const isDryRun = process.argv.includes('--dry-run') ? 'DRY ' : '';
 
-export const createChannel = (name, slug) => {
+const typeToSingular = (type) => ({
+    "people": "person",
+    "projects": "project",
+    "collections": "collection",
+    "tools": "tool",
+    "workshops": "workshop"
+}[type] || 'project');
+
+export const createChannel = (name, type, slug) => {
     name = name.substr(0, 63);
     logger.info(`${isDryRun}Creating channel ${name} [${slug}]`);
     if (isDryRun) return;
@@ -12,7 +20,7 @@ export const createChannel = (name, slug) => {
     return axios.post("https://community.okf.fi/api/v4/channels",
     { 
         "team_id": config.mattermost.teamId, 
-        "name": `project-${slug}`, 
+        "name": `${typeToSingular(type)}-${slug}`, 
         "display_name": name, 
         "type": "O" 
     },

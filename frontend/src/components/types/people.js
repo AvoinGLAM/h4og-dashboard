@@ -13,8 +13,8 @@ import {
 } from "react-router-dom";
 
 import { Socials, isSocialsEmpty } from '../inline/socials';
-import { Proposals, getProposalsByOwner } from '../inline/proposals';
-import { useEffect, useState } from 'react';
+import { Proposals } from '../inline/proposals';
+import { useProposalsByOwner } from '../../hooks/useProposalsByOwner';
 
 export function PeopleCard({ data }) {
     /*
@@ -28,6 +28,8 @@ export function PeopleCard({ data }) {
         return `${randomSkill}, +${skills.length - 1} more`
       }
     }*/
+    
+
     return (
       <Link to={`/${data.type}/${data.slug}/`} className="cardLink">
         <div className="peopleCard">
@@ -64,12 +66,8 @@ export function PeopleCard({ data }) {
 }
 
 function PeoplePage({data}) {
-  const [proposals, setProposals] = useState([]);
-  useEffect(() => {
-    (async () => {
-      setProposals(await getProposalsByOwner(data.ownerHash));
-    })();
-  }, [data]);
+  const ownerProposals = useProposalsByOwner(data.ownerHash)
+      .filter(proposal => proposal.type !== 'people');
 
   return (
       <div className="peoplePage page">
@@ -102,9 +100,9 @@ function PeoplePage({data}) {
               <h3>Contact</h3>
               <Socials data={data.social} />
             </>}
-            { proposals.length > 0 ? <>
+            { ownerProposals.length > 0 ? <>
               <h3>Proposals</h3>
-              <Proposals data={proposals} />
+              <Proposals data={ownerProposals} />
             </> : null }
             
           </div> 
