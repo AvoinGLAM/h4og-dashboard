@@ -2,6 +2,7 @@ import people from './components/types/people';
 import collections from './components/types/collections';
 import ghost from './components/types/ghost';
 import projects from './components/types/projects';
+import workshops from './components/types/workshops';
 
 // to-do: combine these two objects into array of objects
 export const displayTypes = {
@@ -17,7 +18,8 @@ export const typeComponents = {
     people,
     collections,
     ghost,
-    projects
+    projects,
+    workshops
 };
 
 export function getDisplayTypeName(displayType) {

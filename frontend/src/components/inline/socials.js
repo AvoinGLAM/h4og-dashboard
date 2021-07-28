@@ -52,7 +52,7 @@ const socialPlatforms = {
     },
     "slack": {
         icon: FaComments,
-        name: "Join the project channel on Mattermost!"
+        name: "Join the channel on Mattermost!"
     }
 };
 
@@ -63,7 +63,7 @@ function SocialTile({platformKey, target}) {
     if (target.trim().length === 0) return <></>;
 
     return (
-        <a className="socialTile" href={normalizeSocial(target, platform.urlStart)}>
+        <a className="socialTile" href={normalizeSocial(target, platform.urlStart)} target="_blank" rel="noreferrer">
             <Icon />
             <span className="platformName">
                 {platform.name}

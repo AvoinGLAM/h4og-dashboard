@@ -5,7 +5,7 @@ import { Proposals } from '../inline/proposals';
 import { isSocialsEmpty, Socials } from '../inline/socials';
 import { RichText } from '../richText';
 
-const typeToSingular = (type) => ({
+export const typeToSingular = (type) => ({
     "people": "person",
     "projects": "project",
     "collections": "collection",
