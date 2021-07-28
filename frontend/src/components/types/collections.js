@@ -6,8 +6,6 @@ import { defaultPictures } from '../../defaultPictures';
 import 'tippy.js/dist/tippy.css'; // optional
 import { getDisplayTypeName } from '../../displayTypes';
 
-import postcards02Light from '../../assets/images/postcards_02_light.jpg';
-
 import {
   Link,
 } from "react-router-dom";
