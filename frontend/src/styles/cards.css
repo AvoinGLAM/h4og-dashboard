@@ -7,6 +7,31 @@
     padding: 1.5rem !important;
 }
 
+@media only screen and (max-width: 1150px) {
+    .resultGrid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .resultGrid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .resultGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .resultGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
 .cardPadding {
     padding: 0.5rem;
 }

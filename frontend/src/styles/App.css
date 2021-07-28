@@ -18,6 +18,15 @@ a {
 
 .header h1 {flex: 1;}
 
+@media only screen and (max-width: 700px) {
+  .header {
+    flex-direction: column;
+  }
+  .header h1 {
+    margin-bottom: 1rem;
+  }
+}
+
 h1 {
   color: #121212;
   font-family: 'Goblin One', serif; 
