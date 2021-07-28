@@ -19,6 +19,8 @@ function App() {
   const [data, setData] = useState([]);
 
   const loadData = useCallback(async (queryParams) => {
+    if (!queryParams) return;
+
     let newData = await api.getResults(queryParams);
     console.log('Loaded new data', newData)
 
@@ -39,8 +41,8 @@ function App() {
         <Switch>
           <Route exact path={[...(Object.values(displayTypes).map(val => `/${val}`))]}>
             <Header />
-            <Filters loadData={loadData} />
-            <Results data={data} />
+            <Filters />
+            <Results data={data} loadData={loadData} />
           </Route>
           <Route exact path={[...(Object.values(displayTypes).map(val => `/${val}/:slug`))]}>
             <Header backButton="Back to Results"/>
