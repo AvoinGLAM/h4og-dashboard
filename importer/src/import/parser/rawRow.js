@@ -74,7 +74,7 @@ export const findDataTypes = (row) => {
     if (row.person.firstName) types.push("people");
     if (row.proposal.type == proposalTypes["collections"]) types.push("collections");
     if (row.proposal.type == proposalTypes["projects"]) types.push("projects");
-    //if (row.proposal.type == proposalTypes["tools"]) types.push("tools");
+    if (row.proposal.type == proposalTypes["tools"]) types.push("tools");
     if (row.proposal.type == proposalTypes["workshops"]) types.push("workshops");
 
     return types;
