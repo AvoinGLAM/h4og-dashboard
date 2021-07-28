@@ -3,6 +3,7 @@ import collections from './components/types/collections';
 import ghost from './components/types/ghost';
 import projects from './components/types/projects';
 
+// to-do: combine these two objects into array of objects
 export const displayTypes = {
     "All": "",
     "People": "people",

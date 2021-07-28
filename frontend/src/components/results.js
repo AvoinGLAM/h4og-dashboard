@@ -8,6 +8,8 @@ import { useCallback, useEffect, useState } from "react";
 
 
 const localFilter = (data, filters) => {
+  if (!filters) return data;
+
   return data.filter(item => {
     if (filters.type ? item.type !== filters.type : false) return false;
     if (filters.ownerHash ? item.ownerHash !== filters.ownerHash : false) return false;
@@ -33,10 +35,12 @@ export function Results({data, loadData}) {
       loadData(filters)
     }, [filters, loadData]);
 
-    if (data.length > 0) {
+    const filteredData = localFilter(data, filters);
+
+    if (filteredData.length > 0) {
       return (
         <div className="container resultGrid">
-          {localFilter(data, filters).map(item => {
+          {filteredData.map(item => {
             if (typeComponents[item.type] === undefined) {
               console.log(`Couldn't find component for type ${item.type}`);
               return typeComponents["ghost"].card();

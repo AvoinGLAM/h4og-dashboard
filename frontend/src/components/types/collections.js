@@ -11,6 +11,7 @@ import postcards02Light from '../../assets/images/postcards_02_light.jpg';
 import {
   Link,
 } from "react-router-dom";
+import { ProposalsPage } from './proposals';
 
 function CollectionsCard({ data }) {
     console.log(data);
@@ -30,26 +31,8 @@ function CollectionsCard({ data }) {
     )
 }
 
-function CollectionsPage({data}) {
-    return (
-        <div className="container" style={{backgroundImage: "url('" + postcards02Light + "')"}}>
-            <div className="center">
-                <div className="cardHeader">
-                    <div className="picture">
-                        
-                    </div>
-                    <div>
-                        <h3>{data.name}</h3>
-                        <span>{data.description.trim().length === 0 ? data.shortDescription : data.description}</span>
-                    </div>
-                </div>
-            </div>
-      </div>
-    );
-}
-
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
     card: CollectionsCard,
-    page: CollectionsPage
+    page: ProposalsPage
 };

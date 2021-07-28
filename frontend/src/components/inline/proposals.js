@@ -3,7 +3,7 @@ import '../../styles/inline.css';
 import { PeopleCard } from '../types/people';
 
 export async function getProposalsByOwner(ownerHash) {
-    const proposals = (await api.getResults({ownerHash})).filter(proposal => proposal.type !== 'people');
+    const proposals = (await api.getResults({ownerHash})); 
 
     return proposals;
 }
