@@ -3,7 +3,8 @@ import '../../styles/cards.css';
 
 import { defaultPictures } from '../../defaultPictures';
 //import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css'; // optional
+//import 'tippy.js/dist/tippy.css'; // optional
+
 import { getDisplayTypeName } from '../../displayTypes';
 
 import postcards02Light from '../../assets/images/postcards_02_light.jpg';
@@ -15,6 +16,15 @@ import {
 import { Socials, isSocialsEmpty } from '../inline/socials';
 import { Proposals } from '../inline/proposals';
 import { useProposalsByOwner } from '../../hooks/useProposalsByOwner';
+
+function literalJoin(arr, con = 'and') {
+    return arr.join(', ').replace(/, ([^,]*)$/, ` ${con} $1`);
+}
+
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 
 export function PeopleCard({ data }) {
     /*
@@ -78,12 +88,25 @@ function PeoplePage({data}) {
                           <img src={data.picture ? `//images.weserv.nl/?url=${data.picture}&w=348&h=348&fit=cover` : defaultPictures[data.defaultPictureIndex]} alt={`${data.name}`} />
                       </div>
                       <div className="content">
-                          <h3>{data.name}</h3>
-                          {data.company.trim().length + data.city.trim().length === 0 ? '' :
-                              <span className="from">from {data.company.trim().length === 0 ? '' : `${data.company} & `}{data.city}</span>
-                          }
-                          <span>I am {data.skills.join(', ')}</span>
-                          <span>Let's talk about... (interests) in (languages)!</span>
+                          <h3>{data.name} {data.lastName || ''}</h3>
+
+                          {capitalize(`${data.companyRole || ''} from ${data.company.trim().length > 0 ? (data.city ? `${data.company} &` : '') : ''} ${data.city || ''}`)}
+
+                          {data.skills.length > 0 ?
+                          <span>{capitalize(literalJoin(data.skills))}</span>
+                          : null}
+
+
+                          {data.interests.length > 0 ?
+                          <span>Let's talk about {literalJoin(data.interests, 'or')}</span>
+                          : null}
+
+                          <div className="tags">
+                              {data.languages.map(lang => (
+                                  <span>{lang}</span>
+                              ))}
+                          </div>
+
                       </div>
                       
                       {/*
@@ -96,7 +119,12 @@ function PeoplePage({data}) {
               </div>
           </div>
           <div className="center">
-            { isSocialsEmpty(data.social) ? null : <>
+              {data.description.trim().length > 0 ?
+                  <blockquote>{data.description}</blockquote>
+                  : null }
+
+
+              { isSocialsEmpty(data.social) ? null : <>
               <h3>Contact</h3>
               <Socials data={data.social} />
             </>}

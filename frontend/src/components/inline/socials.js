@@ -5,7 +5,8 @@ import '../../styles/inline.css';
 const socialPlatforms = {
     "website": {
         icon: FaGlobe,
-        name: "Website"
+        name: "Website",
+        
     },
     "twitter": {
         icon: FaTwitter,

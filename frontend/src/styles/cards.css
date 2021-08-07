@@ -243,3 +243,33 @@
     font-family: 'Goblin One', serif;
     font-size: 2rem;
 }
+
+blockquote {
+    position: relative;
+    max-width: 30em;
+    margin: 0 0 2rem 0;
+
+    background-color: #eee;
+    padding: 1.125em 1.5em;
+    font-size: 1.25em;
+}
+
+blockquote::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    left: 1.5em;
+    border: .75rem solid transparent;
+    border-top: none;
+    border-bottom-color: #eee;
+}
+
+.tags span {
+    background-image: url('../assets/images/postcards_02_input.png');
+    display: inline-block !important;
+    margin-right: 0.5rem;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+}

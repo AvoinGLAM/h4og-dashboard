@@ -1,5 +1,14 @@
 import { proposalTypes } from './utils.js';
 
+
+/*
+Check row:
+ - translate row letters into numbers
+ - index - 1
+
+EXAMPLE: W - 23 -> [22]
+*/
+
 /**
  * Cast raw row data into a formatted object
  * @param {Array} data Raw row data from the spreadsheet
@@ -12,6 +21,7 @@ import { proposalTypes } from './utils.js';
         firstName: data[3],
         lastName: data[4],
         organization: data[5],
+        organizationRole: data[51],
         volunteering: data[6],
         shortDescription: data[7],
         timezone: data[8],

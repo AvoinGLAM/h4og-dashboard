@@ -85,3 +85,8 @@
 .page .center:nth-child(2) {
     margin-top: 2rem;
 }
+
+.personDescription {
+    color: #777;
+    font-style: italic;
+}

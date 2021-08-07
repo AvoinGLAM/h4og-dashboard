@@ -30,9 +30,12 @@ const people = async (row, index) => {
     return {
         type: "people",
         name: person.firstName,
+        lastName: person.lastName,
         company: person.organization,
+        companyRole: person.organizationRole,
+        languages: person.languages?.split('\n'), // make use of the otherLanguages as well
         skills: person.describers?.split('\n'), // consider splitting also by a comma, in case someone doesn't read the instructions
-        languages: person.languages?.split(', '), // make use of the otherLanguages as well
+        interests: person.interests?.split('\n'), // consider splitting also by a comma, in case someone doesn't read the instructions
         city: person.city,
         picture: await utils.testPictureUrl(
             person.pictureUrl, 
