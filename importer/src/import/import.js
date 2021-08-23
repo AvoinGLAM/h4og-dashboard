@@ -3,6 +3,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import crypto from 'crypto';
 
+import commonConfig from '../../../config/common.json';
 import config from '../../../config/importer/config.json';
 import googleKey from '../../../config/importer/google-key.json';
 import { parseTable } from './parser/parser.js';
@@ -12,6 +13,7 @@ import { mailTemplates, sendMail } from './mail.js';
 import { addSlugs } from './slugs.js';
 
 import logger from '../logger/logger.js';
+import axios from 'axios';
 
 const isDryRun = process.argv.includes('--dry-run') ? 'DRY ' : '';
 
@@ -63,6 +65,12 @@ const firstTimeTasks = async (item, ctx) => {
                 .catch((reason) => { logger.error(reason) });
         }
     }
+};
+
+const requestBackendUpdate = () => {
+    axios.get(commonConfig.backendApiUrl + '/update', {headers: { authorization: commonConfig.internalApiKey}})
+        .then((response) => console.log(`Backend update requested: ${response.data}`))
+        .catch((response) => console.log(`Backend update request failed: ${response.data}`));
 };
 
 /**
@@ -130,6 +138,8 @@ export const importData = async () => {
     
     await fs.writeFile(dataFilePath, JSON.stringify(out, null, 2));
     logger.info(`Saved data.json`);
+
+    requestBackendUpdate();
 };
 
 const md5 = (str) => crypto.createHash('md5').update(config.hashSalt + str).digest('hex');
