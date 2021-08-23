@@ -8,3 +8,5 @@ tools/v1migration/server.js
 node_modules/
 data/
 backend/web/
+.idea
+.DS_Store

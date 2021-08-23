@@ -48,10 +48,11 @@ const people = async (row, index) => {
         social: person.socials, // we should maybe do some parsing for these, we'll see
         meta: { // Meta object will be removed later in the import process
             emailAllowed: person.emailAllowed, 
-            followUpFlag: row.followUpFlag,
+            importedBefore: row.importedBefore,
             rowIncludesProjectProposal: rawRow.findDataTypes(row).includes("projects"),
             lastName: person.lastName
-        }
+        },
+        eventRole: person.eventRole
     }
 }
 
@@ -84,7 +85,7 @@ const projects = async (row, index) => {
             video: proposal.media.video,
         }
     };
-    data.meta.followUpFlag = row.followUpFlag;
+    data.meta.importedBefore = row.importedBefore;
 
     return data;
 }
@@ -115,7 +116,7 @@ const tools = async (row, index) => {
             video: proposal.media.video,
         }
     };
-    data.meta.followUpFlag = row.followUpFlag;
+    data.meta.importedBefore = row.importedBefore;
 
     return data;
 };

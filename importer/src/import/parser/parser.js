@@ -8,9 +8,9 @@ import * as rawRow from './rawRow.js';
  * @param {Number} index Row index
  * @returns {Array<Object>}
  */
- export const parseRow = ({_rawData}, index) => {
+ export const parseRow = ({_rawData: rawData}, {_rawData: rawExtrasData}, index) => {
      // Structure row data according to our Hack4OpenGLAM 2021 spreadsheet template
-    const row = rawRow.mapData(_rawData); 
+    const row = rawRow.mapData(rawData, rawExtrasData); 
 
     // Data type specific structuring and pushing into data array below
     // We will push data objects extracted from current row to the following data array
@@ -26,8 +26,14 @@ import * as rawRow from './rawRow.js';
     return data;
 };
 
-export const parseTable = (rows) => {
-    const parsed = rows.flatMap((row, index) => parseRow(row, index));
+export const parseTable = (rows, extrasRows) => {
+    console.log(extrasRows, extrasRows[0]._rawData)
+
+    const parsed = rows.flatMap((row, index) => {
+        console.log(index, extrasRows[index])
+
+        return parseRow(row, extrasRows[index] || ({_rawData: null}), index)
+    });
 
     return parsed;
 }
