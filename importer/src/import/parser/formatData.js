@@ -19,7 +19,8 @@ const proposalBase = (row, index) => {
             owner: {
                 name: person.firstName,
                 email: person.email
-            }
+            },
+            importedBefore: row.importedBefore
         },
         defaultPictureIndex: utils.randomDefaultPictureIndex(),
     };
@@ -85,7 +86,6 @@ const projects = async (row, index) => {
             video: proposal.media.video,
         }
     };
-    data.meta.importedBefore = row.importedBefore;
 
     return data;
 }
