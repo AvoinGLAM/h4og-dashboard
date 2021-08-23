@@ -14,7 +14,7 @@ EXAMPLE: W - 23 -> [22]
  * @param {Array} data Raw row data from the spreadsheet
  * @returns {Object}
  */
- export const mapData = data => ({
+ export const mapData = (data, extrasData) => ({
     timestamp: data[0],
     person: {
         email: data[1],
@@ -41,7 +41,8 @@ EXAMPLE: W - 23 -> [22]
             wikimedia: data[21]
         },
         emailAllowed: data[22] == 'Yes',
-        pictureUrl: data[23]
+        pictureUrl: data[23],
+        eventRole: extrasData ? extrasData[2] : false
     },
     proposal: {
         type: data[29],
@@ -71,7 +72,7 @@ EXAMPLE: W - 23 -> [22]
         requirements: data[46],
         level: data[47]
     },
-    followUpFlag: data[55] // Make sure this matches with the letters in import.js
+    importedBefore: extrasData ? extrasData[1] : '0' // Make sure this matches with the letters in import.js
 });
 
 /**

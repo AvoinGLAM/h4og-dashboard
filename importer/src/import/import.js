@@ -3,6 +3,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import crypto from 'crypto';
 
+import commonConfig from '../../../config/common.json';
 import config from '../../../config/importer/config.json';
 import googleKey from '../../../config/importer/google-key.json';
 import { parseTable } from './parser/parser.js';
@@ -12,6 +13,7 @@ import { mailTemplates, sendMail } from './mail.js';
 import { addSlugs } from './slugs.js';
 
 import logger from '../logger/logger.js';
+import axios from 'axios';
 
 const isDryRun = process.argv.includes('--dry-run') ? 'DRY ' : '';
 
@@ -19,14 +21,14 @@ const dataFilePath = path.join(path.resolve(), '../data/data.json');
 
 /**
  * Run tasks for new added items
- * State of being new is based on followUpFlag-column (BD) in the spreadsheet
+ * State of being new is based on importedBefore-column (B) in the spreadsheet
  * @param {Object} item 
  * @param {Object} context 
  */
 const firstTimeTasks = async (item, ctx) => {
-    const followUpFlagCell = ctx.sheet.getCellByA1(`BD${item.index + 2}`);
+    const importedBeforeCell = ctx.extrasSheet.getCellByA1(`B${item.index + 2}`);
 
-    if (item?.meta.followUpFlag != "1" && item?.meta.followUpFlag != "2") {
+    if (item?.meta.importedBefore != "1" && item?.meta.importedBefore != "2") {
         // Flag has not been set off yet, thus this is a new item
         
 
@@ -45,7 +47,7 @@ const firstTimeTasks = async (item, ctx) => {
                 }))
                 .then(() => addNewSubscriber(ctx.owner))
                 // Update the flag cell
-                .then(() => { followUpFlagCell.value = "1"; })
+                .then(() => { importedBeforeCell.value = "1"; })
                 .catch((reason) => { logger.error(reason) });
             
         } else if (item.type == "people" && !item.meta.rowIncludesProjectProposal) {
@@ -59,10 +61,16 @@ const firstTimeTasks = async (item, ctx) => {
                 })
                 .then(() => addNewSubscriber(item))
                 // Update the flag cell
-                .then(() => { followUpFlagCell.value = "2"; })
+                .then(() => { importedBeforeCell.value = "2"; })
                 .catch((reason) => { logger.error(reason) });
         }
     }
+};
+
+const requestBackendUpdate = () => {
+    axios.get(commonConfig.backendApiUrl + '/update', {headers: { authorization: commonConfig.internalApiKey}})
+        .then((response) => logger.info(`Backend update requested: ${response.data}`))
+        .catch((response) => logger.error(`Backend update request failed: ${response.data}`));
 };
 
 /**
@@ -75,16 +83,26 @@ export const importData = async () => {
     const doc = new GoogleSpreadsheet(config.spreadsheetId);
     await doc.useServiceAccountAuth(googleKey);
     await doc.loadInfo(); 
+    logger.info(`Loaded document ${doc.title}`)
+    
+    // Load Forms answer sheet
     const sheet = doc.sheetsByIndex[0];
     sheet.headerValues = []; // empty headerValues array prevents google-spreadsheet from calling loadHeaderRow()
     const rows = await sheet.getRows();
-    logger.info(`Loaded document ${doc.title}`)
+    logger.info(`Loaded sheet ${sheet.title}`);
+
+    // Load extras sheet
+    const extrasSheet = doc.sheetsByTitle['extras'];
+    sheet.headerValues = []; // empty headerValues array prevents google-spreadsheet from calling loadHeaderRow()
+    const extrasRows = await extrasSheet.getRows();
+    logger.info(`Loaded sheet ${extrasSheet.title}`);
+
 
     // Parse the Spreadsheet data into an array of objects
-    let out = await Promise.all(parseTable(rows));
+    let out = await Promise.all(parseTable(rows, extrasRows));
     out = addSlugs(out);
 
-    await sheet.loadCells(`BD1:BD${rows.length + 2}`); // Load followUpFlag column
+    await extrasSheet.loadCells(`A1:J${rows.length + 2}`); // Load cells so we can put data there
     
     const getOwnerByEmail = (email) => out.find(o => o.type == "people" && o.email == email);
 
@@ -97,6 +115,7 @@ export const importData = async () => {
         // Run automated tasks for new items
         await firstTimeTasks(item, {
             sheet: sheet,
+            extrasSheet: extrasSheet,
             owner: (item.type != "people" ? getOwnerByEmail(item?.meta?.owner?.email) : item.email)
         });
         return item;
@@ -115,10 +134,12 @@ export const importData = async () => {
     });
 
     logger.info(`${isDryRun}Saving updated cells`);
-    if (!isDryRun) await sheet.saveUpdatedCells();
+    if (!isDryRun) await extrasSheet.saveUpdatedCells();
     
     await fs.writeFile(dataFilePath, JSON.stringify(out, null, 2));
     logger.info(`Saved data.json`);
+
+    requestBackendUpdate();
 };
 
 const md5 = (str) => crypto.createHash('md5').update(config.hashSalt + str).digest('hex');
