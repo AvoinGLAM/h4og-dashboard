@@ -27,11 +27,7 @@ import * as rawRow from './rawRow.js';
 };
 
 export const parseTable = (rows, extrasRows) => {
-    console.log(extrasRows, extrasRows[0]._rawData)
-
     const parsed = rows.flatMap((row, index) => {
-        console.log(index, extrasRows[index])
-
         return parseRow(row, extrasRows[index] || ({_rawData: null}), index)
     });
 

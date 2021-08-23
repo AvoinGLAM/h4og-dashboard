@@ -69,8 +69,8 @@ const firstTimeTasks = async (item, ctx) => {
 
 const requestBackendUpdate = () => {
     axios.get(commonConfig.backendApiUrl + '/update', {headers: { authorization: commonConfig.internalApiKey}})
-        .then((response) => console.log(`Backend update requested: ${response.data}`))
-        .catch((response) => console.log(`Backend update request failed: ${response.data}`));
+        .then((response) => logger.info(`Backend update requested: ${response.data}`))
+        .catch((response) => logger.error(`Backend update request failed: ${response.data}`));
 };
 
 /**
