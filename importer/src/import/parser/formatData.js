@@ -5,11 +5,11 @@ import * as rawRow from './rawRow.js';
 
 const proposalBase = (row, index) => {
     const { proposal, person } = row;
-
     return {
         name: proposal.title,
         shortDescription: proposal.shortDescription,
         description: proposal.description,
+        keywords: proposal.keywords,
         links: {
             homepage: proposal.links.homepage,
             codebase: proposal.links.codebase

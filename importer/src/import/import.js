@@ -27,10 +27,11 @@ const dataFilePath = path.join(path.resolve(), '../data/data.json');
  */
 const firstTimeTasks = async (item, ctx) => {
     const importedBeforeCell = ctx.extrasSheet.getCellByA1(`B${item.index + 2}`);
+    const slugCell = ctx.extrasSheet.getCellByA1(`D${item.index + 2}`);
 
     if (item?.meta.importedBefore != "1" && item?.meta.importedBefore != "2") {
         // Flag has not been set off yet, thus this is a new item
-        
+
 
         if (item.type != "people") {
             // Case: New project/collection/tool/workshop and person
@@ -48,6 +49,7 @@ const firstTimeTasks = async (item, ctx) => {
                 .then(() => addNewSubscriber(ctx.owner))
                 // Update the flag cell
                 .then(() => { importedBeforeCell.value = "1"; })
+                .then(() => { slugCell.value = item.slug; })
                 .catch((reason) => { logger.error(reason) });
             
         } else if (item.type == "people" && !item.meta.rowIncludesProjectProposal) {
@@ -62,6 +64,7 @@ const firstTimeTasks = async (item, ctx) => {
                 .then(() => addNewSubscriber(item))
                 // Update the flag cell
                 .then(() => { importedBeforeCell.value = "2"; })
+                .then(() => { slugCell.value = item.slug; })
                 .catch((reason) => { logger.error(reason) });
         }
     }

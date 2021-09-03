@@ -7,6 +7,8 @@ Check row:
  - index - 1
 
 EXAMPLE: W - 23 -> [22]
+
+BB -> 54 -> [53]
 */
 
 /**
@@ -46,6 +48,7 @@ EXAMPLE: W - 23 -> [22]
     },
     proposal: {
         type: data[29],
+        keywords: data[53],
         title: data[30],
         shortDescription: data[31],
         description: data[32],
