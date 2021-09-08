@@ -30,7 +30,7 @@ If you have already signed up, you can access your text channel #project-${slug}
 
 https://community.okf.fi/hack4openglam/channels/project-${slug}
 
-If you wish to edit your submission, you can do so here:
+If you wish to edit your submission, please find the Google Forms reply message and click on the edit link in it. You can create a new entry here:
 https://docs.google.com/forms/d/e/1FAIpQLSc-ANlrZl9HDIYOP8d2MRzFK7v6WOuzNOpYxy2Roy-pgX3BOg/viewform
 
 
