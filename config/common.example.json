@@ -1,0 +1,4 @@
+{
+    "internalApiKey": "something random here",
+    "backendApiUrl": "http://localhost/api"
+}

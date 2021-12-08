@@ -1,4 +1,3 @@
-config/
 data.json
 tools/v1migration/latest.json
 tools/v1migration/output.json
@@ -10,3 +9,7 @@ data/
 backend/web/
 .idea
 .DS_Store
+
+config/importer/config.json
+config/importer/google-key.json
+config/common.json

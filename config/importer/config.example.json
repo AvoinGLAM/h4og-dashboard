@@ -1,0 +1,28 @@
+{
+    "spreadsheetId": "",
+    "mattermost": {
+        "token": "",
+        "teamName": "",
+        "teamId": "",
+        "inviteId": ""
+    },
+    "mailerlite": {
+        "apiKey": "",
+        "groups": {
+            "newParticipant": ""
+        }
+    },
+    "mailFrom": "email@address.com",
+    "smtp":
+    {
+        "host": "",
+        "password": "",
+        "port": 25,
+        "auth": {
+            "user": "email@address.com", 
+            "pass": ""
+          }
+    },
+    "logdnaKey": "",
+    "hashSalt": ""
+}
