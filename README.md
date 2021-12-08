@@ -4,6 +4,22 @@
 
 Google Forms data fetching, parsing, and visualizing on public web interface. [Learn more about Hack4OpenGLAM (summit.creativecommons.org)...](https://summit.creativecommons.org/hack4openglam-launch/)
 
+## Table of contents
+
+- [Hack4OpenGLAM Dashboard](#hack4openglam-dashboard)
+  - [Components](#components)
+  - [Workflow](#workflow)
+    - [Data parsing and formatting](#data-parsing-and-formatting)
+    - [Automations](#automations)
+    - [Frontend App and REST API](#frontend-app-and-rest-api)
+  - [Getting Started](#getting-started)
+    - [Development](#development)
+    - [Configuration](#configuration)
+    - [Acquiring Google Spreadsheets API credentials](#acquiring-google-spreadsheets-api-credentials)
+    - [Building and Docker](#building-and-docker)
+  - [Attributions](#attributions)
+  - [Troubleshooting](#troubleshooting)
+
 ## Components
 
 The project consists of three main components:
@@ -163,20 +179,20 @@ $ docker-compose up
 
 ## Attributions
 
-### [/frontend/src/assets/images/frame.png](https://github.com/AvoinGLAM/h4og-dashboard/blob/production/frontend/src/assets/images/frame.png)
+#### [/frontend/src/assets/images/frame.png](https://github.com/AvoinGLAM/h4og-dashboard/blob/production/frontend/src/assets/images/frame.png)
 Commons user Sailko, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons
 
-### [/frontend/src/assets/images/frame2.png](https://github.com/AvoinGLAM/h4og-dashboard/blob/production/frontend/src/assets/images/frame2.png)
+#### [/frontend/src/assets/images/frame2.png](https://github.com/AvoinGLAM/h4og-dashboard/blob/production/frontend/src/assets/images/frame2.png)
 ["Goldener Bilderrahmen - gold picture frame"](https://www.flickr.com/photos/37977505@N00/2303608353) by [eriwst](https://www.flickr.com/photos/37977505@N00) is licensed under [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/?ref=ccsearch&atype=rich)
 
 ## Troubleshooting
 
-### No results are shown in the frontend
+#### No results are shown in the frontend
 Check, that:
 - On the networking tab of your browser developer tools: API request from the frontend to the backend is responded to with status code 200 OK
 - `data/data.json` is not empty
 - Dump backend's data variable to debug the issue
 
-### `Error: invalid_grant: Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values in the JWT claim.`
+#### `Error: invalid_grant: Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values in the JWT claim.`
 Check if the clock in the Docker container is off. You can re-sync the clock by running the following command:
 `docker run --rm --privileged node:lts-alpine hwclock -s`
